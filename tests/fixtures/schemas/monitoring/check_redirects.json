@@ -1,0 +1,153 @@
+{
+ "schema": {
+  "$defs": {
+   "Hop": {
+    "properties": {
+     "status": {
+      "title": "Status",
+      "type": "integer"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url",
+     "status"
+    ],
+    "title": "Hop",
+    "type": "object"
+   },
+   "RedirectCheck": {
+    "properties": {
+     "chain": {
+      "items": {
+       "$ref": "#/$defs/Hop"
+      },
+      "title": "Chain",
+      "type": "array"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "expected": {
+      "title": "Expected",
+      "type": "string"
+     },
+     "final_status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Final Status"
+     },
+     "final_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Final Url"
+     },
+     "hops": {
+      "default": 0,
+      "title": "Hops",
+      "type": "integer"
+     },
+     "issues": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Issues",
+      "type": "array"
+     },
+     "loop": {
+      "default": false,
+      "title": "Loop",
+      "type": "boolean"
+     },
+     "matches_expected": {
+      "default": false,
+      "title": "Matches Expected",
+      "type": "boolean"
+     },
+     "old": {
+      "title": "Old",
+      "type": "string"
+     },
+     "statuses": {
+      "items": {
+       "type": "integer"
+      },
+      "title": "Statuses",
+      "type": "array"
+     }
+    },
+    "required": [
+     "old",
+     "expected"
+    ],
+    "title": "RedirectCheck",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "checked": {
+    "default": 0,
+    "title": "Checked",
+    "type": "integer"
+   },
+   "concurrency": {
+    "default": 0,
+    "title": "Concurrency",
+    "type": "integer"
+   },
+   "items": {
+    "items": {
+     "$ref": "#/$defs/RedirectCheck"
+    },
+    "title": "Items",
+    "type": "array"
+   },
+   "max_hops": {
+    "default": 1,
+    "title": "Max Hops",
+    "type": "integer"
+   },
+   "skipped": {
+    "default": 0,
+    "title": "Skipped",
+    "type": "integer"
+   },
+   "temporary_statuses": {
+    "items": {
+     "type": "integer"
+    },
+    "title": "Temporary Statuses",
+    "type": "array"
+   }
+  },
+  "title": "RedirectChecks",
+  "type": "object"
+ },
+ "schema_version": "check_redirects/1"
+}

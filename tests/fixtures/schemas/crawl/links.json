@@ -1,0 +1,255 @@
+{
+ "schema": {
+  "$defs": {
+   "LinkRecord": {
+    "properties": {
+     "anchor": {
+      "default": "",
+      "title": "Anchor",
+      "type": "string"
+     },
+     "checked": {
+      "default": false,
+      "title": "Checked",
+      "type": "boolean"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "final_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Final Url"
+     },
+     "kind": {
+      "enum": [
+       "internal",
+       "external"
+      ],
+      "title": "Kind",
+      "type": "string"
+     },
+     "redirect_hops": {
+      "default": 0,
+      "title": "Redirect Hops",
+      "type": "integer"
+     },
+     "rel": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Rel",
+      "type": "array"
+     },
+     "source_url": {
+      "title": "Source Url",
+      "type": "string"
+     },
+     "target_status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Target Status"
+     },
+     "target_url": {
+      "title": "Target Url",
+      "type": "string"
+     },
+     "zone": {
+      "default": "other",
+      "enum": [
+       "nav",
+       "footer",
+       "main",
+       "other"
+      ],
+      "title": "Zone",
+      "type": "string"
+     }
+    },
+    "required": [
+     "source_url",
+     "target_url",
+     "kind"
+    ],
+    "title": "LinkRecord",
+    "type": "object"
+   },
+   "PageLinkStats": {
+    "properties": {
+     "depth": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Depth"
+     },
+     "in_sitemap": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "In Sitemap"
+     },
+     "inlinks": {
+      "default": 0,
+      "title": "Inlinks",
+      "type": "integer"
+     },
+     "outlinks_external": {
+      "default": 0,
+      "title": "Outlinks External",
+      "type": "integer"
+     },
+     "outlinks_internal": {
+      "default": 0,
+      "title": "Outlinks Internal",
+      "type": "integer"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "PageLinkStats",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "broken": {
+    "default": 0,
+    "title": "Broken",
+    "type": "integer"
+   },
+   "checked": {
+    "default": 0,
+    "title": "Checked",
+    "type": "integer"
+   },
+   "external_domains": {
+    "items": {
+     "additionalProperties": true,
+     "type": "object"
+    },
+    "title": "External Domains",
+    "type": "array"
+   },
+   "external_total": {
+    "default": 0,
+    "title": "External Total",
+    "type": "integer"
+   },
+   "external_unique": {
+    "default": 0,
+    "title": "External Unique",
+    "type": "integer"
+   },
+   "internal_total": {
+    "default": 0,
+    "title": "Internal Total",
+    "type": "integer"
+   },
+   "internal_unique": {
+    "default": 0,
+    "title": "Internal Unique",
+    "type": "integer"
+   },
+   "links": {
+    "items": {
+     "$ref": "#/$defs/LinkRecord"
+    },
+    "title": "Links",
+    "type": "array"
+   },
+   "max_depth": {
+    "anyOf": [
+     {
+      "type": "integer"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Max Depth"
+   },
+   "nofollow": {
+    "default": 0,
+    "title": "Nofollow",
+    "type": "integer"
+   },
+   "orphans": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Orphans",
+    "type": "array"
+   },
+   "pages": {
+    "items": {
+     "$ref": "#/$defs/PageLinkStats"
+    },
+    "title": "Pages",
+    "type": "array"
+   },
+   "redirecting": {
+    "default": 0,
+    "title": "Redirecting",
+    "type": "integer"
+   },
+   "skipped": {
+    "default": 0,
+    "title": "Skipped",
+    "type": "integer"
+   },
+   "skipped_time_budget": {
+    "default": 0,
+    "title": "Skipped Time Budget",
+    "type": "integer"
+   },
+   "truncated": {
+    "default": false,
+    "title": "Truncated",
+    "type": "boolean"
+   }
+  },
+  "title": "LinkSummary",
+  "type": "object"
+ },
+ "schema_version": "links/1"
+}

@@ -1,0 +1,69 @@
+{
+ "schema": {
+  "properties": {
+   "allowed": {
+    "default": false,
+    "title": "Allowed",
+    "type": "boolean"
+   },
+   "host": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Host"
+   },
+   "input": {
+    "title": "Input",
+    "type": "string"
+   },
+   "origin": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Origin"
+   },
+   "reason": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Reason"
+   },
+   "url": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "title": "Url"
+   }
+  },
+  "required": [
+   "input",
+   "url"
+  ],
+  "title": "NormalizedUrl",
+  "type": "object"
+ },
+ "schema_version": "normalize/1"
+}

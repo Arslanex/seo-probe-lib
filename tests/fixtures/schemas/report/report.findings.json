@@ -1,0 +1,254 @@
+{
+ "schema": {
+  "$defs": {
+   "Affected": {
+    "properties": {
+     "count": {
+      "title": "Count",
+      "type": "integer"
+     },
+     "examples": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Examples",
+      "type": "array"
+     },
+     "share_of_sampled_pages": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Share Of Sampled Pages"
+     }
+    },
+    "required": [
+     "count"
+    ],
+    "title": "Affected",
+    "type": "object"
+   },
+   "Category": {
+    "enum": [
+     "technical",
+     "onpage",
+     "links",
+     "content",
+     "schema",
+     "performance",
+     "ai_readiness",
+     "images"
+    ],
+    "title": "Category",
+    "type": "string"
+   },
+   "Evidence": {
+    "description": "Page-derived text. ALWAYS untrusted; consumers must render it as text.",
+    "properties": {
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     },
+     "value": {
+      "maxLength": 200,
+      "title": "Value",
+      "type": "string"
+     }
+    },
+    "required": [
+     "value"
+    ],
+    "title": "Evidence",
+    "type": "object"
+   },
+   "FindingReport": {
+    "properties": {
+     "affected": {
+      "$ref": "#/$defs/Affected"
+     },
+     "category": {
+      "$ref": "#/$defs/Category"
+     },
+     "check_id": {
+      "title": "Check Id",
+      "type": "string"
+     },
+     "confidence": {
+      "default": "high",
+      "enum": [
+       "high",
+       "medium",
+       "low"
+      ],
+      "title": "Confidence",
+      "type": "string"
+     },
+     "count": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Count"
+     },
+     "evidence": {
+      "anyOf": [
+       {
+        "$ref": "#/$defs/Evidence"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null
+     },
+     "heuristic": {
+      "default": false,
+      "title": "Heuristic",
+      "type": "boolean"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "is_gate": {
+      "default": false,
+      "title": "Is Gate",
+      "type": "boolean"
+     },
+     "layer": {
+      "$ref": "#/$defs/Layer"
+     },
+     "message": {
+      "title": "Message",
+      "type": "string"
+     },
+     "message_key": {
+      "title": "Message Key",
+      "type": "string"
+     },
+     "recommendation_ids": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Recommendation Ids",
+      "type": "array"
+     },
+     "rule_version": {
+      "title": "Rule Version",
+      "type": "string"
+     },
+     "scope": {
+      "enum": [
+       "page",
+       "site"
+      ],
+      "title": "Scope",
+      "type": "string"
+     },
+     "severity": {
+      "$ref": "#/$defs/Severity"
+     },
+     "severity_original": {
+      "anyOf": [
+       {
+        "$ref": "#/$defs/Severity"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null
+     },
+     "severity_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Severity Reason"
+     },
+     "url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Url"
+     },
+     "urls": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Urls",
+      "type": "array"
+     }
+    },
+    "required": [
+     "id",
+     "check_id",
+     "rule_version",
+     "category",
+     "layer",
+     "severity",
+     "scope",
+     "affected",
+     "message_key",
+     "message"
+    ],
+    "title": "FindingReport",
+    "type": "object"
+   },
+   "Layer": {
+    "enum": [
+     "A",
+     "B"
+    ],
+    "title": "Layer",
+    "type": "string"
+   },
+   "Severity": {
+    "enum": [
+     "Critical",
+     "High",
+     "Medium",
+     "Low",
+     "Info"
+    ],
+    "title": "Severity",
+    "type": "string"
+   }
+  },
+  "description": "Findings of a report, filtered and sorted by ``report.findings``.",
+  "properties": {
+   "items": {
+    "items": {
+     "$ref": "#/$defs/FindingReport"
+    },
+    "title": "Items",
+    "type": "array"
+   }
+  },
+  "title": "FindingList",
+  "type": "object"
+ },
+ "schema_version": "report.findings/1"
+}

@@ -1,0 +1,103 @@
+{
+ "schema": {
+  "$defs": {
+   "IndexabilityRow": {
+    "properties": {
+     "canonical": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Canonical"
+     },
+     "depth": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Depth"
+     },
+     "in_sitemap": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "In Sitemap"
+     },
+     "indexable": {
+      "default": true,
+      "title": "Indexable",
+      "type": "boolean"
+     },
+     "inlinks": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Inlinks"
+     },
+     "reasons": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Reasons",
+      "type": "array"
+     },
+     "status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Status"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "IndexabilityRow",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "items": {
+    "items": {
+     "$ref": "#/$defs/IndexabilityRow"
+    },
+    "title": "Items",
+    "type": "array"
+   }
+  },
+  "title": "IndexabilityTable",
+  "type": "object"
+ },
+ "schema_version": "indexability/1"
+}

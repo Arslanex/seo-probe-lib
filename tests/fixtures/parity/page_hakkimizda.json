@@ -1,0 +1,3629 @@
+{
+ "business_type": "other",
+ "coverage": {
+  "crux": false,
+  "psi": false
+ },
+ "error": null,
+ "extras": {
+  "agentic": {
+   "checks": [
+    {
+     "detail": "absent-optional",
+     "id": "llms-txt",
+     "status": "na"
+    },
+    {
+     "detail": "not-found",
+     "id": "markdown-delivery",
+     "status": "na"
+    },
+    {
+     "detail": "absent-optional",
+     "id": "content-signal",
+     "status": "na"
+    },
+    {
+     "detail": "none-found",
+     "id": "agent-discovery",
+     "status": "na"
+    },
+    {
+     "detail": "all-named",
+     "id": "named-controls",
+     "status": "pass"
+    }
+   ],
+   "fraction": "1/1",
+   "lighthouse_fraction": null,
+   "llms_txt_notes": [],
+   "notes": [
+    "local-checklist-not-lighthouse",
+    "lighthouse-fraction-needs-psi"
+   ],
+   "requests": 3,
+   "unnamed": {
+    "buttons": 0,
+    "inputs": 0,
+    "links": 0
+   }
+  },
+  "hreflang": {
+   "applicable": false,
+   "has_x_default": false,
+   "languages": [],
+   "multilingual_signals": [],
+   "notes": [
+    "single-language-site"
+   ],
+   "pages": [],
+   "probed": [],
+   "unchecked": 0
+  },
+  "local": {
+   "addresses": [],
+   "applicable": false,
+   "business_types": [],
+   "has_map_embed": false,
+   "has_tel_link": false,
+   "inconsistencies": [],
+   "names": [],
+   "notes": [],
+   "pages_scanned": 1,
+   "phones": [],
+   "signals": []
+  },
+  "previews": {
+   "notes": [
+    "description-missing-google-writes-snippet",
+    "pixel-width-is-approximate"
+   ],
+   "serp": [
+    {
+     "description": "",
+     "description_missing": true,
+     "description_shown": "",
+     "description_truncated": false,
+     "device": "desktop",
+     "display_url": "demo.test › hakkimizda",
+     "title": "Hakkımızda | Demo A.S. kurumsal profil ve ekip",
+     "title_px": 437,
+     "title_shown": "Hakkımızda | Demo A.S. kurumsal profil ve ekip",
+     "title_truncated": false
+    },
+    {
+     "description": "",
+     "description_missing": true,
+     "description_shown": "",
+     "description_truncated": false,
+     "device": "mobile",
+     "display_url": "demo.test › hakkimizda",
+     "title": "Hakkımızda | Demo A.S. kurumsal profil ve ekip",
+     "title_px": 437,
+     "title_shown": "Hakkımızda | Demo A.S. kurumsal profil ve ekip",
+     "title_truncated": false
+    }
+   ],
+   "social": {
+    "image": {
+     "absolute": true,
+     "bytes": null,
+     "bytes_is_lower_bound": false,
+     "error": null,
+     "format": null,
+     "height": null,
+     "ratio": null,
+     "reachable": null,
+     "status": null,
+     "too_heavy": false,
+     "url": null,
+     "width": null
+    },
+    "missing_og": [
+     "og:title",
+     "og:description",
+     "og:image"
+    ],
+    "og": {},
+    "twitter": {}
+   }
+  },
+  "readability": {
+   "keywords": [],
+   "language": "tr",
+   "notes": [],
+   "phrases": [],
+   "readability": null,
+   "suggested_targets": [
+    "sayfa",
+    "hakkımızda",
+    "ana"
+   ],
+   "terms": [
+    {
+     "count": 2,
+     "density": 22.22,
+     "term": "sayfa"
+    },
+    {
+     "count": 2,
+     "density": 22.22,
+     "term": "hakkımızda"
+    },
+    {
+     "count": 1,
+     "density": 11.11,
+     "term": "ana"
+    },
+    {
+     "count": 1,
+     "density": 11.11,
+     "term": "iletişim"
+    },
+    {
+     "count": 1,
+     "density": 11.11,
+     "term": "blog"
+    },
+    {
+     "count": 1,
+     "density": 11.11,
+     "term": "kısa"
+    }
+   ],
+   "title_terms": [
+    {
+     "count": 2,
+     "density": 22.22,
+     "term": "hakkımızda"
+    }
+   ]
+  },
+  "schema_suggestions": {
+   "items": [],
+   "notes": [
+    "no-missing-types-detected",
+    "suggestions-are-not-part-of-the-page"
+   ],
+   "pages_examined": 1,
+   "product_gaps": []
+  },
+  "site_setup": {
+   "custom_404": false,
+   "files": {
+    "ads_txt": {
+     "detail": null,
+     "error": null,
+     "present": false,
+     "status": 404,
+     "url": "https://demo.test/ads.txt"
+    },
+    "favicon": {
+     "detail": null,
+     "error": null,
+     "present": false,
+     "status": 404,
+     "url": "https://demo.test/favicon.ico"
+    },
+    "humans_txt": {
+     "detail": null,
+     "error": null,
+     "present": false,
+     "status": 404,
+     "url": "https://demo.test/humans.txt"
+    },
+    "security_txt": {
+     "detail": null,
+     "error": null,
+     "present": false,
+     "status": 404,
+     "url": "https://demo.test/.well-known/security.txt"
+    }
+   },
+   "headers": {
+    "cache_control": null,
+    "content_encoding": null,
+    "etag": false,
+    "last_modified": false,
+    "server": null,
+    "vary": null,
+    "x_powered_by": null
+   },
+   "hsts": {
+    "present": false
+   },
+   "http_version": "unknown",
+   "redirects": [
+    {
+     "error": null,
+     "final_status": 404,
+     "final_url": "http://demo.test/",
+     "hops": 0,
+     "name": "http",
+     "permanent": null,
+     "status": 404,
+     "variant_url": "http://demo.test/"
+    },
+    {
+     "error": null,
+     "final_status": 404,
+     "final_url": "https://www.demo.test/",
+     "hops": 0,
+     "name": "www-counterpart",
+     "permanent": null,
+     "status": 404,
+     "variant_url": "https://www.demo.test/"
+    },
+    {
+     "error": null,
+     "final_status": 404,
+     "final_url": "https://demo.test/hakkimizda/",
+     "hops": 0,
+     "name": "trailing-slash",
+     "permanent": null,
+     "status": 404,
+     "variant_url": "https://demo.test/hakkimizda/"
+    },
+    {
+     "error": null,
+     "final_status": 404,
+     "final_url": "https://demo.test/HAKKIMIZDA",
+     "hops": 0,
+     "name": "uppercase",
+     "permanent": null,
+     "status": 404,
+     "variant_url": "https://demo.test/HAKKIMIZDA"
+    },
+    {
+     "error": null,
+     "final_status": 404,
+     "final_url": "https://demo.test/index.html",
+     "hops": 0,
+     "name": "index-html",
+     "permanent": null,
+     "status": 404,
+     "variant_url": "https://demo.test/index.html"
+    },
+    {
+     "error": null,
+     "final_status": 404,
+     "final_url": "https://demo.test/index.php",
+     "hops": 0,
+     "name": "index-php",
+     "permanent": null,
+     "status": 404,
+     "variant_url": "https://demo.test/index.php"
+    }
+   ],
+   "requests_made": 11,
+   "skipped": {},
+   "soft_404": {
+    "detected": false,
+    "final_status": 404,
+    "final_url": "https://demo.test/55ddcf84eae48c2ef1934cd9-seoa-probe",
+    "probe_url": "https://demo.test/55ddcf84eae48c2ef1934cd9-seoa-probe",
+    "status": 404
+   }
+  },
+  "techstack": {
+   "by_category": {},
+   "items": []
+  }
+ },
+ "final_origin": "https://demo.test",
+ "findings": [
+  {
+   "category": "ai_readiness",
+   "confidence": "high",
+   "count": null,
+   "evidence": "no Content-Signal line in any robots.txt group",
+   "id": "content-signal-missing",
+   "scope": "site",
+   "severity": "Info",
+   "url": "https://demo.test/robots.txt"
+  },
+  {
+   "category": "technical",
+   "confidence": "high",
+   "count": null,
+   "evidence": "https://demo.test/favicon.ico -> 404",
+   "id": "favicon-missing",
+   "scope": "site",
+   "severity": "Low",
+   "url": "https://demo.test"
+  },
+  {
+   "category": "ai_readiness",
+   "confidence": "high",
+   "count": null,
+   "evidence": null,
+   "id": "llms-txt-missing",
+   "scope": "site",
+   "severity": "Info",
+   "url": "https://demo.test/llms.txt"
+  },
+  {
+   "category": "ai_readiness",
+   "confidence": "high",
+   "count": null,
+   "evidence": "no .md sibling, no alternate Markdown link; Accept negotiation not tested",
+   "id": "markdown-not-available",
+   "scope": "site",
+   "severity": "Info",
+   "url": "https://demo.test/hakkimizda"
+  },
+  {
+   "category": "technical",
+   "confidence": "high",
+   "count": null,
+   "evidence": "no <link rel=\"canonical\"> with an href",
+   "id": "missing-canonical",
+   "scope": "page",
+   "severity": "Medium",
+   "url": "https://demo.test/hakkimizda"
+  },
+  {
+   "category": "onpage",
+   "confidence": "high",
+   "count": null,
+   "evidence": "no <meta name=\"description\"> with content",
+   "id": "missing-meta-description",
+   "scope": "page",
+   "severity": "Medium",
+   "url": "https://demo.test/hakkimizda"
+  },
+  {
+   "category": "onpage",
+   "confidence": "high",
+   "count": null,
+   "evidence": "no og:title and no og:image",
+   "id": "missing-open-graph",
+   "scope": "page",
+   "severity": "Medium",
+   "url": "https://demo.test/hakkimizda"
+  },
+  {
+   "category": "technical",
+   "confidence": "medium",
+   "count": null,
+   "evidence": "no ETag, no Last-Modified",
+   "id": "no-cache-validators",
+   "scope": "site",
+   "severity": "Low",
+   "url": "https://demo.test/hakkimizda"
+  },
+  {
+   "category": "technical",
+   "confidence": "medium",
+   "count": null,
+   "evidence": "404, 9 bytes, no links",
+   "id": "no-custom-404",
+   "scope": "site",
+   "severity": "Low",
+   "url": "https://demo.test"
+  },
+  {
+   "category": "schema",
+   "confidence": "high",
+   "count": null,
+   "evidence": null,
+   "id": "schema-none-found",
+   "scope": "page",
+   "severity": "Info",
+   "url": "https://demo.test/hakkimizda"
+  },
+  {
+   "category": "technical",
+   "confidence": "high",
+   "count": null,
+   "evidence": "https://demo.test/.well-known/security.txt -> 404",
+   "id": "security-txt-missing",
+   "scope": "site",
+   "severity": "Info",
+   "url": "https://demo.test"
+  },
+  {
+   "category": "content",
+   "confidence": "high",
+   "count": null,
+   "evidence": "4 words of visible body text",
+   "id": "thin-content",
+   "scope": "page",
+   "severity": "Medium",
+   "url": "https://demo.test/hakkimizda"
+  },
+  {
+   "category": "onpage",
+   "confidence": "high",
+   "count": null,
+   "evidence": null,
+   "id": "twitter-card-missing",
+   "scope": "page",
+   "severity": "Low",
+   "url": "https://demo.test/hakkimizda"
+  }
+ ],
+ "indexability": [
+  {
+   "canonical": null,
+   "depth": 0,
+   "in_sitemap": null,
+   "indexable": true,
+   "inlinks": 0,
+   "reasons": [],
+   "status": 200,
+   "url": "https://demo.test/hakkimizda"
+  }
+ ],
+ "lang": "tr",
+ "links": {
+  "broken": 0,
+  "checked": 5,
+  "external_domains": [],
+  "external_total": 0,
+  "external_unique": 0,
+  "internal_total": 6,
+  "internal_unique": 5,
+  "links": [
+   {
+    "anchor": "Ana sayfa",
+    "checked": true,
+    "error": null,
+    "final_url": "https://demo.test/",
+    "kind": "internal",
+    "redirect_hops": 0,
+    "rel": [],
+    "source_url": "https://demo.test/hakkimizda",
+    "target_status": 200,
+    "target_url": "https://demo.test/",
+    "zone": "nav"
+   },
+   {
+    "anchor": "Hakkımızda",
+    "checked": true,
+    "error": null,
+    "final_url": "https://demo.test/hakkimizda",
+    "kind": "internal",
+    "redirect_hops": 0,
+    "rel": [],
+    "source_url": "https://demo.test/hakkimizda",
+    "target_status": 200,
+    "target_url": "https://demo.test/hakkimizda",
+    "zone": "nav"
+   },
+   {
+    "anchor": "İletişim",
+    "checked": true,
+    "error": null,
+    "final_url": "https://demo.test/iletisim",
+    "kind": "internal",
+    "redirect_hops": 0,
+    "rel": [],
+    "source_url": "https://demo.test/hakkimizda",
+    "target_status": 200,
+    "target_url": "https://demo.test/iletisim",
+    "zone": "nav"
+   },
+   {
+    "anchor": "Blog",
+    "checked": true,
+    "error": null,
+    "final_url": "https://demo.test/blog/yazi-1-seo-nedir",
+    "kind": "internal",
+    "redirect_hops": 0,
+    "rel": [],
+    "source_url": "https://demo.test/hakkimizda",
+    "target_status": 200,
+    "target_url": "https://demo.test/blog/yazi-1-seo-nedir",
+    "zone": "nav"
+   },
+   {
+    "anchor": "Gizlilik Politikası",
+    "checked": true,
+    "error": null,
+    "final_url": "https://demo.test/gizlilik",
+    "kind": "internal",
+    "redirect_hops": 0,
+    "rel": [],
+    "source_url": "https://demo.test/hakkimizda",
+    "target_status": 200,
+    "target_url": "https://demo.test/gizlilik",
+    "zone": "nav"
+   },
+   {
+    "anchor": "İletişim",
+    "checked": true,
+    "error": null,
+    "final_url": "https://demo.test/iletisim",
+    "kind": "internal",
+    "redirect_hops": 0,
+    "rel": [],
+    "source_url": "https://demo.test/hakkimizda",
+    "target_status": 200,
+    "target_url": "https://demo.test/iletisim",
+    "zone": "nav"
+   }
+  ],
+  "max_depth": 0,
+  "nofollow": 0,
+  "orphans": [],
+  "pages": [
+   {
+    "depth": 0,
+    "in_sitemap": null,
+    "inlinks": 0,
+    "outlinks_external": 0,
+    "outlinks_internal": 6,
+    "url": "https://demo.test/hakkimizda"
+   }
+  ],
+  "redirecting": 0,
+  "skipped": 0,
+  "truncated": false
+ },
+ "mode": "page",
+ "not_checked": [
+  {
+   "check_id": "authority",
+   "reason_code": "no-api-key",
+   "url": null
+  },
+  {
+   "check_id": "competitors",
+   "reason_code": "no-competitors",
+   "url": null
+  },
+  {
+   "check_id": "description-not-reflected-in-content",
+   "reason_code": "language-unsupported",
+   "url": "https://demo.test/hakkimizda"
+  },
+  {
+   "check_id": "hreflang",
+   "reason_code": "not-applicable",
+   "url": null
+  },
+  {
+   "check_id": "keyword-targeting",
+   "reason_code": "no-keywords",
+   "url": "https://demo.test/hakkimizda"
+  },
+  {
+   "check_id": "local",
+   "reason_code": "not-applicable",
+   "url": null
+  },
+  {
+   "check_id": "local-nap-inconsistent",
+   "reason_code": "not-applicable",
+   "url": null
+  },
+  {
+   "check_id": "local-no-phone-link",
+   "reason_code": "not-applicable",
+   "url": null
+  },
+  {
+   "check_id": "markdown-negotiation",
+   "reason_code": "fetcher-headers-unsupported",
+   "url": null
+  },
+  {
+   "check_id": "readability",
+   "reason_code": "too-little-text",
+   "url": "https://demo.test/hakkimizda"
+  },
+  {
+   "check_id": "screenshots",
+   "reason_code": "render-unavailable",
+   "url": "https://demo.test/hakkimizda"
+  },
+  {
+   "check_id": "sitemap_generated",
+   "reason_code": "site-mode-only",
+   "url": null
+  },
+  {
+   "check_id": "title-not-reflected-in-content",
+   "reason_code": "language-unsupported",
+   "url": "https://demo.test/hakkimizda"
+  }
+ ],
+ "pages": [
+  {
+   "error": null,
+   "final_url": "https://demo.test/hakkimizda",
+   "is_spa": null,
+   "page_score": 93.0,
+   "rendered": false,
+   "sample_kind": "core",
+   "status": 200,
+   "template_key": null,
+   "title": "Hakkımızda | Demo A.S. kurumsal profil ve ekip",
+   "url": "https://demo.test/hakkimizda",
+   "word_count": 4
+  }
+ ],
+ "report_en": {
+  "action_plan": {
+   "phases": [
+    {
+     "id": "phase-1",
+     "items": [],
+     "name": "Phase 1: Critical fixes",
+     "name_key": "plan.phase1",
+     "notes": [],
+     "number": 1,
+     "timeframe": "Week 1",
+     "timeframe_key": "plan.week1"
+    },
+    {
+     "id": "phase-2",
+     "items": [
+      {
+       "order": 1,
+       "recommendation_id": "rec_0001"
+      },
+      {
+       "order": 2,
+       "recommendation_id": "rec_0002"
+      },
+      {
+       "order": 3,
+       "recommendation_id": "rec_0003"
+      }
+     ],
+     "name": "Phase 2: High-impact improvements",
+     "name_key": "plan.phase2",
+     "notes": [],
+     "number": 2,
+     "timeframe": "Weeks 2-3",
+     "timeframe_key": "plan.weeks2-3"
+    },
+    {
+     "id": "phase-3",
+     "items": [
+      {
+       "order": 1,
+       "recommendation_id": "rec_0004"
+      }
+     ],
+     "name": "Phase 3: Content & authority",
+     "name_key": "plan.phase3",
+     "notes": [],
+     "number": 3,
+     "timeframe": "Month 2",
+     "timeframe_key": "plan.month2"
+    },
+    {
+     "id": "phase-4",
+     "items": [
+      {
+       "order": 1,
+       "recommendation_id": "rec_0005"
+      },
+      {
+       "order": 2,
+       "recommendation_id": "rec_0008"
+      },
+      {
+       "order": 3,
+       "recommendation_id": "rec_0009"
+      },
+      {
+       "order": 4,
+       "recommendation_id": "rec_0010"
+      },
+      {
+       "order": 5,
+       "recommendation_id": "rec_0011"
+      },
+      {
+       "order": 6,
+       "recommendation_id": "rec_0013"
+      },
+      {
+       "order": 7,
+       "recommendation_id": "rec_0006"
+      },
+      {
+       "order": 8,
+       "recommendation_id": "rec_0007"
+      },
+      {
+       "order": 9,
+       "recommendation_id": "rec_0012"
+      }
+     ],
+     "name": "Phase 4: Monitoring & iteration",
+     "name_key": "plan.phase4",
+     "notes": [
+      "Re-run the audit after the fixes.",
+      "Compare score and coverage within the same score version."
+     ],
+     "number": 4,
+     "timeframe": "Ongoing",
+     "timeframe_key": "plan.ongoing"
+    }
+   ]
+  },
+  "advisory": null,
+  "agentic": {
+   "fraction": "1/1",
+   "not_measured_reason": null,
+   "not_measured_text": null,
+   "note": "This checklist is our own. The Lighthouse Agentic Browsing X/N score is not produced without PageSpeed.",
+   "notes": [],
+   "rows": [
+    {
+     "detail": "absent (optional)",
+     "id": "llms-txt",
+     "label": "llms.txt",
+     "status": "na"
+    },
+    {
+     "detail": "not found",
+     "id": "markdown-delivery",
+     "label": "Markdown access",
+     "status": "na"
+    },
+    {
+     "detail": "absent (optional)",
+     "id": "content-signal",
+     "label": "Content-Signal (robots.txt)",
+     "status": "na"
+    },
+    {
+     "detail": "no traces found",
+     "id": "agent-discovery",
+     "label": "Agent / WebMCP traces",
+     "status": "na"
+    },
+    {
+     "detail": "all named",
+     "id": "named-controls",
+     "label": "Named controls",
+     "status": "pass"
+    }
+   ],
+   "status": "measured",
+   "truncated": false
+  },
+  "audit": {
+   "business_type": "other",
+   "error": null,
+   "error_text": null,
+   "final_url": "https://demo.test",
+   "finished_at": "2026-11-22T22:44:38.009235Z",
+   "id": "4a6b8f5b33244f94",
+   "language": "tr",
+   "locale": "en",
+   "mode": "page",
+   "parent_audit_id": null,
+   "requested_url": "https://demo.test/hakkimizda",
+   "started_at": "2026-11-22T22:44:37.895972Z",
+   "status": "completed"
+  },
+  "authority": {
+   "counts_toward_overall": false,
+   "items": [],
+   "not_measured_reason": "no-api-key",
+   "not_measured_text": "No OpenPageRank key is set. Get a free key at keywordseverywhere.com/account/openpagerank and add it to .env as SEOA_OPENPAGERANK_KEY.",
+   "note": "",
+   "status": "not_measured",
+   "truncated": false
+  },
+  "competitors": {
+   "columns": [],
+   "counts_toward_overall": false,
+   "metrics": [],
+   "not_measured_reason": "no-competitors",
+   "not_measured_text": "No competitor address was given. You can enter up to 3 on the home page form.",
+   "note": "",
+   "skipped": [],
+   "status": "not_measured",
+   "truncated": false
+  },
+  "crawl": {
+   "coverage": {
+    "crux": false,
+    "psi": false
+   },
+   "limits": {
+    "max_pages_applied": 25,
+    "max_pages_requested": null,
+    "reason": null
+   },
+   "sample_seed": null,
+   "templates": []
+  },
+  "data_sources": [
+   {
+    "id": "fetch",
+    "label": "HTTP fetch",
+    "status": "ok"
+   },
+   {
+    "id": "render",
+    "label": "JS rendering",
+    "status": "missing"
+   },
+   {
+    "id": "lab",
+    "label": "Lab performance measurement",
+    "status": "missing"
+   },
+   {
+    "id": "psi",
+    "label": "PageSpeed/CrUX",
+    "status": "missing"
+   },
+   {
+    "id": "gsc",
+    "label": "Search Console",
+    "status": "missing"
+   },
+   {
+    "id": "crux",
+    "label": "CrUX field data",
+    "status": "missing"
+   },
+   {
+    "id": "llm",
+    "label": "AI model",
+    "status": "missing"
+   }
+  ],
+  "field": {
+   "counts_toward_overall": false,
+   "form_factor": null,
+   "metrics": [],
+   "not_measured_reason": "field-not-run",
+   "not_measured_text": "Field data (CrUX) was not queried in this audit.",
+   "note": "",
+   "period_first": null,
+   "period_last": null,
+   "scope": null,
+   "source": "crux",
+   "status": "not_measured",
+   "truncated": false
+  },
+  "findings": [
+   {
+    "affected": {
+     "count": 1,
+     "examples": [
+      "https://demo.test/hakkimizda"
+     ],
+     "share_of_sampled_pages": 1.0
+    },
+    "category": "technical",
+    "check_id": "missing-canonical",
+    "confidence": "high",
+    "count": null,
+    "evidence": {
+     "truncated": false,
+     "value": "no <link rel=\"canonical\"> with an href"
+    },
+    "heuristic": false,
+    "id": "fnd_0001",
+    "is_gate": false,
+    "layer": "A",
+    "message": "The page has no canonical link. Search engines then choose the preferred URL themselves.",
+    "message_key": "finding.missing-canonical",
+    "recommendation_ids": [
+     "rec_0001"
+    ],
+    "rule_version": "1.0",
+    "scope": "page",
+    "severity": "Medium",
+    "severity_original": null,
+    "severity_reason": null,
+    "url": "https://demo.test/hakkimizda",
+    "urls": [
+     "https://demo.test/hakkimizda"
+    ]
+   },
+   {
+    "affected": {
+     "count": 1,
+     "examples": [
+      "https://demo.test/hakkimizda"
+     ],
+     "share_of_sampled_pages": 1.0
+    },
+    "category": "onpage",
+    "check_id": "missing-meta-description",
+    "confidence": "high",
+    "count": null,
+    "evidence": {
+     "truncated": false,
+     "value": "no <meta name=\"description\"> with content"
+    },
+    "heuristic": false,
+    "id": "fnd_0002",
+    "is_gate": false,
+    "layer": "A",
+    "message": "The page has no meta description. Search engines write their own snippet when none is given.",
+    "message_key": "finding.missing-meta-description",
+    "recommendation_ids": [
+     "rec_0002"
+    ],
+    "rule_version": "1.0",
+    "scope": "page",
+    "severity": "Medium",
+    "severity_original": null,
+    "severity_reason": null,
+    "url": "https://demo.test/hakkimizda",
+    "urls": [
+     "https://demo.test/hakkimizda"
+    ]
+   },
+   {
+    "affected": {
+     "count": 1,
+     "examples": [
+      "https://demo.test/hakkimizda"
+     ],
+     "share_of_sampled_pages": 1.0
+    },
+    "category": "onpage",
+    "check_id": "missing-open-graph",
+    "confidence": "high",
+    "count": null,
+    "evidence": {
+     "truncated": false,
+     "value": "no og:title and no og:image"
+    },
+    "heuristic": false,
+    "id": "fnd_0003",
+    "is_gate": false,
+    "layer": "A",
+    "message": "The page has neither og:title nor og:image, so shared links show no title or preview image.",
+    "message_key": "finding.missing-open-graph",
+    "recommendation_ids": [
+     "rec_0003"
+    ],
+    "rule_version": "1.0",
+    "scope": "page",
+    "severity": "Medium",
+    "severity_original": null,
+    "severity_reason": null,
+    "url": "https://demo.test/hakkimizda",
+    "urls": [
+     "https://demo.test/hakkimizda"
+    ]
+   },
+   {
+    "affected": {
+     "count": 1,
+     "examples": [
+      "https://demo.test/hakkimizda"
+     ],
+     "share_of_sampled_pages": 1.0
+    },
+    "category": "content",
+    "check_id": "thin-content",
+    "confidence": "high",
+    "count": null,
+    "evidence": {
+     "truncated": false,
+     "value": "4 words of visible body text"
+    },
+    "heuristic": true,
+    "id": "fnd_0004",
+    "is_gate": false,
+    "layer": "A",
+    "message": "The page has fewer than 200 words of visible body text. Google has no minimum word count, so this is not a ranking rule. Check that the page fully answers what a visitor came for.",
+    "message_key": "finding.thin-content",
+    "recommendation_ids": [
+     "rec_0004"
+    ],
+    "rule_version": "1.0",
+    "scope": "page",
+    "severity": "Medium",
+    "severity_original": null,
+    "severity_reason": null,
+    "url": "https://demo.test/hakkimizda",
+    "urls": [
+     "https://demo.test/hakkimizda"
+    ]
+   },
+   {
+    "affected": {
+     "count": 1,
+     "examples": [
+      "https://demo.test"
+     ],
+     "share_of_sampled_pages": null
+    },
+    "category": "technical",
+    "check_id": "favicon-missing",
+    "confidence": "high",
+    "count": null,
+    "evidence": {
+     "truncated": false,
+     "value": "https://demo.test/favicon.ico -> 404"
+    },
+    "heuristic": false,
+    "id": "fnd_0005",
+    "is_gate": false,
+    "layer": "A",
+    "message": "No favicon is declared and /favicon.ico does not exist.",
+    "message_key": "finding.favicon-missing",
+    "recommendation_ids": [
+     "rec_0005"
+    ],
+    "rule_version": "1.0",
+    "scope": "site",
+    "severity": "Low",
+    "severity_original": null,
+    "severity_reason": null,
+    "url": "https://demo.test",
+    "urls": [
+     "https://demo.test"
+    ]
+   },
+   {
+    "affected": {
+     "count": 1,
+     "examples": [
+      "https://demo.test/hakkimizda"
+     ],
+     "share_of_sampled_pages": null
+    },
+    "category": "technical",
+    "check_id": "no-cache-validators",
+    "confidence": "medium",
+    "count": null,
+    "evidence": {
+     "truncated": false,
+     "value": "no ETag, no Last-Modified"
+    },
+    "heuristic": true,
+    "id": "fnd_0006",
+    "is_gate": false,
+    "layer": "A",
+    "message": "The HTML response has neither ETag nor Last-Modified, so clients cannot revalidate it cheaply (heuristic).",
+    "message_key": "finding.no-cache-validators",
+    "recommendation_ids": [
+     "rec_0006"
+    ],
+    "rule_version": "1.0",
+    "scope": "site",
+    "severity": "Low",
+    "severity_original": null,
+    "severity_reason": null,
+    "url": "https://demo.test/hakkimizda",
+    "urls": [
+     "https://demo.test/hakkimizda"
+    ]
+   },
+   {
+    "affected": {
+     "count": 1,
+     "examples": [
+      "https://demo.test"
+     ],
+     "share_of_sampled_pages": null
+    },
+    "category": "technical",
+    "check_id": "no-custom-404",
+    "confidence": "medium",
+    "count": null,
+    "evidence": {
+     "truncated": false,
+     "value": "404, 9 bytes, no links"
+    },
+    "heuristic": true,
+    "id": "fnd_0007",
+    "is_gate": false,
+    "layer": "A",
+    "message": "The 404 response looks like a bare server default page without navigation (heuristic).",
+    "message_key": "finding.no-custom-404",
+    "recommendation_ids": [
+     "rec_0007"
+    ],
+    "rule_version": "1.0",
+    "scope": "site",
+    "severity": "Low",
+    "severity_original": null,
+    "severity_reason": null,
+    "url": "https://demo.test",
+    "urls": [
+     "https://demo.test"
+    ]
+   },
+   {
+    "affected": {
+     "count": 1,
+     "examples": [
+      "https://demo.test/hakkimizda"
+     ],
+     "share_of_sampled_pages": 1.0
+    },
+    "category": "onpage",
+    "check_id": "twitter-card-missing",
+    "confidence": "high",
+    "count": null,
+    "evidence": null,
+    "heuristic": true,
+    "id": "fnd_0008",
+    "is_gate": false,
+    "layer": "A",
+    "message": "There is no twitter:card tag. X/Twitter falls back to Open Graph but shows a small card by default.",
+    "message_key": "finding.twitter-card-missing",
+    "recommendation_ids": [
+     "rec_0008"
+    ],
+    "rule_version": "1.0",
+    "scope": "page",
+    "severity": "Low",
+    "severity_original": null,
+    "severity_reason": null,
+    "url": "https://demo.test/hakkimizda",
+    "urls": [
+     "https://demo.test/hakkimizda"
+    ]
+   },
+   {
+    "affected": {
+     "count": 1,
+     "examples": [
+      "https://demo.test/robots.txt"
+     ],
+     "share_of_sampled_pages": null
+    },
+    "category": "ai_readiness",
+    "check_id": "content-signal-missing",
+    "confidence": "high",
+    "count": null,
+    "evidence": {
+     "truncated": false,
+     "value": "no Content-Signal line in any robots.txt group"
+    },
+    "heuristic": true,
+    "id": "fnd_0009",
+    "is_gate": false,
+    "layer": "A",
+    "message": "robots.txt has no Content-Signal line stating how content may be used (search, ai-input, ai-train). Content-Signal is a draft, and it does not affect Google Search.",
+    "message_key": "finding.content-signal-missing",
+    "recommendation_ids": [
+     "rec_0009"
+    ],
+    "rule_version": "1.0",
+    "scope": "site",
+    "severity": "Info",
+    "severity_original": null,
+    "severity_reason": null,
+    "url": "https://demo.test/robots.txt",
+    "urls": [
+     "https://demo.test/robots.txt"
+    ]
+   },
+   {
+    "affected": {
+     "count": 1,
+     "examples": [
+      "https://demo.test/llms.txt"
+     ],
+     "share_of_sampled_pages": null
+    },
+    "category": "ai_readiness",
+    "check_id": "llms-txt-missing",
+    "confidence": "high",
+    "count": null,
+    "evidence": null,
+    "heuristic": true,
+    "id": "fnd_0010",
+    "is_gate": false,
+    "layer": "A",
+    "message": "No /llms.txt file was found. It is an optional community proposal that Google Search ignores.",
+    "message_key": "finding.llms-txt-missing",
+    "recommendation_ids": [
+     "rec_0010"
+    ],
+    "rule_version": "1.0",
+    "scope": "site",
+    "severity": "Info",
+    "severity_original": null,
+    "severity_reason": null,
+    "url": "https://demo.test/llms.txt",
+    "urls": [
+     "https://demo.test/llms.txt"
+    ]
+   },
+   {
+    "affected": {
+     "count": 1,
+     "examples": [
+      "https://demo.test/hakkimizda"
+     ],
+     "share_of_sampled_pages": null
+    },
+    "category": "ai_readiness",
+    "check_id": "markdown-not-available",
+    "confidence": "high",
+    "count": null,
+    "evidence": {
+     "truncated": false,
+     "value": "no .md sibling, no alternate Markdown link; Accept negotiation not tested"
+    },
+    "heuristic": true,
+    "id": "fnd_0011",
+    "is_gate": false,
+    "layer": "A",
+    "message": "No Markdown version of the page was found (no .md URL and no alternate Markdown link). Optional; no AI service is confirmed to request it.",
+    "message_key": "finding.markdown-not-available",
+    "recommendation_ids": [
+     "rec_0011"
+    ],
+    "rule_version": "1.0",
+    "scope": "site",
+    "severity": "Info",
+    "severity_original": null,
+    "severity_reason": null,
+    "url": "https://demo.test/hakkimizda",
+    "urls": [
+     "https://demo.test/hakkimizda"
+    ]
+   },
+   {
+    "affected": {
+     "count": 1,
+     "examples": [
+      "https://demo.test/hakkimizda"
+     ],
+     "share_of_sampled_pages": 1.0
+    },
+    "category": "schema",
+    "check_id": "schema-none-found",
+    "confidence": "high",
+    "count": null,
+    "evidence": null,
+    "heuristic": true,
+    "id": "fnd_0012",
+    "is_gate": false,
+    "layer": "A",
+    "message": "finding.schema-none-found",
+    "message_key": "finding.schema-none-found",
+    "recommendation_ids": [
+     "rec_0012"
+    ],
+    "rule_version": "1.0",
+    "scope": "page",
+    "severity": "Info",
+    "severity_original": null,
+    "severity_reason": null,
+    "url": "https://demo.test/hakkimizda",
+    "urls": [
+     "https://demo.test/hakkimizda"
+    ]
+   },
+   {
+    "affected": {
+     "count": 1,
+     "examples": [
+      "https://demo.test"
+     ],
+     "share_of_sampled_pages": null
+    },
+    "category": "technical",
+    "check_id": "security-txt-missing",
+    "confidence": "high",
+    "count": null,
+    "evidence": {
+     "truncated": false,
+     "value": "https://demo.test/.well-known/security.txt -> 404"
+    },
+    "heuristic": false,
+    "id": "fnd_0013",
+    "is_gate": false,
+    "layer": "A",
+    "message": "No /.well-known/security.txt with a Contact field was found.",
+    "message_key": "finding.security-txt-missing",
+    "recommendation_ids": [
+     "rec_0013"
+    ],
+    "rule_version": "1.0",
+    "scope": "site",
+    "severity": "Info",
+    "severity_original": null,
+    "severity_reason": null,
+    "url": "https://demo.test",
+    "urls": [
+     "https://demo.test"
+    ]
+   }
+  ],
+  "glance": {
+   "items": [
+    {
+     "label": "Overall score",
+     "value": "92 / 100"
+    },
+    {
+     "label": "Indexable pages",
+     "value": "1 / 1"
+    },
+    {
+     "label": "Internal / external links",
+     "value": "6 / 0"
+    },
+    {
+     "label": "Broken links",
+     "value": "0"
+    },
+    {
+     "label": "Critical / High findings",
+     "value": "0 / 0"
+    }
+   ],
+   "not_measured_reason": null,
+   "not_measured_text": null,
+   "status": "measured",
+   "truncated": false
+  },
+  "gsc": {
+   "account": null,
+   "can_connect": true,
+   "delay_note": "",
+   "gsc_status": "not-connected",
+   "indexed_count": 0,
+   "inspections": [],
+   "inspections_total": 0,
+   "mismatch_count": 0,
+   "not_indexed_count": 0,
+   "not_measured_reason": "gsc-not-connected",
+   "not_measured_text": "Not connected: no Google account is linked, so Google's indexing and search data was not fetched.",
+   "note": "",
+   "period_days": 28,
+   "permission": null,
+   "property": null,
+   "sitemaps": [],
+   "status": "not_measured",
+   "top_pages": [],
+   "top_queries": [],
+   "totals": {},
+   "truncated": false
+  },
+  "history": {
+   "counts_toward_overall": false,
+   "metrics": [],
+   "new_findings": [],
+   "new_total": 0,
+   "not_measured_reason": "history-unavailable",
+   "not_measured_text": "No history data was supplied with this report.",
+   "note": "",
+   "persisting": 0,
+   "previous_at": null,
+   "previous_href": null,
+   "previous_id": null,
+   "resolved_findings": [],
+   "resolved_total": 0,
+   "rows": [],
+   "rows_total": 0,
+   "scores": [],
+   "status": "not_measured",
+   "truncated": false,
+   "warning_text": null
+  },
+  "hreflang": {
+   "has_x_default": false,
+   "languages": [],
+   "not_measured_reason": "hreflang-not-applicable",
+   "not_measured_text": "The site declares no hreflang and does not look multilingual, so it was not checked.",
+   "notes": [
+    "The site looks single-language."
+   ],
+   "rows": [],
+   "rows_total": 0,
+   "status": "not_measured",
+   "truncated": false,
+   "unchecked": 0
+  },
+  "images": {
+   "by_format": [],
+   "not_measured_reason": "lab-unavailable",
+   "not_measured_text": "The browser measurement could not be taken (rendering is off or failed).",
+   "rows": [],
+   "rows_total": 0,
+   "status": "not_measured",
+   "thresholds_note": "",
+   "total_kb": 0.0,
+   "truncated": false
+  },
+  "indexability": {
+   "blocked_count": 0,
+   "indexable_count": 1,
+   "not_measured_reason": null,
+   "not_measured_text": null,
+   "note": "This table shows whether anything BLOCKS indexing; it does not show whether Google has actually indexed the page (that needs Search Console).",
+   "rows": [
+    {
+     "canonical": null,
+     "depth": 0,
+     "in_sitemap": null,
+     "indexable": true,
+     "inlinks": 0,
+     "reason_texts": [],
+     "reasons": [],
+     "status": 200,
+     "url": "https://demo.test/hakkimizda"
+    }
+   ],
+   "rows_total": 1,
+   "status": "measured",
+   "truncated": false
+  },
+  "limitations": [
+   {
+    "code": "language-unsupported",
+    "message": "Language-dependent checks could not be run for this language."
+   }
+  ],
+  "links": {
+   "broken": [],
+   "external_domains": [],
+   "links": [
+    {
+     "anchor": "Ana sayfa",
+     "error": null,
+     "error_text": null,
+     "final_url": "https://demo.test/",
+     "kind": "internal",
+     "redirect_hops": 0,
+     "rel": [],
+     "source_url": "https://demo.test/hakkimizda",
+     "state": "ok",
+     "target_status": 200,
+     "target_url": "https://demo.test/",
+     "zone": "nav"
+    },
+    {
+     "anchor": "Hakkımızda",
+     "error": null,
+     "error_text": null,
+     "final_url": "https://demo.test/hakkimizda",
+     "kind": "internal",
+     "redirect_hops": 0,
+     "rel": [],
+     "source_url": "https://demo.test/hakkimizda",
+     "state": "ok",
+     "target_status": 200,
+     "target_url": "https://demo.test/hakkimizda",
+     "zone": "nav"
+    },
+    {
+     "anchor": "İletişim",
+     "error": null,
+     "error_text": null,
+     "final_url": "https://demo.test/iletisim",
+     "kind": "internal",
+     "redirect_hops": 0,
+     "rel": [],
+     "source_url": "https://demo.test/hakkimizda",
+     "state": "ok",
+     "target_status": 200,
+     "target_url": "https://demo.test/iletisim",
+     "zone": "nav"
+    },
+    {
+     "anchor": "Blog",
+     "error": null,
+     "error_text": null,
+     "final_url": "https://demo.test/blog/yazi-1-seo-nedir",
+     "kind": "internal",
+     "redirect_hops": 0,
+     "rel": [],
+     "source_url": "https://demo.test/hakkimizda",
+     "state": "ok",
+     "target_status": 200,
+     "target_url": "https://demo.test/blog/yazi-1-seo-nedir",
+     "zone": "nav"
+    },
+    {
+     "anchor": "Gizlilik Politikası",
+     "error": null,
+     "error_text": null,
+     "final_url": "https://demo.test/gizlilik",
+     "kind": "internal",
+     "redirect_hops": 0,
+     "rel": [],
+     "source_url": "https://demo.test/hakkimizda",
+     "state": "ok",
+     "target_status": 200,
+     "target_url": "https://demo.test/gizlilik",
+     "zone": "nav"
+    },
+    {
+     "anchor": "İletişim",
+     "error": null,
+     "error_text": null,
+     "final_url": "https://demo.test/iletisim",
+     "kind": "internal",
+     "redirect_hops": 0,
+     "rel": [],
+     "source_url": "https://demo.test/hakkimizda",
+     "state": "ok",
+     "target_status": 200,
+     "target_url": "https://demo.test/iletisim",
+     "zone": "nav"
+    }
+   ],
+   "links_total": 6,
+   "not_measured_reason": null,
+   "not_measured_text": null,
+   "orphans": [],
+   "pages": [
+    {
+     "depth": 0,
+     "in_sitemap": null,
+     "inlinks": 0,
+     "outlinks_external": 0,
+     "outlinks_internal": 6,
+     "url": "https://demo.test/hakkimizda"
+    }
+   ],
+   "pages_total": 1,
+   "redirecting": [],
+   "status": "measured",
+   "summary": {
+    "broken": 0,
+    "checked": 5,
+    "external_total": 0,
+    "external_unique": 0,
+    "internal_total": 6,
+    "internal_unique": 5,
+    "max_depth": 0,
+    "nofollow": 0,
+    "orphans": 0,
+    "redirecting": 0,
+    "skipped": 0
+   },
+   "truncated": false
+  },
+  "local": {
+   "addresses": [],
+   "facts": [],
+   "issues": [],
+   "not_measured_reason": "not-applicable",
+   "not_measured_text": "Not applicable for this audit type.",
+   "note": "",
+   "notes": [],
+   "phones": [],
+   "status": "not_measured",
+   "truncated": false
+  },
+  "methodology": {
+   "notes": [
+    "Measured: — checks ran and produced 13 findings.",
+    "Checks that could not be measured (13) are never counted as \"passed\" and do not count toward the score.",
+    "Thresholds such as title/description length, URL length and word count are display heuristics, not rules published by search engines.",
+    "Category weights are this product's internal model; Google does not publish numeric weights for ranking.",
+    "Coverage means two different things: category coverage (measured weight in the score) and page coverage (fetched pages).",
+    "If an indexing blocker exists on the entry page the score is capped; this is stated at the top of the report.",
+    "A category score is the severity-weighted share of the applicable checks in that category that passed; a check that could not be measured is not counted as passed and leaves the denominator."
+   ]
+  },
+  "not_checked": [
+   {
+    "check_id": "title-not-reflected-in-content",
+    "reason": "This check is disabled for this language.",
+    "reason_code": "language-unsupported",
+    "url": "https://demo.test/hakkimizda"
+   },
+   {
+    "check_id": "description-not-reflected-in-content",
+    "reason": "This check is disabled for this language.",
+    "reason_code": "language-unsupported",
+    "url": "https://demo.test/hakkimizda"
+   },
+   {
+    "check_id": "markdown-negotiation",
+    "reason": "fetcher-headers-unsupported",
+    "reason_code": "fetcher-headers-unsupported",
+    "url": null
+   },
+   {
+    "check_id": "authority",
+    "reason": "No OpenPageRank key is set. Get a free key at keywordseverywhere.com/account/openpagerank and add it to .env as SEOA_OPENPAGERANK_KEY.",
+    "reason_code": "no-api-key",
+    "url": null
+   },
+   {
+    "check_id": "competitors",
+    "reason": "No competitor address was given. You can enter up to 3 on the home page form.",
+    "reason_code": "no-competitors",
+    "url": null
+   },
+   {
+    "check_id": "hreflang",
+    "reason": "Not applicable for this audit type.",
+    "reason_code": "not-applicable",
+    "url": null
+   },
+   {
+    "check_id": "local",
+    "reason": "Not applicable for this audit type.",
+    "reason_code": "not-applicable",
+    "url": null
+   },
+   {
+    "check_id": "local-nap-inconsistent",
+    "reason": "Not applicable for this audit type.",
+    "reason_code": "not-applicable",
+    "url": null
+   },
+   {
+    "check_id": "local-no-phone-link",
+    "reason": "Not applicable for this audit type.",
+    "reason_code": "not-applicable",
+    "url": null
+   },
+   {
+    "check_id": "readability",
+    "reason": "too-little-text",
+    "reason_code": "too-little-text",
+    "url": "https://demo.test/hakkimizda"
+   },
+   {
+    "check_id": "keyword-targeting",
+    "reason": "no-keywords",
+    "reason_code": "no-keywords",
+    "url": "https://demo.test/hakkimizda"
+   },
+   {
+    "check_id": "screenshots",
+    "reason": "No screenshot: the browser (render) was not available.",
+    "reason_code": "render-unavailable",
+    "url": "https://demo.test/hakkimizda"
+   },
+   {
+    "check_id": "sitemap_generated",
+    "reason": "The suggested sitemap is built only in site audits (a single-page audit has no sample).",
+    "reason_code": "site-mode-only",
+    "url": null
+   }
+  ],
+  "pages": [
+   {
+    "error": null,
+    "final_url": "https://demo.test/hakkimizda",
+    "page_score": 93.0,
+    "rendered": false,
+    "role": "core",
+    "status": 200,
+    "template_key": null,
+    "title": "Hakkımızda | Demo A.S. kurumsal profil ve ekip",
+    "url": "https://demo.test/hakkimizda"
+   }
+  ],
+  "performance": {
+   "by_type": [],
+   "lab_note": "",
+   "no_cache": [],
+   "not_measured_reason": "lab-unavailable",
+   "not_measured_text": "The browser measurement could not be taken (rendering is off or failed).",
+   "rows": [],
+   "rows_total": 0,
+   "status": "not_measured",
+   "third_party": [],
+   "truncated": false,
+   "uncompressed": []
+  },
+  "previews": {
+   "not_measured_reason": null,
+   "not_measured_text": null,
+   "notes": [
+    "Without a meta description Google writes its own snippet.",
+    "Title truncation is a pixel-width estimate."
+   ],
+   "serp": [
+    {
+     "description_missing": true,
+     "description_shown": "",
+     "description_truncated": false,
+     "device": "desktop",
+     "device_label": "Desktop",
+     "display_url": "demo.test › hakkimizda",
+     "title_shown": "Hakkımızda | Demo A.S. kurumsal profil ve ekip",
+     "title_truncated": false
+    },
+    {
+     "description_missing": true,
+     "description_shown": "",
+     "description_truncated": false,
+     "device": "mobile",
+     "device_label": "Mobile",
+     "display_url": "demo.test › hakkimizda",
+     "title_shown": "Hakkımızda | Demo A.S. kurumsal profil ve ekip",
+     "title_truncated": false
+    }
+   ],
+   "social": [
+    {
+     "label": "Missing og tags",
+     "value": "og:title, og:description, og:image"
+    }
+   ],
+   "social_image": [],
+   "status": "measured",
+   "truncated": false
+  },
+  "quality": {
+   "checks": [],
+   "status": "PASS"
+  },
+  "rankings": {
+   "counts_toward_overall": false,
+   "keywords_note": "",
+   "keywords_requested": 0,
+   "list_error": "",
+   "low_ctr": [],
+   "not_measured_reason": "rankings-gsc-required",
+   "not_measured_text": "Not measured: Search Console is not connected. Rankings come only from the Search Console data of a verified site you own; someone else's rankings cannot be measured reliably for free.",
+   "note": "",
+   "opportunities": [],
+   "period_days": 28,
+   "rows": [],
+   "rules_note": "",
+   "status": "not_measured",
+   "truncated": false
+  },
+  "readability": {
+   "keywords": [],
+   "keywords_not_measured_text": "No keyword was entered; add some in the form to audit them here.",
+   "language": "tr",
+   "not_measured_reason": null,
+   "not_measured_text": null,
+   "notes": [],
+   "phrases": [],
+   "scores": [],
+   "status": "measured",
+   "suggested_targets": [
+    "sayfa",
+    "hakkımızda",
+    "ana"
+   ],
+   "terms": [
+    {
+     "label": "sayfa",
+     "value": "2"
+    },
+    {
+     "label": "hakkımızda",
+     "value": "2"
+    },
+    {
+     "label": "ana",
+     "value": "1"
+    },
+    {
+     "label": "iletişim",
+     "value": "1"
+    },
+    {
+     "label": "blog",
+     "value": "1"
+    },
+    {
+     "label": "kısa",
+     "value": "1"
+    }
+   ],
+   "truncated": false
+  },
+  "recommendations": [
+   {
+    "body": "Add a self-referencing <link rel=\"canonical\"> with the preferred absolute URL.",
+    "check_ids": [
+     "missing-canonical"
+    ],
+    "confidence": "high",
+    "context": [],
+    "depends_on": [],
+    "effort": {
+     "hours_max": 1.0,
+     "hours_min": 0.25,
+     "level": "S"
+    },
+    "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+    "finding_ids": [
+     "fnd_0001"
+    ],
+    "id": "rec_0001",
+    "impact": {
+     "level": "medium"
+    },
+    "leading_indicator": "Indexed page count and crawl errors in Search Console move in the right direction.",
+    "phase": 2,
+    "priority_score": 2.0,
+    "severity": "Medium",
+    "title": "Add a self-referencing <link rel=\"canonical\"> with the preferred absolute URL."
+   },
+   {
+    "body": "Write a meta description of about 120 to 160 characters for this page.",
+    "check_ids": [
+     "missing-meta-description"
+    ],
+    "confidence": "high",
+    "context": [],
+    "depends_on": [],
+    "effort": {
+     "hours_max": 1.0,
+     "hours_min": 0.25,
+     "level": "S"
+    },
+    "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+    "finding_ids": [
+     "fnd_0002"
+    ],
+    "id": "rec_0002",
+    "impact": {
+     "level": "medium"
+    },
+    "leading_indicator": "Impressions and click-through rate of the page in Search Console.",
+    "phase": 2,
+    "priority_score": 2.0,
+    "severity": "Medium",
+    "title": "Write a meta description of about 120 to 160 characters for this page."
+   },
+   {
+    "body": "Add og:title, og:description and og:image.",
+    "check_ids": [
+     "missing-open-graph"
+    ],
+    "confidence": "high",
+    "context": [],
+    "depends_on": [],
+    "effort": {
+     "hours_max": 1.0,
+     "hours_min": 0.25,
+     "level": "S"
+    },
+    "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+    "finding_ids": [
+     "fnd_0003"
+    ],
+    "id": "rec_0003",
+    "impact": {
+     "level": "medium"
+    },
+    "leading_indicator": "Impressions and click-through rate of the page in Search Console.",
+    "phase": 2,
+    "priority_score": 2.0,
+    "severity": "Medium",
+    "title": "Add og:title, og:description and og:image."
+   },
+   {
+    "body": "Check that the page fully answers the visitor's question; expand it if it does not.",
+    "check_ids": [
+     "thin-content"
+    ],
+    "confidence": "high",
+    "context": [],
+    "depends_on": [],
+    "effort": {
+     "hours_max": 24.0,
+     "hours_min": 8.0,
+     "level": "L"
+    },
+    "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+    "finding_ids": [
+     "fnd_0004"
+    ],
+    "id": "rec_0004",
+    "impact": {
+     "level": "medium"
+    },
+    "leading_indicator": "Engagement on the page (time on page, scroll depth) and impressions for its topic.",
+    "phase": 3,
+    "priority_score": 0.5,
+    "severity": "Medium",
+    "title": "Check that the page fully answers the visitor's question; expand it if it does not."
+   },
+   {
+    "body": "Add a favicon (a <link rel=\"icon\"> or /favicon.ico); Google shows it next to mobile results.",
+    "check_ids": [
+     "favicon-missing"
+    ],
+    "confidence": "high",
+    "context": [],
+    "depends_on": [],
+    "effort": {
+     "hours_max": 1.0,
+     "hours_min": 0.25,
+     "level": "S"
+    },
+    "failure_check": "The page declares an icon or /favicon.ico returns an image.",
+    "finding_ids": [
+     "fnd_0005"
+    ],
+    "id": "rec_0005",
+    "impact": {
+     "level": "low"
+    },
+    "leading_indicator": "Favicon shown next to the site in Google search results.",
+    "phase": 4,
+    "priority_score": 1.0,
+    "severity": "Low",
+    "title": "Add a favicon (a <link rel=\"icon\"> or /favicon.ico); Google shows it next to mobile results."
+   },
+   {
+    "body": "Send an ETag or Last-Modified header so repeat requests can be answered with 304.",
+    "check_ids": [
+     "no-cache-validators"
+    ],
+    "confidence": "medium",
+    "context": [],
+    "depends_on": [],
+    "effort": {
+     "hours_max": 1.0,
+     "hours_min": 0.25,
+     "level": "S"
+    },
+    "failure_check": "The HTML response has an ETag or Last-Modified header.",
+    "finding_ids": [
+     "fnd_0006"
+    ],
+    "id": "rec_0006",
+    "impact": {
+     "level": "low"
+    },
+    "leading_indicator": "Share of 304 responses in server logs.",
+    "phase": 4,
+    "priority_score": 0.75,
+    "severity": "Low",
+    "title": "Send an ETag or Last-Modified header so repeat requests can be answered with 304."
+   },
+   {
+    "body": "Serve a branded 404 page with links to the home page and key sections.",
+    "check_ids": [
+     "no-custom-404"
+    ],
+    "confidence": "medium",
+    "context": [],
+    "depends_on": [],
+    "effort": {
+     "hours_max": 1.0,
+     "hours_min": 0.25,
+     "level": "S"
+    },
+    "failure_check": "The 404 page contains site navigation and links.",
+    "finding_ids": [
+     "fnd_0007"
+    ],
+    "id": "rec_0007",
+    "impact": {
+     "level": "low"
+    },
+    "leading_indicator": "Bounce rate on 404 pages in analytics.",
+    "phase": 4,
+    "priority_score": 0.75,
+    "severity": "Low",
+    "title": "Serve a branded 404 page with links to the home page and key sections."
+   },
+   {
+    "body": "Add <meta name=\"twitter:card\" content=\"summary_large_image\">.",
+    "check_ids": [
+     "twitter-card-missing"
+    ],
+    "confidence": "high",
+    "context": [],
+    "depends_on": [],
+    "effort": {
+     "hours_max": 1.0,
+     "hours_min": 0.25,
+     "level": "S"
+    },
+    "failure_check": "A fresh audit finds a twitter:card tag.",
+    "finding_ids": [
+     "fnd_0008"
+    ],
+    "id": "rec_0008",
+    "impact": {
+     "level": "low"
+    },
+    "leading_indicator": "How the link looks when shared on X.",
+    "phase": 4,
+    "priority_score": 1.0,
+    "severity": "Low",
+    "title": "Add <meta name=\"twitter:card\" content=\"summary_large_image\">."
+   },
+   {
+    "body": "If you want to state a policy, add Content-Signal to the relevant robots.txt groups; decide the ai-train value yourself.",
+    "check_ids": [
+     "content-signal-missing"
+    ],
+    "confidence": "high",
+    "context": [],
+    "depends_on": [],
+    "effort": {
+     "hours_max": 1.0,
+     "hours_min": 0.25,
+     "level": "S"
+    },
+    "failure_check": "A fresh audit finds Content-Signal in robots.txt.",
+    "finding_ids": [
+     "fnd_0009"
+    ],
+    "id": "rec_0009",
+    "impact": {
+     "level": "low"
+    },
+    "leading_indicator": "The policy you stated being read by the services you care about.",
+    "phase": 4,
+    "priority_score": 1.0,
+    "severity": "Info",
+    "title": "If you want to state a policy, add Content-Signal to the relevant robots.txt groups; decide the ai-train va…"
+   },
+   {
+    "body": "Optional: publish /llms.txt if you want to guide AI agents; it has no effect on Google Search.",
+    "check_ids": [
+     "llms-txt-missing"
+    ],
+    "confidence": "high",
+    "context": [],
+    "depends_on": [],
+    "effort": {
+     "hours_max": 1.0,
+     "hours_min": 0.25,
+     "level": "S"
+    },
+    "failure_check": "A fresh fetch of /robots.txt still shows the same rule or status.",
+    "finding_ids": [
+     "fnd_0010"
+    ],
+    "id": "rec_0010",
+    "impact": {
+     "level": "low"
+    },
+    "leading_indicator": "Crawl statistics (pages crawled per day) in Google Search Console or server logs.",
+    "phase": 4,
+    "priority_score": 1.0,
+    "severity": "Info",
+    "title": "Optional: publish /llms.txt if you want to guide AI agents; it has no effect on Google Search."
+   },
+   {
+    "body": "If agents are a target audience, offer a content-equivalent Markdown version through a .md URL or a rel=alternate link.",
+    "check_ids": [
+     "markdown-not-available"
+    ],
+    "confidence": "high",
+    "context": [],
+    "depends_on": [],
+    "effort": {
+     "hours_max": 1.0,
+     "hours_min": 0.25,
+     "level": "S"
+    },
+    "failure_check": "A fresh audit finds the Markdown version.",
+    "finding_ids": [
+     "fnd_0011"
+    ],
+    "id": "rec_0011",
+    "impact": {
+     "level": "low"
+    },
+    "leading_indicator": "Requests to the Markdown URLs in your server logs.",
+    "phase": 4,
+    "priority_score": 1.0,
+    "severity": "Info",
+    "title": "If agents are a target audience, offer a content-equivalent Markdown version through a .md URL or a rel=alt…"
+   },
+   {
+    "body": "finding.schema-none-found",
+    "check_ids": [
+     "schema-none-found"
+    ],
+    "confidence": "high",
+    "context": [],
+    "depends_on": [],
+    "effort": {
+     "hours_max": 8.0,
+     "hours_min": 2.0,
+     "level": "M"
+    },
+    "failure_check": null,
+    "finding_ids": [
+     "fnd_0012"
+    ],
+    "id": "rec_0012",
+    "impact": {
+     "level": "low"
+    },
+    "leading_indicator": null,
+    "phase": 4,
+    "priority_score": 0.5,
+    "severity": "Info",
+    "title": "finding.schema-none-found"
+   },
+   {
+    "body": "Publish /.well-known/security.txt (RFC 9116) so researchers know how to report vulnerabilities.",
+    "check_ids": [
+     "security-txt-missing"
+    ],
+    "confidence": "high",
+    "context": [],
+    "depends_on": [],
+    "effort": {
+     "hours_max": 1.0,
+     "hours_min": 0.25,
+     "level": "S"
+    },
+    "failure_check": "/.well-known/security.txt returns 200 with a Contact field.",
+    "finding_ids": [
+     "fnd_0013"
+    ],
+    "id": "rec_0013",
+    "impact": {
+     "level": "low"
+    },
+    "leading_indicator": "Security reports received through the published contact.",
+    "phase": 4,
+    "priority_score": 1.0,
+    "severity": "Info",
+    "title": "Publish /.well-known/security.txt (RFC 9116) so researchers know how to report vulnerabilities."
+   }
+  ],
+  "schema_suggestions": {
+   "items": [],
+   "items_total": 0,
+   "not_measured_reason": "schema-nothing-to-suggest",
+   "not_measured_text": "No missing schema type was found for this kind of page.",
+   "notes": [
+    "No missing type was detected.",
+    "Suggestions are not part of the page and do not count toward the score."
+   ],
+   "status": "not_measured",
+   "truncated": false
+  },
+  "schema_version": "1.6.0",
+  "scope_note": {
+   "intro": "This score only measures the technical and on-page hygiene of your site: is it set up correctly, is anything in the way. On its own it does not tell whether the site will show up in search. Not measured:",
+   "items": [
+    "Indexing status: whether Google has actually indexed the page",
+    "Rankings and the searches you appear in",
+    "Backlinks (links from other sites) and authority",
+    "Keyword targeting and search-intent fit",
+    "Field speed data: what real users experience (the speed measurement below is a lab value taken from this machine)",
+    "Comparison with competitors"
+   ],
+   "model_note": "The score is an estimated model: the weights are this product's internal model and have not been calibrated against real rankings.",
+   "next_step": "What can be done: connect your Google account (Search Console) for indexing and search data; only read access is requested; until it is connected, the Visibility signals below are informational only.",
+   "title": "What this score does not measure"
+  },
+  "scores": {
+   "categories": [
+    {
+     "checks": [
+      {
+       "check_id": "above-fold-no-h1",
+       "message": "The H1 heading is not visible in the first screen (above the fold) on desktop or mobile.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "canonical-points-elsewhere",
+       "message": "The canonical names a different URL, so this page asks search engines to index that URL instead. Confirm this is intended.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "High",
+       "status": "pass",
+       "weight": 4.0
+      },
+      {
+       "check_id": "charset-mismatch",
+       "message": "The Content-Type response header and the meta tag declare different character encodings.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "clickjacking-protection-missing",
+       "message": "Neither X-Frame-Options nor a CSP frame-ancestors directive limits framing of the page.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "cookie-missing-secure",
+       "message": "One or more cookies are set without the Secure flag.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "csp",
+       "message": "csp",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "deep-dom",
+       "message": "The DOM is nested more than 32 levels deep, which slows rendering (Lighthouse guidance).",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "deprecated-html-tags",
+       "message": "The page uses HTML tags that are obsolete, such as <center> or <font>.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "favicon-missing",
+       "message": "No favicon is declared and /favicon.ico does not exist.",
+       "pages_affected": 1,
+       "pages_assessed": 1,
+       "pass_ratio": 0.0,
+       "severity": "Low",
+       "status": "fail",
+       "weight": 1.0
+      },
+      {
+       "check_id": "hreflang-canonical-conflict",
+       "message": "Hreflang and canonical disagree: the page or a target names a different canonical URL than the one used in the hreflang set.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "hreflang-duplicate-language",
+       "message": "The same language code points at two different URLs in one hreflang set.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "hreflang-invalid-code",
+       "message": "A hreflang value is not a valid language or language-region code (for example 'eng', 'jp' or 'en-uk').",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "hreflang-lang-attr-mismatch",
+       "message": "The page's own hreflang language differs from its <html lang> attribute.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "hreflang-missing-self",
+       "message": "The page has hreflang links but none of them points to the page itself. Hreflang sets should include a self reference.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "hreflang-no-return-link",
+       "message": "A page points to a language version that does not point back. Search engines ignore an unreciprocated hreflang pair.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "High",
+       "status": "pass",
+       "weight": 4.0
+      },
+      {
+       "check_id": "hreflang-no-x-default",
+       "message": "The hreflang set has several languages but no x-default entry for visitors whose language is not listed.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "hreflang-target-noindex",
+       "message": "A hreflang target is marked noindex, so it cannot be shown as the language version.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "hreflang-target-not-200",
+       "message": "A hreflang target does not answer 200 directly (error, unreachable or it redirects).",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "hsts",
+       "message": "hsts",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "html-not-compressed",
+       "message": "The HTML response is larger than 1.5 KB and is sent without compression (no Content-Encoding).",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "html-over-2mb",
+       "message": "The HTML is larger than 2 MB. Googlebot reads only the first 2 MB of an HTML file, measured before compression, so content after that point is not considered for indexing.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "High",
+       "status": "pass",
+       "weight": 4.0
+      },
+      {
+       "check_id": "https-redirect",
+       "message": "https-redirect",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "High",
+       "status": "pass",
+       "weight": 4.0
+      },
+      {
+       "check_id": "index-file-duplicate",
+       "message": "The home page is also reachable at /index.html or /index.php with a 200 and no canonical.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "intrusive-interstitial",
+       "message": "A fixed layer (cookie banner, dialog or pop-up) covers more than 30% of the first screen.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "links-to-http",
+       "message": "This HTTPS page links to plain http:// addresses.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "manifest-invalid",
+       "message": "The web app manifest linked from the page cannot be fetched or is not valid JSON.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "meta-refresh-redirect",
+       "message": "The page redirects with a meta refresh. Google follows it, but a server side 301 or 308 redirect is the more reliable choice.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "missing-canonical",
+       "message": "The page has no canonical link. Search engines then choose the preferred URL themselves.",
+       "pages_affected": 1,
+       "pages_assessed": 1,
+       "pass_ratio": 0.0,
+       "severity": "Medium",
+       "status": "fail",
+       "weight": 2.0
+      },
+      {
+       "check_id": "missing-charset",
+       "message": "No character encoding is declared for the document.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "missing-doctype",
+       "message": "The document does not start with <!doctype html>, so browsers fall back to quirks mode.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "mixed-content",
+       "message": "This HTTPS page loads resources over plain HTTP. Browsers block or warn about these.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "High",
+       "status": "pass",
+       "weight": 4.0
+      },
+      {
+       "check_id": "no-cache-validators",
+       "message": "The HTML response has neither ETag nor Last-Modified, so clients cannot revalidate it cheaply (heuristic).",
+       "pages_affected": 1,
+       "pages_assessed": 1,
+       "pass_ratio": 0.0,
+       "severity": "Low",
+       "status": "fail",
+       "weight": 1.0
+      },
+      {
+       "check_id": "no-custom-404",
+       "message": "The 404 response looks like a bare server default page without navigation (heuristic).",
+       "pages_affected": 1,
+       "pages_assessed": 1,
+       "pass_ratio": 0.0,
+       "severity": "Low",
+       "status": "fail",
+       "weight": 1.0
+      },
+      {
+       "check_id": "nofollow",
+       "message": "The page asks search engines not to follow any of its links. Confirm this is intended.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "noindex",
+       "message": "A robots meta tag asks search engines not to index this page. Confirm this is intended.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Critical",
+       "status": "pass",
+       "weight": 8.0
+      },
+      {
+       "check_id": "noindex-header",
+       "message": "The X-Robots-Tag response header asks search engines not to index this page. Confirm this is intended.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Critical",
+       "status": "pass",
+       "weight": 8.0
+      },
+      {
+       "check_id": "nosniff-missing",
+       "message": "X-Content-Type-Options is not set to nosniff.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "page-status-4xx",
+       "message": "A sampled page answers with a 4xx status (not found or blocked).",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "page-status-5xx",
+       "message": "A sampled page answers with a 5xx server error.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "High",
+       "status": "pass",
+       "weight": 4.0
+      },
+      {
+       "check_id": "redirect-chain-long",
+       "message": "The URL redirects through two or more hops before the final page. This is a heuristic, not a search engine limit.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "referrer-policy-unsafe",
+       "message": "The Referrer-Policy is unsafe-url or not a recognised value.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "robots",
+       "message": "robots",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "High",
+       "status": "pass",
+       "weight": 4.0
+      },
+      {
+       "check_id": "slow-ttfb",
+       "message": "The server took more than 1.8 seconds to start answering from this measurement point. The figure depends on where it was measured; it is a heuristic.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "soft-404",
+       "message": "A URL that does not exist answers with 200 (or redirects to a 200 page) instead of 404.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "High",
+       "status": "pass",
+       "weight": 4.0
+      },
+      {
+       "check_id": "tls",
+       "message": "tls",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Critical",
+       "status": "pass",
+       "weight": 8.0
+      },
+      {
+       "check_id": "trailing-slash-duplicate",
+       "message": "The same page answers with 200 both with and without a trailing slash and no canonical separates them.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "uppercase-path-duplicate",
+       "message": "The page is also reachable with an upper-case path and both answer with 200.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "uses-frames",
+       "message": "The page uses frames. Content inside frames is hard for search engines to attribute to this URL.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "High",
+       "status": "pass",
+       "weight": 4.0
+      },
+      {
+       "check_id": "wide-dom-node",
+       "message": "One element has more than 60 direct children, which is slow to lay out (Lighthouse guidance).",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "www-not-consolidated",
+       "message": "The www and non-www hosts end on different URLs.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      }
+     ],
+     "checks_failed": 4,
+     "checks_passed": 46,
+     "checks_total": 50,
+     "confidence": null,
+     "finding_ids": [
+      "fnd_0001",
+      "fnd_0005",
+      "fnd_0006",
+      "fnd_0007",
+      "fnd_0013"
+     ],
+     "id": "technical",
+     "label": "Technical",
+     "not_measured_reason": null,
+     "not_measured_text": null,
+     "penalties": [
+      {
+       "check_id": "missing-canonical",
+       "finding_id": "fnd_0001",
+       "points": 1.74,
+       "severity": "Medium"
+      },
+      {
+       "check_id": "favicon-missing",
+       "finding_id": "fnd_0005",
+       "points": 0.87,
+       "severity": "Low"
+      },
+      {
+       "check_id": "no-cache-validators",
+       "finding_id": "fnd_0006",
+       "points": 0.87,
+       "severity": "Low"
+      },
+      {
+       "check_id": "no-custom-404",
+       "finding_id": "fnd_0007",
+       "points": 0.87,
+       "severity": "Low"
+      }
+     ],
+     "score": 95.7,
+     "status": "measured",
+     "weight_default": 20.0,
+     "weight_effective": 27.4
+    },
+    {
+     "checks": [
+      {
+       "check_id": "generic-anchor-text",
+       "message": "Some links in the content use generic text such as \"click here\", which says nothing about where they lead.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "heading-level-skip",
+       "message": "Heading levels skip inside the main content, for example from H2 to H4. Google Search does not mind heading order, but screen reader users move through a page by heading level.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "links-without-text",
+       "message": "Some links have no accessible text: no link text, no label and no image alt text.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "meta-description-too-long",
+       "message": "The meta description is longer than 160 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "missing-h1",
+       "message": "No H1 heading was found on the page.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "missing-lang",
+       "message": "The html element does not declare the page language with a lang attribute.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "missing-meta-description",
+       "message": "The page has no meta description. Search engines write their own snippet when none is given.",
+       "pages_affected": 1,
+       "pages_assessed": 1,
+       "pass_ratio": 0.0,
+       "severity": "Medium",
+       "status": "fail",
+       "weight": 2.0
+      },
+      {
+       "check_id": "missing-og-image",
+       "message": "The page has no og:image, so shared links show no preview image.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "missing-open-graph",
+       "message": "The page has neither og:title nor og:image, so shared links show no title or preview image.",
+       "pages_affected": 1,
+       "pages_assessed": 1,
+       "pass_ratio": 0.0,
+       "severity": "Medium",
+       "status": "fail",
+       "weight": 2.0
+      },
+      {
+       "check_id": "missing-title",
+       "message": "The page has no title tag. Search engines then build the result title from other text, such as the main heading.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "High",
+       "status": "pass",
+       "weight": 4.0
+      },
+      {
+       "check_id": "missing-viewport",
+       "message": "The page has no viewport meta tag, so phones render it zoomed out.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "multiple-h1",
+       "message": "The page has more than one H1. Google says there is no ideal number of headings, so this does not affect Search on its own. Check that the most prominent heading names the page.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "og-image-relative-url",
+       "message": "The og:image is a relative URL. Most social crawlers need an absolute URL (https://...).",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "og-image-too-small",
+       "message": "The og:image is smaller than 1200x630 pixels; large cards may be shown small or cropped.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "og-image-unreachable",
+       "message": "The og:image URL does not return an image (error, missing file or unreachable). Social networks will show no picture.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "og-image-wrong-ratio",
+       "message": "The og:image does not have the usual 1.91:1 ratio; platforms may crop it.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "og-url-differs-from-canonical",
+       "message": "og:url differs from the canonical, so social shares may point at a different URL than search engines use.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "title-too-long",
+       "message": "The title is longer than 60 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "title-too-short",
+       "message": "The title is shorter than 30 characters. A very short title rarely describes the page well enough to earn a click. This is a heuristic, not a search engine rule.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "twitter-card-missing",
+       "message": "There is no twitter:card tag. X/Twitter falls back to Open Graph but shows a small card by default.",
+       "pages_affected": 1,
+       "pages_assessed": 1,
+       "pass_ratio": 0.0,
+       "severity": "Low",
+       "status": "fail",
+       "weight": 1.0
+      },
+      {
+       "check_id": "url-double-slash",
+       "message": "The URL path has a double slash, which often creates accidental duplicate URLs.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "url-has-parameters",
+       "message": "The URL has query parameters other than tracking parameters. Parameters can create duplicate versions of the same page.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "url-non-ascii",
+       "message": "The URL has unencoded non-ASCII characters. Words in the audience's language are fine in URLs; links should use the percent encoded form so the address survives copying.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "url-too-long",
+       "message": "The URL is longer than 100 characters. Long URLs are harder to share and may be truncated in results. This is a heuristic, not a search engine limit.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "url-underscores",
+       "message": "The URL path uses underscores. Hyphens are the usual word separator in URLs.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "url-uppercase",
+       "message": "The URL path has uppercase letters. URLs are case sensitive, so mixed case invites duplicates and broken links.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      }
+     ],
+     "checks_failed": 3,
+     "checks_passed": 23,
+     "checks_total": 26,
+     "confidence": null,
+     "finding_ids": [
+      "fnd_0002",
+      "fnd_0003",
+      "fnd_0008"
+     ],
+     "id": "onpage",
+     "label": "On-page",
+     "not_measured_reason": null,
+     "not_measured_text": null,
+     "penalties": [
+      {
+       "check_id": "missing-meta-description",
+       "finding_id": "fnd_0002",
+       "points": 4.88,
+       "severity": "Medium"
+      },
+      {
+       "check_id": "missing-open-graph",
+       "finding_id": "fnd_0003",
+       "points": 4.88,
+       "severity": "Medium"
+      },
+      {
+       "check_id": "twitter-card-missing",
+       "finding_id": "fnd_0008",
+       "points": 2.44,
+       "severity": "Low"
+      }
+     ],
+     "score": 87.8,
+     "status": "measured",
+     "weight_default": 15.0,
+     "weight_effective": 20.5
+    },
+    {
+     "checks": [
+      {
+       "check_id": "broken-external-link",
+       "message": "The page links to an external URL that answers with an error or cannot be reached. This can be temporary.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "broken-internal-link",
+       "message": "The page links to an internal URL that answers with an error (for example 404) or cannot be reached.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "internal-redirect-link",
+       "message": "An internal link points to a URL that redirects before reaching the page.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "nofollow-internal-links",
+       "message": "At least a fifth of the page's internal links carry rel=nofollow. This is a heuristic.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "placeholder-links",
+       "message": "Several links with visible text point nowhere (href=\"#\" or javascript:void). Visitors and crawlers cannot follow them. This is a heuristic: a link may be wired to a script.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "too-many-links",
+       "message": "The page has more than 150 links. This is a heuristic, not a limit set by search engines.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      }
+     ],
+     "checks_failed": 0,
+     "checks_passed": 6,
+     "checks_total": 6,
+     "confidence": null,
+     "finding_ids": [],
+     "id": "links",
+     "label": "Links",
+     "not_measured_reason": null,
+     "not_measured_text": null,
+     "penalties": [],
+     "score": 100.0,
+     "status": "measured",
+     "weight_default": 10.0,
+     "weight_effective": 13.7
+    },
+    {
+     "checks": [
+      {
+       "check_id": "keyword-missing-in-description",
+       "message": "A target keyword you gave does not appear in the meta description.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "keyword-missing-in-h1",
+       "message": "A target keyword you gave does not appear in the H1 heading.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "keyword-missing-in-title",
+       "message": "A target keyword you gave does not appear in the title tag.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "keyword-stuffing",
+       "message": "A target keyword makes up more than 3% of the words. Google publishes no density rule; this is a readability warning.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "long-sentences",
+       "message": "More than 30% of the sentences are longer than 25 words.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "placeholder-text",
+       "message": "Placeholder text such as lorem ipsum was found in the visible content.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "High",
+       "status": "pass",
+       "weight": 4.0
+      },
+      {
+       "check_id": "readability-hard",
+       "message": "The text is very difficult to read by the Flesch / Atesman score (long sentences and long words).",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "thin-content",
+       "message": "The page has fewer than 200 words of visible body text. Google has no minimum word count, so this is not a ranking rule. Check that the page fully answers what a visitor came for.",
+       "pages_affected": 1,
+       "pages_assessed": 1,
+       "pass_ratio": 0.0,
+       "severity": "Medium",
+       "status": "fail",
+       "weight": 2.0
+      }
+     ],
+     "checks_failed": 1,
+     "checks_passed": 7,
+     "checks_total": 8,
+     "confidence": null,
+     "finding_ids": [
+      "fnd_0004"
+     ],
+     "id": "content",
+     "label": "Content",
+     "not_measured_reason": null,
+     "not_measured_text": null,
+     "penalties": [
+      {
+       "check_id": "thin-content",
+       "finding_id": "fnd_0004",
+       "points": 14.29,
+       "severity": "Medium"
+      }
+     ],
+     "score": 85.7,
+     "status": "measured",
+     "weight_default": 20.0,
+     "weight_effective": 27.4
+    },
+    {
+     "checks": [],
+     "checks_failed": 0,
+     "checks_passed": 0,
+     "checks_total": 0,
+     "confidence": null,
+     "finding_ids": [
+      "fnd_0012"
+     ],
+     "id": "schema",
+     "label": "Schema",
+     "not_measured_reason": "no-structured-data",
+     "not_measured_text": "no-structured-data",
+     "penalties": [],
+     "score": null,
+     "status": "not_measured",
+     "weight_default": 8.0,
+     "weight_effective": null
+    },
+    {
+     "checks": [
+      {
+       "check_id": "agent-unfriendly-controls",
+       "message": "Some buttons, form fields or links have no accessible name, so an agent (or a screen reader) cannot tell what they do.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      },
+      {
+       "check_id": "ai-search-bots-blocked",
+       "message": "robots.txt blocks at least one AI search crawler at the site root.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "js-dependent-content",
+       "message": "A large share of the page content only exists after JavaScript runs. Many AI crawlers do not run JavaScript (heuristic).",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Medium",
+       "status": "pass",
+       "weight": 2.0
+      },
+      {
+       "check_id": "llms-txt-malformed",
+       "message": "The site's /llms.txt exists but does not follow the llmstxt.org proposal (title, summary, sections with links). Google Search ignores this file.",
+       "pages_affected": 0,
+       "pages_assessed": 1,
+       "pass_ratio": 1.0,
+       "severity": "Low",
+       "status": "pass",
+       "weight": 1.0
+      }
+     ],
+     "checks_failed": 0,
+     "checks_passed": 4,
+     "checks_total": 4,
+     "confidence": null,
+     "finding_ids": [
+      "fnd_0009",
+      "fnd_0010",
+      "fnd_0011"
+     ],
+     "id": "ai_readiness",
+     "label": "AI-search readiness",
+     "not_measured_reason": null,
+     "not_measured_text": null,
+     "penalties": [],
+     "score": 100.0,
+     "status": "measured",
+     "weight_default": 8.0,
+     "weight_effective": 11.0
+    },
+    {
+     "checks": [],
+     "checks_failed": 0,
+     "checks_passed": 0,
+     "checks_total": 0,
+     "confidence": null,
+     "finding_ids": [],
+     "id": "images",
+     "label": "Images",
+     "not_measured_reason": "no-images",
+     "not_measured_text": "no-images",
+     "penalties": [],
+     "score": null,
+     "status": "not_measured",
+     "weight_default": 7.0,
+     "weight_effective": null
+    }
+   ],
+   "core_overall": null,
+   "kind": "page_card",
+   "overall": {
+    "band": "good",
+    "confidence": "medium",
+    "coverage_pct": 83.0,
+    "display": "number",
+    "gate": null,
+    "raw_value": 92.4,
+    "value": 92.4
+   },
+   "p25": null
+  },
+  "screenshots": {
+   "above_fold": [],
+   "errors": [],
+   "not_measured_reason": "render-unavailable",
+   "not_measured_text": "No screenshot: the browser (render) was not available.",
+   "shots": [],
+   "status": "not_measured",
+   "truncated": false
+  },
+  "site_setup": {
+   "custom_404_text": "No custom 404 page seen (heuristic).",
+   "files": [
+    {
+     "id": "security_txt",
+     "label": "security.txt",
+     "note": null,
+     "present": false,
+     "status": 404,
+     "url": "https://demo.test/.well-known/security.txt"
+    },
+    {
+     "id": "ads_txt",
+     "label": "ads.txt",
+     "note": null,
+     "present": false,
+     "status": 404,
+     "url": "https://demo.test/ads.txt"
+    },
+    {
+     "id": "humans_txt",
+     "label": "humans.txt",
+     "note": null,
+     "present": false,
+     "status": 404,
+     "url": "https://demo.test/humans.txt"
+    },
+    {
+     "id": "favicon",
+     "label": "Favicon",
+     "note": null,
+     "present": false,
+     "status": 404,
+     "url": "https://demo.test/favicon.ico"
+    }
+   ],
+   "headers": [
+    {
+     "label": "etag",
+     "value": "False"
+    },
+    {
+     "label": "last_modified",
+     "value": "False"
+    }
+   ],
+   "hsts_text": "not set",
+   "http_version_text": "unknown (the HTTP library does not expose it)",
+   "not_measured_reason": null,
+   "not_measured_text": null,
+   "redirects": [
+    {
+     "final_url": "http://demo.test/",
+     "hops": 0,
+     "label": "http → https",
+     "name": "http",
+     "note": null,
+     "permanent": null,
+     "status": 404,
+     "variant_url": "http://demo.test/"
+    },
+    {
+     "final_url": "https://www.demo.test/",
+     "hops": 0,
+     "label": "www ↔ non-www",
+     "name": "www-counterpart",
+     "note": null,
+     "permanent": null,
+     "status": 404,
+     "variant_url": "https://www.demo.test/"
+    },
+    {
+     "final_url": "https://demo.test/hakkimizda/",
+     "hops": 0,
+     "label": "Trailing slash",
+     "name": "trailing-slash",
+     "note": null,
+     "permanent": null,
+     "status": 404,
+     "variant_url": "https://demo.test/hakkimizda/"
+    },
+    {
+     "final_url": "https://demo.test/HAKKIMIZDA",
+     "hops": 0,
+     "label": "Upper-case path",
+     "name": "uppercase",
+     "note": null,
+     "permanent": null,
+     "status": 404,
+     "variant_url": "https://demo.test/HAKKIMIZDA"
+    },
+    {
+     "final_url": "https://demo.test/index.html",
+     "hops": 0,
+     "label": "/index.html",
+     "name": "index-html",
+     "note": null,
+     "permanent": null,
+     "status": 404,
+     "variant_url": "https://demo.test/index.html"
+    },
+    {
+     "final_url": "https://demo.test/index.php",
+     "hops": 0,
+     "label": "/index.php",
+     "name": "index-php",
+     "note": null,
+     "permanent": null,
+     "status": 404,
+     "variant_url": "https://demo.test/index.php"
+    }
+   ],
+   "requests_made": 11,
+   "skipped": [],
+   "soft_404": "ok",
+   "soft_404_text": "A non-existent address correctly returns 404.",
+   "status": "measured",
+   "truncated": false
+  },
+  "sitemap_gen": {
+   "counts_toward_overall": false,
+   "download_href": "",
+   "excluded": [],
+   "excluded_total": 0,
+   "facts": [],
+   "missing": [],
+   "missing_total": 0,
+   "not_indexable": [],
+   "not_indexable_total": 0,
+   "not_measured_reason": "site-mode-only",
+   "not_measured_text": "The suggested sitemap is built only in site audits (a single-page audit has no sample).",
+   "note": "",
+   "status": "not_measured",
+   "truncated": false,
+   "urls_shown": 0,
+   "urls_total": 0,
+   "xml_preview": ""
+  },
+  "summary": {
+   "counts": {
+    "Critical": 0,
+    "High": 0,
+    "Info": 5,
+    "Low": 4,
+    "Medium": 4
+   },
+   "quick_win_recommendation_ids": [
+    "rec_0001",
+    "rec_0002",
+    "rec_0003"
+   ],
+   "top_finding_ids": [
+    "fnd_0001",
+    "fnd_0002",
+    "fnd_0003",
+    "fnd_0004",
+    "fnd_0005"
+   ],
+   "zero_findings": false
+  },
+  "synthesis": null,
+  "techstack": {
+   "groups": [],
+   "not_measured_reason": "tech-none-detected",
+   "not_measured_text": "No known technology signature was found.",
+   "note": "",
+   "status": "not_measured",
+   "total": 0,
+   "truncated": false
+  },
+  "trend": {
+   "basis": "core_sample",
+   "comparable": false,
+   "core_overall": null,
+   "reason_if_not": "first_audit"
+  },
+  "usage": {
+   "wall_ms": 112
+  },
+  "versions": {
+   "engine_version": "0.1.0",
+   "rubric_version": null,
+   "rule_version": "1.0",
+   "score_version": "mvp-0.2"
+  },
+  "visibility": {
+   "counts_toward_overall": false,
+   "disclaimer": "",
+   "domain": null,
+   "items": [],
+   "not_measured_reason": "visibility-unavailable",
+   "not_measured_text": "Visibility signals could not be fetched from public sources.",
+   "notes": [],
+   "status": "not_measured",
+   "truncated": false
+  }
+ },
+ "scores": {
+  "categories": [
+   {
+    "category": "technical",
+    "checks_failed": 4,
+    "checks_passed": 46,
+    "checks_total": 50,
+    "measured": true,
+    "reason": null,
+    "score": 95.7
+   },
+   {
+    "category": "onpage",
+    "checks_failed": 3,
+    "checks_passed": 23,
+    "checks_total": 26,
+    "measured": true,
+    "reason": null,
+    "score": 87.8
+   },
+   {
+    "category": "links",
+    "checks_failed": 0,
+    "checks_passed": 6,
+    "checks_total": 6,
+    "measured": true,
+    "reason": null,
+    "score": 100.0
+   },
+   {
+    "category": "content",
+    "checks_failed": 1,
+    "checks_passed": 7,
+    "checks_total": 8,
+    "measured": true,
+    "reason": null,
+    "score": 85.7
+   },
+   {
+    "category": "schema",
+    "checks_failed": 0,
+    "checks_passed": 0,
+    "checks_total": 0,
+    "measured": false,
+    "reason": "no-structured-data",
+    "score": null
+   },
+   {
+    "category": "ai_readiness",
+    "checks_failed": 0,
+    "checks_passed": 4,
+    "checks_total": 4,
+    "measured": true,
+    "reason": null,
+    "score": 100.0
+   },
+   {
+    "category": "images",
+    "checks_failed": 0,
+    "checks_passed": 0,
+    "checks_total": 0,
+    "measured": false,
+    "reason": "no-images",
+    "score": null
+   }
+  ],
+  "confidence": "medium",
+  "core_overall": null,
+  "coverage_pct": 83.0,
+  "gate": null,
+  "insufficient_data": false,
+  "overall": 92.4,
+  "p25": null,
+  "raw_overall": 92.4
+ },
+ "status": "completed",
+ "target_url": "https://demo.test/hakkimizda"
+}

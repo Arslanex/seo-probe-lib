@@ -1,0 +1,36 @@
+{
+ "schema": {
+  "$defs": {
+   "GscProperty": {
+    "properties": {
+     "permission": {
+      "default": "",
+      "title": "Permission",
+      "type": "string"
+     },
+     "site_url": {
+      "title": "Site Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "site_url"
+    ],
+    "title": "GscProperty",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "items": {
+    "items": {
+     "$ref": "#/$defs/GscProperty"
+    },
+    "title": "Items",
+    "type": "array"
+   }
+  },
+  "title": "GscProperties",
+  "type": "object"
+ },
+ "schema_version": "gsc.properties/1"
+}

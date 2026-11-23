@@ -1,0 +1,92 @@
+{
+ "schema": {
+  "$defs": {
+   "Ga4LandingPage": {
+    "properties": {
+     "engaged_sessions": {
+      "default": 0,
+      "title": "Engaged Sessions",
+      "type": "integer"
+     },
+     "engagement_rate": {
+      "default": 0.0,
+      "title": "Engagement Rate",
+      "type": "number"
+     },
+     "key_events": {
+      "default": 0.0,
+      "title": "Key Events",
+      "type": "number"
+     },
+     "page": {
+      "title": "Page",
+      "type": "string"
+     },
+     "revenue": {
+      "default": 0.0,
+      "title": "Revenue",
+      "type": "number"
+     },
+     "sessions": {
+      "default": 0,
+      "title": "Sessions",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "page"
+    ],
+    "title": "Ga4LandingPage",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "channel": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": "Organic Search",
+    "title": "Channel"
+   },
+   "days": {
+    "default": 28,
+    "title": "Days",
+    "type": "integer"
+   },
+   "items": {
+    "items": {
+     "$ref": "#/$defs/Ga4LandingPage"
+    },
+    "title": "Items",
+    "type": "array"
+   },
+   "property": {
+    "title": "Property",
+    "type": "string"
+   },
+   "totals": {
+    "additionalProperties": {
+     "type": "number"
+    },
+    "title": "Totals",
+    "type": "object"
+   },
+   "truncated": {
+    "default": false,
+    "title": "Truncated",
+    "type": "boolean"
+   }
+  },
+  "required": [
+   "property"
+  ],
+  "title": "Ga4LandingPages",
+  "type": "object"
+ },
+ "schema_version": "ga4.landing_pages/1"
+}

@@ -1,0 +1,1903 @@
+{
+ "version": 1,
+ "technologies": [
+  {
+   "name": "WordPress",
+   "category": "cms",
+   "website": "https://wordpress.org",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^WordPress\\s*(?P<v>\\d+(?:\\.\\d+){0,3})?",
+     "confidence": "high"
+    },
+    {
+     "type": "script",
+     "key": null,
+     "regex": "/wp-(?:content|includes)/",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "/wp-json/",
+     "confidence": "medium"
+    },
+    {
+     "type": "header",
+     "key": "link",
+     "regex": "rel=\\\"https://api\\.w\\.org/\\\"",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "WooCommerce",
+   "category": "ecommerce",
+   "website": "https://woocommerce.com",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^WooCommerce\\s*(?P<v>\\d+(?:\\.\\d+){0,3})?",
+     "confidence": "high"
+    },
+    {
+     "type": "script",
+     "key": null,
+     "regex": "/wp-content/plugins/woocommerce/",
+     "confidence": "high"
+    },
+    {
+     "type": "cookie",
+     "key": null,
+     "regex": "^woocommerce_",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Shopify",
+   "category": "ecommerce",
+   "website": "https://www.shopify.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "cdn\\.shopify\\.com/",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-shopid",
+     "regex": ".+",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-shopify-stage",
+     "regex": ".+",
+     "confidence": "high"
+    },
+    {
+     "type": "cookie",
+     "key": null,
+     "regex": "^_shopify_",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Wix",
+   "category": "cms",
+   "website": "https://www.wix.com",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^Wix\\.com",
+     "confidence": "high"
+    },
+    {
+     "type": "script",
+     "key": null,
+     "regex": "static\\.parastorage\\.com/",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-wix-request-id",
+     "regex": ".+",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Webflow",
+   "category": "cms",
+   "website": "https://webflow.com",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^Webflow",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "data-wf-(?:page|site)=",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Squarespace",
+   "category": "cms",
+   "website": "https://www.squarespace.com",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^Squarespace",
+     "confidence": "high"
+    },
+    {
+     "type": "script",
+     "key": null,
+     "regex": "static1\\.squarespace\\.com/",
+     "confidence": "high"
+    },
+    {
+     "type": "script",
+     "key": null,
+     "regex": "assets\\.squarespace\\.com/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Drupal",
+   "category": "cms",
+   "website": "https://www.drupal.org",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^Drupal\\s*(?P<v>\\d+(?:\\.\\d+){0,3})?",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-generator",
+     "regex": "^Drupal\\s*(?P<v>\\d+(?:\\.\\d+){0,3})?",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-drupal-cache",
+     "regex": ".+",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Joomla",
+   "category": "cms",
+   "website": "https://www.joomla.org",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^Joomla!?\\s*(?P<v>\\d+(?:\\.\\d+){0,3})?",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "/media/system/js/",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "MediaWiki",
+   "category": "cms",
+   "website": "https://www.mediawiki.org",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^MediaWiki\\s*(?P<v>\\d+(?:\\.\\d+){0,3})?",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "class=\"mw-parser-output\"",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Ghost",
+   "category": "cms",
+   "website": "https://ghost.org",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^Ghost\\s*(?P<v>\\d+(?:\\.\\d+){0,3})?",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "TYPO3",
+   "category": "cms",
+   "website": "https://typo3.org",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^TYPO3",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "HubSpot CMS",
+   "category": "cms",
+   "website": "https://www.hubspot.com",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^HubSpot",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-hs-hub-id",
+     "regex": ".+",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Blogger",
+   "category": "cms",
+   "website": "https://www.blogger.com",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^Blogger",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "PrestaShop",
+   "category": "ecommerce",
+   "website": "https://prestashop.com",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^PrestaShop",
+     "confidence": "high"
+    },
+    {
+     "type": "cookie",
+     "key": null,
+     "regex": "^PrestaShop-",
+     "confidence": "medium"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "var prestashop\\s*=",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Magento",
+   "category": "ecommerce",
+   "website": "https://magento.com",
+   "patterns": [
+    {
+     "type": "cookie",
+     "key": null,
+     "regex": "^mage-cache-sessid$",
+     "confidence": "medium"
+    },
+    {
+     "type": "script",
+     "key": null,
+     "regex": "/static/(?:version\\d+/)?frontend/",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "Mage\\.Cookies",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "OpenCart",
+   "category": "ecommerce",
+   "website": "https://www.opencart.com",
+   "patterns": [
+    {
+     "type": "html",
+     "key": null,
+     "regex": "catalog/view/theme/",
+     "confidence": "medium"
+    },
+    {
+     "type": "cookie",
+     "key": null,
+     "regex": "^OCSESSID$",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "BigCommerce",
+   "category": "ecommerce",
+   "website": "https://www.bigcommerce.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "cdn\\d*\\.bigcommerce\\.com/",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-bc-",
+     "regex": ".+",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "ikas",
+   "category": "ecommerce",
+   "website": "https://ikas.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "cdn\\.myikas\\.com/",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "myikas\\.com",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Ticimax",
+   "category": "ecommerce",
+   "website": "https://www.ticimax.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "cdn\\.ticimax\\.com/",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "ticimax",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "T-Soft",
+   "category": "ecommerce",
+   "website": "https://www.tsoft.com.tr",
+   "patterns": [
+    {
+     "type": "html",
+     "key": null,
+     "regex": "tsoft(?:cdn|\\.com)",
+     "confidence": "low"
+    },
+    {
+     "type": "script",
+     "key": null,
+     "regex": "/Data/EditorFiles/",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "IdeaSoft",
+   "category": "ecommerce",
+   "website": "https://www.ideasoft.com.tr",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "ideacdn\\.net/",
+     "confidence": "medium"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "ideasoft",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "Next.js",
+   "category": "framework",
+   "website": "https://nextjs.org",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "x-powered-by",
+     "regex": "^Next\\.js\\s*(?P<v>\\d+(?:\\.\\d+){0,3})?",
+     "confidence": "high"
+    },
+    {
+     "type": "script",
+     "key": null,
+     "regex": "/_next/static/",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "id=\\\"__NEXT_DATA__\\\"",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Nuxt",
+   "category": "framework",
+   "website": "https://nuxt.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "/_nuxt/",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "window\\.__NUXT__",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "id=\\\"__nuxt\\\"",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Gatsby",
+   "category": "framework",
+   "website": "https://www.gatsbyjs.com",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^Gatsby\\s*(?P<v>\\d+(?:\\.\\d+){0,3})?",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "id=\\\"___gatsby\\\"",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Astro",
+   "category": "framework",
+   "website": "https://astro.build",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "generator",
+     "regex": "^Astro\\s*(?P<v>\\d+(?:\\.\\d+){0,3})?",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "<astro-island",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "SvelteKit",
+   "category": "framework",
+   "website": "https://kit.svelte.dev",
+   "patterns": [
+    {
+     "type": "html",
+     "key": null,
+     "regex": "data-sveltekit-",
+     "confidence": "high"
+    },
+    {
+     "type": "script",
+     "key": null,
+     "regex": "/_app/immutable/",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Remix",
+   "category": "framework",
+   "website": "https://remix.run",
+   "patterns": [
+    {
+     "type": "html",
+     "key": null,
+     "regex": "window\\.__remixContext",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Angular",
+   "category": "framework",
+   "website": "https://angular.dev",
+   "patterns": [
+    {
+     "type": "html",
+     "key": null,
+     "regex": "\\bng-version=\\\"?(?P<v>\\d+(?:\\.\\d+){0,3})",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "<app-root",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "Laravel",
+   "category": "framework",
+   "website": "https://laravel.com",
+   "patterns": [
+    {
+     "type": "cookie",
+     "key": null,
+     "regex": "^laravel_session$",
+     "confidence": "medium"
+    },
+    {
+     "type": "cookie",
+     "key": null,
+     "regex": "^XSRF-TOKEN$",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Ruby on Rails",
+   "category": "framework",
+   "website": "https://rubyonrails.org",
+   "patterns": [
+    {
+     "type": "meta",
+     "key": "csrf-param",
+     "regex": "^authenticity_token$",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-runtime",
+     "regex": "^\\d+\\.\\d+$",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "Django",
+   "category": "framework",
+   "website": "https://www.djangoproject.com",
+   "patterns": [
+    {
+     "type": "cookie",
+     "key": null,
+     "regex": "^csrftoken$",
+     "confidence": "medium"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "name=[\\\"']csrfmiddlewaretoken[\\\"']",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Express",
+   "category": "framework",
+   "website": "https://expressjs.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "x-powered-by",
+     "regex": "^Express",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "ASP.NET",
+   "category": "framework",
+   "website": "https://dotnet.microsoft.com/apps/aspnet",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "x-powered-by",
+     "regex": "^ASP\\.NET",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-aspnet-version",
+     "regex": "^(?P<v>\\d+(?:\\.\\d+){0,3})",
+     "confidence": "high"
+    },
+    {
+     "type": "cookie",
+     "key": null,
+     "regex": "^ASP\\.NET_SessionId$",
+     "confidence": "medium"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "id=\\\"__VIEWSTATE\\\"",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "PHP",
+   "category": "framework",
+   "website": "https://www.php.net",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "x-powered-by",
+     "regex": "^PHP/?(?P<v>\\d+(?:\\.\\d+){0,3})?",
+     "confidence": "high"
+    },
+    {
+     "type": "cookie",
+     "key": null,
+     "regex": "^PHPSESSID$",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "React",
+   "category": "js-library",
+   "website": "https://react.dev",
+   "patterns": [
+    {
+     "type": "html",
+     "key": null,
+     "regex": "data-reactroot|data-reactid",
+     "confidence": "high"
+    },
+    {
+     "type": "script",
+     "key": null,
+     "regex": "react(?:\\.production|-dom)(?:\\.min)?\\.js",
+     "confidence": "medium"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "id=\\\"root\\\"",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "Vue.js",
+   "category": "js-library",
+   "website": "https://vuejs.org",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "vue(?:\\.runtime)?(?:\\.global)?(?:\\.prod)?(?:\\.min)?\\.js",
+     "confidence": "medium"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "\\bdata-v-[0-9a-f]{8}\\b",
+     "confidence": "medium"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "data-server-rendered=\\\"true\\\"",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Svelte",
+   "category": "js-library",
+   "website": "https://svelte.dev",
+   "patterns": [
+    {
+     "type": "html",
+     "key": null,
+     "regex": "class=\\\"[^\\\"]{0,80}svelte-[a-z0-9]{4,8}",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "jQuery",
+   "category": "js-library",
+   "website": "https://jquery.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "jquery[-.]?(?P<v>\\d+(?:\\.\\d+){0,3})?(?:\\.min)?\\.js",
+     "confidence": "high"
+    },
+    {
+     "type": "script",
+     "key": null,
+     "regex": "/jquery(?:\\.min)?\\.js",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "jQuery UI",
+   "category": "js-library",
+   "website": "https://jqueryui.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "jquery-ui[-.]?(?P<v>\\d+(?:\\.\\d+){0,3})?(?:\\.min)?\\.js",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Alpine.js",
+   "category": "js-library",
+   "website": "https://alpinejs.dev",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "alpinejs",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "\\sx-data=",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "htmx",
+   "category": "js-library",
+   "website": "https://htmx.org",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "htmx(?:\\.min)?\\.js",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "\\shx-(?:get|post|trigger)=",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Lodash",
+   "category": "js-library",
+   "website": "https://lodash.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "lodash(?:\\.min)?\\.js",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Moment.js",
+   "category": "js-library",
+   "website": "https://momentjs.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "moment(?:\\.min)?\\.js",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Bootstrap",
+   "category": "ui",
+   "website": "https://getbootstrap.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "bootstrap(?:[-.](?P<v>\\d+(?:\\.\\d+){0,3}))?(?:\\.bundle)?(?:\\.min)?\\.(?:js|css)",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "(?:maxcdn|stackpath)\\.bootstrapcdn\\.com/bootstrap/(?P<v>\\d+(?:\\.\\d+){0,3})",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Tailwind CSS",
+   "category": "ui",
+   "website": "https://tailwindcss.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "cdn\\.tailwindcss\\.com",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "class=\\\"[^\\\"]{0,200}\\b(?:md|lg):(?:flex|grid|hidden|w-\\d)",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "Font Awesome",
+   "category": "ui",
+   "website": "https://fontawesome.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "font-?awesome|fontawesome",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "\\bfa-(?:solid|brands|regular)\\b",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "Material UI",
+   "category": "ui",
+   "website": "https://mui.com",
+   "patterns": [
+    {
+     "type": "html",
+     "key": null,
+     "regex": "class=\\\"[^\\\"]{0,100}\\bMui[A-Z][A-Za-z]+-root",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Foundation",
+   "category": "ui",
+   "website": "https://get.foundation",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "foundation(?:\\.min)?\\.(?:js|css)",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Bulma",
+   "category": "ui",
+   "website": "https://bulma.io",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "bulma(?:\\.min)?\\.css",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Cloudflare",
+   "category": "cdn",
+   "website": "https://www.cloudflare.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "server",
+     "regex": "^cloudflare$",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "cf-ray",
+     "regex": ".+",
+     "confidence": "high"
+    },
+    {
+     "type": "cookie",
+     "key": null,
+     "regex": "^__cf_bm$",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Fastly",
+   "category": "cdn",
+   "website": "https://www.fastly.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "x-served-by",
+     "regex": "cache-",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-fastly-request-id",
+     "regex": ".+",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "via",
+     "regex": "varnish",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "Akamai",
+   "category": "cdn",
+   "website": "https://www.akamai.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "server",
+     "regex": "^AkamaiGHost",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-akamai-transformed",
+     "regex": ".+",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-akamai-request-id",
+     "regex": ".+",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Amazon CloudFront",
+   "category": "cdn",
+   "website": "https://aws.amazon.com/cloudfront/",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "x-amz-cf-id",
+     "regex": ".+",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "via",
+     "regex": "CloudFront",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Google Cloud CDN",
+   "category": "cdn",
+   "website": "https://cloud.google.com/cdn",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "via",
+     "regex": "google",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "BunnyCDN",
+   "category": "cdn",
+   "website": "https://bunny.net",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "server",
+     "regex": "^BunnyCDN",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "cdn-pullzone",
+     "regex": ".+",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "KeyCDN",
+   "category": "cdn",
+   "website": "https://www.keycdn.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "server",
+     "regex": "^keycdn",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "jsDelivr",
+   "category": "cdn",
+   "website": "https://www.jsdelivr.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "cdn\\.jsdelivr\\.net/",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "cdnjs",
+   "category": "cdn",
+   "website": "https://cdnjs.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "cdnjs\\.cloudflare\\.com/",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "unpkg",
+   "category": "cdn",
+   "website": "https://unpkg.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "unpkg\\.com/",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Vercel",
+   "category": "hosting",
+   "website": "https://vercel.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "server",
+     "regex": "^Vercel$",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-vercel-id",
+     "regex": ".+",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Netlify",
+   "category": "hosting",
+   "website": "https://www.netlify.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "server",
+     "regex": "^Netlify$",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-nf-request-id",
+     "regex": ".+",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "GitHub Pages",
+   "category": "hosting",
+   "website": "https://pages.github.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "server",
+     "regex": "^GitHub\\.com$",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-github-request-id",
+     "regex": ".+",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Firebase Hosting",
+   "category": "hosting",
+   "website": "https://firebase.google.com/products/hosting",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "x-firebase-",
+     "regex": ".+",
+     "confidence": "medium"
+    },
+    {
+     "type": "header",
+     "key": "server",
+     "regex": "^Google Frontend$",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "Heroku",
+   "category": "hosting",
+   "website": "https://www.heroku.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "via",
+     "regex": "vegur",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Render",
+   "category": "hosting",
+   "website": "https://render.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "x-render-origin-server",
+     "regex": ".+",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "WP Engine",
+   "category": "hosting",
+   "website": "https://wpengine.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "x-powered-by",
+     "regex": "^WP Engine",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-wpe-",
+     "regex": ".+",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Kinsta",
+   "category": "hosting",
+   "website": "https://kinsta.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "x-kinsta-cache",
+     "regex": ".+",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "nginx",
+   "category": "server",
+   "website": "https://nginx.org",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "server",
+     "regex": "^nginx(?:/(?P<v>\\d+(?:\\.\\d+){0,3}))?",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Apache",
+   "category": "server",
+   "website": "https://httpd.apache.org",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "server",
+     "regex": "^Apache(?:/(?P<v>\\d+(?:\\.\\d+){0,3}))?",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "LiteSpeed",
+   "category": "server",
+   "website": "https://www.litespeedtech.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "server",
+     "regex": "^LiteSpeed",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "x-litespeed-cache",
+     "regex": ".+",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Microsoft IIS",
+   "category": "server",
+   "website": "https://www.iis.net",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "server",
+     "regex": "^Microsoft-IIS(?:/(?P<v>\\d+(?:\\.\\d+){0,3}))?",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Caddy",
+   "category": "server",
+   "website": "https://caddyserver.com",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "server",
+     "regex": "^Caddy",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Varnish",
+   "category": "server",
+   "website": "https://varnish-cache.org",
+   "patterns": [
+    {
+     "type": "header",
+     "key": "x-varnish",
+     "regex": ".+",
+     "confidence": "high"
+    },
+    {
+     "type": "header",
+     "key": "via",
+     "regex": "varnish",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Google Analytics (UA)",
+   "category": "analytics",
+   "website": "https://analytics.google.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "google-analytics\\.com/analytics\\.js",
+     "confidence": "high"
+    },
+    {
+     "type": "script",
+     "key": null,
+     "regex": "google-analytics\\.com/ga\\.js",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Google Analytics 4",
+   "category": "analytics",
+   "website": "https://analytics.google.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "googletagmanager\\.com/gtag/js\\?id=G-",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"]G-",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Google Tag Manager",
+   "category": "tag-manager",
+   "website": "https://tagmanager.google.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "googletagmanager\\.com/gtm\\.js",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "GTM-[A-Z0-9]{4,8}",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Meta Pixel",
+   "category": "ads",
+   "website": "https://www.facebook.com/business/tools/meta-pixel",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "connect\\.facebook\\.net/[a-zA-Z_]+/fbevents\\.js",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "fbq\\(\\s*['\\\"]init['\\\"]",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Google Ads",
+   "category": "ads",
+   "website": "https://ads.google.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "googleadservices\\.com/pagead/conversion",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "gtag\\(\\s*['\\\"]config['\\\"]\\s*,\\s*['\\\"]AW-",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Google AdSense",
+   "category": "ads",
+   "website": "https://adsense.google.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "pagead2\\.googlesyndication\\.com/pagead/js/adsbygoogle\\.js",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "TikTok Pixel",
+   "category": "ads",
+   "website": "https://ads.tiktok.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "analytics\\.tiktok\\.com/i18n/pixel",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "LinkedIn Insight Tag",
+   "category": "ads",
+   "website": "https://business.linkedin.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "snap\\.licdn\\.com/li\\.lms-analytics/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Hotjar",
+   "category": "analytics",
+   "website": "https://www.hotjar.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "static\\.hotjar\\.com/c/hotjar-",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "hj\\(\\s*['\\\"]",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "Microsoft Clarity",
+   "category": "analytics",
+   "website": "https://clarity.microsoft.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "clarity\\.ms/tag/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Plausible",
+   "category": "analytics",
+   "website": "https://plausible.io",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "plausible\\.io/js/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Matomo",
+   "category": "analytics",
+   "website": "https://matomo.org",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "matomo\\.js|piwik\\.js",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "_paq\\.push",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Yandex Metrica",
+   "category": "analytics",
+   "website": "https://metrica.yandex.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "mc\\.yandex\\.ru/metrika/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Fathom",
+   "category": "analytics",
+   "website": "https://usefathom.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "cdn\\.usefathom\\.com/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Mixpanel",
+   "category": "analytics",
+   "website": "https://mixpanel.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "cdn\\.mxpnl\\.com/|mixpanel(?:\\.min)?\\.js",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Segment",
+   "category": "analytics",
+   "website": "https://segment.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "cdn\\.segment\\.com/analytics\\.js",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Stripe",
+   "category": "other",
+   "website": "https://stripe.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "js\\.stripe\\.com/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "PayPal",
+   "category": "other",
+   "website": "https://www.paypal.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "paypal\\.com/sdk/js",
+     "confidence": "medium"
+    },
+    {
+     "type": "script",
+     "key": null,
+     "regex": "paypalobjects\\.com/",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "iyzico",
+   "category": "other",
+   "website": "https://www.iyzico.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "iyzipay|iyzico",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "name": "Google Fonts",
+   "category": "font",
+   "website": "https://fonts.google.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "fonts\\.googleapis\\.com/",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "fonts\\.gstatic\\.com",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "Adobe Fonts",
+   "category": "font",
+   "website": "https://fonts.adobe.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "use\\.typekit\\.net/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "reCAPTCHA",
+   "category": "security",
+   "website": "https://www.google.com/recaptcha/",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "google\\.com/recaptcha/|gstatic\\.com/recaptcha/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Cloudflare Turnstile",
+   "category": "security",
+   "website": "https://www.cloudflare.com/products/turnstile/",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "challenges\\.cloudflare\\.com/turnstile/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "hCaptcha",
+   "category": "security",
+   "website": "https://www.hcaptcha.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "hcaptcha\\.com/1/api\\.js",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "HubSpot",
+   "category": "other",
+   "website": "https://www.hubspot.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "js\\.hs-scripts\\.com/|js\\.hsforms\\.net/|js\\.hs-analytics\\.net/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Intercom",
+   "category": "other",
+   "website": "https://www.intercom.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "widget\\.intercom\\.io/|js\\.intercomcdn\\.com/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Crisp",
+   "category": "other",
+   "website": "https://crisp.chat",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "client\\.crisp\\.chat/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Tidio",
+   "category": "other",
+   "website": "https://www.tidio.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "code\\.tidio\\.co/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Zendesk",
+   "category": "other",
+   "website": "https://www.zendesk.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "static\\.zdassets\\.com/|zopim",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Drift",
+   "category": "other",
+   "website": "https://www.drift.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "js\\.driftt\\.com/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Mailchimp",
+   "category": "other",
+   "website": "https://mailchimp.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "chimpstatic\\.com/|list-manage\\.com/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "OneTrust",
+   "category": "other",
+   "website": "https://www.onetrust.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "cdn\\.cookielaw\\.org/|onetrust",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Cookiebot",
+   "category": "other",
+   "website": "https://www.cookiebot.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "consent\\.cookiebot\\.com/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Sentry",
+   "category": "other",
+   "website": "https://sentry.io",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "browser\\.sentry-cdn\\.com/|js\\.sentry-cdn\\.com/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Cloudflare Rocket Loader",
+   "category": "other",
+   "website": "https://www.cloudflare.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "rocket-loader\\.min\\.js",
+     "confidence": "medium"
+    }
+   ]
+  },
+  {
+   "name": "YouTube embed",
+   "category": "other",
+   "website": "https://www.youtube.com",
+   "patterns": [
+    {
+     "type": "html",
+     "key": null,
+     "regex": "youtube(?:-nocookie)?\\.com/embed/",
+     "confidence": "high"
+    }
+   ]
+  },
+  {
+   "name": "Google Maps",
+   "category": "other",
+   "website": "https://maps.google.com",
+   "patterns": [
+    {
+     "type": "script",
+     "key": null,
+     "regex": "maps\\.googleapis\\.com/maps/api/js",
+     "confidence": "high"
+    },
+    {
+     "type": "html",
+     "key": null,
+     "regex": "google\\.com/maps/embed",
+     "confidence": "high"
+    }
+   ]
+  }
+ ]
+}

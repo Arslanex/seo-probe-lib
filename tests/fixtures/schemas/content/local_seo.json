@@ -1,0 +1,189 @@
+{
+ "schema": {
+  "$defs": {
+   "AddressEntry": {
+    "properties": {
+     "pages": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Pages",
+      "type": "array"
+     },
+     "source": {
+      "enum": [
+       "schema",
+       "text"
+      ],
+      "title": "Source",
+      "type": "string"
+     },
+     "text": {
+      "title": "Text",
+      "type": "string"
+     }
+    },
+    "required": [
+     "text",
+     "source"
+    ],
+    "title": "AddressEntry",
+    "type": "object"
+   },
+   "NapInconsistency": {
+    "properties": {
+     "code": {
+      "enum": [
+       "schema-phone-not-on-page",
+       "schema-phones-differ",
+       "schema-addresses-differ"
+      ],
+      "title": "Code",
+      "type": "string"
+     },
+     "kind": {
+      "enum": [
+       "phone",
+       "address"
+      ],
+      "title": "Kind",
+      "type": "string"
+     },
+     "pages": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Pages",
+      "type": "array"
+     },
+     "values": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Values",
+      "type": "array"
+     }
+    },
+    "required": [
+     "kind",
+     "code"
+    ],
+    "title": "NapInconsistency",
+    "type": "object"
+   },
+   "PhoneEntry": {
+    "properties": {
+     "formats": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Formats",
+      "type": "array"
+     },
+     "number": {
+      "title": "Number",
+      "type": "string"
+     },
+     "pages": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Pages",
+      "type": "array"
+     },
+     "sources": {
+      "items": {
+       "enum": [
+        "schema",
+        "tel-link",
+        "text"
+       ],
+       "type": "string"
+      },
+      "title": "Sources",
+      "type": "array"
+     }
+    },
+    "required": [
+     "number"
+    ],
+    "title": "PhoneEntry",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "addresses": {
+    "items": {
+     "$ref": "#/$defs/AddressEntry"
+    },
+    "title": "Addresses",
+    "type": "array"
+   },
+   "applicable": {
+    "default": false,
+    "title": "Applicable",
+    "type": "boolean"
+   },
+   "business_types": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Business Types",
+    "type": "array"
+   },
+   "has_map_embed": {
+    "default": false,
+    "title": "Has Map Embed",
+    "type": "boolean"
+   },
+   "has_tel_link": {
+    "default": false,
+    "title": "Has Tel Link",
+    "type": "boolean"
+   },
+   "inconsistencies": {
+    "items": {
+     "$ref": "#/$defs/NapInconsistency"
+    },
+    "title": "Inconsistencies",
+    "type": "array"
+   },
+   "names": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Names",
+    "type": "array"
+   },
+   "notes": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Notes",
+    "type": "array"
+   },
+   "pages_scanned": {
+    "default": 0,
+    "title": "Pages Scanned",
+    "type": "integer"
+   },
+   "phones": {
+    "items": {
+     "$ref": "#/$defs/PhoneEntry"
+    },
+    "title": "Phones",
+    "type": "array"
+   },
+   "signals": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Signals",
+    "type": "array"
+   }
+  },
+  "title": "LocalSeo",
+  "type": "object"
+ },
+ "schema_version": "local_seo/1"
+}

@@ -1,0 +1,77 @@
+{
+ "schema": {
+  "properties": {
+   "anchor_count": {
+    "default": 0,
+    "title": "Anchor Count",
+    "type": "integer"
+   },
+   "discovery_date": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Discovery Date"
+   },
+   "document_size": {
+    "default": 0,
+    "title": "Document Size",
+    "type": "integer"
+   },
+   "http_status": {
+    "anyOf": [
+     {
+      "type": "integer"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Http Status"
+   },
+   "is_page": {
+    "default": false,
+    "title": "Is Page",
+    "type": "boolean"
+   },
+   "last_crawled_date": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Last Crawled Date"
+   },
+   "site": {
+    "title": "Site",
+    "type": "string"
+   },
+   "total_child_url_count": {
+    "default": 0,
+    "title": "Total Child Url Count",
+    "type": "integer"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   }
+  },
+  "required": [
+   "site",
+   "url"
+  ],
+  "title": "BingUrlInfo",
+  "type": "object"
+ },
+ "schema_version": "bing.url_info/1"
+}

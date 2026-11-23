@@ -1,0 +1,406 @@
+{
+  "rules": {
+    "gsc-canonical-mismatch": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.gsc-canonical-mismatch",
+      "recommendation_key": "rec.gsc-canonical-mismatch",
+      "failure_check_key": "fail.gsc-canonical-mismatch",
+      "leading_indicator_key": "lead.gsc-canonical-mismatch",
+      "depends_on": [],
+      "requires": [
+        "gsc"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0"
+    },
+    "gsc-fetch-failed": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "M",
+      "impact_default": "medium",
+      "message_key": "finding.gsc-fetch-failed",
+      "recommendation_key": "rec.gsc-fetch-failed",
+      "failure_check_key": "fail.gsc-fetch-failed",
+      "leading_indicator_key": "lead.gsc-fetch-failed",
+      "depends_on": [],
+      "requires": [
+        "gsc"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0"
+    },
+    "gsc-no-impressions": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": true,
+      "effort_default": "L",
+      "impact_default": "medium",
+      "message_key": "finding.gsc-no-impressions",
+      "recommendation_key": "rec.gsc-no-impressions",
+      "failure_check_key": "fail.gsc-no-impressions",
+      "leading_indicator_key": "lead.gsc-no-impressions",
+      "depends_on": [],
+      "requires": [
+        "gsc"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0"
+    },
+    "gsc-page-not-indexed": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "M",
+      "impact_default": "high",
+      "message_key": "finding.gsc-page-not-indexed",
+      "recommendation_key": "rec.gsc-page-not-indexed",
+      "failure_check_key": "fail.gsc-page-not-indexed",
+      "leading_indicator_key": "lead.gsc-page-not-indexed",
+      "depends_on": [],
+      "requires": [
+        "gsc"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0"
+    },
+    "gsc-robots-blocked": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "high",
+      "message_key": "finding.gsc-robots-blocked",
+      "recommendation_key": "rec.gsc-robots-blocked",
+      "failure_check_key": "fail.gsc-robots-blocked",
+      "leading_indicator_key": "lead.gsc-robots-blocked",
+      "depends_on": [],
+      "requires": [
+        "gsc"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0"
+    },
+    "gsc-sitemap-errors": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.gsc-sitemap-errors",
+      "recommendation_key": "rec.gsc-sitemap-errors",
+      "failure_check_key": "fail.gsc-sitemap-errors",
+      "leading_indicator_key": "lead.gsc-sitemap-errors",
+      "depends_on": [],
+      "requires": [
+        "gsc"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0"
+    },
+    "gsc-sitemap-not-submitted": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "low",
+      "message_key": "finding.gsc-sitemap-not-submitted",
+      "recommendation_key": "rec.gsc-sitemap-not-submitted",
+      "failure_check_key": "fail.gsc-sitemap-not-submitted",
+      "leading_indicator_key": "lead.gsc-sitemap-not-submitted",
+      "depends_on": [],
+      "requires": [
+        "gsc"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0"
+    },
+    "gsc-striking-distance": {
+      "category": "content",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": false,
+      "effort_default": "M",
+      "impact_default": "high",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [
+        "gsc"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      ],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.gsc-striking-distance",
+      "recommendation_key": "rec.gsc-striking-distance"
+    },
+    "gsc-low-ctr": {
+      "category": "onpage",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": true,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [
+        "gsc"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/appearance/title-link",
+        "https://developers.google.com/search/docs/appearance/snippet"
+      ],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.gsc-low-ctr",
+      "recommendation_key": "rec.gsc-low-ctr"
+    },
+    "gsc-cannibalization": {
+      "category": "content",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": true,
+      "effort_default": "M",
+      "impact_default": "medium",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [
+        "gsc"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+      ],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.gsc-cannibalization",
+      "recommendation_key": "rec.gsc-cannibalization"
+    },
+    "gsc-declining-clicks": {
+      "category": "content",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": false,
+      "effort_default": "M",
+      "impact_default": "high",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [
+        "gsc"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops"
+      ],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.gsc-declining-clicks",
+      "recommendation_key": "rec.gsc-declining-clicks"
+    },
+    "bing-crawl-issues": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": false,
+      "effort_default": "M",
+      "impact_default": "medium",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [
+        "bing"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a"
+      ],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.bing-crawl-issues",
+      "recommendation_key": "rec.bing-crawl-issues"
+    },
+    "indexnow-key-not-verified": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "low",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://www.indexnow.org/documentation"
+      ],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.indexnow-key-not-verified",
+      "recommendation_key": "rec.indexnow-key-not-verified"
+    }
+  },
+  "messages": {
+    "en": {
+      "fail.gsc-canonical-mismatch": "URL Inspection shows the Google-selected canonical equal to the declared one.",
+      "fail.gsc-fetch-failed": "URL Inspection reports a successful page fetch.",
+      "fail.gsc-no-impressions": "Impressions greater than zero in the Performance report.",
+      "fail.gsc-page-not-indexed": "URL Inspection reports the page as indexed.",
+      "fail.gsc-robots-blocked": "URL Inspection no longer reports the page as blocked by robots.txt.",
+      "fail.gsc-sitemap-errors": "The sitemap shows no errors in Search Console.",
+      "fail.gsc-sitemap-not-submitted": "The Sitemaps report lists a submitted sitemap with status Success.",
+      "finding.gsc-canonical-mismatch": "Google chose a different canonical URL than the one the page declares.",
+      "finding.gsc-fetch-failed": "Google could not fetch this page the last time it tried (server error, timeout or not found).",
+      "finding.gsc-no-impressions": "The site had no search impressions in the reporting period. This is a heuristic: a new site or a very recent connection also looks like this.",
+      "finding.gsc-page-not-indexed": "Google reports that this page is not in its index (see the coverage state in the evidence).",
+      "finding.gsc-robots-blocked": "Google reports that robots.txt blocks this page, so it cannot be crawled.",
+      "finding.gsc-sitemap-errors": "A sitemap submitted in Search Console reports errors.",
+      "finding.gsc-sitemap-not-submitted": "No sitemap is submitted in Search Console for this property.",
+      "lead.gsc-canonical-mismatch": "'Duplicate, Google chose different canonical' count in the Pages report.",
+      "lead.gsc-fetch-failed": "Crawl stats and server-error counts in Google Search Console.",
+      "lead.gsc-no-impressions": "Impressions and average position in the Performance report over several weeks.",
+      "lead.gsc-page-not-indexed": "The number of indexed pages in the Pages report of Google Search Console.",
+      "lead.gsc-robots-blocked": "'Blocked by robots.txt' count in the Pages report of Google Search Console.",
+      "lead.gsc-sitemap-errors": "Sitemap status and discovered-URL counts in the Sitemaps report.",
+      "lead.gsc-sitemap-not-submitted": "Discovered-URL count of the sitemap over time.",
+      "rec.gsc-canonical-mismatch": "Make the declared canonical, internal links, redirects and the sitemap point to the same URL, and keep the page content distinct from the one Google prefers.",
+      "rec.gsc-fetch-failed": "Check that the page answers 200 quickly for Googlebot; review server logs and firewall rules.",
+      "rec.gsc-no-impressions": "Check indexing first (Pages report); give a new site a few weeks, then improve content and internal links for the queries you want to reach.",
+      "rec.gsc-page-not-indexed": "Open the page in the URL Inspection tool, fix what the coverage state names (noindex, duplicate, thin or unreachable content) and request indexing.",
+      "rec.gsc-robots-blocked": "Remove the matching Disallow rule from robots.txt if the page should be found in search.",
+      "rec.gsc-sitemap-errors": "Open the Sitemaps report, read the error and fix the file (invalid URLs, wrong format, unreachable address), then resubmit it.",
+      "rec.gsc-sitemap-not-submitted": "Submit your sitemap in the Sitemaps report so Google finds new pages faster.",
+      "finding.gsc-striking-distance": "Queries rank just below the top results (average position in the striking range) with many impressions: small improvements could bring them to the first page or top three.",
+      "rec.gsc-striking-distance": "Improve the ranking page for these queries: answer the query fully, use it in the title and headings, add internal links from strong pages and refresh outdated content.",
+      "finding.gsc-low-ctr": "Some queries get far fewer clicks than usual for their position (CTR well below the expected CTR curve). The curve is an industry average, so this is an estimate.",
+      "rec.gsc-low-ctr": "Rewrite the title and meta description of these pages to match the search intent, make the benefit clear and check that the snippet Google shows is the one you want.",
+      "finding.gsc-cannibalization": "Several pages of the site share the impressions of the same query, so they may compete with each other and none of them ranks as well as one strong page could.",
+      "rec.gsc-cannibalization": "Decide which page should rank for the query; merge or differentiate the others, point internal links and canonicals to the chosen page and redirect pages that duplicate it.",
+      "finding.gsc-declining-clicks": "Some pages received clearly fewer clicks from Google Search than in the previous period.",
+      "rec.gsc-declining-clicks": "Check these pages for ranking or indexing changes, technical problems, content that became outdated, new competitors and seasonal effects, then update or fix them.",
+      "finding.bing-crawl-issues": "Bing Webmaster Tools reports crawl issues on URLs of the site (4xx/5xx errors, robots.txt blocks, DNS or timeout errors, or malware).",
+      "rec.bing-crawl-issues": "Fix the reported URLs: repair or redirect broken pages, resolve server errors, unblock important URLs in robots.txt and remove any malware; Bing may take a few days to clear fixed issues.",
+      "finding.indexnow-key-not-verified": "The IndexNow key file is not served correctly: the URL does not answer 200 or its content is not exactly the key, so search engines will reject the submissions.",
+      "rec.indexnow-key-not-verified": "Publish a UTF-8 text file named after the key at the site root (https://host/<key>.txt) whose only content is the key, then verify again before submitting."
+    },
+    "tr": {
+      "fail.gsc-canonical-mismatch": "URL Denetimi, Google'ın seçtiği canonical'ı bildirilenle aynı gösteriyor.",
+      "fail.gsc-fetch-failed": "URL Denetimi başarılı bir sayfa alımı bildiriyor.",
+      "fail.gsc-no-impressions": "Performans raporunda sıfırdan büyük gösterim.",
+      "fail.gsc-page-not-indexed": "URL Denetimi sayfayı dizinde olarak bildiriyor.",
+      "fail.gsc-robots-blocked": "URL Denetimi sayfayı artık robots.txt tarafından engellenmiş olarak bildirmiyor.",
+      "fail.gsc-sitemap-errors": "Site haritası Search Console'da hata göstermiyor.",
+      "fail.gsc-sitemap-not-submitted": "Site Haritaları raporu, durumu Başarılı olan gönderilmiş bir site haritası listeliyor.",
+      "finding.gsc-canonical-mismatch": "Google, sayfanın bildirdiğinden farklı bir kurallı (canonical) URL seçmiş.",
+      "finding.gsc-fetch-failed": "Google bu sayfayı son denemesinde alamadı (sunucu hatası, zaman aşımı veya bulunamadı).",
+      "finding.gsc-no-impressions": "Site, raporlama döneminde hiç arama gösterimi almadı. Bu bir sezgidir: yeni bir site veya çok yakın zamanda yapılan bağlantı da böyle görünür.",
+      "finding.gsc-page-not-indexed": "Google bu sayfanın dizininde olmadığını bildiriyor (kanıttaki kapsama durumuna bakın).",
+      "finding.gsc-robots-blocked": "Google, robots.txt'nin bu sayfayı engellediğini ve taranamadığını bildiriyor.",
+      "finding.gsc-sitemap-errors": "Search Console'a gönderilmiş bir site haritası hata bildiriyor.",
+      "finding.gsc-sitemap-not-submitted": "Bu mülk için Search Console'a hiç site haritası gönderilmemiş.",
+      "lead.gsc-canonical-mismatch": "Sayfalar raporundaki 'Kopya, Google farklı canonical seçti' sayısı.",
+      "lead.gsc-fetch-failed": "Google Search Console'daki tarama istatistikleri ve sunucu hatası sayıları.",
+      "lead.gsc-no-impressions": "Performans raporundaki gösterim ve ortalama konum, birkaç hafta boyunca.",
+      "lead.gsc-page-not-indexed": "Google Search Console Sayfalar raporundaki dizindeki sayfa sayısı.",
+      "lead.gsc-robots-blocked": "Google Search Console Sayfalar raporundaki 'robots.txt tarafından engellendi' sayısı.",
+      "lead.gsc-sitemap-errors": "Site Haritaları raporundaki durum ve keşfedilen URL sayıları.",
+      "lead.gsc-sitemap-not-submitted": "Site haritasının zaman içindeki keşfedilen URL sayısı.",
+      "rec.gsc-canonical-mismatch": "Bildirilen canonical, iç bağlantılar, yönlendirmeler ve site haritasını aynı URL'ye yönlendirin; sayfa içeriğinin Google'ın tercih ettiğinden ayrışmasını sağlayın.",
+      "rec.gsc-fetch-failed": "Sayfanın Googlebot'a hızlıca 200 döndüğünü kontrol edin; sunucu günlüklerini ve güvenlik duvarı kurallarını gözden geçirin.",
+      "rec.gsc-no-impressions": "Önce dizine eklenmeyi kontrol edin (Sayfalar raporu); yeni siteye birkaç hafta tanıyın, ardından hedef sorgular için içeriği ve iç bağlantıları geliştirin.",
+      "rec.gsc-page-not-indexed": "Sayfayı Search Console'daki URL Denetimi aracında açın, kapsama durumunun gösterdiği sorunu (noindex, kopya, zayıf veya erişilemeyen içerik) giderin ve dizine eklenmesini isteyin.",
+      "rec.gsc-robots-blocked": "Sayfa aramada bulunmalıysa robots.txt'teki eşleşen Disallow kuralını kaldırın.",
+      "rec.gsc-sitemap-errors": "Site Haritaları raporunu açıp hatayı okuyun ve dosyayı düzeltin (geçersiz URL, yanlış biçim, erişilemeyen adres); ardından yeniden gönderin.",
+      "rec.gsc-sitemap-not-submitted": "Google yeni sayfaları daha hızlı bulsun diye site haritanızı Site Haritaları raporundan gönderin.",
+      "finding.gsc-striking-distance": "Bazı sorgular çok gösterim alıyor ama ilk sonuçların hemen altında kalıyor (ortalama konum hedef aralıkta): küçük iyileştirmeler bu sorguları ilk sayfaya ya da ilk üçe taşıyabilir.",
+      "rec.gsc-striking-distance": "Bu sorgularda sıralanan sayfayı güçlendirin: sorguyu eksiksiz yanıtlayın, başlıkta ve ara başlıklarda kullanın, güçlü sayfalardan iç bağlantı verin ve eskimiş içeriği güncelleyin.",
+      "finding.gsc-low-ctr": "Bazı sorgular konumlarına göre olağandan çok daha az tıklanıyor (TO, beklenen TO eğrisinin belirgin biçimde altında). Eğri sektör ortalamasıdır; bu nedenle bulgu bir tahmindir.",
+      "rec.gsc-low-ctr": "Bu sayfaların başlığını ve meta açıklamasını arama niyetine uygun yeniden yazın, sunduğunuz faydayı açıkça belirtin ve Google'ın gösterdiği snippet'in istediğiniz metin olduğunu kontrol edin.",
+      "finding.gsc-cannibalization": "Sitenin birden çok sayfası aynı sorgunun gösterimlerini paylaşıyor; bu sayfalar birbiriyle rekabet ediyor olabilir ve hiçbiri tek güçlü bir sayfa kadar iyi sıralanamıyor.",
+      "rec.gsc-cannibalization": "Sorguda hangi sayfanın sıralanması gerektiğine karar verin; diğerlerini birleştirin ya da farklılaştırın, iç bağlantıları ve canonical etiketlerini seçilen sayfaya yönlendirin, onu tekrarlayan sayfaları yönlendirin.",
+      "finding.gsc-declining-clicks": "Bazı sayfalar Google Arama'dan önceki döneme göre belirgin biçimde daha az tıklama aldı.",
+      "rec.gsc-declining-clicks": "Bu sayfalarda sıralama ya da dizine ekleme değişikliklerini, teknik sorunları, eskiyen içeriği, yeni rakipleri ve mevsimsel etkileri kontrol edin; ardından sayfaları güncelleyin ya da düzeltin.",
+      "finding.bing-crawl-issues": "Bing Webmaster Araçları sitenin URL'lerinde tarama sorunları bildiriyor (4xx/5xx hataları, robots.txt engelleri, DNS ya da zaman aşımı hataları veya kötü amaçlı yazılım).",
+      "rec.bing-crawl-issues": "Bildirilen URL'leri düzeltin: bozuk sayfaları onarın ya da yönlendirin, sunucu hatalarını giderin, önemli URL'lerin robots.txt engelini kaldırın ve kötü amaçlı yazılımı temizleyin; düzeltilen sorunların Bing'den kalkması birkaç gün sürebilir.",
+      "finding.indexnow-key-not-verified": "IndexNow anahtar dosyası doğru sunulmuyor: adres 200 yanıtı vermiyor ya da içeriği tam olarak anahtar değil; bu durumda arama motorları gönderimleri reddeder.",
+      "rec.indexnow-key-not-verified": "Site kökünde anahtarla aynı adı taşıyan (https://host/<anahtar>.txt) ve içeriği yalnızca anahtardan oluşan UTF-8 bir metin dosyası yayımlayın, ardından göndermeden önce yeniden doğrulayın."
+    }
+  }
+}

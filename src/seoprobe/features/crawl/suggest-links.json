@@ -1,0 +1,13 @@
+{
+  "_note": "Defaults of suggest_links. Heuristics, not search engine rules.",
+  "max_inlinks": 1,
+  "max_suggestions": 5,
+  "min_similarity": 0.1,
+  "min_words": 30,
+  "min_token_length": 2,
+  "max_terms_per_page": 300,
+  "shared_terms": 5,
+  "max_anchor_candidates": 5,
+  "max_anchor_length": 80,
+  "similarity_digits": 4
+}

@@ -1,0 +1,12 @@
+{
+  "_doc": "Defaults of the dns_health operation. spf_lookup_limit is the RFC 7208 s.4.6.4 limit; the rest are caps and heuristics of this package.",
+  "spf_lookup_limit": 10,
+  "spf_max_depth": 10,
+  "spf_max_follow": 30,
+  "min_nameservers": 2,
+  "min_ns_subnets": 2,
+  "max_ns_hosts": 8,
+  "query_timeout_s": 3.0,
+  "total_timeout_s": 25.0,
+  "max_queries": 80
+}

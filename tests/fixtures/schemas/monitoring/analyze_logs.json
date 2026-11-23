@@ -1,0 +1,225 @@
+{
+ "schema": {
+  "$defs": {
+   "BotStats": {
+    "properties": {
+     "distinct_ips": {
+      "default": 0,
+      "title": "Distinct Ips",
+      "type": "integer"
+     },
+     "kind": {
+      "title": "Kind",
+      "type": "string"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "paths_truncated": {
+      "default": false,
+      "title": "Paths Truncated",
+      "type": "boolean"
+     },
+     "requests": {
+      "default": 0,
+      "title": "Requests",
+      "type": "integer"
+     },
+     "spoofed_ips": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Spoofed Ips",
+      "type": "array"
+     },
+     "spoofed_requests": {
+      "default": 0,
+      "title": "Spoofed Requests",
+      "type": "integer"
+     },
+     "status": {
+      "additionalProperties": {
+       "type": "integer"
+      },
+      "title": "Status",
+      "type": "object"
+     },
+     "top_paths": {
+      "items": {
+       "$ref": "#/$defs/PathCount"
+      },
+      "title": "Top Paths",
+      "type": "array"
+     },
+     "unverified_requests": {
+      "default": 0,
+      "title": "Unverified Requests",
+      "type": "integer"
+     },
+     "vendor": {
+      "default": "",
+      "title": "Vendor",
+      "type": "string"
+     },
+     "verifiable": {
+      "default": false,
+      "title": "Verifiable",
+      "type": "boolean"
+     },
+     "verified_requests": {
+      "default": 0,
+      "title": "Verified Requests",
+      "type": "integer"
+     },
+     "wasted": {
+      "$ref": "#/$defs/WastedCrawl"
+     }
+    },
+    "required": [
+     "name",
+     "kind"
+    ],
+    "title": "BotStats",
+    "type": "object"
+   },
+   "PathCount": {
+    "properties": {
+     "path": {
+      "title": "Path",
+      "type": "string"
+     },
+     "requests": {
+      "title": "Requests",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "path",
+     "requests"
+    ],
+    "title": "PathCount",
+    "type": "object"
+   },
+   "WastedCrawl": {
+    "properties": {
+     "client_error": {
+      "default": 0,
+      "title": "Client Error",
+      "type": "integer"
+     },
+     "parameterised": {
+      "default": 0,
+      "title": "Parameterised",
+      "type": "integer"
+     },
+     "redirect": {
+      "default": 0,
+      "title": "Redirect",
+      "type": "integer"
+     },
+     "share": {
+      "default": 0.0,
+      "title": "Share",
+      "type": "number"
+     },
+     "total": {
+      "default": 0,
+      "title": "Total",
+      "type": "integer"
+     }
+    },
+    "title": "WastedCrawl",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "bot_requests": {
+    "default": 0,
+    "title": "Bot Requests",
+    "type": "integer"
+   },
+   "bots": {
+    "items": {
+     "$ref": "#/$defs/BotStats"
+    },
+    "title": "Bots",
+    "type": "array"
+   },
+   "format": {
+    "title": "Format",
+    "type": "string"
+   },
+   "ips_not_verified": {
+    "default": 0,
+    "title": "Ips Not Verified",
+    "type": "integer"
+   },
+   "ips_truncated": {
+    "default": false,
+    "title": "Ips Truncated",
+    "type": "boolean"
+   },
+   "ips_verified": {
+    "default": 0,
+    "title": "Ips Verified",
+    "type": "integer"
+   },
+   "lines_parsed": {
+    "default": 0,
+    "title": "Lines Parsed",
+    "type": "integer"
+   },
+   "lines_total": {
+    "default": 0,
+    "title": "Lines Total",
+    "type": "integer"
+   },
+   "lines_unparsable": {
+    "default": 0,
+    "title": "Lines Unparsable",
+    "type": "integer"
+   },
+   "other_requests": {
+    "default": 0,
+    "title": "Other Requests",
+    "type": "integer"
+   },
+   "thresholds": {
+    "additionalProperties": {
+     "type": "number"
+    },
+    "title": "Thresholds",
+    "type": "object"
+   },
+   "uncrawled_urls": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Uncrawled Urls",
+    "type": "array"
+   },
+   "urls_checked": {
+    "default": 0,
+    "title": "Urls Checked",
+    "type": "integer"
+   },
+   "urls_skipped": {
+    "default": 0,
+    "title": "Urls Skipped",
+    "type": "integer"
+   },
+   "verify_bots": {
+    "default": true,
+    "title": "Verify Bots",
+    "type": "boolean"
+   }
+  },
+  "required": [
+   "format"
+  ],
+  "title": "LogAnalysis",
+  "type": "object"
+ },
+ "schema_version": "analyze_logs/1"
+}

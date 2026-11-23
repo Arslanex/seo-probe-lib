@@ -1,0 +1,95 @@
+{
+ "schema": {
+  "$defs": {
+   "SchemaSuggestion": {
+    "properties": {
+     "complete": {
+      "title": "Complete",
+      "type": "boolean"
+     },
+     "json_ld": {
+      "title": "Json Ld",
+      "type": "string"
+     },
+     "missing_fields": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Missing Fields",
+      "type": "array"
+     },
+     "reason": {
+      "title": "Reason",
+      "type": "string"
+     },
+     "rich_result_note": {
+      "default": "",
+      "title": "Rich Result Note",
+      "type": "string"
+     },
+     "type": {
+      "title": "Type",
+      "type": "string"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     },
+     "validation_issues": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Validation Issues",
+      "type": "array"
+     },
+     "warning": {
+      "default": "",
+      "title": "Warning",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url",
+     "type",
+     "reason",
+     "json_ld",
+     "complete"
+    ],
+    "title": "SchemaSuggestion",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "items": {
+    "items": {
+     "$ref": "#/$defs/SchemaSuggestion"
+    },
+    "title": "Items",
+    "type": "array"
+   },
+   "notes": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Notes",
+    "type": "array"
+   },
+   "pages_examined": {
+    "default": 0,
+    "title": "Pages Examined",
+    "type": "integer"
+   },
+   "product_gaps": {
+    "items": {
+     "additionalProperties": true,
+     "type": "object"
+    },
+    "title": "Product Gaps",
+    "type": "array"
+   }
+  },
+  "title": "SchemaSuggestions",
+  "type": "object"
+ },
+ "schema_version": "suggest_schema/1"
+}

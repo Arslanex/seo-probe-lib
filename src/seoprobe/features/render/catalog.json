@@ -1,0 +1,344 @@
+{
+  "rules": {
+    "above-fold-no-h1": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": true,
+      "effort_default": "S",
+      "impact_default": "low",
+      "message_key": "finding.above-fold-no-h1",
+      "recommendation_key": "rec.above-fold-no-h1",
+      "failure_check_key": "fail.above-fold-no-h1",
+      "leading_indicator_key": "lead.above-fold-no-h1",
+      "depends_on": [],
+      "requires": [
+        "rendered"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0"
+    },
+    "intrusive-interstitial": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": true,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.intrusive-interstitial",
+      "recommendation_key": "rec.intrusive-interstitial",
+      "failure_check_key": "fail.intrusive-interstitial",
+      "leading_indicator_key": "lead.intrusive-interstitial",
+      "depends_on": [],
+      "requires": [
+        "rendered"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0"
+    },
+    "mobile-small-tap-targets": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": true,
+      "effort_default": "S",
+      "impact_default": "low",
+      "depends_on": [],
+      "requires": [
+        "rendered"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html"
+      ],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.mobile-small-tap-targets",
+      "recommendation_key": "rec.mobile-small-tap-targets"
+    },
+    "mobile-overlapping-tap-targets": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": true,
+      "effort_default": "S",
+      "impact_default": "low",
+      "depends_on": [],
+      "requires": [
+        "rendered"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.mobile-overlapping-tap-targets",
+      "recommendation_key": "rec.mobile-overlapping-tap-targets"
+    },
+    "mobile-small-text": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": true,
+      "effort_default": "S",
+      "impact_default": "low",
+      "depends_on": [],
+      "requires": [
+        "rendered"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.mobile-small-text",
+      "recommendation_key": "rec.mobile-small-text"
+    },
+    "mobile-horizontal-overflow": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "depends_on": [],
+      "requires": [
+        "rendered"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.mobile-horizontal-overflow",
+      "recommendation_key": "rec.mobile-horizontal-overflow"
+    },
+    "mobile-viewport-not-device-width": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "depends_on": [],
+      "requires": [
+        "rendered"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.mobile-viewport-not-device-width",
+      "recommendation_key": "rec.mobile-viewport-not-device-width"
+    },
+    "mobile-content-parity": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": true,
+      "effort_default": "M",
+      "impact_default": "high",
+      "depends_on": [],
+      "requires": [
+        "rendered"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing"
+      ],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.mobile-content-parity",
+      "recommendation_key": "rec.mobile-content-parity"
+    },
+    "a11y-critical": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "depends_on": [],
+      "requires": [
+        "rendered"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://www.w3.org/TR/WCAG22/"
+      ],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.a11y-critical",
+      "recommendation_key": "rec.a11y-critical"
+    },
+    "a11y-serious": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "depends_on": [],
+      "requires": [
+        "rendered"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://www.w3.org/TR/WCAG22/"
+      ],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.a11y-serious",
+      "recommendation_key": "rec.a11y-serious"
+    },
+    "a11y-moderate": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "low",
+      "depends_on": [],
+      "requires": [
+        "rendered"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://www.w3.org/TR/WCAG22/"
+      ],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.a11y-moderate",
+      "recommendation_key": "rec.a11y-moderate"
+    },
+    "a11y-minor": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "low",
+      "depends_on": [],
+      "requires": [
+        "rendered"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://www.w3.org/TR/WCAG22/"
+      ],
+      "since": "0.1.0",
+      "scored": false,
+      "message_key": "finding.a11y-minor",
+      "recommendation_key": "rec.a11y-minor"
+    }
+  },
+  "messages": {
+    "en": {
+      "fail.above-fold-no-h1": "A fresh audit finds the H1 inside the first screen on both devices.",
+      "fail.intrusive-interstitial": "A fresh audit finds no fixed layer covering more than 30% of the first screen.",
+      "finding.a11y-critical": "axe-core found critical accessibility violations: some visitors cannot use parts of the page at all.",
+      "finding.a11y-minor": "axe-core found minor accessibility violations.",
+      "finding.a11y-moderate": "axe-core found moderate accessibility violations.",
+      "finding.a11y-serious": "axe-core found serious accessibility violations that make the page hard to use for some visitors.",
+      "finding.above-fold-no-h1": "The H1 heading is not visible in the first screen (above the fold) on the device(s) named in the evidence.",
+      "finding.intrusive-interstitial": "A fixed layer (cookie banner, dialog or pop-up) covers more than 30% of the first screen.",
+      "finding.mobile-content-parity": "The phone view shows clearly less text or fewer internal links than the desktop view. Google indexes the mobile version, so the missing part may not count. The ratio threshold is a heuristic.",
+      "finding.mobile-horizontal-overflow": "On the phone view the page is wider than the screen, so it scrolls sideways.",
+      "finding.mobile-overlapping-tap-targets": "Some tap targets on the phone view overlap each other, so a tap can hit the wrong one.",
+      "finding.mobile-small-tap-targets": "Many tap targets on the phone view are smaller than 48 by 48 CSS pixels. The share threshold is a heuristic.",
+      "finding.mobile-small-text": "A large share of the text on the phone view is set below 12 px. The share threshold is a heuristic.",
+      "finding.mobile-viewport-not-device-width": "The page has no viewport meta tag with width=device-width, so phones show it zoomed out.",
+      "lead.above-fold-no-h1": "Bounce rate on mobile and desktop in your analytics.",
+      "lead.intrusive-interstitial": "Mobile usability and page experience reports in Search Console.",
+      "rec.a11y-critical": "Fix each listed axe rule; its help link explains the WCAG criterion and the fix. Start with these.",
+      "rec.a11y-minor": "Fix the listed axe rules as part of regular maintenance.",
+      "rec.a11y-moderate": "Fix each listed axe rule when you work on the affected templates.",
+      "rec.a11y-serious": "Fix each listed axe rule; its help link explains the WCAG criterion and the fix.",
+      "rec.above-fold-no-h1": "Show the main heading near the top of the page so visitors see at once what the page is about.",
+      "rec.intrusive-interstitial": "Shrink the banner or turn it into a dismissible bar at the edge; Google may demote pages whose content is hidden by intrusive pop-ups on mobile.",
+      "rec.mobile-content-parity": "Serve the same main content and navigation links on mobile as on desktop; collapse them into menus or accordions instead of removing them.",
+      "rec.mobile-horizontal-overflow": "Find the element wider than the screen (fixed widths, large images, tables) and make it fit with max-width: 100% or a responsive layout.",
+      "rec.mobile-overlapping-tap-targets": "Separate the overlapping links and buttons so each has its own tappable area.",
+      "rec.mobile-small-tap-targets": "Give buttons and links at least 48 by 48 pixels of tappable area (padding counts) so visitors can hit them with a finger.",
+      "rec.mobile-small-text": "Use a base font size of at least 16 px on mobile and keep secondary text at 12 px or more.",
+      "rec.mobile-viewport-not-device-width": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> to the head."
+    },
+    "tr": {
+      "fail.above-fold-no-h1": "Yeni bir denetim H1'i her iki cihazda da ilk ekranın içinde buluyor.",
+      "fail.intrusive-interstitial": "Yeni bir denetim ilk ekranın %30'undan fazlasını kaplayan sabit katman bulmuyor.",
+      "finding.a11y-critical": "axe-core kritik erişilebilirlik ihlalleri buldu: bazı ziyaretçiler sayfanın bazı bölümlerini hiç kullanamıyor.",
+      "finding.a11y-minor": "axe-core küçük erişilebilirlik ihlalleri buldu.",
+      "finding.a11y-moderate": "axe-core orta düzeyde erişilebilirlik ihlalleri buldu.",
+      "finding.a11y-serious": "axe-core, sayfayı bazı ziyaretçiler için kullanması zor hale getiren ciddi erişilebilirlik ihlalleri buldu.",
+      "finding.above-fold-no-h1": "H1 başlığı, kanıtta adı geçen cihaz(lar)da ilk ekranda (ekran üstünde) görünmüyor.",
+      "finding.intrusive-interstitial": "Sabit bir katman (çerez bandı, diyalog veya açılır pencere) ilk ekranın %30'undan fazlasını kaplıyor.",
+      "finding.mobile-content-parity": "Telefon görünümü masaüstüne göre belirgin biçimde daha az metin veya daha az iç bağlantı gösteriyor. Google mobil sürümü dizine eklediği için eksik kısım hesaba katılmayabilir. Oran eşiği sezgiseldir.",
+      "finding.mobile-horizontal-overflow": "Telefon görünümünde sayfa ekrandan geniş; yana doğru kayıyor.",
+      "finding.mobile-overlapping-tap-targets": "Telefon görünümünde bazı dokunma hedefleri üst üste biniyor; bir dokunuş yanlış hedefe gidebilir.",
+      "finding.mobile-small-tap-targets": "Telefon görünümündeki dokunma hedeflerinin önemli bir kısmı 48x48 CSS pikselden küçük. Oran eşiği sezgiseldir.",
+      "finding.mobile-small-text": "Telefon görünümündeki metnin büyük bir kısmı 12 pikselin altında. Oran eşiği sezgiseldir.",
+      "finding.mobile-viewport-not-device-width": "Sayfada width=device-width içeren bir viewport meta etiketi yok; telefonlar sayfayı uzaklaştırılmış gösteriyor.",
+      "lead.above-fold-no-h1": "Analitiğinizde mobil ve masaüstü hemen çıkma oranı.",
+      "lead.intrusive-interstitial": "Search Console'da mobil kullanılabilirlik ve sayfa deneyimi raporları.",
+      "rec.a11y-critical": "Listelenen her axe kuralını düzeltin; yardım bağlantısı ilgili WCAG ölçütünü ve çözümü anlatıyor. İşe bunlardan başlayın.",
+      "rec.a11y-minor": "Listelenen axe kurallarını düzenli bakım sırasında düzeltin.",
+      "rec.a11y-moderate": "Etkilenen şablonlar üzerinde çalışırken listelenen her axe kuralını düzeltin.",
+      "rec.a11y-serious": "Listelenen her axe kuralını düzeltin; yardım bağlantısı ilgili WCAG ölçütünü ve çözümü anlatıyor.",
+      "rec.above-fold-no-h1": "Ana başlığı sayfanın üstüne yakın gösterin; ziyaretçi sayfanın ne hakkında olduğunu hemen görsün.",
+      "rec.intrusive-interstitial": "Bandı küçültün veya kenarda kapatılabilir bir çubuğa çevirin; mobilde içeriği kapatan müdahaleci pencereler Google'da sıralamayı düşürebilir.",
+      "rec.mobile-content-parity": "Mobilde de masaüstündeki ana içeriği ve gezinme bağlantılarını sunun; kaldırmak yerine menü veya akordeon içine toplayın.",
+      "rec.mobile-horizontal-overflow": "Ekrandan geniş öğeyi (sabit genişlikler, büyük görseller, tablolar) bulun ve max-width: 100% veya duyarlı bir düzenle sığdırın.",
+      "rec.mobile-overlapping-tap-targets": "Üst üste binen bağlantı ve düğmeleri ayırın; her birinin kendi dokunma alanı olsun.",
+      "rec.mobile-small-tap-targets": "Düğme ve bağlantılara en az 48x48 piksellik dokunma alanı verin (iç boşluk da sayılır); ziyaretçiler parmakla rahatça dokunabilsin.",
+      "rec.mobile-small-text": "Mobilde temel yazı boyutunu en az 16 piksel yapın, ikincil metni de 12 pikselin altına düşürmeyin.",
+      "rec.mobile-viewport-not-device-width": "head bölümüne <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> ekleyin."
+    }
+  }
+}

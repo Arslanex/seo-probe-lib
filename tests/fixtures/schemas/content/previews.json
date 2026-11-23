@@ -1,0 +1,245 @@
+{
+ "schema": {
+  "$defs": {
+   "SerpPreview": {
+    "properties": {
+     "description": {
+      "title": "Description",
+      "type": "string"
+     },
+     "description_missing": {
+      "title": "Description Missing",
+      "type": "boolean"
+     },
+     "description_shown": {
+      "title": "Description Shown",
+      "type": "string"
+     },
+     "description_truncated": {
+      "title": "Description Truncated",
+      "type": "boolean"
+     },
+     "device": {
+      "title": "Device",
+      "type": "string"
+     },
+     "display_url": {
+      "title": "Display Url",
+      "type": "string"
+     },
+     "title": {
+      "title": "Title",
+      "type": "string"
+     },
+     "title_px": {
+      "title": "Title Px",
+      "type": "integer"
+     },
+     "title_shown": {
+      "title": "Title Shown",
+      "type": "string"
+     },
+     "title_truncated": {
+      "title": "Title Truncated",
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "device",
+     "display_url",
+     "title",
+     "title_shown",
+     "title_truncated",
+     "title_px",
+     "description",
+     "description_shown",
+     "description_truncated",
+     "description_missing"
+    ],
+    "title": "SerpPreview",
+    "type": "object"
+   },
+   "SocialCard": {
+    "properties": {
+     "image": {
+      "$ref": "#/$defs/SocialImage"
+     },
+     "missing_og": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Missing Og",
+      "type": "array"
+     },
+     "og": {
+      "additionalProperties": {
+       "type": "string"
+      },
+      "title": "Og",
+      "type": "object"
+     },
+     "twitter": {
+      "additionalProperties": {
+       "type": "string"
+      },
+      "title": "Twitter",
+      "type": "object"
+     }
+    },
+    "title": "SocialCard",
+    "type": "object"
+   },
+   "SocialImage": {
+    "properties": {
+     "absolute": {
+      "default": true,
+      "title": "Absolute",
+      "type": "boolean"
+     },
+     "bytes": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Bytes"
+     },
+     "bytes_is_lower_bound": {
+      "default": false,
+      "title": "Bytes Is Lower Bound",
+      "type": "boolean"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "format": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Format"
+     },
+     "height": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Height"
+     },
+     "ratio": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Ratio"
+     },
+     "reachable": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Reachable"
+     },
+     "status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Status"
+     },
+     "too_heavy": {
+      "default": false,
+      "title": "Too Heavy",
+      "type": "boolean"
+     },
+     "url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Url"
+     },
+     "width": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Width"
+     }
+    },
+    "title": "SocialImage",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "notes": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Notes",
+    "type": "array"
+   },
+   "serp": {
+    "items": {
+     "$ref": "#/$defs/SerpPreview"
+    },
+    "title": "Serp",
+    "type": "array"
+   },
+   "social": {
+    "$ref": "#/$defs/SocialCard"
+   }
+  },
+  "title": "Previews",
+  "type": "object"
+ },
+ "schema_version": "previews/1"
+}

@@ -1,0 +1,134 @@
+{
+ "schema": {
+  "$defs": {
+   "KeywordCheck": {
+    "properties": {
+     "density_percent": {
+      "title": "Density Percent",
+      "type": "number"
+     },
+     "in_description": {
+      "title": "In Description",
+      "type": "boolean"
+     },
+     "in_first_100_words": {
+      "title": "In First 100 Words",
+      "type": "boolean"
+     },
+     "in_h1": {
+      "title": "In H1",
+      "type": "boolean"
+     },
+     "in_subheadings": {
+      "title": "In Subheadings",
+      "type": "boolean"
+     },
+     "in_title": {
+      "title": "In Title",
+      "type": "boolean"
+     },
+     "in_url": {
+      "title": "In Url",
+      "type": "boolean"
+     },
+     "keyword": {
+      "title": "Keyword",
+      "type": "string"
+     },
+     "occurrences": {
+      "title": "Occurrences",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "keyword",
+     "in_title",
+     "in_h1",
+     "in_description",
+     "in_url",
+     "in_first_100_words",
+     "in_subheadings",
+     "occurrences",
+     "density_percent"
+    ],
+    "title": "KeywordCheck",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "keywords": {
+    "items": {
+     "$ref": "#/$defs/KeywordCheck"
+    },
+    "title": "Keywords",
+    "type": "array"
+   },
+   "language": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Language"
+   },
+   "notes": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Notes",
+    "type": "array"
+   },
+   "phrases": {
+    "items": {
+     "additionalProperties": true,
+     "type": "object"
+    },
+    "title": "Phrases",
+    "type": "array"
+   },
+   "readability": {
+    "anyOf": [
+     {
+      "additionalProperties": true,
+      "type": "object"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Readability"
+   },
+   "suggested_targets": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Suggested Targets",
+    "type": "array"
+   },
+   "terms": {
+    "items": {
+     "additionalProperties": true,
+     "type": "object"
+    },
+    "title": "Terms",
+    "type": "array"
+   },
+   "title_terms": {
+    "items": {
+     "additionalProperties": true,
+     "type": "object"
+    },
+    "title": "Title Terms",
+    "type": "array"
+   }
+  },
+  "title": "ReadabilityData",
+  "type": "object"
+ },
+ "schema_version": "readability/1"
+}

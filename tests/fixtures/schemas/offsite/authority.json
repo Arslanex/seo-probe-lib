@@ -1,0 +1,62 @@
+{
+ "schema": {
+  "properties": {
+   "domain": {
+    "default": "",
+    "title": "Domain",
+    "type": "string"
+   },
+   "error": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Error"
+   },
+   "page_rank_decimal": {
+    "anyOf": [
+     {
+      "type": "number"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Page Rank Decimal"
+   },
+   "page_rank_integer": {
+    "anyOf": [
+     {
+      "type": "integer"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Page Rank Integer"
+   },
+   "rank": {
+    "anyOf": [
+     {
+      "type": "integer"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Rank"
+   }
+  },
+  "title": "AuthoritySignal",
+  "type": "object"
+ },
+ "schema_version": "authority/1"
+}

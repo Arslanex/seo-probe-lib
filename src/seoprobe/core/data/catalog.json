@@ -1,0 +1,51 @@
+{
+  "rules": {},
+  "messages": {
+    "en": {
+      "error.invalid-url": "The URL is not valid.",
+      "error.unsupported-scheme": "Only http and https URLs are supported.",
+      "error.ssrf-blocked": "The address points to a private or reserved network and was not contacted.",
+      "error.invalid-input": "The input is not valid.",
+      "error.dns-failed": "The host name could not be resolved.",
+      "error.connect-failed": "The server could not be reached.",
+      "error.tls-error": "The TLS handshake failed.",
+      "error.fetch-timeout": "The server did not answer in time.",
+      "error.too-many-redirects": "The URL redirects too many times.",
+      "error.rate-limited": "Too many requests or failures for this host; try again later.",
+      "error.request-budget-exceeded": "The request or download budget of the operation was used up.",
+      "error.missing-extra": "An optional dependency is not installed.",
+      "error.missing-credential": "A required key or credential is not configured.",
+      "error.browser-unavailable": "The headless browser could not be started.",
+      "error.not-connected": "The account is not connected.",
+      "error.no-permission": "The account has no permission for this resource.",
+      "error.property-not-found": "No matching property was found for this site.",
+      "error.api-quota-exceeded": "The quota of the external service is exhausted.",
+      "error.api-error": "The external service failed.",
+      "error.timeout": "The operation took longer than allowed.",
+      "error.internal-error": "An unexpected error occurred."
+    },
+    "tr": {
+      "error.invalid-url": "URL geçerli değil.",
+      "error.unsupported-scheme": "Yalnızca http ve https adresleri desteklenir.",
+      "error.ssrf-blocked": "Adres özel veya ayrılmış bir ağı gösteriyor; bağlanılmadı.",
+      "error.invalid-input": "Girdi geçerli değil.",
+      "error.dns-failed": "Alan adı çözümlenemedi.",
+      "error.connect-failed": "Sunucuya ulaşılamadı.",
+      "error.tls-error": "TLS bağlantısı kurulamadı.",
+      "error.fetch-timeout": "Sunucu zamanında yanıt vermedi.",
+      "error.too-many-redirects": "Adres çok fazla yönlendirme yapıyor.",
+      "error.rate-limited": "Bu sunucu için çok fazla istek veya hata oldu; daha sonra deneyin.",
+      "error.request-budget-exceeded": "İşlemin istek veya indirme bütçesi doldu.",
+      "error.missing-extra": "İsteğe bağlı bir bağımlılık kurulu değil.",
+      "error.missing-credential": "Gerekli bir anahtar veya kimlik bilgisi ayarlanmamış.",
+      "error.browser-unavailable": "Başsız tarayıcı başlatılamadı.",
+      "error.not-connected": "Hesap bağlı değil.",
+      "error.no-permission": "Hesabın bu kaynak için izni yok.",
+      "error.property-not-found": "Bu site için eşleşen mülk bulunamadı.",
+      "error.api-quota-exceeded": "Dış servisin kotası doldu.",
+      "error.api-error": "Dış servis hata verdi.",
+      "error.timeout": "İşlem izin verilen süreden uzun sürdü.",
+      "error.internal-error": "Beklenmeyen bir hata oluştu."
+    }
+  }
+}

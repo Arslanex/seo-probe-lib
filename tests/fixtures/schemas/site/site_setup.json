@@ -1,0 +1,206 @@
+{
+ "schema": {
+  "$defs": {
+   "Probe": {
+    "properties": {
+     "detail": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Detail"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "present": {
+      "default": false,
+      "title": "Present",
+      "type": "boolean"
+     },
+     "status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Status"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "Probe",
+    "type": "object"
+   },
+   "RedirectVariant": {
+    "properties": {
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "final_status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Final Status"
+     },
+     "final_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Final Url"
+     },
+     "hops": {
+      "default": 0,
+      "title": "Hops",
+      "type": "integer"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "permanent": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Permanent"
+     },
+     "status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Status"
+     },
+     "variant_url": {
+      "title": "Variant Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "name",
+     "variant_url"
+    ],
+    "title": "RedirectVariant",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "custom_404": {
+    "anyOf": [
+     {
+      "type": "boolean"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Custom 404"
+   },
+   "files": {
+    "additionalProperties": {
+     "$ref": "#/$defs/Probe"
+    },
+    "title": "Files",
+    "type": "object"
+   },
+   "headers": {
+    "additionalProperties": true,
+    "title": "Headers",
+    "type": "object"
+   },
+   "hsts": {
+    "additionalProperties": true,
+    "title": "Hsts",
+    "type": "object"
+   },
+   "http_version": {
+    "default": "unknown",
+    "title": "Http Version",
+    "type": "string"
+   },
+   "redirects": {
+    "items": {
+     "$ref": "#/$defs/RedirectVariant"
+    },
+    "title": "Redirects",
+    "type": "array"
+   },
+   "requests_made": {
+    "default": 0,
+    "title": "Requests Made",
+    "type": "integer"
+   },
+   "skipped": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "title": "Skipped",
+    "type": "object"
+   },
+   "soft_404": {
+    "additionalProperties": true,
+    "title": "Soft 404",
+    "type": "object"
+   }
+  },
+  "title": "SiteSetup",
+  "type": "object"
+ },
+ "schema_version": "site_setup/1"
+}

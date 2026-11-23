@@ -1,0 +1,933 @@
+{
+  "rules": {
+    "url-check-broken": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "high",
+      "message_key": "finding.url-check-broken",
+      "recommendation_key": "rec.url-check-broken",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/http-network-errors"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "url-check-redirected": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "low",
+      "message_key": "finding.url-check-redirected",
+      "recommendation_key": "rec.url-check-redirected",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "url-check-robots-blocked": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "high",
+      "message_key": "finding.url-check-robots-blocked",
+      "recommendation_key": "rec.url-check-robots-blocked",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [
+        "robots"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/robots/intro"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "url-check-noindex": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "high",
+      "message_key": "finding.url-check-noindex",
+      "recommendation_key": "rec.url-check-noindex",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/block-indexing"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "url-check-canonical-elsewhere": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.url-check-canonical-elsewhere",
+      "recommendation_key": "rec.url-check-canonical-elsewhere",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "url-check-sitemap-not-indexable": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.url-check-sitemap-not-indexable",
+      "recommendation_key": "rec.url-check-sitemap-not-indexable",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [
+        "sitemap"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "url-check-not-in-sitemap": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "low",
+      "message_key": "finding.url-check-not-in-sitemap",
+      "recommendation_key": "rec.url-check-not-in-sitemap",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [
+        "sitemap"
+      ],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "redirect-not-redirected": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "high",
+      "message_key": "finding.redirect-not-redirected",
+      "recommendation_key": "rec.redirect-not-redirected",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "redirect-wrong-target": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "high",
+      "message_key": "finding.redirect-wrong-target",
+      "recommendation_key": "rec.redirect-wrong-target",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "redirect-too-many-hops": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.redirect-too-many-hops",
+      "recommendation_key": "rec.redirect-too-many-hops",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "redirect-loop": {
+      "category": "technical",
+      "severity": "Critical",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "high",
+      "message_key": "finding.redirect-loop",
+      "recommendation_key": "rec.redirect-loop",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "redirect-target-error": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "high",
+      "message_key": "finding.redirect-target-error",
+      "recommendation_key": "rec.redirect-target-error",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/http-network-errors"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "redirect-temporary": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.redirect-temporary",
+      "recommendation_key": "rec.redirect-temporary",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-noindex-added": {
+      "category": "technical",
+      "severity": "Critical",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "high",
+      "message_key": "finding.snapshot-noindex-added",
+      "recommendation_key": "rec.snapshot-noindex-added",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/block-indexing"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-noindex-removed": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "low",
+      "message_key": "finding.snapshot-noindex-removed",
+      "recommendation_key": "rec.snapshot-noindex-removed",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/block-indexing"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-status-error": {
+      "category": "technical",
+      "severity": "Critical",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "high",
+      "message_key": "finding.snapshot-status-error",
+      "recommendation_key": "rec.snapshot-status-error",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/http-network-errors"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-status-changed": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.snapshot-status-changed",
+      "recommendation_key": "rec.snapshot-status-changed",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/http-network-errors"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-final-url-changed": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.snapshot-final-url-changed",
+      "recommendation_key": "rec.snapshot-final-url-changed",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/301-redirects"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-canonical-changed": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "high",
+      "message_key": "finding.snapshot-canonical-changed",
+      "recommendation_key": "rec.snapshot-canonical-changed",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-robots-changed": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.snapshot-robots-changed",
+      "recommendation_key": "rec.snapshot-robots-changed",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-title-changed": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.snapshot-title-changed",
+      "recommendation_key": "rec.snapshot-title-changed",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/appearance/title-link"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-h1-changed": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.snapshot-h1-changed",
+      "recommendation_key": "rec.snapshot-h1-changed",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-hreflang-changed": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.snapshot-hreflang-changed",
+      "recommendation_key": "rec.snapshot-hreflang-changed",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/specialty/international/localized-versions"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-content-shrunk": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "medium",
+      "message_key": "finding.snapshot-content-shrunk",
+      "recommendation_key": "rec.snapshot-content-shrunk",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-description-changed": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "low",
+      "message_key": "finding.snapshot-description-changed",
+      "recommendation_key": "rec.snapshot-description-changed",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/appearance/snippet"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-schema-changed": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "low",
+      "message_key": "finding.snapshot-schema-changed",
+      "recommendation_key": "rec.snapshot-schema-changed",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-internal-links-changed": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "low",
+      "message_key": "finding.snapshot-internal-links-changed",
+      "recommendation_key": "rec.snapshot-internal-links-changed",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/links-crawlable"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "snapshot-content-changed": {
+      "category": "technical",
+      "severity": "Info",
+      "layer": "A",
+      "scope": "page",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "low",
+      "message_key": "finding.snapshot-content-changed",
+      "recommendation_key": "rec.snapshot-content-changed",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "page",
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "logs-spoofed-bot": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": false,
+      "effort_default": "M",
+      "impact_default": "low",
+      "message_key": "finding.logs-spoofed-bot",
+      "recommendation_key": "rec.logs-spoofed-bot",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "logs-crawl-waste": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": true,
+      "effort_default": "M",
+      "impact_default": "medium",
+      "message_key": "finding.logs-crawl-waste",
+      "recommendation_key": "rec.logs-crawl-waste",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "logs-bot-server-errors": {
+      "category": "technical",
+      "severity": "High",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": false,
+      "effort_default": "M",
+      "impact_default": "high",
+      "message_key": "finding.logs-bot-server-errors",
+      "recommendation_key": "rec.logs-bot-server-errors",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/http-network-errors"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "logs-uncrawled-urls": {
+      "category": "technical",
+      "severity": "Medium",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": false,
+      "effort_default": "M",
+      "impact_default": "medium",
+      "message_key": "finding.logs-uncrawled-urls",
+      "recommendation_key": "rec.logs-uncrawled-urls",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "site"
+      ],
+      "references": [
+        "https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget"
+      ],
+      "since": "0.1.0",
+      "scored": false
+    },
+    "logs-unparsable-lines": {
+      "category": "technical",
+      "severity": "Low",
+      "layer": "A",
+      "scope": "site",
+      "heuristic": false,
+      "effort_default": "S",
+      "impact_default": "low",
+      "message_key": "finding.logs-unparsable-lines",
+      "recommendation_key": "rec.logs-unparsable-lines",
+      "failure_check_key": "",
+      "leading_indicator_key": "",
+      "depends_on": [],
+      "requires": [],
+      "modes": [
+        "site"
+      ],
+      "references": [],
+      "since": "0.1.0",
+      "scored": false
+    }
+  },
+  "messages": {
+    "en": {
+      "finding.url-check-broken": "The URL did not return a successful response (fetch error or HTTP 4xx/5xx).",
+      "rec.url-check-broken": "Fix the URL so it answers 200, or redirect it to its replacement and remove it from internal links and sitemaps.",
+      "finding.url-check-redirected": "The URL redirects; the URL itself will not be indexed, its target will.",
+      "rec.url-check-redirected": "Link to and list the final URL directly instead of the redirecting one.",
+      "finding.url-check-robots-blocked": "robots.txt does not allow search engines to crawl the URL.",
+      "rec.url-check-robots-blocked": "Remove or narrow the Disallow rule if the page should appear in search results.",
+      "finding.url-check-noindex": "The page asks search engines not to index it (noindex in a robots meta tag or the X-Robots-Tag header).",
+      "rec.url-check-noindex": "Remove the noindex directive if the page should be indexed.",
+      "finding.url-check-canonical-elsewhere": "The canonical link of the page names a different URL, so this URL is unlikely to be indexed itself.",
+      "rec.url-check-canonical-elsewhere": "Point the canonical to the page itself if this URL is the one that should rank.",
+      "finding.url-check-sitemap-not-indexable": "The URL is listed in the sitemap but is not indexable.",
+      "rec.url-check-sitemap-not-indexable": "List only indexable, canonical URLs that answer 200 in the sitemap.",
+      "finding.url-check-not-in-sitemap": "The URL is indexable but missing from the given sitemap.",
+      "rec.url-check-not-in-sitemap": "Add the URL to the sitemap so search engines discover changes to it sooner.",
+      "finding.redirect-not-redirected": "The old URL does not redirect to its new address.",
+      "rec.redirect-not-redirected": "Add a permanent (301 or 308) redirect from the old URL to the expected new URL.",
+      "finding.redirect-wrong-target": "The old URL redirects, but not to the expected new URL.",
+      "rec.redirect-wrong-target": "Change the redirect so it lands on the expected URL (often a rule sends many pages to the home page).",
+      "finding.redirect-too-many-hops": "The redirect passes through more hops than the allowed maximum before reaching its target.",
+      "rec.redirect-too-many-hops": "Redirect the old URL straight to the final URL in a single hop.",
+      "finding.redirect-loop": "The redirect chain returns to a URL it already visited, so it never reaches a page.",
+      "rec.redirect-loop": "Break the loop so the chain ends on a page that answers 200.",
+      "finding.redirect-target-error": "The redirect ends on an error (HTTP 4xx/5xx or no response).",
+      "rec.redirect-target-error": "Make the target answer 200, or redirect to a page that exists.",
+      "finding.redirect-temporary": "A permanent move uses a temporary redirect (302 or 307).",
+      "rec.redirect-temporary": "Use a permanent redirect (301 or 308) so the new URL takes over the old one's signals.",
+      "finding.snapshot-noindex-added": "The page became noindex since the previous snapshot.",
+      "rec.snapshot-noindex-added": "Check whether the noindex was intended; if not, remove it at once and request reindexing.",
+      "finding.snapshot-noindex-removed": "The page is no longer noindex since the previous snapshot.",
+      "rec.snapshot-noindex-removed": "Confirm that the page should now be indexed.",
+      "finding.snapshot-status-error": "The page now answers with an error (HTTP 4xx/5xx or no response); it answered before.",
+      "rec.snapshot-status-error": "Restore the page or redirect it to its replacement.",
+      "finding.snapshot-status-changed": "The HTTP status of the page changed since the previous snapshot.",
+      "rec.snapshot-status-changed": "Check that the new status is intended.",
+      "finding.snapshot-final-url-changed": "The page now ends on a different final URL (a redirect was added, removed or changed).",
+      "rec.snapshot-final-url-changed": "Check that the redirect change is intended and that the new target is the right page.",
+      "finding.snapshot-canonical-changed": "The canonical URL of the page changed.",
+      "rec.snapshot-canonical-changed": "Check that the new canonical names the page that should rank.",
+      "finding.snapshot-robots-changed": "The robots meta tags or the X-Robots-Tag header of the page changed.",
+      "rec.snapshot-robots-changed": "Review the new directives (nofollow, nosnippet, max-snippet and similar).",
+      "finding.snapshot-title-changed": "The title of the page changed.",
+      "rec.snapshot-title-changed": "Check that the new title still matches the queries the page ranks for.",
+      "finding.snapshot-h1-changed": "The H1 headings of the page changed.",
+      "rec.snapshot-h1-changed": "Check that the main heading still describes the page's topic.",
+      "finding.snapshot-hreflang-changed": "The hreflang annotations of the page changed.",
+      "rec.snapshot-hreflang-changed": "Check that every language version is still listed and returns the annotation.",
+      "finding.snapshot-content-shrunk": "The word count of the page dropped by at least the threshold since the previous snapshot.",
+      "rec.snapshot-content-shrunk": "Check whether content was removed by mistake (a template or rendering change can hide text).",
+      "finding.snapshot-description-changed": "The meta description of the page changed.",
+      "rec.snapshot-description-changed": "Check that the new description still summarises the page.",
+      "finding.snapshot-schema-changed": "The structured data types on the page changed.",
+      "rec.snapshot-schema-changed": "Check that rich-result markup was not lost.",
+      "finding.snapshot-internal-links-changed": "The number of internal links on the page changed by at least the threshold.",
+      "rec.snapshot-internal-links-changed": "Check that navigation or related-content links were not removed by mistake.",
+      "finding.snapshot-content-changed": "The visible text of the page changed.",
+      "rec.snapshot-content-changed": "No action needed if the edit was intended.",
+      "finding.logs-spoofed-bot": "Requests claim to come from a search engine bot, but their IPs fail the reverse and forward DNS check.",
+      "rec.logs-spoofed-bot": "Do not trust the user agent alone; block or rate-limit these IPs if they cause load.",
+      "finding.logs-crawl-waste": "A large share of the bot's requests goes to parameterised URLs, redirects or 4xx pages.",
+      "rec.logs-crawl-waste": "Fix internal links that point to redirects and missing pages, and keep crawlers away from parameter variations.",
+      "finding.logs-bot-server-errors": "The search engine bot received server errors (5xx) for at least the threshold share of its requests.",
+      "rec.logs-bot-server-errors": "Find the failing URLs and the cause (capacity, timeouts, bot protection); repeated 5xx slow crawling down.",
+      "finding.logs-uncrawled-urls": "Some of the given URLs were never fetched by a verified search engine bot in this log.",
+      "rec.logs-uncrawled-urls": "Link to these pages from crawled pages and list them in the sitemap.",
+      "finding.logs-unparsable-lines": "A share of the log lines at or above the threshold could not be read in the chosen format.",
+      "rec.logs-unparsable-lines": "Check the log format option (combined, common or json) and the server's log configuration.",
+      "reason.verification-cap": "More bot IPs than the verification limit; the least active ones were not verified."
+    },
+    "tr": {
+      "finding.url-check-broken": "URL başarılı bir yanıt döndürmedi (erişim hatası ya da HTTP 4xx/5xx).",
+      "rec.url-check-broken": "URL'nin 200 döndürmesini sağlayın ya da yerine geçen sayfaya yönlendirip iç bağlantılardan ve site haritalarından çıkarın.",
+      "finding.url-check-redirected": "URL yönlendiriliyor; dizine bu URL değil, hedefi girer.",
+      "rec.url-check-redirected": "Bağlantılarda ve listelerde yönlendiren URL yerine doğrudan son URL'yi kullanın.",
+      "finding.url-check-robots-blocked": "robots.txt, arama motorlarının bu URL'yi taramasına izin vermiyor.",
+      "rec.url-check-robots-blocked": "Sayfanın arama sonuçlarında görünmesi gerekiyorsa ilgili Disallow kuralını kaldırın ya da daraltın.",
+      "finding.url-check-noindex": "Sayfa, arama motorlarından dizine eklenmemeyi istiyor (robots meta etiketinde ya da X-Robots-Tag başlığında noindex).",
+      "rec.url-check-noindex": "Sayfanın dizine girmesi gerekiyorsa noindex yönergesini kaldırın.",
+      "finding.url-check-canonical-elsewhere": "Sayfanın canonical bağlantısı başka bir URL'yi gösteriyor; bu URL'nin kendisinin dizine girmesi olası değil.",
+      "rec.url-check-canonical-elsewhere": "Sıralanması gereken bu URL ise canonical bağlantısını sayfanın kendisine yönlendirin.",
+      "finding.url-check-sitemap-not-indexable": "URL site haritasında yer alıyor ama dizine eklenebilir değil.",
+      "rec.url-check-sitemap-not-indexable": "Site haritasına yalnızca 200 döndüren, dizine eklenebilir ve canonical olan URL'leri koyun.",
+      "finding.url-check-not-in-sitemap": "URL dizine eklenebilir ama verilen site haritasında yok.",
+      "rec.url-check-not-in-sitemap": "Arama motorlarının değişiklikleri daha erken fark etmesi için URL'yi site haritasına ekleyin.",
+      "finding.redirect-not-redirected": "Eski URL yeni adresine yönlendirilmiyor.",
+      "rec.redirect-not-redirected": "Eski URL'den beklenen yeni URL'ye kalıcı (301 ya da 308) bir yönlendirme ekleyin.",
+      "finding.redirect-wrong-target": "Eski URL yönlendiriliyor ama beklenen yeni URL'ye değil.",
+      "rec.redirect-wrong-target": "Yönlendirmeyi beklenen URL'ye varacak şekilde düzeltin (çoğu zaman bir kural birçok sayfayı ana sayfaya gönderir).",
+      "finding.redirect-too-many-hops": "Yönlendirme, hedefe ulaşmadan önce izin verilen en fazla adımdan daha çok adımdan geçiyor.",
+      "rec.redirect-too-many-hops": "Eski URL'yi tek adımda doğrudan son URL'ye yönlendirin.",
+      "finding.redirect-loop": "Yönlendirme zinciri daha önce geçtiği bir URL'ye geri dönüyor ve hiçbir sayfaya ulaşmıyor.",
+      "rec.redirect-loop": "Döngüyü kırın; zincir 200 döndüren bir sayfada sonlansın.",
+      "finding.redirect-target-error": "Yönlendirme bir hatada sonlanıyor (HTTP 4xx/5xx ya da yanıt yok).",
+      "rec.redirect-target-error": "Hedefin 200 döndürmesini sağlayın ya da var olan bir sayfaya yönlendirin.",
+      "finding.redirect-temporary": "Kalıcı bir taşıma geçici bir yönlendirme (302 ya da 307) kullanıyor.",
+      "rec.redirect-temporary": "Yeni URL'nin eski URL'nin sinyallerini devralması için kalıcı yönlendirme (301 ya da 308) kullanın.",
+      "finding.snapshot-noindex-added": "Sayfa önceki görüntüden bu yana noindex oldu.",
+      "rec.snapshot-noindex-added": "noindex'in bilerek eklenip eklenmediğini kontrol edin; değilse hemen kaldırıp yeniden dizine eklenmesini isteyin.",
+      "finding.snapshot-noindex-removed": "Sayfa önceki görüntüden bu yana artık noindex değil.",
+      "rec.snapshot-noindex-removed": "Sayfanın artık dizine girmesi gerektiğini doğrulayın.",
+      "finding.snapshot-status-error": "Sayfa artık hata döndürüyor (HTTP 4xx/5xx ya da yanıt yok); önceden yanıt veriyordu.",
+      "rec.snapshot-status-error": "Sayfayı geri getirin ya da yerine geçen sayfaya yönlendirin.",
+      "finding.snapshot-status-changed": "Sayfanın HTTP durum kodu önceki görüntüden bu yana değişti.",
+      "rec.snapshot-status-changed": "Yeni durum kodunun bilerek yapılmış olduğunu kontrol edin.",
+      "finding.snapshot-final-url-changed": "Sayfa artık farklı bir son URL'de sonlanıyor (yönlendirme eklendi, kaldırıldı ya da değişti).",
+      "rec.snapshot-final-url-changed": "Yönlendirme değişikliğinin bilerek yapıldığını ve yeni hedefin doğru sayfa olduğunu kontrol edin.",
+      "finding.snapshot-canonical-changed": "Sayfanın canonical URL'si değişti.",
+      "rec.snapshot-canonical-changed": "Yeni canonical'ın sıralanması gereken sayfayı gösterdiğini kontrol edin.",
+      "finding.snapshot-robots-changed": "Sayfanın robots meta etiketleri ya da X-Robots-Tag başlığı değişti.",
+      "rec.snapshot-robots-changed": "Yeni yönergeleri (nofollow, nosnippet, max-snippet vb.) gözden geçirin.",
+      "finding.snapshot-title-changed": "Sayfanın başlığı (title) değişti.",
+      "rec.snapshot-title-changed": "Yeni başlığın sayfanın sıralandığı sorgularla hâlâ örtüştüğünü kontrol edin.",
+      "finding.snapshot-h1-changed": "Sayfanın H1 başlıkları değişti.",
+      "rec.snapshot-h1-changed": "Ana başlığın hâlâ sayfanın konusunu anlattığını kontrol edin.",
+      "finding.snapshot-hreflang-changed": "Sayfanın hreflang işaretlemeleri değişti.",
+      "rec.snapshot-hreflang-changed": "Tüm dil sürümlerinin hâlâ listelendiğini ve karşılıklı işaretlemeyi döndürdüğünü kontrol edin.",
+      "finding.snapshot-content-shrunk": "Sayfanın kelime sayısı önceki görüntüden bu yana en az eşik kadar düştü.",
+      "rec.snapshot-content-shrunk": "İçeriğin yanlışlıkla kaldırılıp kaldırılmadığını kontrol edin (şablon ya da işleme değişikliği metni gizleyebilir).",
+      "finding.snapshot-description-changed": "Sayfanın meta açıklaması değişti.",
+      "rec.snapshot-description-changed": "Yeni açıklamanın sayfayı hâlâ özetlediğini kontrol edin.",
+      "finding.snapshot-schema-changed": "Sayfadaki yapılandırılmış veri türleri değişti.",
+      "rec.snapshot-schema-changed": "Zengin sonuç işaretlemelerinin kaybolmadığını kontrol edin.",
+      "finding.snapshot-internal-links-changed": "Sayfadaki iç bağlantı sayısı en az eşik kadar değişti.",
+      "rec.snapshot-internal-links-changed": "Gezinme ya da ilgili içerik bağlantılarının yanlışlıkla kaldırılmadığını kontrol edin.",
+      "finding.snapshot-content-changed": "Sayfanın görünür metni değişti.",
+      "rec.snapshot-content-changed": "Değişiklik bilerek yapıldıysa bir şey yapmanız gerekmez.",
+      "finding.logs-spoofed-bot": "Bazı istekler bir arama motoru botundan geldiğini söylüyor ama IP adresleri ters ve ileri DNS doğrulamasını geçemiyor.",
+      "rec.logs-spoofed-bot": "Yalnızca kullanıcı aracısına güvenmeyin; yük oluşturuyorlarsa bu IP'leri engelleyin ya da hızlarını sınırlayın.",
+      "finding.logs-crawl-waste": "Botun isteklerinin büyük bir kısmı parametreli URL'lere, yönlendirmelere ya da 4xx sayfalarına gidiyor.",
+      "rec.logs-crawl-waste": "Yönlendirmelere ve olmayan sayfalara giden iç bağlantıları düzeltin, tarayıcıları parametre varyasyonlarından uzak tutun.",
+      "finding.logs-bot-server-errors": "Arama motoru botu isteklerinin en az eşik oranında sunucu hatası (5xx) aldı.",
+      "rec.logs-bot-server-errors": "Hata veren URL'leri ve nedenini (kapasite, zaman aşımı, bot koruması) bulun; tekrarlanan 5xx taramayı yavaşlatır.",
+      "finding.logs-uncrawled-urls": "Verilen URL'lerin bazıları bu logda doğrulanmış bir arama motoru botu tarafından hiç taranmamış.",
+      "rec.logs-uncrawled-urls": "Bu sayfalara taranan sayfalardan bağlantı verin ve site haritasına ekleyin.",
+      "finding.logs-unparsable-lines": "Log satırlarının eşik ya da daha yüksek bir oranı seçilen biçimde okunamadı.",
+      "rec.logs-unparsable-lines": "Log biçimi seçeneğini (combined, common ya da json) ve sunucunun log ayarlarını kontrol edin.",
+      "reason.verification-cap": "Bot IP sayısı doğrulama sınırını aştı; en az istek yapanlar doğrulanmadı."
+    }
+  }
+}

@@ -1,0 +1,5550 @@
+{
+ "schema": {
+  "$defs": {
+   "ActionPlan": {
+    "properties": {
+     "phases": {
+      "items": {
+       "$ref": "#/$defs/Phase"
+      },
+      "title": "Phases",
+      "type": "array"
+     }
+    },
+    "required": [
+     "phases"
+    ],
+    "title": "ActionPlan",
+    "type": "object"
+   },
+   "Affected": {
+    "properties": {
+     "count": {
+      "title": "Count",
+      "type": "integer"
+     },
+     "examples": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Examples",
+      "type": "array"
+     },
+     "share_of_sampled_pages": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Share Of Sampled Pages"
+     }
+    },
+    "required": [
+     "count"
+    ],
+    "title": "Affected",
+    "type": "object"
+   },
+   "AgenticRow": {
+    "properties": {
+     "detail": {
+      "default": "",
+      "title": "Detail",
+      "type": "string"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "label": {
+      "title": "Label",
+      "type": "string"
+     },
+     "status": {
+      "enum": [
+       "pass",
+       "fail",
+       "unknown",
+       "na"
+      ],
+      "title": "Status",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "label",
+     "status"
+    ],
+    "title": "AgenticRow",
+    "type": "object"
+   },
+   "AgenticSection": {
+    "properties": {
+     "fraction": {
+      "default": "",
+      "title": "Fraction",
+      "type": "string"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "note": {
+      "default": "",
+      "title": "Note",
+      "type": "string"
+     },
+     "notes": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+     },
+     "rows": {
+      "items": {
+       "$ref": "#/$defs/AgenticRow"
+      },
+      "title": "Rows",
+      "type": "array"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "AgenticSection",
+    "type": "object"
+   },
+   "AuditInfo": {
+    "properties": {
+     "business_type": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Business Type"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "error_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error Text"
+     },
+     "final_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Final Url"
+     },
+     "finished_at": {
+      "anyOf": [
+       {
+        "format": "date-time",
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Finished At"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "language": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Language"
+     },
+     "locale": {
+      "enum": [
+       "tr",
+       "en"
+      ],
+      "title": "Locale",
+      "type": "string"
+     },
+     "mode": {
+      "$ref": "#/$defs/AuditMode"
+     },
+     "requested_url": {
+      "title": "Requested Url",
+      "type": "string"
+     },
+     "started_at": {
+      "format": "date-time",
+      "title": "Started At",
+      "type": "string"
+     },
+     "status": {
+      "$ref": "#/$defs/AuditStatus"
+     }
+    },
+    "required": [
+     "id",
+     "mode",
+     "status",
+     "locale",
+     "requested_url",
+     "started_at"
+    ],
+    "title": "AuditInfo",
+    "type": "object"
+   },
+   "AuditMode": {
+    "enum": [
+     "site",
+     "page"
+    ],
+    "title": "AuditMode",
+    "type": "string"
+   },
+   "AuditStatus": {
+    "enum": [
+     "queued",
+     "running",
+     "partial",
+     "completed",
+     "failed",
+     "canceled"
+    ],
+    "title": "AuditStatus",
+    "type": "string"
+   },
+   "AuthoritySection": {
+    "properties": {
+     "counts_toward_overall": {
+      "const": false,
+      "default": false,
+      "title": "Counts Toward Overall",
+      "type": "boolean"
+     },
+     "items": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Items",
+      "type": "array"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "note": {
+      "default": "",
+      "title": "Note",
+      "type": "string"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "AuthoritySection",
+    "type": "object"
+   },
+   "Category": {
+    "enum": [
+     "technical",
+     "onpage",
+     "links",
+     "content",
+     "schema",
+     "performance",
+     "ai_readiness",
+     "images"
+    ],
+    "title": "Category",
+    "type": "string"
+   },
+   "CategoryReport": {
+    "properties": {
+     "checks": {
+      "items": {
+       "$ref": "#/$defs/CheckRow"
+      },
+      "title": "Checks",
+      "type": "array"
+     },
+     "checks_failed": {
+      "default": 0,
+      "title": "Checks Failed",
+      "type": "integer"
+     },
+     "checks_passed": {
+      "default": 0,
+      "title": "Checks Passed",
+      "type": "integer"
+     },
+     "checks_total": {
+      "default": 0,
+      "title": "Checks Total",
+      "type": "integer"
+     },
+     "confidence": {
+      "anyOf": [
+       {
+        "enum": [
+         "high",
+         "medium",
+         "low"
+        ],
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Confidence"
+     },
+     "finding_ids": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Finding Ids",
+      "type": "array"
+     },
+     "id": {
+      "$ref": "#/$defs/Category"
+     },
+     "label": {
+      "title": "Label",
+      "type": "string"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "penalties": {
+      "items": {
+       "$ref": "#/$defs/Penalty"
+      },
+      "title": "Penalties",
+      "type": "array"
+     },
+     "score": {
+      "anyOf": [
+       {
+        "maximum": 100,
+        "minimum": 0,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Score"
+     },
+     "status": {
+      "enum": [
+       "measured",
+       "partial",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "weight_default": {
+      "title": "Weight Default",
+      "type": "number"
+     },
+     "weight_effective": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Weight Effective"
+     }
+    },
+    "required": [
+     "id",
+     "label",
+     "weight_default",
+     "status"
+    ],
+    "title": "CategoryReport",
+    "type": "object"
+   },
+   "CheckRow": {
+    "description": "One applicable check behind a category score.",
+    "properties": {
+     "check_id": {
+      "title": "Check Id",
+      "type": "string"
+     },
+     "message": {
+      "title": "Message",
+      "type": "string"
+     },
+     "pages_affected": {
+      "default": 0,
+      "title": "Pages Affected",
+      "type": "integer"
+     },
+     "pages_assessed": {
+      "default": 1,
+      "title": "Pages Assessed",
+      "type": "integer"
+     },
+     "pass_ratio": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Pass Ratio",
+      "type": "number"
+     },
+     "severity": {
+      "$ref": "#/$defs/Severity"
+     },
+     "status": {
+      "default": "pass",
+      "enum": [
+       "pass",
+       "warn",
+       "fail"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "weight": {
+      "title": "Weight",
+      "type": "number"
+     }
+    },
+    "required": [
+     "check_id",
+     "message",
+     "severity",
+     "weight",
+     "pass_ratio"
+    ],
+    "title": "CheckRow",
+    "type": "object"
+   },
+   "CompetitorColumn": {
+    "properties": {
+     "host": {
+      "title": "Host",
+      "type": "string"
+     },
+     "is_you": {
+      "default": false,
+      "title": "Is You",
+      "type": "boolean"
+     },
+     "note": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Note"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     },
+     "values": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Values",
+      "type": "array"
+     }
+    },
+    "required": [
+     "host",
+     "url"
+    ],
+    "title": "CompetitorColumn",
+    "type": "object"
+   },
+   "CompetitorsSection": {
+    "properties": {
+     "columns": {
+      "items": {
+       "$ref": "#/$defs/CompetitorColumn"
+      },
+      "title": "Columns",
+      "type": "array"
+     },
+     "counts_toward_overall": {
+      "const": false,
+      "default": false,
+      "title": "Counts Toward Overall",
+      "type": "boolean"
+     },
+     "metrics": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Metrics",
+      "type": "array"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "note": {
+      "default": "",
+      "title": "Note",
+      "type": "string"
+     },
+     "skipped": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Skipped",
+      "type": "array"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "CompetitorsSection",
+    "type": "object"
+   },
+   "CrawlInfo": {
+    "properties": {
+     "coverage": {
+      "additionalProperties": true,
+      "title": "Coverage",
+      "type": "object"
+     },
+     "limits": {
+      "additionalProperties": true,
+      "title": "Limits",
+      "type": "object"
+     },
+     "sample_seed": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Sample Seed"
+     },
+     "templates": {
+      "items": {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      "title": "Templates",
+      "type": "array"
+     }
+    },
+    "title": "CrawlInfo",
+    "type": "object"
+   },
+   "DataSource": {
+    "properties": {
+     "id": {
+      "enum": [
+       "fetch",
+       "render",
+       "lab",
+       "psi",
+       "gsc",
+       "crux"
+      ],
+      "title": "Id",
+      "type": "string"
+     },
+     "label": {
+      "title": "Label",
+      "type": "string"
+     },
+     "status": {
+      "enum": [
+       "ok",
+       "missing",
+       "failed"
+      ],
+      "title": "Status",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "label",
+     "status"
+    ],
+    "title": "DataSource",
+    "type": "object"
+   },
+   "DomainCount": {
+    "properties": {
+     "count": {
+      "title": "Count",
+      "type": "integer"
+     },
+     "domain": {
+      "title": "Domain",
+      "type": "string"
+     }
+    },
+    "required": [
+     "domain",
+     "count"
+    ],
+    "title": "DomainCount",
+    "type": "object"
+   },
+   "Effort": {
+    "properties": {
+     "hours_max": {
+      "title": "Hours Max",
+      "type": "number"
+     },
+     "hours_min": {
+      "title": "Hours Min",
+      "type": "number"
+     },
+     "level": {
+      "enum": [
+       "S",
+       "M",
+       "L"
+      ],
+      "title": "Level",
+      "type": "string"
+     }
+    },
+    "required": [
+     "level",
+     "hours_min",
+     "hours_max"
+    ],
+    "title": "Effort",
+    "type": "object"
+   },
+   "Evidence": {
+    "description": "Page-derived text. ALWAYS untrusted; consumers must render it as text.",
+    "properties": {
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     },
+     "value": {
+      "maxLength": 200,
+      "title": "Value",
+      "type": "string"
+     }
+    },
+    "required": [
+     "value"
+    ],
+    "title": "Evidence",
+    "type": "object"
+   },
+   "ExecutiveSummary": {
+    "properties": {
+     "counts": {
+      "additionalProperties": {
+       "type": "integer"
+      },
+      "title": "Counts",
+      "type": "object"
+     },
+     "quick_win_recommendation_ids": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Quick Win Recommendation Ids",
+      "type": "array"
+     },
+     "top_finding_ids": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Top Finding Ids",
+      "type": "array"
+     },
+     "zero_findings": {
+      "default": false,
+      "title": "Zero Findings",
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "counts",
+     "top_finding_ids",
+     "quick_win_recommendation_ids"
+    ],
+    "title": "ExecutiveSummary",
+    "type": "object"
+   },
+   "FieldMetricRow": {
+    "properties": {
+     "good_pct": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Good Pct"
+     },
+     "label": {
+      "title": "Label",
+      "type": "string"
+     },
+     "metric": {
+      "enum": [
+       "lcp",
+       "inp",
+       "cls",
+       "fcp",
+       "ttfb"
+      ],
+      "title": "Metric",
+      "type": "string"
+     },
+     "needs_improvement_pct": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Needs Improvement Pct"
+     },
+     "p75": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "P75"
+     },
+     "p75_text": {
+      "default": "\u2014",
+      "title": "P75 Text",
+      "type": "string"
+     },
+     "poor_pct": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Poor Pct"
+     },
+     "rating": {
+      "anyOf": [
+       {
+        "enum": [
+         "good",
+         "needs-improvement",
+         "poor"
+        ],
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Rating"
+     }
+    },
+    "required": [
+     "metric",
+     "label"
+    ],
+    "title": "FieldMetricRow",
+    "type": "object"
+   },
+   "FieldSection": {
+    "description": "Real-user (CrUX) p75 values. Distinct from the LAB measurement of the performance section.",
+    "properties": {
+     "counts_toward_overall": {
+      "const": false,
+      "default": false,
+      "title": "Counts Toward Overall",
+      "type": "boolean"
+     },
+     "form_factor": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Form Factor"
+     },
+     "metrics": {
+      "items": {
+       "$ref": "#/$defs/FieldMetricRow"
+      },
+      "title": "Metrics",
+      "type": "array"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "note": {
+      "default": "",
+      "title": "Note",
+      "type": "string"
+     },
+     "period_first": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Period First"
+     },
+     "period_last": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Period Last"
+     },
+     "scope": {
+      "anyOf": [
+       {
+        "enum": [
+         "url",
+         "origin"
+        ],
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Scope"
+     },
+     "source": {
+      "default": "crux",
+      "title": "Source",
+      "type": "string"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "FieldSection",
+    "type": "object"
+   },
+   "FileRow": {
+    "properties": {
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "label": {
+      "title": "Label",
+      "type": "string"
+     },
+     "note": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Note"
+     },
+     "present": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Present"
+     },
+     "status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Status"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "label",
+     "url"
+    ],
+    "title": "FileRow",
+    "type": "object"
+   },
+   "FindingReport": {
+    "properties": {
+     "affected": {
+      "$ref": "#/$defs/Affected"
+     },
+     "category": {
+      "$ref": "#/$defs/Category"
+     },
+     "check_id": {
+      "title": "Check Id",
+      "type": "string"
+     },
+     "confidence": {
+      "default": "high",
+      "enum": [
+       "high",
+       "medium",
+       "low"
+      ],
+      "title": "Confidence",
+      "type": "string"
+     },
+     "count": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Count"
+     },
+     "evidence": {
+      "anyOf": [
+       {
+        "$ref": "#/$defs/Evidence"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null
+     },
+     "heuristic": {
+      "default": false,
+      "title": "Heuristic",
+      "type": "boolean"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "is_gate": {
+      "default": false,
+      "title": "Is Gate",
+      "type": "boolean"
+     },
+     "layer": {
+      "$ref": "#/$defs/Layer"
+     },
+     "message": {
+      "title": "Message",
+      "type": "string"
+     },
+     "message_key": {
+      "title": "Message Key",
+      "type": "string"
+     },
+     "recommendation_ids": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Recommendation Ids",
+      "type": "array"
+     },
+     "rule_version": {
+      "title": "Rule Version",
+      "type": "string"
+     },
+     "scope": {
+      "enum": [
+       "page",
+       "site"
+      ],
+      "title": "Scope",
+      "type": "string"
+     },
+     "severity": {
+      "$ref": "#/$defs/Severity"
+     },
+     "severity_original": {
+      "anyOf": [
+       {
+        "$ref": "#/$defs/Severity"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null
+     },
+     "severity_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Severity Reason"
+     },
+     "url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Url"
+     },
+     "urls": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Urls",
+      "type": "array"
+     }
+    },
+    "required": [
+     "id",
+     "check_id",
+     "rule_version",
+     "category",
+     "layer",
+     "severity",
+     "scope",
+     "affected",
+     "message_key",
+     "message"
+    ],
+    "title": "FindingReport",
+    "type": "object"
+   },
+   "FoldRow": {
+    "properties": {
+     "cta_visible": {
+      "title": "Cta Visible",
+      "type": "boolean"
+     },
+     "device": {
+      "title": "Device",
+      "type": "string"
+     },
+     "device_label": {
+      "title": "Device Label",
+      "type": "string"
+     },
+     "h1_present": {
+      "title": "H1 Present",
+      "type": "boolean"
+     },
+     "h1_visible": {
+      "title": "H1 Visible",
+      "type": "boolean"
+     },
+     "overflow": {
+      "title": "Overflow",
+      "type": "boolean"
+     },
+     "overlay_pct": {
+      "title": "Overlay Pct",
+      "type": "number"
+     },
+     "text_chars": {
+      "title": "Text Chars",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "device",
+     "device_label",
+     "h1_present",
+     "h1_visible",
+     "cta_visible",
+     "text_chars",
+     "overflow",
+     "overlay_pct"
+    ],
+    "title": "FoldRow",
+    "type": "object"
+   },
+   "FormatShare": {
+    "properties": {
+     "count": {
+      "title": "Count",
+      "type": "integer"
+     },
+     "format": {
+      "title": "Format",
+      "type": "string"
+     },
+     "kb": {
+      "title": "Kb",
+      "type": "number"
+     }
+    },
+    "required": [
+     "format",
+     "count",
+     "kb"
+    ],
+    "title": "FormatShare",
+    "type": "object"
+   },
+   "Gate": {
+    "properties": {
+     "cap": {
+      "title": "Cap",
+      "type": "integer"
+     },
+     "finding_id": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Finding Id"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "message": {
+      "default": "",
+      "title": "Message",
+      "type": "string"
+     },
+     "url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Url"
+     }
+    },
+    "required": [
+     "id",
+     "cap"
+    ],
+    "title": "Gate",
+    "type": "object"
+   },
+   "GlanceSection": {
+    "description": "One-look summary assembled from the other sections; shows no new data.",
+    "properties": {
+     "items": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Items",
+      "type": "array"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "GlanceSection",
+    "type": "object"
+   },
+   "GscInspectionRow": {
+    "description": "Google's own view of one URL (URL Inspection API).",
+    "properties": {
+     "canonical_mismatch": {
+      "default": false,
+      "title": "Canonical Mismatch",
+      "type": "boolean"
+     },
+     "coverage_state": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Coverage State"
+     },
+     "crawled_as": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Crawled As"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "error_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error Text"
+     },
+     "fetch_state": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Fetch State"
+     },
+     "google_canonical": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Google Canonical"
+     },
+     "indexed": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Indexed"
+     },
+     "last_crawl": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Last Crawl"
+     },
+     "robots_state": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Robots State"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     },
+     "user_canonical": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "User Canonical"
+     },
+     "verdict": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Verdict"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "GscInspectionRow",
+    "type": "object"
+   },
+   "GscMetricRow": {
+    "description": "One query or page of the Search Console performance report.",
+    "properties": {
+     "clicks": {
+      "default": 0,
+      "title": "Clicks",
+      "type": "integer"
+     },
+     "ctr_pct": {
+      "default": 0.0,
+      "title": "Ctr Pct",
+      "type": "number"
+     },
+     "impressions": {
+      "default": 0,
+      "title": "Impressions",
+      "type": "integer"
+     },
+     "key": {
+      "title": "Key",
+      "type": "string"
+     },
+     "position": {
+      "default": 0.0,
+      "title": "Position",
+      "type": "number"
+     }
+    },
+    "required": [
+     "key"
+    ],
+    "title": "GscMetricRow",
+    "type": "object"
+   },
+   "GscSection": {
+    "description": "Search Console data of the audited property: informational, indexing findings reach the technical score elsewhere.",
+    "properties": {
+     "account": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Account"
+     },
+     "can_connect": {
+      "default": false,
+      "title": "Can Connect",
+      "type": "boolean"
+     },
+     "delay_note": {
+      "default": "",
+      "title": "Delay Note",
+      "type": "string"
+     },
+     "gsc_status": {
+      "default": "not-connected",
+      "title": "Gsc Status",
+      "type": "string"
+     },
+     "indexed_count": {
+      "default": 0,
+      "title": "Indexed Count",
+      "type": "integer"
+     },
+     "inspections": {
+      "items": {
+       "$ref": "#/$defs/GscInspectionRow"
+      },
+      "title": "Inspections",
+      "type": "array"
+     },
+     "inspections_total": {
+      "default": 0,
+      "title": "Inspections Total",
+      "type": "integer"
+     },
+     "mismatch_count": {
+      "default": 0,
+      "title": "Mismatch Count",
+      "type": "integer"
+     },
+     "not_indexed_count": {
+      "default": 0,
+      "title": "Not Indexed Count",
+      "type": "integer"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "note": {
+      "default": "",
+      "title": "Note",
+      "type": "string"
+     },
+     "period_days": {
+      "default": 28,
+      "title": "Period Days",
+      "type": "integer"
+     },
+     "permission": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Permission"
+     },
+     "property": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Property"
+     },
+     "sitemaps": {
+      "items": {
+       "$ref": "#/$defs/GscSitemapRow"
+      },
+      "title": "Sitemaps",
+      "type": "array"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "top_pages": {
+      "items": {
+       "$ref": "#/$defs/GscMetricRow"
+      },
+      "title": "Top Pages",
+      "type": "array"
+     },
+     "top_queries": {
+      "items": {
+       "$ref": "#/$defs/GscMetricRow"
+      },
+      "title": "Top Queries",
+      "type": "array"
+     },
+     "totals": {
+      "additionalProperties": {
+       "type": "number"
+      },
+      "title": "Totals",
+      "type": "object"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "GscSection",
+    "type": "object"
+   },
+   "GscSitemapRow": {
+    "properties": {
+     "errors": {
+      "default": 0,
+      "title": "Errors",
+      "type": "integer"
+     },
+     "last_downloaded": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Last Downloaded"
+     },
+     "last_submitted": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Last Submitted"
+     },
+     "path": {
+      "title": "Path",
+      "type": "string"
+     },
+     "pending": {
+      "default": false,
+      "title": "Pending",
+      "type": "boolean"
+     },
+     "warnings": {
+      "default": 0,
+      "title": "Warnings",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "path"
+    ],
+    "title": "GscSitemapRow",
+    "type": "object"
+   },
+   "HistoryChange": {
+    "properties": {
+     "delta": {
+      "default": "\u2014",
+      "title": "Delta",
+      "type": "string"
+     },
+     "direction": {
+      "default": "none",
+      "enum": [
+       "better",
+       "worse",
+       "same",
+       "none"
+      ],
+      "title": "Direction",
+      "type": "string"
+     },
+     "label": {
+      "title": "Label",
+      "type": "string"
+     },
+     "new": {
+      "default": "\u2014",
+      "title": "New",
+      "type": "string"
+     },
+     "old": {
+      "default": "\u2014",
+      "title": "Old",
+      "type": "string"
+     }
+    },
+    "required": [
+     "label"
+    ],
+    "title": "HistoryChange",
+    "type": "object"
+   },
+   "HistoryFinding": {
+    "properties": {
+     "rule_id": {
+      "title": "Rule Id",
+      "type": "string"
+     },
+     "severity": {
+      "title": "Severity",
+      "type": "string"
+     },
+     "title": {
+      "title": "Title",
+      "type": "string"
+     },
+     "url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Url"
+     }
+    },
+    "required": [
+     "rule_id",
+     "severity",
+     "title"
+    ],
+    "title": "HistoryFinding",
+    "type": "object"
+   },
+   "HistoryRow": {
+    "properties": {
+     "coverage_pct": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Coverage Pct"
+     },
+     "created_at": {
+      "anyOf": [
+       {
+        "format": "date-time",
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Created At"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "is_current": {
+      "default": false,
+      "title": "Is Current",
+      "type": "boolean"
+     },
+     "mode": {
+      "title": "Mode",
+      "type": "string"
+     },
+     "overall": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Overall"
+     },
+     "status": {
+      "title": "Status",
+      "type": "string"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "url",
+     "mode",
+     "status"
+    ],
+    "title": "HistoryRow",
+    "type": "object"
+   },
+   "HistorySection": {
+    "properties": {
+     "counts_toward_overall": {
+      "const": false,
+      "default": false,
+      "title": "Counts Toward Overall",
+      "type": "boolean"
+     },
+     "metrics": {
+      "items": {
+       "$ref": "#/$defs/HistoryChange"
+      },
+      "title": "Metrics",
+      "type": "array"
+     },
+     "new_findings": {
+      "items": {
+       "$ref": "#/$defs/HistoryFinding"
+      },
+      "title": "New Findings",
+      "type": "array"
+     },
+     "new_total": {
+      "default": 0,
+      "title": "New Total",
+      "type": "integer"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "note": {
+      "default": "",
+      "title": "Note",
+      "type": "string"
+     },
+     "persisting": {
+      "default": 0,
+      "title": "Persisting",
+      "type": "integer"
+     },
+     "previous_at": {
+      "anyOf": [
+       {
+        "format": "date-time",
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Previous At"
+     },
+     "previous_id": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Previous Id"
+     },
+     "resolved_findings": {
+      "items": {
+       "$ref": "#/$defs/HistoryFinding"
+      },
+      "title": "Resolved Findings",
+      "type": "array"
+     },
+     "resolved_total": {
+      "default": 0,
+      "title": "Resolved Total",
+      "type": "integer"
+     },
+     "rows": {
+      "items": {
+       "$ref": "#/$defs/HistoryRow"
+      },
+      "title": "Rows",
+      "type": "array"
+     },
+     "rows_total": {
+      "default": 0,
+      "title": "Rows Total",
+      "type": "integer"
+     },
+     "scores": {
+      "items": {
+       "$ref": "#/$defs/HistoryChange"
+      },
+      "title": "Scores",
+      "type": "array"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     },
+     "warning_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Warning Text"
+     }
+    },
+    "title": "HistorySection",
+    "type": "object"
+   },
+   "HostShare": {
+    "properties": {
+     "host": {
+      "title": "Host",
+      "type": "string"
+     },
+     "kb": {
+      "title": "Kb",
+      "type": "number"
+     },
+     "requests": {
+      "title": "Requests",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "host",
+     "requests",
+     "kb"
+    ],
+    "title": "HostShare",
+    "type": "object"
+   },
+   "HreflangRow": {
+    "properties": {
+     "canonical": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Canonical"
+     },
+     "entries": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Entries",
+      "type": "array"
+     },
+     "html_lang": {
+      "default": "",
+      "title": "Html Lang",
+      "type": "string"
+     },
+     "issues": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Issues",
+      "type": "array"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "HreflangRow",
+    "type": "object"
+   },
+   "HreflangSection": {
+    "properties": {
+     "has_x_default": {
+      "default": false,
+      "title": "Has X Default",
+      "type": "boolean"
+     },
+     "languages": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Languages",
+      "type": "array"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "notes": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+     },
+     "rows": {
+      "items": {
+       "$ref": "#/$defs/HreflangRow"
+      },
+      "title": "Rows",
+      "type": "array"
+     },
+     "rows_total": {
+      "default": 0,
+      "title": "Rows Total",
+      "type": "integer"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     },
+     "unchecked": {
+      "default": 0,
+      "title": "Unchecked",
+      "type": "integer"
+     }
+    },
+    "title": "HreflangSection",
+    "type": "object"
+   },
+   "ImageRow": {
+    "properties": {
+     "above_fold": {
+      "default": false,
+      "title": "Above Fold",
+      "type": "boolean"
+     },
+     "category": {
+      "default": "content",
+      "enum": [
+       "thumbnail",
+       "content",
+       "hero"
+      ],
+      "title": "Category",
+      "type": "string"
+     },
+     "displayed": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Displayed"
+     },
+     "format": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Format"
+     },
+     "has_alt": {
+      "default": true,
+      "title": "Has Alt",
+      "type": "boolean"
+     },
+     "issue_texts": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Issue Texts",
+      "type": "array"
+     },
+     "issues": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Issues",
+      "type": "array"
+     },
+     "kb": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Kb"
+     },
+     "lazy": {
+      "default": false,
+      "title": "Lazy",
+      "type": "boolean"
+     },
+     "natural": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Natural"
+     },
+     "page_url": {
+      "title": "Page Url",
+      "type": "string"
+     },
+     "src": {
+      "title": "Src",
+      "type": "string"
+     }
+    },
+    "required": [
+     "page_url",
+     "src"
+    ],
+    "title": "ImageRow",
+    "type": "object"
+   },
+   "ImagesSection": {
+    "properties": {
+     "by_format": {
+      "items": {
+       "$ref": "#/$defs/FormatShare"
+      },
+      "title": "By Format",
+      "type": "array"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "rows": {
+      "items": {
+       "$ref": "#/$defs/ImageRow"
+      },
+      "title": "Rows",
+      "type": "array"
+     },
+     "rows_total": {
+      "default": 0,
+      "title": "Rows Total",
+      "type": "integer"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "thresholds_note": {
+      "default": "",
+      "title": "Thresholds Note",
+      "type": "string"
+     },
+     "total_kb": {
+      "default": 0.0,
+      "title": "Total Kb",
+      "type": "number"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "ImagesSection",
+    "type": "object"
+   },
+   "Impact": {
+    "properties": {
+     "level": {
+      "enum": [
+       "low",
+       "medium",
+       "high"
+      ],
+      "title": "Level",
+      "type": "string"
+     }
+    },
+    "required": [
+     "level"
+    ],
+    "title": "Impact",
+    "type": "object"
+   },
+   "IndexRow": {
+    "properties": {
+     "canonical": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Canonical"
+     },
+     "depth": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Depth"
+     },
+     "in_sitemap": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "In Sitemap"
+     },
+     "indexable": {
+      "default": true,
+      "title": "Indexable",
+      "type": "boolean"
+     },
+     "inlinks": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Inlinks"
+     },
+     "reason_texts": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Reason Texts",
+      "type": "array"
+     },
+     "reasons": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Reasons",
+      "type": "array"
+     },
+     "status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Status"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "IndexRow",
+    "type": "object"
+   },
+   "IndexabilitySection": {
+    "properties": {
+     "blocked_count": {
+      "default": 0,
+      "title": "Blocked Count",
+      "type": "integer"
+     },
+     "indexable_count": {
+      "default": 0,
+      "title": "Indexable Count",
+      "type": "integer"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "note": {
+      "default": "",
+      "title": "Note",
+      "type": "string"
+     },
+     "rows": {
+      "items": {
+       "$ref": "#/$defs/IndexRow"
+      },
+      "title": "Rows",
+      "type": "array"
+     },
+     "rows_total": {
+      "default": 0,
+      "title": "Rows Total",
+      "type": "integer"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "IndexabilitySection",
+    "type": "object"
+   },
+   "KV": {
+    "properties": {
+     "label": {
+      "title": "Label",
+      "type": "string"
+     },
+     "value": {
+      "default": "",
+      "title": "Value",
+      "type": "string"
+     }
+    },
+    "required": [
+     "label"
+    ],
+    "title": "KV",
+    "type": "object"
+   },
+   "KeywordRow": {
+    "properties": {
+     "density_percent": {
+      "title": "Density Percent",
+      "type": "number"
+     },
+     "in_description": {
+      "title": "In Description",
+      "type": "boolean"
+     },
+     "in_first_100_words": {
+      "title": "In First 100 Words",
+      "type": "boolean"
+     },
+     "in_h1": {
+      "title": "In H1",
+      "type": "boolean"
+     },
+     "in_subheadings": {
+      "title": "In Subheadings",
+      "type": "boolean"
+     },
+     "in_title": {
+      "title": "In Title",
+      "type": "boolean"
+     },
+     "in_url": {
+      "title": "In Url",
+      "type": "boolean"
+     },
+     "keyword": {
+      "title": "Keyword",
+      "type": "string"
+     },
+     "occurrences": {
+      "title": "Occurrences",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "keyword",
+     "in_title",
+     "in_h1",
+     "in_description",
+     "in_url",
+     "in_first_100_words",
+     "in_subheadings",
+     "occurrences",
+     "density_percent"
+    ],
+    "title": "KeywordRow",
+    "type": "object"
+   },
+   "Layer": {
+    "enum": [
+     "A",
+     "B"
+    ],
+    "title": "Layer",
+    "type": "string"
+   },
+   "Limitation": {
+    "properties": {
+     "code": {
+      "title": "Code",
+      "type": "string"
+     },
+     "message": {
+      "title": "Message",
+      "type": "string"
+     }
+    },
+    "required": [
+     "code",
+     "message"
+    ],
+    "title": "Limitation",
+    "type": "object"
+   },
+   "LinkPageRow": {
+    "properties": {
+     "depth": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Depth"
+     },
+     "in_sitemap": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "In Sitemap"
+     },
+     "inlinks": {
+      "default": 0,
+      "title": "Inlinks",
+      "type": "integer"
+     },
+     "outlinks_external": {
+      "default": 0,
+      "title": "Outlinks External",
+      "type": "integer"
+     },
+     "outlinks_internal": {
+      "default": 0,
+      "title": "Outlinks Internal",
+      "type": "integer"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "LinkPageRow",
+    "type": "object"
+   },
+   "LinkRow": {
+    "properties": {
+     "anchor": {
+      "default": "",
+      "title": "Anchor",
+      "type": "string"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "error_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error Text"
+     },
+     "final_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Final Url"
+     },
+     "kind": {
+      "enum": [
+       "internal",
+       "external"
+      ],
+      "title": "Kind",
+      "type": "string"
+     },
+     "redirect_hops": {
+      "default": 0,
+      "title": "Redirect Hops",
+      "type": "integer"
+     },
+     "rel": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Rel",
+      "type": "array"
+     },
+     "source_url": {
+      "title": "Source Url",
+      "type": "string"
+     },
+     "state": {
+      "default": "unchecked",
+      "enum": [
+       "ok",
+       "broken",
+       "redirect",
+       "blocked",
+       "unchecked"
+      ],
+      "title": "State",
+      "type": "string"
+     },
+     "target_status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Target Status"
+     },
+     "target_url": {
+      "title": "Target Url",
+      "type": "string"
+     },
+     "zone": {
+      "default": "other",
+      "enum": [
+       "nav",
+       "footer",
+       "main",
+       "other"
+      ],
+      "title": "Zone",
+      "type": "string"
+     }
+    },
+    "required": [
+     "source_url",
+     "target_url",
+     "kind"
+    ],
+    "title": "LinkRow",
+    "type": "object"
+   },
+   "LinksSection": {
+    "properties": {
+     "broken": {
+      "items": {
+       "$ref": "#/$defs/LinkRow"
+      },
+      "title": "Broken",
+      "type": "array"
+     },
+     "external_domains": {
+      "items": {
+       "$ref": "#/$defs/DomainCount"
+      },
+      "title": "External Domains",
+      "type": "array"
+     },
+     "links": {
+      "items": {
+       "$ref": "#/$defs/LinkRow"
+      },
+      "title": "Links",
+      "type": "array"
+     },
+     "links_total": {
+      "default": 0,
+      "title": "Links Total",
+      "type": "integer"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "orphans": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Orphans",
+      "type": "array"
+     },
+     "pages": {
+      "items": {
+       "$ref": "#/$defs/LinkPageRow"
+      },
+      "title": "Pages",
+      "type": "array"
+     },
+     "pages_total": {
+      "default": 0,
+      "title": "Pages Total",
+      "type": "integer"
+     },
+     "redirecting": {
+      "items": {
+       "$ref": "#/$defs/LinkRow"
+      },
+      "title": "Redirecting",
+      "type": "array"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "summary": {
+      "additionalProperties": true,
+      "title": "Summary",
+      "type": "object"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "LinksSection",
+    "type": "object"
+   },
+   "LocalAddressRow": {
+    "properties": {
+     "pages": {
+      "default": 0,
+      "title": "Pages",
+      "type": "integer"
+     },
+     "source": {
+      "default": "",
+      "title": "Source",
+      "type": "string"
+     },
+     "text": {
+      "title": "Text",
+      "type": "string"
+     }
+    },
+    "required": [
+     "text"
+    ],
+    "title": "LocalAddressRow",
+    "type": "object"
+   },
+   "LocalIssueRow": {
+    "properties": {
+     "label": {
+      "title": "Label",
+      "type": "string"
+     },
+     "pages": {
+      "default": "",
+      "title": "Pages",
+      "type": "string"
+     },
+     "values": {
+      "default": "",
+      "title": "Values",
+      "type": "string"
+     }
+    },
+    "required": [
+     "label"
+    ],
+    "title": "LocalIssueRow",
+    "type": "object"
+   },
+   "LocalPhoneRow": {
+    "properties": {
+     "formats": {
+      "default": "",
+      "title": "Formats",
+      "type": "string"
+     },
+     "number": {
+      "title": "Number",
+      "type": "string"
+     },
+     "pages": {
+      "default": 0,
+      "title": "Pages",
+      "type": "integer"
+     },
+     "sources": {
+      "default": "",
+      "title": "Sources",
+      "type": "string"
+     }
+    },
+    "required": [
+     "number"
+    ],
+    "title": "LocalPhoneRow",
+    "type": "object"
+   },
+   "LocalSection": {
+    "properties": {
+     "addresses": {
+      "items": {
+       "$ref": "#/$defs/LocalAddressRow"
+      },
+      "title": "Addresses",
+      "type": "array"
+     },
+     "facts": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Facts",
+      "type": "array"
+     },
+     "issues": {
+      "items": {
+       "$ref": "#/$defs/LocalIssueRow"
+      },
+      "title": "Issues",
+      "type": "array"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "note": {
+      "default": "",
+      "title": "Note",
+      "type": "string"
+     },
+     "notes": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+     },
+     "phones": {
+      "items": {
+       "$ref": "#/$defs/LocalPhoneRow"
+      },
+      "title": "Phones",
+      "type": "array"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "LocalSection",
+    "type": "object"
+   },
+   "Methodology": {
+    "properties": {
+     "notes": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+     }
+    },
+    "required": [
+     "notes"
+    ],
+    "title": "Methodology",
+    "type": "object"
+   },
+   "NotCheckedReport": {
+    "properties": {
+     "check_id": {
+      "title": "Check Id",
+      "type": "string"
+     },
+     "reason": {
+      "title": "Reason",
+      "type": "string"
+     },
+     "reason_code": {
+      "title": "Reason Code",
+      "type": "string"
+     },
+     "url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Url"
+     }
+    },
+    "required": [
+     "check_id",
+     "reason_code",
+     "reason"
+    ],
+    "title": "NotCheckedReport",
+    "type": "object"
+   },
+   "OverallScore": {
+    "properties": {
+     "band": {
+      "anyOf": [
+       {
+        "enum": [
+         "good",
+         "attention",
+         "poor"
+        ],
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Band"
+     },
+     "confidence": {
+      "enum": [
+       "high",
+       "medium",
+       "low"
+      ],
+      "title": "Confidence",
+      "type": "string"
+     },
+     "coverage_pct": {
+      "maximum": 100,
+      "minimum": 0,
+      "title": "Coverage Pct",
+      "type": "number"
+     },
+     "display": {
+      "enum": [
+       "number",
+       "insufficient_data"
+      ],
+      "title": "Display",
+      "type": "string"
+     },
+     "gate": {
+      "anyOf": [
+       {
+        "$ref": "#/$defs/Gate"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null
+     },
+     "raw_value": {
+      "anyOf": [
+       {
+        "maximum": 100,
+        "minimum": 0,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Raw Value"
+     },
+     "value": {
+      "anyOf": [
+       {
+        "maximum": 100,
+        "minimum": 0,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Value"
+     }
+    },
+    "required": [
+     "value",
+     "display",
+     "coverage_pct",
+     "confidence"
+    ],
+    "title": "OverallScore",
+    "type": "object"
+   },
+   "PageSummary": {
+    "properties": {
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "final_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Final Url"
+     },
+     "page_score": {
+      "anyOf": [
+       {
+        "maximum": 100,
+        "minimum": 0,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Page Score"
+     },
+     "rendered": {
+      "default": false,
+      "title": "Rendered",
+      "type": "boolean"
+     },
+     "role": {
+      "default": "core",
+      "enum": [
+       "core",
+       "exploration"
+      ],
+      "title": "Role",
+      "type": "string"
+     },
+     "status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Status"
+     },
+     "template_key": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Template Key"
+     },
+     "title": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Title"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "PageSummary",
+    "type": "object"
+   },
+   "Penalty": {
+    "properties": {
+     "check_id": {
+      "title": "Check Id",
+      "type": "string"
+     },
+     "finding_id": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Finding Id"
+     },
+     "points": {
+      "title": "Points",
+      "type": "number"
+     },
+     "severity": {
+      "$ref": "#/$defs/Severity"
+     }
+    },
+    "required": [
+     "check_id",
+     "severity",
+     "points"
+    ],
+    "title": "Penalty",
+    "type": "object"
+   },
+   "PerfRow": {
+    "properties": {
+     "by_type": {
+      "items": {
+       "$ref": "#/$defs/TypeShare"
+      },
+      "title": "By Type",
+      "type": "array"
+     },
+     "cls": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Cls"
+     },
+     "device": {
+      "enum": [
+       "desktop",
+       "mobile"
+      ],
+      "title": "Device",
+      "type": "string"
+     },
+     "dom_content_loaded_ms": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Dom Content Loaded Ms"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "error_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error Text"
+     },
+     "fcp_ms": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Fcp Ms"
+     },
+     "html_kb": {
+      "default": 0.0,
+      "title": "Html Kb",
+      "type": "number"
+     },
+     "lcp_ms": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Lcp Ms"
+     },
+     "load_ms": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Load Ms"
+     },
+     "mobile": {
+      "anyOf": [
+       {
+        "additionalProperties": true,
+        "type": "object"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Mobile"
+     },
+     "ratings": {
+      "additionalProperties": {
+       "type": "string"
+      },
+      "title": "Ratings",
+      "type": "object"
+     },
+     "render_blocking": {
+      "default": 0,
+      "title": "Render Blocking",
+      "type": "integer"
+     },
+     "requests": {
+      "default": 0,
+      "title": "Requests",
+      "type": "integer"
+     },
+     "tbt_ms": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Tbt Ms"
+     },
+     "total_kb": {
+      "default": 0.0,
+      "title": "Total Kb",
+      "type": "number"
+     },
+     "ttfb_ms": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Ttfb Ms"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url",
+     "device"
+    ],
+    "title": "PerfRow",
+    "type": "object"
+   },
+   "PerfSection": {
+    "properties": {
+     "by_type": {
+      "items": {
+       "$ref": "#/$defs/TypeShare"
+      },
+      "title": "By Type",
+      "type": "array"
+     },
+     "lab_note": {
+      "default": "",
+      "title": "Lab Note",
+      "type": "string"
+     },
+     "no_cache": {
+      "items": {
+       "type": "string"
+      },
+      "title": "No Cache",
+      "type": "array"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "rows": {
+      "items": {
+       "$ref": "#/$defs/PerfRow"
+      },
+      "title": "Rows",
+      "type": "array"
+     },
+     "rows_total": {
+      "default": 0,
+      "title": "Rows Total",
+      "type": "integer"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "third_party": {
+      "items": {
+       "$ref": "#/$defs/HostShare"
+      },
+      "title": "Third Party",
+      "type": "array"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     },
+     "uncompressed": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Uncompressed",
+      "type": "array"
+     }
+    },
+    "title": "PerfSection",
+    "type": "object"
+   },
+   "Phase": {
+    "properties": {
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "items": {
+      "items": {
+       "$ref": "#/$defs/PhaseItem"
+      },
+      "title": "Items",
+      "type": "array"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "name_key": {
+      "title": "Name Key",
+      "type": "string"
+     },
+     "notes": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+     },
+     "number": {
+      "title": "Number",
+      "type": "integer"
+     },
+     "timeframe": {
+      "title": "Timeframe",
+      "type": "string"
+     },
+     "timeframe_key": {
+      "title": "Timeframe Key",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "number",
+     "name_key",
+     "name",
+     "timeframe_key",
+     "timeframe"
+    ],
+    "title": "Phase",
+    "type": "object"
+   },
+   "PhaseItem": {
+    "properties": {
+     "order": {
+      "title": "Order",
+      "type": "integer"
+     },
+     "recommendation_id": {
+      "title": "Recommendation Id",
+      "type": "string"
+     }
+    },
+    "required": [
+     "recommendation_id",
+     "order"
+    ],
+    "title": "PhaseItem",
+    "type": "object"
+   },
+   "PreviewsSection": {
+    "properties": {
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "notes": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+     },
+     "serp": {
+      "items": {
+       "$ref": "#/$defs/SerpRow"
+      },
+      "title": "Serp",
+      "type": "array"
+     },
+     "social": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Social",
+      "type": "array"
+     },
+     "social_image": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Social Image",
+      "type": "array"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "PreviewsSection",
+    "type": "object"
+   },
+   "Quality": {
+    "properties": {
+     "checks": {
+      "items": {
+       "$ref": "#/$defs/QualityCheck"
+      },
+      "title": "Checks",
+      "type": "array"
+     },
+     "status": {
+      "default": "PASS",
+      "enum": [
+       "PASS",
+       "WARN",
+       "FAIL"
+      ],
+      "title": "Status",
+      "type": "string"
+     }
+    },
+    "title": "Quality",
+    "type": "object"
+   },
+   "QualityCheck": {
+    "properties": {
+     "detail": {
+      "default": "",
+      "title": "Detail",
+      "type": "string"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "status": {
+      "enum": [
+       "PASS",
+       "WARN",
+       "FAIL"
+      ],
+      "title": "Status",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "status"
+    ],
+    "title": "QualityCheck",
+    "type": "object"
+   },
+   "RankingQueryRow": {
+    "properties": {
+     "clicks": {
+      "default": 0,
+      "title": "Clicks",
+      "type": "integer"
+     },
+     "ctr_pct": {
+      "default": 0.0,
+      "title": "Ctr Pct",
+      "type": "number"
+     },
+     "impressions": {
+      "default": 0,
+      "title": "Impressions",
+      "type": "integer"
+     },
+     "position": {
+      "default": 0.0,
+      "title": "Position",
+      "type": "number"
+     },
+     "query": {
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "RankingQueryRow",
+    "type": "object"
+   },
+   "RankingRow": {
+    "properties": {
+     "clicks": {
+      "default": 0,
+      "title": "Clicks",
+      "type": "integer"
+     },
+     "ctr_pct": {
+      "default": 0.0,
+      "title": "Ctr Pct",
+      "type": "number"
+     },
+     "impressions": {
+      "default": 0,
+      "title": "Impressions",
+      "type": "integer"
+     },
+     "keyword": {
+      "title": "Keyword",
+      "type": "string"
+     },
+     "matched_query": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Matched Query"
+     },
+     "position": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Position"
+     },
+     "status": {
+      "default": "no-data",
+      "enum": [
+       "ok",
+       "no-data",
+       "error"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "status_text": {
+      "default": "",
+      "title": "Status Text",
+      "type": "string"
+     },
+     "top_page": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Top Page"
+     }
+    },
+    "required": [
+     "keyword"
+    ],
+    "title": "RankingRow",
+    "type": "object"
+   },
+   "RankingsSection": {
+    "description": "Keyword rankings from Search Console only (the owner's property). Informational, no score.",
+    "properties": {
+     "counts_toward_overall": {
+      "const": false,
+      "default": false,
+      "title": "Counts Toward Overall",
+      "type": "boolean"
+     },
+     "keywords_note": {
+      "default": "",
+      "title": "Keywords Note",
+      "type": "string"
+     },
+     "keywords_requested": {
+      "default": 0,
+      "title": "Keywords Requested",
+      "type": "integer"
+     },
+     "list_error": {
+      "default": "",
+      "title": "List Error",
+      "type": "string"
+     },
+     "low_ctr": {
+      "items": {
+       "$ref": "#/$defs/RankingQueryRow"
+      },
+      "title": "Low Ctr",
+      "type": "array"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "note": {
+      "default": "",
+      "title": "Note",
+      "type": "string"
+     },
+     "opportunities": {
+      "items": {
+       "$ref": "#/$defs/RankingQueryRow"
+      },
+      "title": "Opportunities",
+      "type": "array"
+     },
+     "period_days": {
+      "default": 28,
+      "title": "Period Days",
+      "type": "integer"
+     },
+     "rows": {
+      "items": {
+       "$ref": "#/$defs/RankingRow"
+      },
+      "title": "Rows",
+      "type": "array"
+     },
+     "rules_note": {
+      "default": "",
+      "title": "Rules Note",
+      "type": "string"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "RankingsSection",
+    "type": "object"
+   },
+   "ReadabilitySection": {
+    "properties": {
+     "keywords": {
+      "items": {
+       "$ref": "#/$defs/KeywordRow"
+      },
+      "title": "Keywords",
+      "type": "array"
+     },
+     "keywords_not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Keywords Not Measured Text"
+     },
+     "language": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Language"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "notes": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+     },
+     "phrases": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Phrases",
+      "type": "array"
+     },
+     "scores": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Scores",
+      "type": "array"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "suggested_targets": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Suggested Targets",
+      "type": "array"
+     },
+     "terms": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Terms",
+      "type": "array"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "ReadabilitySection",
+    "type": "object"
+   },
+   "Recommendation": {
+    "properties": {
+     "body": {
+      "title": "Body",
+      "type": "string"
+     },
+     "check_ids": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Check Ids",
+      "type": "array"
+     },
+     "confidence": {
+      "default": "high",
+      "enum": [
+       "high",
+       "medium",
+       "low"
+      ],
+      "title": "Confidence",
+      "type": "string"
+     },
+     "depends_on": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Depends On",
+      "type": "array"
+     },
+     "effort": {
+      "$ref": "#/$defs/Effort"
+     },
+     "failure_check": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Failure Check"
+     },
+     "finding_ids": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Finding Ids",
+      "type": "array"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "impact": {
+      "$ref": "#/$defs/Impact"
+     },
+     "leading_indicator": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Leading Indicator"
+     },
+     "phase": {
+      "default": 4,
+      "title": "Phase",
+      "type": "integer"
+     },
+     "priority_score": {
+      "title": "Priority Score",
+      "type": "number"
+     },
+     "severity": {
+      "$ref": "#/$defs/Severity"
+     },
+     "title": {
+      "title": "Title",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "finding_ids",
+     "check_ids",
+     "title",
+     "body",
+     "severity",
+     "effort",
+     "impact",
+     "priority_score"
+    ],
+    "title": "Recommendation",
+    "type": "object"
+   },
+   "RedirectRow": {
+    "properties": {
+     "final_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Final Url"
+     },
+     "hops": {
+      "default": 0,
+      "title": "Hops",
+      "type": "integer"
+     },
+     "label": {
+      "title": "Label",
+      "type": "string"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "note": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Note"
+     },
+     "permanent": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Permanent"
+     },
+     "status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Status"
+     },
+     "variant_url": {
+      "title": "Variant Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "name",
+     "label",
+     "variant_url"
+    ],
+    "title": "RedirectRow",
+    "type": "object"
+   },
+   "SchemaItem": {
+    "properties": {
+     "complete": {
+      "title": "Complete",
+      "type": "boolean"
+     },
+     "json_ld": {
+      "title": "Json Ld",
+      "type": "string"
+     },
+     "missing_fields": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Missing Fields",
+      "type": "array"
+     },
+     "reason": {
+      "title": "Reason",
+      "type": "string"
+     },
+     "rich_result_note": {
+      "default": "",
+      "title": "Rich Result Note",
+      "type": "string"
+     },
+     "type": {
+      "title": "Type",
+      "type": "string"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     },
+     "warning": {
+      "default": "",
+      "title": "Warning",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url",
+     "type",
+     "reason",
+     "json_ld",
+     "complete"
+    ],
+    "title": "SchemaItem",
+    "type": "object"
+   },
+   "SchemaSuggestSection": {
+    "properties": {
+     "items": {
+      "items": {
+       "$ref": "#/$defs/SchemaItem"
+      },
+      "title": "Items",
+      "type": "array"
+     },
+     "items_total": {
+      "default": 0,
+      "title": "Items Total",
+      "type": "integer"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "notes": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "SchemaSuggestSection",
+    "type": "object"
+   },
+   "ScopeNote": {
+    "description": "\"What this score does not measure\".",
+    "properties": {
+     "intro": {
+      "title": "Intro",
+      "type": "string"
+     },
+     "items": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Items",
+      "type": "array"
+     },
+     "model_note": {
+      "title": "Model Note",
+      "type": "string"
+     },
+     "next_step": {
+      "title": "Next Step",
+      "type": "string"
+     },
+     "title": {
+      "title": "Title",
+      "type": "string"
+     }
+    },
+    "required": [
+     "title",
+     "intro",
+     "items",
+     "next_step",
+     "model_note"
+    ],
+    "title": "ScopeNote",
+    "type": "object"
+   },
+   "Scores": {
+    "properties": {
+     "categories": {
+      "items": {
+       "$ref": "#/$defs/CategoryReport"
+      },
+      "title": "Categories",
+      "type": "array"
+     },
+     "core_overall": {
+      "anyOf": [
+       {
+        "maximum": 100,
+        "minimum": 0,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Core Overall"
+     },
+     "kind": {
+      "enum": [
+       "health",
+       "page_card"
+      ],
+      "title": "Kind",
+      "type": "string"
+     },
+     "overall": {
+      "$ref": "#/$defs/OverallScore"
+     },
+     "p25": {
+      "anyOf": [
+       {
+        "maximum": 100,
+        "minimum": 0,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "P25"
+     }
+    },
+    "required": [
+     "kind",
+     "overall",
+     "categories"
+    ],
+    "title": "Scores",
+    "type": "object"
+   },
+   "ScreenshotsSection": {
+    "properties": {
+     "above_fold": {
+      "items": {
+       "$ref": "#/$defs/FoldRow"
+      },
+      "title": "Above Fold",
+      "type": "array"
+     },
+     "errors": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Errors",
+      "type": "array"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "shots": {
+      "items": {
+       "$ref": "#/$defs/ShotRow"
+      },
+      "title": "Shots",
+      "type": "array"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "ScreenshotsSection",
+    "type": "object"
+   },
+   "SerpRow": {
+    "properties": {
+     "description_missing": {
+      "title": "Description Missing",
+      "type": "boolean"
+     },
+     "description_shown": {
+      "title": "Description Shown",
+      "type": "string"
+     },
+     "description_truncated": {
+      "title": "Description Truncated",
+      "type": "boolean"
+     },
+     "device": {
+      "title": "Device",
+      "type": "string"
+     },
+     "device_label": {
+      "title": "Device Label",
+      "type": "string"
+     },
+     "display_url": {
+      "title": "Display Url",
+      "type": "string"
+     },
+     "title_shown": {
+      "title": "Title Shown",
+      "type": "string"
+     },
+     "title_truncated": {
+      "title": "Title Truncated",
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "device",
+     "device_label",
+     "display_url",
+     "title_shown",
+     "title_truncated",
+     "description_shown",
+     "description_truncated",
+     "description_missing"
+    ],
+    "title": "SerpRow",
+    "type": "object"
+   },
+   "Severity": {
+    "enum": [
+     "Critical",
+     "High",
+     "Medium",
+     "Low",
+     "Info"
+    ],
+    "title": "Severity",
+    "type": "string"
+   },
+   "ShotRow": {
+    "properties": {
+     "data_base64": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Data Base64"
+     },
+     "device": {
+      "title": "Device",
+      "type": "string"
+     },
+     "device_label": {
+      "title": "Device Label",
+      "type": "string"
+     },
+     "height": {
+      "title": "Height",
+      "type": "integer"
+     },
+     "kb": {
+      "title": "Kb",
+      "type": "number"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "width": {
+      "title": "Width",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "device",
+     "device_label",
+     "name",
+     "width",
+     "height",
+     "kb"
+    ],
+    "title": "ShotRow",
+    "type": "object"
+   },
+   "SiteSetupSection": {
+    "properties": {
+     "custom_404_text": {
+      "default": "",
+      "title": "Custom 404 Text",
+      "type": "string"
+     },
+     "files": {
+      "items": {
+       "$ref": "#/$defs/FileRow"
+      },
+      "title": "Files",
+      "type": "array"
+     },
+     "headers": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Headers",
+      "type": "array"
+     },
+     "hsts_text": {
+      "default": "",
+      "title": "Hsts Text",
+      "type": "string"
+     },
+     "http_version_text": {
+      "default": "",
+      "title": "Http Version Text",
+      "type": "string"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "redirects": {
+      "items": {
+       "$ref": "#/$defs/RedirectRow"
+      },
+      "title": "Redirects",
+      "type": "array"
+     },
+     "requests_made": {
+      "default": 0,
+      "title": "Requests Made",
+      "type": "integer"
+     },
+     "skipped": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Skipped",
+      "type": "array"
+     },
+     "soft_404": {
+      "default": "unknown",
+      "enum": [
+       "ok",
+       "problem",
+       "unknown"
+      ],
+      "title": "Soft 404",
+      "type": "string"
+     },
+     "soft_404_text": {
+      "default": "",
+      "title": "Soft 404 Text",
+      "type": "string"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "SiteSetupSection",
+    "type": "object"
+   },
+   "SitemapGenSection": {
+    "properties": {
+     "counts_toward_overall": {
+      "const": false,
+      "default": false,
+      "title": "Counts Toward Overall",
+      "type": "boolean"
+     },
+     "excluded": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Excluded",
+      "type": "array"
+     },
+     "excluded_total": {
+      "default": 0,
+      "title": "Excluded Total",
+      "type": "integer"
+     },
+     "facts": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Facts",
+      "type": "array"
+     },
+     "missing": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Missing",
+      "type": "array"
+     },
+     "missing_total": {
+      "default": 0,
+      "title": "Missing Total",
+      "type": "integer"
+     },
+     "not_indexable": {
+      "items": {
+       "$ref": "#/$defs/KV"
+      },
+      "title": "Not Indexable",
+      "type": "array"
+     },
+     "not_indexable_total": {
+      "default": 0,
+      "title": "Not Indexable Total",
+      "type": "integer"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "note": {
+      "default": "",
+      "title": "Note",
+      "type": "string"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     },
+     "urls_shown": {
+      "default": 0,
+      "title": "Urls Shown",
+      "type": "integer"
+     },
+     "urls_total": {
+      "default": 0,
+      "title": "Urls Total",
+      "type": "integer"
+     },
+     "xml_preview": {
+      "default": "",
+      "title": "Xml Preview",
+      "type": "string"
+     }
+    },
+    "title": "SitemapGenSection",
+    "type": "object"
+   },
+   "TechGroup": {
+    "properties": {
+     "category": {
+      "title": "Category",
+      "type": "string"
+     },
+     "items": {
+      "items": {
+       "$ref": "#/$defs/TechRow"
+      },
+      "title": "Items",
+      "type": "array"
+     },
+     "label": {
+      "title": "Label",
+      "type": "string"
+     }
+    },
+    "required": [
+     "category",
+     "label"
+    ],
+    "title": "TechGroup",
+    "type": "object"
+   },
+   "TechRow": {
+    "properties": {
+     "confidence": {
+      "default": "medium",
+      "enum": [
+       "high",
+       "medium",
+       "low"
+      ],
+      "title": "Confidence",
+      "type": "string"
+     },
+     "evidence": {
+      "default": "",
+      "title": "Evidence",
+      "type": "string"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "version": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Version"
+     },
+     "website": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Website"
+     }
+    },
+    "required": [
+     "name"
+    ],
+    "title": "TechRow",
+    "type": "object"
+   },
+   "TechSection": {
+    "properties": {
+     "groups": {
+      "items": {
+       "$ref": "#/$defs/TechGroup"
+      },
+      "title": "Groups",
+      "type": "array"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "note": {
+      "default": "",
+      "title": "Note",
+      "type": "string"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "total": {
+      "default": 0,
+      "title": "Total",
+      "type": "integer"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "TechSection",
+    "type": "object"
+   },
+   "Trend": {
+    "properties": {
+     "basis": {
+      "const": "core_sample",
+      "default": "core_sample",
+      "title": "Basis",
+      "type": "string"
+     },
+     "comparable": {
+      "default": false,
+      "title": "Comparable",
+      "type": "boolean"
+     },
+     "core_overall": {
+      "anyOf": [
+       {
+        "maximum": 100,
+        "minimum": 0,
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Core Overall"
+     },
+     "reason_if_not": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": "first_audit",
+      "title": "Reason If Not"
+     }
+    },
+    "title": "Trend",
+    "type": "object"
+   },
+   "TypeShare": {
+    "properties": {
+     "count": {
+      "title": "Count",
+      "type": "integer"
+     },
+     "kb": {
+      "title": "Kb",
+      "type": "number"
+     },
+     "type": {
+      "title": "Type",
+      "type": "string"
+     }
+    },
+    "required": [
+     "type",
+     "count",
+     "kb"
+    ],
+    "title": "TypeShare",
+    "type": "object"
+   },
+   "Versions": {
+    "properties": {
+     "engine_version": {
+      "default": "0.1.0",
+      "title": "Engine Version",
+      "type": "string"
+     },
+     "rule_version": {
+      "title": "Rule Version",
+      "type": "string"
+     },
+     "score_version": {
+      "title": "Score Version",
+      "type": "string"
+     }
+    },
+    "required": [
+     "score_version",
+     "rule_version"
+    ],
+    "title": "Versions",
+    "type": "object"
+   },
+   "VisItem": {
+    "properties": {
+     "available": {
+      "default": true,
+      "title": "Available",
+      "type": "boolean"
+     },
+     "detail": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Detail"
+     },
+     "error_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error Text"
+     },
+     "id": {
+      "enum": [
+       "rdap",
+       "wayback",
+       "common_crawl",
+       "search_console"
+      ],
+      "title": "Id",
+      "type": "string"
+     },
+     "label": {
+      "title": "Label",
+      "type": "string"
+     },
+     "value": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Value"
+     }
+    },
+    "required": [
+     "id",
+     "label"
+    ],
+    "title": "VisItem",
+    "type": "object"
+   },
+   "VisibilitySection": {
+    "properties": {
+     "counts_toward_overall": {
+      "const": false,
+      "default": false,
+      "title": "Counts Toward Overall",
+      "type": "boolean"
+     },
+     "disclaimer": {
+      "default": "",
+      "title": "Disclaimer",
+      "type": "string"
+     },
+     "domain": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Domain"
+     },
+     "items": {
+      "items": {
+       "$ref": "#/$defs/VisItem"
+      },
+      "title": "Items",
+      "type": "array"
+     },
+     "not_measured_reason": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Reason"
+     },
+     "not_measured_text": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Not Measured Text"
+     },
+     "notes": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+     },
+     "status": {
+      "default": "not_measured",
+      "enum": [
+       "measured",
+       "not_measured"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "VisibilitySection",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "action_plan": {
+    "$ref": "#/$defs/ActionPlan"
+   },
+   "agentic": {
+    "$ref": "#/$defs/AgenticSection"
+   },
+   "audit": {
+    "$ref": "#/$defs/AuditInfo"
+   },
+   "authority": {
+    "$ref": "#/$defs/AuthoritySection"
+   },
+   "competitors": {
+    "$ref": "#/$defs/CompetitorsSection"
+   },
+   "crawl": {
+    "$ref": "#/$defs/CrawlInfo"
+   },
+   "data_sources": {
+    "items": {
+     "$ref": "#/$defs/DataSource"
+    },
+    "title": "Data Sources",
+    "type": "array"
+   },
+   "field": {
+    "$ref": "#/$defs/FieldSection"
+   },
+   "findings": {
+    "items": {
+     "$ref": "#/$defs/FindingReport"
+    },
+    "title": "Findings",
+    "type": "array"
+   },
+   "glance": {
+    "$ref": "#/$defs/GlanceSection"
+   },
+   "gsc": {
+    "$ref": "#/$defs/GscSection"
+   },
+   "history": {
+    "$ref": "#/$defs/HistorySection"
+   },
+   "hreflang": {
+    "$ref": "#/$defs/HreflangSection"
+   },
+   "images": {
+    "$ref": "#/$defs/ImagesSection"
+   },
+   "indexability": {
+    "$ref": "#/$defs/IndexabilitySection"
+   },
+   "limitations": {
+    "items": {
+     "$ref": "#/$defs/Limitation"
+    },
+    "title": "Limitations",
+    "type": "array"
+   },
+   "links": {
+    "$ref": "#/$defs/LinksSection"
+   },
+   "local": {
+    "$ref": "#/$defs/LocalSection"
+   },
+   "methodology": {
+    "$ref": "#/$defs/Methodology"
+   },
+   "not_checked": {
+    "items": {
+     "$ref": "#/$defs/NotCheckedReport"
+    },
+    "title": "Not Checked",
+    "type": "array"
+   },
+   "pages": {
+    "items": {
+     "$ref": "#/$defs/PageSummary"
+    },
+    "title": "Pages",
+    "type": "array"
+   },
+   "performance": {
+    "$ref": "#/$defs/PerfSection"
+   },
+   "previews": {
+    "$ref": "#/$defs/PreviewsSection"
+   },
+   "quality": {
+    "$ref": "#/$defs/Quality"
+   },
+   "rankings": {
+    "$ref": "#/$defs/RankingsSection"
+   },
+   "readability": {
+    "$ref": "#/$defs/ReadabilitySection"
+   },
+   "recommendations": {
+    "items": {
+     "$ref": "#/$defs/Recommendation"
+    },
+    "title": "Recommendations",
+    "type": "array"
+   },
+   "schema_suggestions": {
+    "$ref": "#/$defs/SchemaSuggestSection"
+   },
+   "schema_version": {
+    "default": "1.6.0",
+    "title": "Schema Version",
+    "type": "string"
+   },
+   "scope_note": {
+    "anyOf": [
+     {
+      "$ref": "#/$defs/ScopeNote"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null
+   },
+   "scores": {
+    "$ref": "#/$defs/Scores"
+   },
+   "screenshots": {
+    "$ref": "#/$defs/ScreenshotsSection"
+   },
+   "site_setup": {
+    "$ref": "#/$defs/SiteSetupSection"
+   },
+   "sitemap_gen": {
+    "$ref": "#/$defs/SitemapGenSection"
+   },
+   "summary": {
+    "$ref": "#/$defs/ExecutiveSummary"
+   },
+   "techstack": {
+    "$ref": "#/$defs/TechSection"
+   },
+   "trend": {
+    "anyOf": [
+     {
+      "$ref": "#/$defs/Trend"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null
+   },
+   "usage": {
+    "additionalProperties": true,
+    "title": "Usage",
+    "type": "object"
+   },
+   "versions": {
+    "$ref": "#/$defs/Versions"
+   },
+   "visibility": {
+    "$ref": "#/$defs/VisibilitySection"
+   }
+  },
+  "required": [
+   "audit",
+   "versions",
+   "crawl",
+   "scores",
+   "summary",
+   "action_plan",
+   "methodology"
+  ],
+  "title": "AuditReport",
+  "type": "object"
+ },
+ "schema_version": "report.build/1"
+}

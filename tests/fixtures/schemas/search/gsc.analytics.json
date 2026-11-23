@@ -1,0 +1,70 @@
+{
+ "schema": {
+  "$defs": {
+   "GscAnalyticsRow": {
+    "properties": {
+     "clicks": {
+      "default": 0,
+      "title": "Clicks",
+      "type": "integer"
+     },
+     "ctr": {
+      "default": 0.0,
+      "title": "Ctr",
+      "type": "number"
+     },
+     "impressions": {
+      "default": 0,
+      "title": "Impressions",
+      "type": "integer"
+     },
+     "keys": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Keys",
+      "type": "array"
+     },
+     "position": {
+      "default": 0.0,
+      "title": "Position",
+      "type": "number"
+     }
+    },
+    "title": "GscAnalyticsRow",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "days": {
+    "default": 28,
+    "title": "Days",
+    "type": "integer"
+   },
+   "dimensions": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Dimensions",
+    "type": "array"
+   },
+   "items": {
+    "items": {
+     "$ref": "#/$defs/GscAnalyticsRow"
+    },
+    "title": "Items",
+    "type": "array"
+   },
+   "property": {
+    "title": "Property",
+    "type": "string"
+   }
+  },
+  "required": [
+   "property"
+  ],
+  "title": "GscAnalytics",
+  "type": "object"
+ },
+ "schema_version": "gsc.analytics/1"
+}

@@ -1,0 +1,347 @@
+{
+ "schema": {
+  "$defs": {
+   "OpportunityPage": {
+    "properties": {
+     "clicks": {
+      "default": 0,
+      "title": "Clicks",
+      "type": "integer"
+     },
+     "impressions": {
+      "default": 0,
+      "title": "Impressions",
+      "type": "integer"
+     },
+     "page": {
+      "title": "Page",
+      "type": "string"
+     },
+     "position": {
+      "default": 0.0,
+      "title": "Position",
+      "type": "number"
+     },
+     "share": {
+      "default": 0.0,
+      "title": "Share",
+      "type": "number"
+     }
+    },
+    "required": [
+     "page"
+    ],
+    "title": "OpportunityPage",
+    "type": "object"
+   },
+   "OpportunityRow": {
+    "properties": {
+     "change": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Change"
+     },
+     "change_ratio": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Change Ratio"
+     },
+     "clicks": {
+      "default": 0,
+      "title": "Clicks",
+      "type": "integer"
+     },
+     "ctr": {
+      "default": 0.0,
+      "title": "Ctr",
+      "type": "number"
+     },
+     "expected_ctr": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Expected Ctr"
+     },
+     "ga4_key_events": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Ga4 Key Events"
+     },
+     "ga4_revenue": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Ga4 Revenue"
+     },
+     "impressions": {
+      "default": 0,
+      "title": "Impressions",
+      "type": "integer"
+     },
+     "missed_clicks": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Missed Clicks"
+     },
+     "page": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Page"
+     },
+     "pages": {
+      "items": {
+       "$ref": "#/$defs/OpportunityPage"
+      },
+      "title": "Pages",
+      "type": "array"
+     },
+     "position": {
+      "default": 0.0,
+      "title": "Position",
+      "type": "number"
+     },
+     "previous_clicks": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Previous Clicks"
+     },
+     "query": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Query"
+     }
+    },
+    "title": "OpportunityRow",
+    "type": "object"
+   },
+   "OpportunityThresholds": {
+    "description": "The thresholds an ``opportunities`` run used (defaults in ``opportunities.json``).",
+    "properties": {
+     "cannibal_min_pages": {
+      "title": "Cannibal Min Pages",
+      "type": "integer"
+     },
+     "cannibal_min_share": {
+      "title": "Cannibal Min Share",
+      "type": "number"
+     },
+     "decline_min_drop_clicks": {
+      "title": "Decline Min Drop Clicks",
+      "type": "number"
+     },
+     "decline_min_previous_clicks": {
+      "title": "Decline Min Previous Clicks",
+      "type": "number"
+     },
+     "decline_min_ratio": {
+      "title": "Decline Min Ratio",
+      "type": "number"
+     },
+     "list_limit": {
+      "title": "List Limit",
+      "type": "integer"
+     },
+     "low_ctr_ratio": {
+      "title": "Low Ctr Ratio",
+      "type": "number"
+     },
+     "min_impressions": {
+      "title": "Min Impressions",
+      "type": "integer"
+     },
+     "row_limit": {
+      "title": "Row Limit",
+      "type": "integer"
+     },
+     "striking_max_position": {
+      "title": "Striking Max Position",
+      "type": "number"
+     },
+     "striking_min_position": {
+      "title": "Striking Min Position",
+      "type": "number"
+     }
+    },
+    "required": [
+     "min_impressions",
+     "striking_min_position",
+     "striking_max_position",
+     "low_ctr_ratio",
+     "cannibal_min_share",
+     "cannibal_min_pages",
+     "decline_min_previous_clicks",
+     "decline_min_drop_clicks",
+     "decline_min_ratio",
+     "row_limit",
+     "list_limit"
+    ],
+    "title": "OpportunityThresholds",
+    "type": "object"
+   }
+  },
+  "description": "Search Console opportunities of one property. Informational: never part of the score.",
+  "properties": {
+   "cannibalization": {
+    "items": {
+     "$ref": "#/$defs/OpportunityRow"
+    },
+    "title": "Cannibalization",
+    "type": "array"
+   },
+   "compare_days": {
+    "default": 28,
+    "title": "Compare Days",
+    "type": "integer"
+   },
+   "ctr_curve_source": {
+    "default": "",
+    "title": "Ctr Curve Source",
+    "type": "string"
+   },
+   "days": {
+    "default": 28,
+    "title": "Days",
+    "type": "integer"
+   },
+   "declining": {
+    "items": {
+     "$ref": "#/$defs/OpportunityRow"
+    },
+    "title": "Declining",
+    "type": "array"
+   },
+   "ga4_error": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Ga4 Error"
+   },
+   "ga4_property": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Ga4 Property"
+   },
+   "low_ctr": {
+    "items": {
+     "$ref": "#/$defs/OpportunityRow"
+    },
+    "title": "Low Ctr",
+    "type": "array"
+   },
+   "property": {
+    "title": "Property",
+    "type": "string"
+   },
+   "rows_analysed": {
+    "default": 0,
+    "title": "Rows Analysed",
+    "type": "integer"
+   },
+   "sorted_by": {
+    "default": "search",
+    "enum": [
+     "search",
+     "ga4-value"
+    ],
+    "title": "Sorted By",
+    "type": "string"
+   },
+   "striking": {
+    "items": {
+     "$ref": "#/$defs/OpportunityRow"
+    },
+    "title": "Striking",
+    "type": "array"
+   },
+   "thresholds": {
+    "$ref": "#/$defs/OpportunityThresholds"
+   },
+   "truncated": {
+    "default": false,
+    "title": "Truncated",
+    "type": "boolean"
+   }
+  },
+  "required": [
+   "property",
+   "thresholds"
+  ],
+  "title": "Opportunities",
+  "type": "object"
+ },
+ "schema_version": "gsc.opportunities/1"
+}

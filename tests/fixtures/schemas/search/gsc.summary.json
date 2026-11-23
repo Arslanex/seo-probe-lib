@@ -1,0 +1,526 @@
+{
+ "schema": {
+  "$defs": {
+   "GscInspection": {
+    "description": "URL Inspection result of one page (Google's own view of it).",
+    "properties": {
+     "coverage_state": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Coverage State"
+     },
+     "crawled_as": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Crawled As"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "google_canonical": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Google Canonical"
+     },
+     "indexed": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Indexed"
+     },
+     "indexing_state": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Indexing State"
+     },
+     "last_crawl_time": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Last Crawl Time"
+     },
+     "page_fetch_state": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Page Fetch State"
+     },
+     "robots_txt_state": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Robots Txt State"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     },
+     "user_canonical": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "User Canonical"
+     },
+     "verdict": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Verdict"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "GscInspection",
+    "type": "object"
+   },
+   "GscRow": {
+    "properties": {
+     "clicks": {
+      "default": 0,
+      "title": "Clicks",
+      "type": "integer"
+     },
+     "ctr": {
+      "default": 0.0,
+      "title": "Ctr",
+      "type": "number"
+     },
+     "impressions": {
+      "default": 0,
+      "title": "Impressions",
+      "type": "integer"
+     },
+     "key": {
+      "title": "Key",
+      "type": "string"
+     },
+     "position": {
+      "default": 0.0,
+      "title": "Position",
+      "type": "number"
+     }
+    },
+    "required": [
+     "key"
+    ],
+    "title": "GscRow",
+    "type": "object"
+   },
+   "GscSitemap": {
+    "properties": {
+     "errors": {
+      "default": 0,
+      "title": "Errors",
+      "type": "integer"
+     },
+     "is_pending": {
+      "default": false,
+      "title": "Is Pending",
+      "type": "boolean"
+     },
+     "last_downloaded": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Last Downloaded"
+     },
+     "last_submitted": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Last Submitted"
+     },
+     "path": {
+      "title": "Path",
+      "type": "string"
+     },
+     "warnings": {
+      "default": 0,
+      "title": "Warnings",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "path"
+    ],
+    "title": "GscSitemap",
+    "type": "object"
+   },
+   "KeywordRankRow": {
+    "description": "What Search Console reports for one keyword the user asked about (last ``period_days``).",
+    "properties": {
+     "clicks": {
+      "default": 0,
+      "title": "Clicks",
+      "type": "integer"
+     },
+     "ctr": {
+      "default": 0.0,
+      "title": "Ctr",
+      "type": "number"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "impressions": {
+      "default": 0,
+      "title": "Impressions",
+      "type": "integer"
+     },
+     "keyword": {
+      "title": "Keyword",
+      "type": "string"
+     },
+     "matched_query": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Matched Query"
+     },
+     "position": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Position"
+     },
+     "status": {
+      "default": "no-data",
+      "enum": [
+       "ok",
+       "no-data",
+       "error"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "top_page": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Top Page"
+     }
+    },
+    "required": [
+     "keyword"
+    ],
+    "title": "KeywordRankRow",
+    "type": "object"
+   },
+   "KeywordRankings": {
+    "description": "Rankings of the user's keywords plus opportunities from the site's own queries.\n\nInformational: never part of the score. Search Console hides rare queries, so ``no-data`` does\nnot mean \"not ranking\".",
+    "properties": {
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "keywords_requested": {
+      "default": 0,
+      "title": "Keywords Requested",
+      "type": "integer"
+     },
+     "low_ctr": {
+      "items": {
+       "$ref": "#/$defs/RankingQuery"
+      },
+      "title": "Low Ctr",
+      "type": "array"
+     },
+     "opportunities": {
+      "items": {
+       "$ref": "#/$defs/RankingQuery"
+      },
+      "title": "Opportunities",
+      "type": "array"
+     },
+     "period_days": {
+      "default": 28,
+      "title": "Period Days",
+      "type": "integer"
+     },
+     "rows": {
+      "items": {
+       "$ref": "#/$defs/KeywordRankRow"
+      },
+      "title": "Rows",
+      "type": "array"
+     }
+    },
+    "title": "KeywordRankings",
+    "type": "object"
+   },
+   "RankingQuery": {
+    "description": "A query from the property's own Search Console data that deserves attention.",
+    "properties": {
+     "clicks": {
+      "default": 0,
+      "title": "Clicks",
+      "type": "integer"
+     },
+     "ctr": {
+      "default": 0.0,
+      "title": "Ctr",
+      "type": "number"
+     },
+     "impressions": {
+      "default": 0,
+      "title": "Impressions",
+      "type": "integer"
+     },
+     "position": {
+      "default": 0.0,
+      "title": "Position",
+      "type": "number"
+     },
+     "query": {
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "RankingQuery",
+    "type": "object"
+   }
+  },
+  "description": "Search Console data for the audited site (only with the owner's authorisation).",
+  "properties": {
+   "account": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Account"
+   },
+   "error": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Error"
+   },
+   "inspections": {
+    "items": {
+     "$ref": "#/$defs/GscInspection"
+    },
+    "title": "Inspections",
+    "type": "array"
+   },
+   "period_days": {
+    "default": 28,
+    "title": "Period Days",
+    "type": "integer"
+   },
+   "permission": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Permission"
+   },
+   "property": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Property"
+   },
+   "rankings": {
+    "anyOf": [
+     {
+      "$ref": "#/$defs/KeywordRankings"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null
+   },
+   "sitemaps": {
+    "items": {
+     "$ref": "#/$defs/GscSitemap"
+    },
+    "title": "Sitemaps",
+    "type": "array"
+   },
+   "status": {
+    "default": "not-connected",
+    "enum": [
+     "ok",
+     "not-connected",
+     "not-configured",
+     "property-not-found",
+     "no-permission",
+     "error"
+    ],
+    "title": "Status",
+    "type": "string"
+   },
+   "top_pages": {
+    "items": {
+     "$ref": "#/$defs/GscRow"
+    },
+    "title": "Top Pages",
+    "type": "array"
+   },
+   "top_queries": {
+    "items": {
+     "$ref": "#/$defs/GscRow"
+    },
+    "title": "Top Queries",
+    "type": "array"
+   },
+   "totals": {
+    "additionalProperties": {
+     "type": "number"
+    },
+    "title": "Totals",
+    "type": "object"
+   }
+  },
+  "title": "GscData",
+  "type": "object"
+ },
+ "schema_version": "gsc.summary/1"
+}

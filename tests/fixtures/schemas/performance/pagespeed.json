@@ -1,0 +1,27 @@
+{
+ "schema": {
+  "description": "PageSpeed Insights (mobile strategy). ``facts``: {\"cwv_lcp\": {value, source, rating}, ...}.",
+  "properties": {
+   "facts": {
+    "additionalProperties": true,
+    "title": "Facts",
+    "type": "object"
+   },
+   "measured": {
+    "default": false,
+    "title": "Measured",
+    "type": "boolean"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   }
+  },
+  "required": [
+   "url"
+  ],
+  "title": "PageSpeedReport",
+  "type": "object"
+ },
+ "schema_version": "pagespeed/1"
+}

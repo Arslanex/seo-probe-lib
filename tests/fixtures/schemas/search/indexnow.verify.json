@@ -1,0 +1,55 @@
+{
+ "schema": {
+  "properties": {
+   "content_type": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Content Type"
+   },
+   "found": {
+    "default": false,
+    "title": "Found",
+    "type": "boolean"
+   },
+   "host": {
+    "title": "Host",
+    "type": "string"
+   },
+   "key_url": {
+    "title": "Key Url",
+    "type": "string"
+   },
+   "matches": {
+    "default": false,
+    "title": "Matches",
+    "type": "boolean"
+   },
+   "status": {
+    "anyOf": [
+     {
+      "type": "integer"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Status"
+   }
+  },
+  "required": [
+   "host",
+   "key_url"
+  ],
+  "title": "IndexNowVerification",
+  "type": "object"
+ },
+ "schema_version": "indexnow.verify/1"
+}

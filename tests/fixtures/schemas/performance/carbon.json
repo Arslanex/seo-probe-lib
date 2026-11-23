@@ -1,0 +1,98 @@
+{
+ "schema": {
+  "description": "CO2e per page view estimated from transferred bytes (Sustainable Web Design model).",
+  "properties": {
+   "bytes": {
+    "title": "Bytes",
+    "type": "integer"
+   },
+   "bytes_source": {
+    "enum": [
+     "lab",
+     "html"
+    ],
+    "title": "Bytes Source",
+    "type": "string"
+   },
+   "co2_grams": {
+    "title": "Co2 Grams",
+    "type": "number"
+   },
+   "constants": {
+    "additionalProperties": true,
+    "title": "Constants",
+    "type": "object"
+   },
+   "data_reload_ratio": {
+    "default": 0.0,
+    "title": "Data Reload Ratio",
+    "type": "number"
+   },
+   "energy_kwh": {
+    "title": "Energy Kwh",
+    "type": "number"
+   },
+   "first_visit_share": {
+    "default": 1.0,
+    "title": "First Visit Share",
+    "type": "number"
+   },
+   "flag_from_rating": {
+    "title": "Flag From Rating",
+    "type": "string"
+   },
+   "green_hosting": {
+    "default": false,
+    "title": "Green Hosting",
+    "type": "boolean"
+   },
+   "green_hosting_factor": {
+    "default": 0.0,
+    "title": "Green Hosting Factor",
+    "type": "number"
+   },
+   "model": {
+    "title": "Model",
+    "type": "string"
+   },
+   "model_version": {
+    "title": "Model Version",
+    "type": "string"
+   },
+   "rating": {
+    "title": "Rating",
+    "type": "string"
+   },
+   "return_visit_share": {
+    "default": 0.0,
+    "title": "Return Visit Share",
+    "type": "number"
+   },
+   "segments_g": {
+    "additionalProperties": {
+     "type": "number"
+    },
+    "title": "Segments G",
+    "type": "object"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   }
+  },
+  "required": [
+   "url",
+   "bytes",
+   "bytes_source",
+   "energy_kwh",
+   "co2_grams",
+   "rating",
+   "flag_from_rating",
+   "model",
+   "model_version"
+  ],
+  "title": "CarbonEstimate",
+  "type": "object"
+ },
+ "schema_version": "carbon/1"
+}

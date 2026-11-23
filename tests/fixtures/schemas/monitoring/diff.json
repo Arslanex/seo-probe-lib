@@ -1,0 +1,115 @@
+{
+ "schema": {
+  "$defs": {
+   "FieldChange": {
+    "properties": {
+     "field": {
+      "title": "Field",
+      "type": "string"
+     },
+     "new": {
+      "default": null,
+      "title": "New"
+     },
+     "old": {
+      "default": null,
+      "title": "Old"
+     },
+     "rule": {
+      "title": "Rule",
+      "type": "string"
+     },
+     "severity": {
+      "$ref": "#/$defs/Severity"
+     }
+    },
+    "required": [
+     "field",
+     "severity",
+     "rule"
+    ],
+    "title": "FieldChange",
+    "type": "object"
+   },
+   "Severity": {
+    "enum": [
+     "Critical",
+     "High",
+     "Medium",
+     "Low",
+     "Info"
+    ],
+    "title": "Severity",
+    "type": "string"
+   }
+  },
+  "properties": {
+   "changed": {
+    "default": false,
+    "title": "Changed",
+    "type": "boolean"
+   },
+   "changes": {
+    "items": {
+     "$ref": "#/$defs/FieldChange"
+    },
+    "title": "Changes",
+    "type": "array"
+   },
+   "max_severity": {
+    "anyOf": [
+     {
+      "$ref": "#/$defs/Severity"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null
+   },
+   "new_taken_at": {
+    "anyOf": [
+     {
+      "format": "date-time",
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "New Taken At"
+   },
+   "old_taken_at": {
+    "anyOf": [
+     {
+      "format": "date-time",
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Old Taken At"
+   },
+   "thresholds": {
+    "additionalProperties": {
+     "type": "number"
+    },
+    "title": "Thresholds",
+    "type": "object"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   }
+  },
+  "required": [
+   "url"
+  ],
+  "title": "SnapshotDiff",
+  "type": "object"
+ },
+ "schema_version": "diff/1"
+}

@@ -1,0 +1,184 @@
+{
+ "schema": {
+  "$defs": {
+   "Hop": {
+    "properties": {
+     "status": {
+      "title": "Status",
+      "type": "integer"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url",
+     "status"
+    ],
+    "title": "Hop",
+    "type": "object"
+   }
+  },
+  "description": "One fetched page. ``parsed`` is computed on first access and cached.",
+  "properties": {
+   "content_type": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Content Type"
+   },
+   "error": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Error"
+   },
+   "error_detail": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Error Detail"
+   },
+   "fetched_at": {
+    "anyOf": [
+     {
+      "format": "date-time",
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Fetched At"
+   },
+   "final_url": {
+    "title": "Final Url",
+    "type": "string"
+   },
+   "headers": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "title": "Headers",
+    "type": "object"
+   },
+   "html": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Html"
+   },
+   "html_bytes": {
+    "default": 0,
+    "title": "Html Bytes",
+    "type": "integer"
+   },
+   "redirect_chain": {
+    "items": {
+     "$ref": "#/$defs/Hop"
+    },
+    "title": "Redirect Chain",
+    "type": "array"
+   },
+   "rendered_html": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Rendered Html"
+   },
+   "sample_kind": {
+    "default": "core",
+    "enum": [
+     "core",
+     "exploration"
+    ],
+    "title": "Sample Kind",
+    "type": "string"
+   },
+   "status": {
+    "anyOf": [
+     {
+      "type": "integer"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Status"
+   },
+   "total_ms": {
+    "anyOf": [
+     {
+      "type": "integer"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Total Ms"
+   },
+   "truncated": {
+    "default": false,
+    "title": "Truncated",
+    "type": "boolean"
+   },
+   "ttfb_ms": {
+    "anyOf": [
+     {
+      "type": "integer"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Ttfb Ms"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   }
+  },
+  "required": [
+   "url",
+   "final_url"
+  ],
+  "title": "Page",
+  "type": "object"
+ },
+ "schema_version": "fetch/1"
+}

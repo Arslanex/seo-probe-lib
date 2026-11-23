@@ -1,0 +1,176 @@
+{
+ "schema": {
+  "$defs": {
+   "KeywordRankRow": {
+    "description": "What Search Console reports for one keyword the user asked about (last ``period_days``).",
+    "properties": {
+     "clicks": {
+      "default": 0,
+      "title": "Clicks",
+      "type": "integer"
+     },
+     "ctr": {
+      "default": 0.0,
+      "title": "Ctr",
+      "type": "number"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "impressions": {
+      "default": 0,
+      "title": "Impressions",
+      "type": "integer"
+     },
+     "keyword": {
+      "title": "Keyword",
+      "type": "string"
+     },
+     "matched_query": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Matched Query"
+     },
+     "position": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Position"
+     },
+     "status": {
+      "default": "no-data",
+      "enum": [
+       "ok",
+       "no-data",
+       "error"
+      ],
+      "title": "Status",
+      "type": "string"
+     },
+     "top_page": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Top Page"
+     }
+    },
+    "required": [
+     "keyword"
+    ],
+    "title": "KeywordRankRow",
+    "type": "object"
+   },
+   "RankingQuery": {
+    "description": "A query from the property's own Search Console data that deserves attention.",
+    "properties": {
+     "clicks": {
+      "default": 0,
+      "title": "Clicks",
+      "type": "integer"
+     },
+     "ctr": {
+      "default": 0.0,
+      "title": "Ctr",
+      "type": "number"
+     },
+     "impressions": {
+      "default": 0,
+      "title": "Impressions",
+      "type": "integer"
+     },
+     "position": {
+      "default": 0.0,
+      "title": "Position",
+      "type": "number"
+     },
+     "query": {
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "RankingQuery",
+    "type": "object"
+   }
+  },
+  "description": "Rankings of the user's keywords plus opportunities from the site's own queries.\n\nInformational: never part of the score. Search Console hides rare queries, so ``no-data`` does\nnot mean \"not ranking\".",
+  "properties": {
+   "error": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Error"
+   },
+   "keywords_requested": {
+    "default": 0,
+    "title": "Keywords Requested",
+    "type": "integer"
+   },
+   "low_ctr": {
+    "items": {
+     "$ref": "#/$defs/RankingQuery"
+    },
+    "title": "Low Ctr",
+    "type": "array"
+   },
+   "opportunities": {
+    "items": {
+     "$ref": "#/$defs/RankingQuery"
+    },
+    "title": "Opportunities",
+    "type": "array"
+   },
+   "period_days": {
+    "default": 28,
+    "title": "Period Days",
+    "type": "integer"
+   },
+   "rows": {
+    "items": {
+     "$ref": "#/$defs/KeywordRankRow"
+    },
+    "title": "Rows",
+    "type": "array"
+   }
+  },
+  "title": "KeywordRankings",
+  "type": "object"
+ },
+ "schema_version": "gsc.rankings/1"
+}

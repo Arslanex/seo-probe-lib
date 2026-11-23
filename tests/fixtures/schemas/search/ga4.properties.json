@@ -1,0 +1,46 @@
+{
+ "schema": {
+  "$defs": {
+   "Ga4Property": {
+    "properties": {
+     "account": {
+      "default": "",
+      "title": "Account",
+      "type": "string"
+     },
+     "account_name": {
+      "default": "",
+      "title": "Account Name",
+      "type": "string"
+     },
+     "display_name": {
+      "default": "",
+      "title": "Display Name",
+      "type": "string"
+     },
+     "property": {
+      "title": "Property",
+      "type": "string"
+     }
+    },
+    "required": [
+     "property"
+    ],
+    "title": "Ga4Property",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "items": {
+    "items": {
+     "$ref": "#/$defs/Ga4Property"
+    },
+    "title": "Items",
+    "type": "array"
+   }
+  },
+  "title": "Ga4Properties",
+  "type": "object"
+ },
+ "schema_version": "ga4.properties/1"
+}

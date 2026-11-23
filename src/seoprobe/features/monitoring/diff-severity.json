@@ -1,0 +1,20 @@
+{
+  "_doc": "Severity of a change between two snapshots. Each field maps to the rule raised for it; the severity equals that rule's catalog severity. 'noindex' is split by direction, 'status' by whether the new status is an error, 'word_count' and 'internal_links' are only reported beyond the diff thresholds.",
+  "changes": {
+    "noindex_added": {"rule": "snapshot-noindex-added", "severity": "Critical"},
+    "noindex_removed": {"rule": "snapshot-noindex-removed", "severity": "Low"},
+    "status_error": {"rule": "snapshot-status-error", "severity": "Critical"},
+    "status": {"rule": "snapshot-status-changed", "severity": "High"},
+    "final_url": {"rule": "snapshot-final-url-changed", "severity": "High"},
+    "canonical": {"rule": "snapshot-canonical-changed", "severity": "High"},
+    "robots": {"rule": "snapshot-robots-changed", "severity": "Medium"},
+    "title": {"rule": "snapshot-title-changed", "severity": "Medium"},
+    "h1": {"rule": "snapshot-h1-changed", "severity": "Medium"},
+    "hreflang": {"rule": "snapshot-hreflang-changed", "severity": "Medium"},
+    "word_count": {"rule": "snapshot-content-shrunk", "severity": "Medium"},
+    "meta_description": {"rule": "snapshot-description-changed", "severity": "Low"},
+    "schema_types": {"rule": "snapshot-schema-changed", "severity": "Low"},
+    "internal_links": {"rule": "snapshot-internal-links-changed", "severity": "Low"},
+    "content_hash": {"rule": "snapshot-content-changed", "severity": "Info"}
+  }
+}

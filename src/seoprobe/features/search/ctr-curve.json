@@ -1,0 +1,26 @@
+{
+  "source": "Conservative approximation of public organic CTR-by-position studies of desktop and mobile Google results (Advanced Web Ranking CTR study, Backlinko 2019 \"We analyzed 5 million Google search results\", Sistrix 2020). Values are rounded down so that only clearly low CTRs are flagged; positions 11-20 are extrapolated from page-two figures. Fractional positions are interpolated linearly; positions after the last entry use the last value. A heuristic: real CTR depends on SERP features, brand and intent.",
+  "version": "2026-11",
+  "positions": {
+    "1": 0.28,
+    "2": 0.16,
+    "3": 0.11,
+    "4": 0.08,
+    "5": 0.065,
+    "6": 0.05,
+    "7": 0.04,
+    "8": 0.032,
+    "9": 0.027,
+    "10": 0.024,
+    "11": 0.015,
+    "12": 0.013,
+    "13": 0.012,
+    "14": 0.011,
+    "15": 0.01,
+    "16": 0.009,
+    "17": 0.008,
+    "18": 0.008,
+    "19": 0.007,
+    "20": 0.007
+  }
+}

@@ -1,0 +1,332 @@
+{
+ "schema": {
+  "$defs": {
+   "ImageRecord": {
+    "properties": {
+     "above_fold": {
+      "default": false,
+      "title": "Above Fold",
+      "type": "boolean"
+     },
+     "bytes": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Bytes"
+     },
+     "category": {
+      "default": "content",
+      "enum": [
+       "thumbnail",
+       "content",
+       "hero"
+      ],
+      "title": "Category",
+      "type": "string"
+     },
+     "displayed_h": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Displayed H"
+     },
+     "displayed_w": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Displayed W"
+     },
+     "has_alt": {
+      "default": true,
+      "title": "Has Alt",
+      "type": "boolean"
+     },
+     "issues": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Issues",
+      "type": "array"
+     },
+     "lazy": {
+      "default": false,
+      "title": "Lazy",
+      "type": "boolean"
+     },
+     "natural_h": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Natural H"
+     },
+     "natural_w": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Natural W"
+     },
+     "page_url": {
+      "title": "Page Url",
+      "type": "string"
+     },
+     "served_format": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Served Format"
+     },
+     "src": {
+      "title": "Src",
+      "type": "string"
+     }
+    },
+    "required": [
+     "page_url",
+     "src"
+    ],
+    "title": "ImageRecord",
+    "type": "object"
+   },
+   "PagePerf": {
+    "description": "Lab measurement of one page (this machine and network; not field data).",
+    "properties": {
+     "by_type": {
+      "additionalProperties": {
+       "additionalProperties": {
+        "type": "integer"
+       },
+       "type": "object"
+      },
+      "title": "By Type",
+      "type": "object"
+     },
+     "cls": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Cls"
+     },
+     "device": {
+      "default": "desktop",
+      "enum": [
+       "desktop",
+       "mobile"
+      ],
+      "title": "Device",
+      "type": "string"
+     },
+     "dom_content_loaded_ms": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Dom Content Loaded Ms"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "fcp_ms": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Fcp Ms"
+     },
+     "html_bytes": {
+      "default": 0,
+      "title": "Html Bytes",
+      "type": "integer"
+     },
+     "images": {
+      "items": {
+       "$ref": "#/$defs/ImageRecord"
+      },
+      "title": "Images",
+      "type": "array"
+     },
+     "lcp_ms": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Lcp Ms"
+     },
+     "load_ms": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Load Ms"
+     },
+     "mobile": {
+      "anyOf": [
+       {
+        "additionalProperties": true,
+        "type": "object"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Mobile"
+     },
+     "no_cache_static": {
+      "items": {
+       "type": "string"
+      },
+      "title": "No Cache Static",
+      "type": "array"
+     },
+     "render_blocking": {
+      "default": 0,
+      "title": "Render Blocking",
+      "type": "integer"
+     },
+     "tbt_ms": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Tbt Ms"
+     },
+     "third_party": {
+      "items": {
+       "additionalProperties": true,
+       "type": "object"
+      },
+      "title": "Third Party",
+      "type": "array"
+     },
+     "total_bytes": {
+      "default": 0,
+      "title": "Total Bytes",
+      "type": "integer"
+     },
+     "total_requests": {
+      "default": 0,
+      "title": "Total Requests",
+      "type": "integer"
+     },
+     "ttfb_ms": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Ttfb Ms"
+     },
+     "uncompressed_text": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Uncompressed Text",
+      "type": "array"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "PagePerf",
+    "type": "object"
+   }
+  },
+  "description": "Lab measurements of (url, device) pairs; failed pages keep their ``error``.",
+  "properties": {
+   "items": {
+    "items": {
+     "$ref": "#/$defs/PagePerf"
+    },
+    "title": "Items",
+    "type": "array"
+   }
+  },
+  "title": "LabMetrics",
+  "type": "object"
+ },
+ "schema_version": "lab_metrics/1"
+}

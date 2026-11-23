@@ -1,0 +1,44 @@
+{
+ "schema": {
+  "description": "Public, keyless, informational signals. Never part of the score; never proof of indexing.",
+  "properties": {
+   "common_crawl": {
+    "additionalProperties": true,
+    "title": "Common Crawl",
+    "type": "object"
+   },
+   "domain": {
+    "title": "Domain",
+    "type": "string"
+   },
+   "notes": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Notes",
+    "type": "array"
+   },
+   "rdap": {
+    "additionalProperties": true,
+    "title": "Rdap",
+    "type": "object"
+   },
+   "search_console": {
+    "additionalProperties": true,
+    "title": "Search Console",
+    "type": "object"
+   },
+   "wayback": {
+    "additionalProperties": true,
+    "title": "Wayback",
+    "type": "object"
+   }
+  },
+  "required": [
+   "domain"
+  ],
+  "title": "VisibilitySignals",
+  "type": "object"
+ },
+ "schema_version": "visibility/1"
+}

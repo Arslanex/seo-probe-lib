@@ -1,0 +1,312 @@
+{
+ "schema": {
+  "$defs": {
+   "CompetitorRow": {
+    "properties": {
+     "canonical": {
+      "anyOf": [
+       {
+        "enum": [
+         "self",
+         "other",
+         "none"
+        ],
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Canonical"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "external_links": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "External Links"
+     },
+     "final_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Final Url"
+     },
+     "h1_count": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "H1 Count"
+     },
+     "host": {
+      "default": "",
+      "title": "Host",
+      "type": "string"
+     },
+     "html_bytes": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Html Bytes"
+     },
+     "images": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Images"
+     },
+     "images_alt_pct": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Images Alt Pct"
+     },
+     "internal_links": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Internal Links"
+     },
+     "is_you": {
+      "default": false,
+      "title": "Is You",
+      "type": "boolean"
+     },
+     "meta_len": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Meta Len"
+     },
+     "noindex": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Noindex"
+     },
+     "readability_formula": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Readability Formula"
+     },
+     "readability_score": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Readability Score"
+     },
+     "schema_types": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Schema Types",
+      "type": "array"
+     },
+     "score": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Score"
+     },
+     "status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Status"
+     },
+     "tech": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Tech",
+      "type": "array"
+     },
+     "title_len": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Title Len"
+     },
+     "ttfb_ms": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Ttfb Ms"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     },
+     "words": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Words"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "CompetitorRow",
+    "type": "object"
+   },
+   "SkippedCompetitor": {
+    "properties": {
+     "reason": {
+      "title": "Reason",
+      "type": "string"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url",
+     "reason"
+    ],
+    "title": "SkippedCompetitor",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "rows": {
+    "items": {
+     "$ref": "#/$defs/CompetitorRow"
+    },
+    "title": "Rows",
+    "type": "array"
+   },
+   "skipped": {
+    "items": {
+     "$ref": "#/$defs/SkippedCompetitor"
+    },
+    "title": "Skipped",
+    "type": "array"
+   },
+   "you": {
+    "anyOf": [
+     {
+      "$ref": "#/$defs/CompetitorRow"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null
+   }
+  },
+  "title": "CompetitorComparison",
+  "type": "object"
+ },
+ "schema_version": "competitors/1"
+}

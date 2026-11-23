@@ -1,0 +1,36 @@
+{
+ "schema": {
+  "properties": {
+   "headers": {
+    "additionalProperties": true,
+    "title": "Headers",
+    "type": "object"
+   },
+   "redirects": {
+    "additionalProperties": true,
+    "title": "Redirects",
+    "type": "object"
+   },
+   "set_cookie_limitation": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Set Cookie Limitation"
+   },
+   "tls": {
+    "additionalProperties": true,
+    "title": "Tls",
+    "type": "object"
+   }
+  },
+  "title": "TransportReport",
+  "type": "object"
+ },
+ "schema_version": "transport/1"
+}

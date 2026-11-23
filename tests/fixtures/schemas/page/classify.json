@@ -1,0 +1,27 @@
+{
+ "schema": {
+  "description": "Detected primary language and business type of one page (labels only).",
+  "properties": {
+   "business_type": {
+    "title": "Business Type",
+    "type": "string"
+   },
+   "lang": {
+    "title": "Lang",
+    "type": "string"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   }
+  },
+  "required": [
+   "url",
+   "lang",
+   "business_type"
+  ],
+  "title": "Classification",
+  "type": "object"
+ },
+ "schema_version": "classify/1"
+}

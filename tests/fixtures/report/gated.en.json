@@ -1,0 +1,2359 @@
+{
+  "action_plan": {
+    "phases": [
+      {
+        "id": "phase-1",
+        "items": [
+          {
+            "order": 1,
+            "recommendation_id": "rec_0001"
+          },
+          {
+            "order": 2,
+            "recommendation_id": "rec_0002"
+          }
+        ],
+        "name": "Phase 1: Critical fixes",
+        "name_key": "plan.phase1",
+        "notes": [],
+        "number": 1,
+        "timeframe": "Week 1",
+        "timeframe_key": "plan.week1"
+      },
+      {
+        "id": "phase-2",
+        "items": [
+          {
+            "order": 1,
+            "recommendation_id": "rec_0006"
+          },
+          {
+            "order": 2,
+            "recommendation_id": "rec_0007"
+          },
+          {
+            "order": 3,
+            "recommendation_id": "rec_0004"
+          },
+          {
+            "order": 4,
+            "recommendation_id": "rec_0003"
+          }
+        ],
+        "name": "Phase 2: High-impact improvements",
+        "name_key": "plan.phase2",
+        "notes": [],
+        "number": 2,
+        "timeframe": "Weeks 2-3",
+        "timeframe_key": "plan.weeks2-3"
+      },
+      {
+        "id": "phase-3",
+        "items": [
+          {
+            "order": 1,
+            "recommendation_id": "rec_0008"
+          },
+          {
+            "order": 2,
+            "recommendation_id": "rec_0005"
+          },
+          {
+            "order": 3,
+            "recommendation_id": "rec_0009"
+          }
+        ],
+        "name": "Phase 3: Content & authority",
+        "name_key": "plan.phase3",
+        "notes": [],
+        "number": 3,
+        "timeframe": "Month 2",
+        "timeframe_key": "plan.month2"
+      },
+      {
+        "id": "phase-4",
+        "items": [
+          {
+            "order": 1,
+            "recommendation_id": "rec_0010"
+          },
+          {
+            "order": 2,
+            "recommendation_id": "rec_0012"
+          },
+          {
+            "order": 3,
+            "recommendation_id": "rec_0011"
+          }
+        ],
+        "name": "Phase 4: Monitoring & iteration",
+        "name_key": "plan.phase4",
+        "notes": [
+          "Run the audit again after the fixes.",
+          "Compare score and coverage within the same score version."
+        ],
+        "number": 4,
+        "timeframe": "Ongoing",
+        "timeframe_key": "plan.ongoing"
+      }
+    ]
+  },
+  "agentic": {
+    "fraction": "",
+    "not_measured_reason": "suite-no-data",
+    "not_measured_text": "This analysis did not run or produced no result in this audit (timeout or error).",
+    "note": "",
+    "notes": [],
+    "rows": [],
+    "status": "not_measured",
+    "truncated": false
+  },
+  "audit": {
+    "business_type": "saas",
+    "error": null,
+    "error_text": null,
+    "final_url": "https://example.com",
+    "finished_at": "2026-11-13T10:01:34Z",
+    "id": "aud_sample0001",
+    "language": "en",
+    "locale": "en",
+    "mode": "site",
+    "requested_url": "example.com",
+    "started_at": "2026-11-13T10:00:00Z",
+    "status": "completed"
+  },
+  "authority": {
+    "counts_toward_overall": false,
+    "items": [],
+    "not_measured_reason": "suite-no-data",
+    "not_measured_text": "This analysis did not run or produced no result in this audit (timeout or error).",
+    "note": "",
+    "status": "not_measured",
+    "truncated": false
+  },
+  "competitors": {
+    "columns": [],
+    "counts_toward_overall": false,
+    "metrics": [],
+    "not_measured_reason": "suite-no-data",
+    "not_measured_text": "This analysis did not run or produced no result in this audit (timeout or error).",
+    "note": "",
+    "skipped": [],
+    "status": "not_measured",
+    "truncated": false
+  },
+  "crawl": {
+    "coverage": {
+      "checks_run": 47,
+      "pages_discovered": 1840,
+      "pages_fetched": 10,
+      "pages_planned": 25,
+      "pages_rendered": 1
+    },
+    "limits": {
+      "max_pages_applied": 25,
+      "max_pages_requested": 50,
+      "reason": "unverified"
+    },
+    "sample_seed": "a41c9e",
+    "templates": [
+      {
+        "discovered": 1200,
+        "key": "/blog/*",
+        "sampled": 6
+      },
+      {
+        "discovered": 600,
+        "key": "/urun/*",
+        "sampled": 3
+      }
+    ]
+  },
+  "data_sources": [
+    {
+      "id": "fetch",
+      "label": "HTTP fetch",
+      "status": "ok"
+    },
+    {
+      "id": "render",
+      "label": "JS rendering",
+      "status": "ok"
+    },
+    {
+      "id": "lab",
+      "label": "Lab performance measurement",
+      "status": "ok"
+    },
+    {
+      "id": "psi",
+      "label": "PageSpeed/CrUX",
+      "status": "missing"
+    },
+    {
+      "id": "gsc",
+      "label": "Search Console",
+      "status": "missing"
+    },
+    {
+      "id": "crux",
+      "label": "CrUX field data",
+      "status": "missing"
+    }
+  ],
+  "field": {
+    "counts_toward_overall": false,
+    "form_factor": null,
+    "metrics": [],
+    "not_measured_reason": "field-not-run",
+    "not_measured_text": "Field data (CrUX) was not queried in this audit.",
+    "note": "",
+    "period_first": null,
+    "period_last": null,
+    "scope": null,
+    "source": "crux",
+    "status": "not_measured",
+    "truncated": false
+  },
+  "findings": [
+    {
+      "affected": {
+        "count": 1,
+        "examples": [
+          "https://example.com/"
+        ],
+        "share_of_sampled_pages": 0.1
+      },
+      "category": "technical",
+      "check_id": "noindex",
+      "confidence": "high",
+      "count": null,
+      "evidence": {
+        "truncated": false,
+        "value": "noindex, nofollow"
+      },
+      "heuristic": false,
+      "id": "fnd_0001",
+      "is_gate": true,
+      "layer": "A",
+      "message": "A robots meta tag asks search engines not to index this page. Confirm this is intended.",
+      "message_key": "finding.noindex",
+      "recommendation_ids": [
+        "rec_0001"
+      ],
+      "rule_version": "0.1.0",
+      "scope": "page",
+      "severity": "Critical",
+      "severity_original": null,
+      "severity_reason": null,
+      "url": "https://example.com/",
+      "urls": [
+        "https://example.com/"
+      ]
+    },
+    {
+      "affected": {
+        "count": 1,
+        "examples": [
+          "https://example.com/blog/post-2"
+        ],
+        "share_of_sampled_pages": 0.1
+      },
+      "category": "technical",
+      "check_id": "canonical-points-elsewhere",
+      "confidence": "high",
+      "count": null,
+      "evidence": {
+        "truncated": false,
+        "value": "https://example.com/other"
+      },
+      "heuristic": false,
+      "id": "fnd_0002",
+      "is_gate": false,
+      "layer": "A",
+      "message": "The canonical names a different URL, so this page asks search engines to index that URL instead. Confirm this is intended.",
+      "message_key": "finding.canonical-points-elsewhere",
+      "recommendation_ids": [
+        "rec_0002"
+      ],
+      "rule_version": "0.1.0",
+      "scope": "page",
+      "severity": "High",
+      "severity_original": null,
+      "severity_reason": null,
+      "url": "https://example.com/blog/post-2",
+      "urls": [
+        "https://example.com/blog/post-2"
+      ]
+    },
+    {
+      "affected": {
+        "count": 1,
+        "examples": [
+          "https://example.com/urun/8"
+        ],
+        "share_of_sampled_pages": 0.1
+      },
+      "category": "technical",
+      "check_id": "mixed-content",
+      "confidence": "high",
+      "count": 2,
+      "evidence": {
+        "truncated": false,
+        "value": "http://cdn.example.com/a.js"
+      },
+      "heuristic": false,
+      "id": "fnd_0003",
+      "is_gate": false,
+      "layer": "A",
+      "message": "This HTTPS page loads resources over plain HTTP. Browsers block or warn about these.",
+      "message_key": "finding.mixed-content",
+      "recommendation_ids": [
+        "rec_0003"
+      ],
+      "rule_version": "0.1.0",
+      "scope": "page",
+      "severity": "High",
+      "severity_original": null,
+      "severity_reason": null,
+      "url": "https://example.com/urun/8",
+      "urls": [
+        "https://example.com/urun/8"
+      ]
+    },
+    {
+      "affected": {
+        "count": 3,
+        "examples": [
+          "https://example.com/blog/post-1",
+          "https://example.com/blog/post-2",
+          "https://example.com/urun/7"
+        ],
+        "share_of_sampled_pages": 0.3
+      },
+      "category": "onpage",
+      "check_id": "missing-meta-description",
+      "confidence": "high",
+      "count": null,
+      "evidence": null,
+      "heuristic": false,
+      "id": "fnd_0004",
+      "is_gate": false,
+      "layer": "A",
+      "message": "The page has no meta description. Search engines write their own snippet when none is given.",
+      "message_key": "finding.missing-meta-description",
+      "recommendation_ids": [
+        "rec_0004"
+      ],
+      "rule_version": "0.1.0",
+      "scope": "page",
+      "severity": "Medium",
+      "severity_original": null,
+      "severity_reason": null,
+      "url": "https://example.com/blog/post-1",
+      "urls": [
+        "https://example.com/blog/post-1",
+        "https://example.com/blog/post-2",
+        "https://example.com/urun/7"
+      ]
+    },
+    {
+      "affected": {
+        "count": 2,
+        "examples": [
+          "https://example.com/blog/post-1",
+          "https://example.com/blog/post-3"
+        ],
+        "share_of_sampled_pages": 0.2
+      },
+      "category": "onpage",
+      "check_id": "title-too-long",
+      "confidence": "high",
+      "count": null,
+      "evidence": {
+        "truncated": false,
+        "value": "A very long title that goes past the sixty character display heuristic"
+      },
+      "heuristic": true,
+      "id": "fnd_0005",
+      "is_gate": false,
+      "layer": "B",
+      "message": "The title is longer than 60 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "message_key": "finding.title-too-long",
+      "recommendation_ids": [
+        "rec_0005"
+      ],
+      "rule_version": "0.1.0",
+      "scope": "page",
+      "severity": "Medium",
+      "severity_original": null,
+      "severity_reason": null,
+      "url": "https://example.com/blog/post-1",
+      "urls": [
+        "https://example.com/blog/post-1",
+        "https://example.com/blog/post-3"
+      ]
+    },
+    {
+      "affected": {
+        "count": 1,
+        "examples": [],
+        "share_of_sampled_pages": null
+      },
+      "category": "technical",
+      "check_id": "hsts-missing",
+      "confidence": "high",
+      "count": null,
+      "evidence": null,
+      "heuristic": false,
+      "id": "fnd_0006",
+      "is_gate": false,
+      "layer": "A",
+      "message": "The HTTPS response does not send a Strict-Transport-Security header.",
+      "message_key": "finding.hsts-missing",
+      "recommendation_ids": [
+        "rec_0006"
+      ],
+      "rule_version": "0.1.0",
+      "scope": "site",
+      "severity": "Medium",
+      "severity_original": null,
+      "severity_reason": null,
+      "url": null,
+      "urls": []
+    },
+    {
+      "affected": {
+        "count": 1,
+        "examples": [
+          "https://example.com/blog/post-5"
+        ],
+        "share_of_sampled_pages": 0.1
+      },
+      "category": "images",
+      "check_id": "images-missing-alt",
+      "confidence": "high",
+      "count": 4,
+      "evidence": {
+        "truncated": false,
+        "value": "4 of 9 images"
+      },
+      "heuristic": false,
+      "id": "fnd_0007",
+      "is_gate": false,
+      "layer": "A",
+      "message": "Some images have no alt attribute. Screen readers and image search rely on alt text. An empty alt is correct for decorative images.",
+      "message_key": "finding.images-missing-alt",
+      "recommendation_ids": [
+        "rec_0007"
+      ],
+      "rule_version": "0.1.0",
+      "scope": "page",
+      "severity": "Medium",
+      "severity_original": null,
+      "severity_reason": null,
+      "url": "https://example.com/blog/post-5",
+      "urls": [
+        "https://example.com/blog/post-5"
+      ]
+    },
+    {
+      "affected": {
+        "count": 1,
+        "examples": [
+          "https://example.com/"
+        ],
+        "share_of_sampled_pages": 0.1
+      },
+      "category": "schema",
+      "check_id": "invalid-jsonld",
+      "confidence": "high",
+      "count": null,
+      "evidence": {
+        "truncated": false,
+        "value": "Expecting ',' delimiter"
+      },
+      "heuristic": false,
+      "id": "fnd_0008",
+      "is_gate": false,
+      "layer": "A",
+      "message": "A JSON-LD block is not valid JSON, so search engines cannot read any of it and the page loses the rich result that block was meant to support.",
+      "message_key": "finding.invalid-jsonld",
+      "recommendation_ids": [
+        "rec_0008"
+      ],
+      "rule_version": "0.1.0",
+      "scope": "page",
+      "severity": "Medium",
+      "severity_original": null,
+      "severity_reason": null,
+      "url": "https://example.com/",
+      "urls": [
+        "https://example.com/"
+      ]
+    },
+    {
+      "affected": {
+        "count": 1,
+        "examples": [
+          "https://example.com/urun/8"
+        ],
+        "share_of_sampled_pages": 0.1
+      },
+      "category": "content",
+      "check_id": "thin-content",
+      "confidence": "high",
+      "count": 112,
+      "evidence": {
+        "truncated": false,
+        "value": "112 words"
+      },
+      "heuristic": true,
+      "id": "fnd_0009",
+      "is_gate": false,
+      "layer": "B",
+      "message": "The page has fewer than 200 words of visible body text. Google has no minimum word count, so this is not a ranking rule. Check that the page fully answers what a visitor came for.",
+      "message_key": "finding.thin-content",
+      "recommendation_ids": [
+        "rec_0009"
+      ],
+      "rule_version": "0.1.0",
+      "scope": "page",
+      "severity": "Medium",
+      "severity_original": null,
+      "severity_reason": null,
+      "url": "https://example.com/urun/8",
+      "urls": [
+        "https://example.com/urun/8"
+      ]
+    },
+    {
+      "affected": {
+        "count": 1,
+        "examples": [
+          "https://example.com/blog/post-4"
+        ],
+        "share_of_sampled_pages": 0.1
+      },
+      "category": "onpage",
+      "check_id": "multiple-h1",
+      "confidence": "high",
+      "count": 3,
+      "evidence": {
+        "truncated": false,
+        "value": "3 h1 elements"
+      },
+      "heuristic": true,
+      "id": "fnd_0010",
+      "is_gate": false,
+      "layer": "A",
+      "message": "The page has more than one H1. Google says there is no ideal number of headings, so this does not affect Search on its own. Check that the most prominent heading names the page.",
+      "message_key": "finding.multiple-h1",
+      "recommendation_ids": [
+        "rec_0010"
+      ],
+      "rule_version": "0.1.0",
+      "scope": "page",
+      "severity": "Low",
+      "severity_original": null,
+      "severity_reason": null,
+      "url": "https://example.com/blog/post-4",
+      "urls": [
+        "https://example.com/blog/post-4"
+      ]
+    },
+    {
+      "affected": {
+        "count": 1,
+        "examples": [
+          "https://example.com/urun/9"
+        ],
+        "share_of_sampled_pages": 0.1
+      },
+      "category": "onpage",
+      "check_id": "url-underscores",
+      "confidence": "high",
+      "count": null,
+      "evidence": {
+        "truncated": false,
+        "value": "/urun/9_a"
+      },
+      "heuristic": true,
+      "id": "fnd_0011",
+      "is_gate": false,
+      "layer": "B",
+      "message": "The URL path uses underscores. Hyphens are the usual word separator in URLs.",
+      "message_key": "finding.url-underscores",
+      "recommendation_ids": [
+        "rec_0011"
+      ],
+      "rule_version": "0.1.0",
+      "scope": "page",
+      "severity": "Low",
+      "severity_original": null,
+      "severity_reason": null,
+      "url": "https://example.com/urun/9",
+      "urls": [
+        "https://example.com/urun/9"
+      ]
+    },
+    {
+      "affected": {
+        "count": 1,
+        "examples": [
+          "https://example.com/"
+        ],
+        "share_of_sampled_pages": 0.1
+      },
+      "category": "onpage",
+      "check_id": "missing-og-image",
+      "confidence": "high",
+      "count": null,
+      "evidence": null,
+      "heuristic": false,
+      "id": "fnd_0012",
+      "is_gate": false,
+      "layer": "A",
+      "message": "The page has no og:image, so shared links show no preview image.",
+      "message_key": "finding.missing-og-image",
+      "recommendation_ids": [
+        "rec_0012"
+      ],
+      "rule_version": "0.1.0",
+      "scope": "page",
+      "severity": "Info",
+      "severity_original": null,
+      "severity_reason": null,
+      "url": "https://example.com/",
+      "urls": [
+        "https://example.com/"
+      ]
+    }
+  ],
+  "glance": {
+    "items": [
+      {
+        "label": "Overall score",
+        "value": "40 / 100"
+      },
+      {
+        "label": "LCP (lab)",
+        "value": "3.1 s"
+      },
+      {
+        "label": "TTFB (lab)",
+        "value": "210 ms"
+      },
+      {
+        "label": "Page weight (entry page)",
+        "value": "2.344 KB"
+      },
+      {
+        "label": "Requests",
+        "value": "64"
+      },
+      {
+        "label": "Indexable pages",
+        "value": "0 / 3"
+      },
+      {
+        "label": "Internal / external links",
+        "value": "312 / 48"
+      },
+      {
+        "label": "Broken links",
+        "value": "2"
+      },
+      {
+        "label": "Critical / High findings",
+        "value": "0 / 0"
+      }
+    ],
+    "not_measured_reason": null,
+    "not_measured_text": null,
+    "status": "measured",
+    "truncated": false
+  },
+  "gsc": {
+    "account": null,
+    "can_connect": true,
+    "delay_note": "",
+    "gsc_status": "not-connected",
+    "indexed_count": 0,
+    "inspections": [],
+    "inspections_total": 0,
+    "mismatch_count": 0,
+    "not_indexed_count": 0,
+    "not_measured_reason": "gsc-not-connected",
+    "not_measured_text": "Not connected: no Google account is linked, so Google's indexing and search data was not fetched.",
+    "note": "",
+    "period_days": 28,
+    "permission": null,
+    "property": null,
+    "sitemaps": [],
+    "status": "not_measured",
+    "top_pages": [],
+    "top_queries": [],
+    "totals": {},
+    "truncated": false
+  },
+  "history": {
+    "counts_toward_overall": false,
+    "metrics": [],
+    "new_findings": [],
+    "new_total": 0,
+    "not_measured_reason": "history-unavailable",
+    "not_measured_text": "No history data was supplied with this report.",
+    "note": "",
+    "persisting": 0,
+    "previous_at": null,
+    "previous_id": null,
+    "resolved_findings": [],
+    "resolved_total": 0,
+    "rows": [],
+    "rows_total": 0,
+    "scores": [],
+    "status": "not_measured",
+    "truncated": false,
+    "warning_text": null
+  },
+  "hreflang": {
+    "has_x_default": false,
+    "languages": [],
+    "not_measured_reason": "suite-no-data",
+    "not_measured_text": "This analysis did not run or produced no result in this audit (timeout or error).",
+    "notes": [],
+    "rows": [],
+    "rows_total": 0,
+    "status": "not_measured",
+    "truncated": false,
+    "unchecked": 0
+  },
+  "images": {
+    "by_format": [
+      {
+        "count": 1,
+        "format": "png",
+        "kb": 800.8
+      },
+      {
+        "count": 1,
+        "format": "jpeg",
+        "kb": 302.7
+      },
+      {
+        "count": 1,
+        "format": "webp",
+        "kb": 13.7
+      }
+    ],
+    "not_measured_reason": null,
+    "not_measured_text": null,
+    "rows": [
+      {
+        "above_fold": true,
+        "category": "hero",
+        "displayed": "800x400",
+        "format": "png",
+        "has_alt": true,
+        "issue_texts": [
+          "Some images are larger than the size guideline for their kind (thumbnail 100 KB, content 200 KB, hero 300 KB).",
+          "Some images are much larger (in pixels) than the space they are shown in. This is a heuristic.",
+          "Some large images are served as JPEG or PNG. WebP or AVIF is usually smaller. This is a heuristic."
+        ],
+        "issues": [
+          "image-too-large",
+          "image-oversized-for-display",
+          "image-legacy-format"
+        ],
+        "kb": 800.8,
+        "lazy": false,
+        "natural": "2400x1200",
+        "page_url": "https://example.com/",
+        "src": "https://example.com/media/hero.png"
+      },
+      {
+        "above_fold": false,
+        "category": "content",
+        "displayed": "720x405",
+        "format": "jpeg",
+        "has_alt": false,
+        "issue_texts": [
+          "Some images have no alt attribute. Screen readers and image search rely on alt text. An empty alt is correct for decorative images.",
+          "Some images are larger than the size guideline for their kind (thumbnail 100 KB, content 200 KB, hero 300 KB)."
+        ],
+        "issues": [
+          "images-missing-alt",
+          "image-too-large"
+        ],
+        "kb": 302.7,
+        "lazy": true,
+        "natural": "1600x900",
+        "page_url": "https://example.com/blog/post-1",
+        "src": "https://example.com/media/photo.jpg"
+      },
+      {
+        "above_fold": false,
+        "category": "thumbnail",
+        "displayed": "200x60",
+        "format": "webp",
+        "has_alt": true,
+        "issue_texts": [],
+        "issues": [],
+        "kb": 13.7,
+        "lazy": false,
+        "natural": "200x60",
+        "page_url": "https://example.com/",
+        "src": "https://example.com/media/logo.webp"
+      }
+    ],
+    "rows_total": 3,
+    "status": "measured",
+    "thresholds_note": "Size thresholds: thumbnail target <50 KB (warn >100, critical >200); content image <100 KB (>200, >500); hero/banner <200 KB (>300, >700). WebP/AVIF is preferred; no conversion is suggested for an image that already serves WebP/AVIF.",
+    "total_kb": 1117.2,
+    "truncated": false
+  },
+  "indexability": {
+    "blocked_count": 3,
+    "indexable_count": 0,
+    "not_measured_reason": null,
+    "not_measured_text": null,
+    "note": "This table shows whether anything BLOCKS indexing; it does not show whether Google has actually indexed the page (that needs Search Console).",
+    "rows": [
+      {
+        "canonical": "https://example.com/",
+        "depth": 0,
+        "in_sitemap": true,
+        "indexable": false,
+        "inlinks": 9,
+        "reason_texts": [
+          "noindex tag"
+        ],
+        "reasons": [
+          "noindex"
+        ],
+        "status": 200,
+        "url": "https://example.com/"
+      },
+      {
+        "canonical": "https://example.com/other",
+        "depth": 1,
+        "in_sitemap": true,
+        "indexable": false,
+        "inlinks": 2,
+        "reason_texts": [
+          "canonical points elsewhere"
+        ],
+        "reasons": [
+          "canonical-elsewhere"
+        ],
+        "status": 200,
+        "url": "https://example.com/blog/post-2"
+      },
+      {
+        "canonical": null,
+        "depth": null,
+        "in_sitemap": true,
+        "indexable": false,
+        "inlinks": 0,
+        "reason_texts": [
+          "4xx status"
+        ],
+        "reasons": [
+          "status-4xx"
+        ],
+        "status": 404,
+        "url": "https://example.com/eski-kampanya"
+      }
+    ],
+    "rows_total": 3,
+    "status": "measured",
+    "truncated": false
+  },
+  "limitations": [
+    {
+      "code": "partial-sample",
+      "message": "The sample could only be partly fetched."
+    },
+    {
+      "code": "language-unsupported",
+      "message": "Language-dependent checks could not be run for this language."
+    },
+    {
+      "code": "psi-unavailable",
+      "message": "PageSpeed/CrUX data was unavailable; Performance was not measured."
+    },
+    {
+      "code": "tier-capped",
+      "message": "The page count was capped at 25 (requested 50)."
+    }
+  ],
+  "links": {
+    "broken": [
+      {
+        "anchor": "Eski kampanya",
+        "error": null,
+        "error_text": null,
+        "final_url": null,
+        "kind": "internal",
+        "redirect_hops": 0,
+        "rel": [],
+        "source_url": "https://example.com/",
+        "state": "broken",
+        "target_status": 404,
+        "target_url": "https://example.com/eski-kampanya",
+        "zone": "main"
+      },
+      {
+        "anchor": "Partner",
+        "error": "timeout",
+        "error_text": "timed out",
+        "final_url": null,
+        "kind": "external",
+        "redirect_hops": 0,
+        "rel": [],
+        "source_url": "https://example.com/blog/post-2",
+        "state": "broken",
+        "target_status": null,
+        "target_url": "https://old-partner.example/",
+        "zone": "footer"
+      }
+    ],
+    "external_domains": [
+      {
+        "count": 12,
+        "domain": "twitter.com"
+      },
+      {
+        "count": 7,
+        "domain": "docs.example.org"
+      },
+      {
+        "count": 3,
+        "domain": "old-partner.example"
+      }
+    ],
+    "links": [
+      {
+        "anchor": "Eski kampanya",
+        "error": null,
+        "error_text": null,
+        "final_url": null,
+        "kind": "internal",
+        "redirect_hops": 0,
+        "rel": [],
+        "source_url": "https://example.com/",
+        "state": "broken",
+        "target_status": 404,
+        "target_url": "https://example.com/eski-kampanya",
+        "zone": "main"
+      },
+      {
+        "anchor": "Partner",
+        "error": "timeout",
+        "error_text": "timed out",
+        "final_url": null,
+        "kind": "external",
+        "redirect_hops": 0,
+        "rel": [],
+        "source_url": "https://example.com/blog/post-2",
+        "state": "broken",
+        "target_status": null,
+        "target_url": "https://old-partner.example/",
+        "zone": "footer"
+      },
+      {
+        "anchor": "Ürün 7",
+        "error": null,
+        "error_text": null,
+        "final_url": "https://example.com/urun/7-yeni",
+        "kind": "internal",
+        "redirect_hops": 1,
+        "rel": [],
+        "source_url": "https://example.com/",
+        "state": "redirect",
+        "target_status": 301,
+        "target_url": "https://example.com/urun/7",
+        "zone": "nav"
+      },
+      {
+        "anchor": "Blog",
+        "error": null,
+        "error_text": null,
+        "final_url": null,
+        "kind": "internal",
+        "redirect_hops": 0,
+        "rel": [],
+        "source_url": "https://example.com/",
+        "state": "ok",
+        "target_status": 200,
+        "target_url": "https://example.com/blog/post-1",
+        "zone": "nav"
+      },
+      {
+        "anchor": "Twitter",
+        "error": null,
+        "error_text": null,
+        "final_url": null,
+        "kind": "external",
+        "redirect_hops": 0,
+        "rel": [
+          "nofollow"
+        ],
+        "source_url": "https://example.com/blog/post-1",
+        "state": "ok",
+        "target_status": 200,
+        "target_url": "https://twitter.com/example",
+        "zone": "footer"
+      },
+      {
+        "anchor": "Rehber",
+        "error": null,
+        "error_text": null,
+        "final_url": null,
+        "kind": "external",
+        "redirect_hops": 0,
+        "rel": [],
+        "source_url": "https://example.com/blog/post-3",
+        "state": "unchecked",
+        "target_status": null,
+        "target_url": "https://docs.example.org/guide",
+        "zone": "main"
+      }
+    ],
+    "links_total": 360,
+    "not_measured_reason": null,
+    "not_measured_text": null,
+    "orphans": [
+      "https://example.com/eski-kampanya"
+    ],
+    "pages": [
+      {
+        "depth": 0,
+        "in_sitemap": true,
+        "inlinks": 9,
+        "outlinks_external": 2,
+        "outlinks_internal": 12,
+        "url": "https://example.com/"
+      },
+      {
+        "depth": 1,
+        "in_sitemap": true,
+        "inlinks": 3,
+        "outlinks_external": 1,
+        "outlinks_internal": 6,
+        "url": "https://example.com/blog/post-1"
+      },
+      {
+        "depth": 2,
+        "in_sitemap": false,
+        "inlinks": 1,
+        "outlinks_external": 0,
+        "outlinks_internal": 4,
+        "url": "https://example.com/urun/7"
+      },
+      {
+        "depth": null,
+        "in_sitemap": true,
+        "inlinks": 0,
+        "outlinks_external": 0,
+        "outlinks_internal": 0,
+        "url": "https://example.com/eski-kampanya"
+      }
+    ],
+    "pages_total": 4,
+    "redirecting": [
+      {
+        "anchor": "Ürün 7",
+        "error": null,
+        "error_text": null,
+        "final_url": "https://example.com/urun/7-yeni",
+        "kind": "internal",
+        "redirect_hops": 1,
+        "rel": [],
+        "source_url": "https://example.com/",
+        "state": "redirect",
+        "target_status": 301,
+        "target_url": "https://example.com/urun/7",
+        "zone": "nav"
+      }
+    ],
+    "status": "measured",
+    "summary": {
+      "broken": 2,
+      "checked": 60,
+      "external_total": 48,
+      "external_unique": 21,
+      "internal_total": 312,
+      "internal_unique": 140,
+      "max_depth": 4,
+      "nofollow": 4,
+      "orphans": 1,
+      "redirecting": 3,
+      "skipped": 5
+    },
+    "truncated": true
+  },
+  "local": {
+    "addresses": [],
+    "facts": [],
+    "issues": [],
+    "not_measured_reason": "suite-no-data",
+    "not_measured_text": "This analysis did not run or produced no result in this audit (timeout or error).",
+    "note": "",
+    "notes": [],
+    "phones": [],
+    "status": "not_measured",
+    "truncated": false
+  },
+  "methodology": {
+    "notes": [
+      "Measured: 47 checks ran and produced 12 findings.",
+      "Checks that could not be measured (3) are never counted as \"passed\" and do not count toward the score.",
+      "Thresholds such as title/description length, URL length and word count are display heuristics, not rules published by search engines.",
+      "Category weights are this product's internal model; Google does not publish numeric weights for ranking.",
+      "Coverage means two different things: category coverage (measured weight in the score) and page coverage (fetched pages).",
+      "If an indexing blocker exists on the entry page the score is capped; the cap is given with the overall score (`scores.overall.gate`).",
+      "A category score is the severity-weighted share of the applicable checks in that category that passed; a check that could not be measured is not counted as passed and leaves the denominator.",
+      "Speed and weight measurements are lab values taken from this machine; they are not real-user (field) data.",
+      "Visibility signals are informational, do not count toward the score, and are not proof of indexing.",
+      "Sample: 25 pages planned, 10 fetched. Findings are expressed as ratios measured in the sample; no estimate is made for the whole site."
+    ]
+  },
+  "not_checked": [
+    {
+      "check_id": "title-not-reflected-in-content",
+      "reason": "This check is disabled for this language.",
+      "reason_code": "language-unsupported",
+      "url": null
+    },
+    {
+      "check_id": "noindex-header",
+      "reason": "HTTP headers were not available.",
+      "reason_code": "headers-unavailable",
+      "url": "https://example.com/urun/9"
+    },
+    {
+      "check_id": "core-web-vitals",
+      "reason": "PageSpeed/CrUX data was unavailable.",
+      "reason_code": "psi-unavailable",
+      "url": null
+    }
+  ],
+  "pages": [
+    {
+      "error": null,
+      "final_url": null,
+      "page_score": 60.0,
+      "rendered": true,
+      "role": "core",
+      "status": 200,
+      "template_key": "/",
+      "title": "Page 0",
+      "url": "https://example.com/"
+    },
+    {
+      "error": null,
+      "final_url": null,
+      "page_score": 61.0,
+      "rendered": false,
+      "role": "core",
+      "status": 200,
+      "template_key": "/blog/*",
+      "title": "Page 1",
+      "url": "https://example.com/blog/post-1"
+    },
+    {
+      "error": null,
+      "final_url": null,
+      "page_score": 62.0,
+      "rendered": false,
+      "role": "core",
+      "status": 200,
+      "template_key": "/blog/*",
+      "title": "Page 2",
+      "url": "https://example.com/blog/post-2"
+    },
+    {
+      "error": null,
+      "final_url": null,
+      "page_score": 63.0,
+      "rendered": false,
+      "role": "core",
+      "status": 200,
+      "template_key": "/blog/*",
+      "title": "Page 3",
+      "url": "https://example.com/blog/post-3"
+    },
+    {
+      "error": null,
+      "final_url": null,
+      "page_score": 64.0,
+      "rendered": false,
+      "role": "exploration",
+      "status": 200,
+      "template_key": "/blog/*",
+      "title": "Page 4",
+      "url": "https://example.com/blog/post-4"
+    },
+    {
+      "error": null,
+      "final_url": null,
+      "page_score": 65.0,
+      "rendered": false,
+      "role": "exploration",
+      "status": 200,
+      "template_key": "/blog/*",
+      "title": "Page 5",
+      "url": "https://example.com/blog/post-5"
+    },
+    {
+      "error": null,
+      "final_url": null,
+      "page_score": 66.0,
+      "rendered": false,
+      "role": "exploration",
+      "status": 200,
+      "template_key": "/blog/*",
+      "title": "Page 6",
+      "url": "https://example.com/blog/post-6"
+    },
+    {
+      "error": null,
+      "final_url": null,
+      "page_score": 67.0,
+      "rendered": false,
+      "role": "exploration",
+      "status": 200,
+      "template_key": "/urun/*",
+      "title": "Page 7",
+      "url": "https://example.com/urun/7"
+    },
+    {
+      "error": null,
+      "final_url": null,
+      "page_score": 68.0,
+      "rendered": false,
+      "role": "exploration",
+      "status": 200,
+      "template_key": "/urun/*",
+      "title": "Page 8",
+      "url": "https://example.com/urun/8"
+    },
+    {
+      "error": null,
+      "final_url": null,
+      "page_score": 69.0,
+      "rendered": false,
+      "role": "exploration",
+      "status": 200,
+      "template_key": "/urun/*",
+      "title": "Page 9",
+      "url": "https://example.com/urun/9"
+    }
+  ],
+  "performance": {
+    "by_type": [
+      {
+        "count": 22,
+        "kb": 1074.2,
+        "type": "image"
+      },
+      {
+        "count": 18,
+        "kb": 878.9,
+        "type": "script"
+      },
+      {
+        "count": 4,
+        "kb": 117.2,
+        "type": "stylesheet"
+      }
+    ],
+    "lab_note": "LAB MEASUREMENT: taken from this machine and network; it is not real-user data. Results vary with where they are measured.",
+    "no_cache": [
+      "https://example.com/static/logo.svg"
+    ],
+    "not_measured_reason": null,
+    "not_measured_text": null,
+    "rows": [
+      {
+        "by_type": [
+          {
+            "count": 22,
+            "kb": 1074.2,
+            "type": "image"
+          },
+          {
+            "count": 18,
+            "kb": 878.9,
+            "type": "script"
+          },
+          {
+            "count": 4,
+            "kb": 117.2,
+            "type": "stylesheet"
+          }
+        ],
+        "cls": 0.04,
+        "device": "desktop",
+        "dom_content_loaded_ms": 1400,
+        "error": null,
+        "error_text": null,
+        "fcp_ms": 1100,
+        "html_kb": 43.9,
+        "lcp_ms": 3100,
+        "load_ms": 2900,
+        "mobile": null,
+        "ratings": {
+          "cls": "good",
+          "fcp_ms": "good",
+          "lcp_ms": "needs-improvement",
+          "tbt_ms": "needs-improvement",
+          "ttfb_ms": "good"
+        },
+        "render_blocking": 3,
+        "requests": 64,
+        "tbt_ms": 320,
+        "total_kb": 2343.8,
+        "ttfb_ms": 210,
+        "url": "https://example.com/"
+      },
+      {
+        "by_type": [],
+        "cls": 0.31,
+        "device": "mobile",
+        "dom_content_loaded_ms": 2600,
+        "error": null,
+        "error_text": null,
+        "fcp_ms": 2300,
+        "html_kb": 43.9,
+        "lcp_ms": 4600,
+        "load_ms": 5200,
+        "mobile": {
+          "horizontal_overflow": true,
+          "small_font_share": 0.18,
+          "small_tap_targets": 7,
+          "viewport_meta": true
+        },
+        "ratings": {
+          "cls": "poor",
+          "fcp_ms": "needs-improvement",
+          "lcp_ms": "poor",
+          "tbt_ms": "poor",
+          "ttfb_ms": "good"
+        },
+        "render_blocking": 3,
+        "requests": 61,
+        "tbt_ms": 710,
+        "total_kb": 2246.1,
+        "ttfb_ms": 260,
+        "url": "https://example.com/"
+      },
+      {
+        "by_type": [],
+        "cls": null,
+        "device": "mobile",
+        "dom_content_loaded_ms": null,
+        "error": "render-failed",
+        "error_text": "JavaScript rendering failed.",
+        "fcp_ms": null,
+        "html_kb": 0.0,
+        "lcp_ms": null,
+        "load_ms": null,
+        "mobile": null,
+        "ratings": {},
+        "render_blocking": 0,
+        "requests": 0,
+        "tbt_ms": null,
+        "total_kb": 0.0,
+        "ttfb_ms": null,
+        "url": "https://example.com/blog/post-1"
+      }
+    ],
+    "rows_total": 3,
+    "status": "measured",
+    "third_party": [
+      {
+        "host": "www.googletagmanager.com",
+        "kb": 302.7,
+        "requests": 6
+      },
+      {
+        "host": "cdn.example-ads.com",
+        "kb": 146.5,
+        "requests": 9
+      }
+    ],
+    "truncated": false,
+    "uncompressed": [
+      "https://example.com/static/app.js"
+    ]
+  },
+  "previews": {
+    "not_measured_reason": "suite-no-data",
+    "not_measured_text": "This analysis did not run or produced no result in this audit (timeout or error).",
+    "notes": [],
+    "serp": [],
+    "social": [],
+    "social_image": [],
+    "status": "not_measured",
+    "truncated": false
+  },
+  "quality": {
+    "checks": [],
+    "status": "PASS"
+  },
+  "rankings": {
+    "counts_toward_overall": false,
+    "keywords_note": "",
+    "keywords_requested": 0,
+    "list_error": "",
+    "low_ctr": [],
+    "not_measured_reason": "rankings-gsc-required",
+    "not_measured_text": "Not measured: Search Console is not connected. Rankings come only from the Search Console data of a verified site you own; someone else's rankings cannot be measured reliably for free.",
+    "note": "",
+    "opportunities": [],
+    "period_days": 28,
+    "rows": [],
+    "rules_note": "",
+    "status": "not_measured",
+    "truncated": false
+  },
+  "readability": {
+    "keywords": [],
+    "keywords_not_measured_text": null,
+    "language": null,
+    "not_measured_reason": "suite-no-data",
+    "not_measured_text": "This analysis did not run or produced no result in this audit (timeout or error).",
+    "notes": [],
+    "phrases": [],
+    "scores": [],
+    "status": "not_measured",
+    "suggested_targets": [],
+    "terms": [],
+    "truncated": false
+  },
+  "recommendations": [
+    {
+      "body": "Remove the noindex directive if the page should appear in search results.",
+      "check_ids": [
+        "noindex"
+      ],
+      "confidence": "high",
+      "depends_on": [],
+      "effort": {
+        "hours_max": 1.0,
+        "hours_min": 0.25,
+        "level": "S"
+      },
+      "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+      "finding_ids": [
+        "fnd_0001"
+      ],
+      "id": "rec_0001",
+      "impact": {
+        "level": "high"
+      },
+      "leading_indicator": "Indexed page count and crawl errors in Search Console move in the right direction.",
+      "phase": 1,
+      "priority_score": 3.0,
+      "severity": "Critical",
+      "title": "Remove the noindex directive if the page should appear in search results."
+    },
+    {
+      "body": "If this page should be indexed, point its canonical at itself; otherwise confirm the target is the right page.",
+      "check_ids": [
+        "canonical-points-elsewhere"
+      ],
+      "confidence": "high",
+      "depends_on": [],
+      "effort": {
+        "hours_max": 1.0,
+        "hours_min": 0.25,
+        "level": "S"
+      },
+      "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+      "finding_ids": [
+        "fnd_0002"
+      ],
+      "id": "rec_0002",
+      "impact": {
+        "level": "high"
+      },
+      "leading_indicator": "Indexed page count and crawl errors in Search Console move in the right direction.",
+      "phase": 1,
+      "priority_score": 3.0,
+      "severity": "High",
+      "title": "If this page should be indexed, point its canonical at itself; otherwise confirm the target is the right page."
+    },
+    {
+      "body": "Load every resource over https://.",
+      "check_ids": [
+        "mixed-content"
+      ],
+      "confidence": "high",
+      "depends_on": [],
+      "effort": {
+        "hours_max": 8.0,
+        "hours_min": 2.0,
+        "level": "M"
+      },
+      "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+      "finding_ids": [
+        "fnd_0003"
+      ],
+      "id": "rec_0003",
+      "impact": {
+        "level": "medium"
+      },
+      "leading_indicator": "Indexed page count and crawl errors in Search Console move in the right direction.",
+      "phase": 2,
+      "priority_score": 1.0,
+      "severity": "High",
+      "title": "Load every resource over https://."
+    },
+    {
+      "body": "Write a meta description of about 120 to 160 characters for this page.",
+      "check_ids": [
+        "missing-meta-description"
+      ],
+      "confidence": "high",
+      "depends_on": [],
+      "effort": {
+        "hours_max": 1.0,
+        "hours_min": 0.25,
+        "level": "S"
+      },
+      "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+      "finding_ids": [
+        "fnd_0004"
+      ],
+      "id": "rec_0004",
+      "impact": {
+        "level": "medium"
+      },
+      "leading_indicator": "Impressions and click-through rate of the page in Search Console.",
+      "phase": 2,
+      "priority_score": 2.0,
+      "severity": "Medium",
+      "title": "Write a meta description of about 120 to 160 characters for this page."
+    },
+    {
+      "body": "Shorten the title and put the most important words first.",
+      "check_ids": [
+        "title-too-long"
+      ],
+      "confidence": "high",
+      "depends_on": [],
+      "effort": {
+        "hours_max": 1.0,
+        "hours_min": 0.25,
+        "level": "S"
+      },
+      "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+      "finding_ids": [
+        "fnd_0005"
+      ],
+      "id": "rec_0005",
+      "impact": {
+        "level": "low"
+      },
+      "leading_indicator": "Impressions and click-through rate of the page in Search Console.",
+      "phase": 3,
+      "priority_score": 1.0,
+      "severity": "Medium",
+      "title": "Shorten the title and put the most important words first."
+    },
+    {
+      "body": "Send Strict-Transport-Security with max-age of at least one year once all subdomains serve HTTPS.",
+      "check_ids": [
+        "hsts-missing"
+      ],
+      "confidence": "high",
+      "depends_on": [],
+      "effort": {
+        "hours_max": 1.0,
+        "hours_min": 0.25,
+        "level": "S"
+      },
+      "failure_check": "The response header is still missing or unchanged in a fresh fetch of the page.",
+      "finding_ids": [
+        "fnd_0006"
+      ],
+      "id": "rec_0006",
+      "impact": {
+        "level": "medium"
+      },
+      "leading_indicator": "The header value in a response header scanner (a security header check) after deployment.",
+      "phase": 2,
+      "priority_score": 2.0,
+      "severity": "Medium",
+      "title": "Send Strict-Transport-Security with max-age of at least one year once all subdomains serve HTTPS."
+    },
+    {
+      "body": "Add descriptive alt text to content images; use alt=\"\" for decorative ones.",
+      "check_ids": [
+        "images-missing-alt"
+      ],
+      "confidence": "high",
+      "depends_on": [],
+      "effort": {
+        "hours_max": 1.0,
+        "hours_min": 0.25,
+        "level": "S"
+      },
+      "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+      "finding_ids": [
+        "fnd_0007"
+      ],
+      "id": "rec_0007",
+      "impact": {
+        "level": "medium"
+      },
+      "leading_indicator": "Image search impressions and Cumulative Layout Shift in field data.",
+      "phase": 2,
+      "priority_score": 2.0,
+      "severity": "Medium",
+      "title": "Add descriptive alt text to content images; use alt=\"\" for decorative ones."
+    },
+    {
+      "body": "Fix the JSON syntax of the block and validate it.",
+      "check_ids": [
+        "invalid-jsonld"
+      ],
+      "confidence": "high",
+      "depends_on": [],
+      "effort": {
+        "hours_max": 8.0,
+        "hours_min": 2.0,
+        "level": "M"
+      },
+      "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+      "finding_ids": [
+        "fnd_0008"
+      ],
+      "id": "rec_0008",
+      "impact": {
+        "level": "medium"
+      },
+      "leading_indicator": "Rich result validity reports in Search Console.",
+      "phase": 3,
+      "priority_score": 1.0,
+      "severity": "Medium",
+      "title": "Fix the JSON syntax of the block and validate it."
+    },
+    {
+      "body": "Check that the page fully answers the visitor's question; expand it if it does not.",
+      "check_ids": [
+        "thin-content"
+      ],
+      "confidence": "high",
+      "depends_on": [],
+      "effort": {
+        "hours_max": 24.0,
+        "hours_min": 8.0,
+        "level": "L"
+      },
+      "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+      "finding_ids": [
+        "fnd_0009"
+      ],
+      "id": "rec_0009",
+      "impact": {
+        "level": "medium"
+      },
+      "leading_indicator": "Engagement on the page (time on page, scroll depth) and impressions for its topic.",
+      "phase": 3,
+      "priority_score": 0.5,
+      "severity": "Medium",
+      "title": "Check that the page fully answers the visitor's question; expand it if it does not."
+    },
+    {
+      "body": "Make sure the most prominent heading names the page; demote others if they are not page titles.",
+      "check_ids": [
+        "multiple-h1"
+      ],
+      "confidence": "high",
+      "depends_on": [],
+      "effort": {
+        "hours_max": 1.0,
+        "hours_min": 0.25,
+        "level": "S"
+      },
+      "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+      "finding_ids": [
+        "fnd_0010"
+      ],
+      "id": "rec_0010",
+      "impact": {
+        "level": "low"
+      },
+      "leading_indicator": "Impressions and click-through rate of the page in Search Console.",
+      "phase": 4,
+      "priority_score": 1.0,
+      "severity": "Low",
+      "title": "Make sure the most prominent heading names the page; demote others if they are not page titles."
+    },
+    {
+      "body": "Use hyphens between words and redirect the old URL.",
+      "check_ids": [
+        "url-underscores"
+      ],
+      "confidence": "high",
+      "depends_on": [],
+      "effort": {
+        "hours_max": 8.0,
+        "hours_min": 2.0,
+        "level": "M"
+      },
+      "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+      "finding_ids": [
+        "fnd_0011"
+      ],
+      "id": "rec_0011",
+      "impact": {
+        "level": "low"
+      },
+      "leading_indicator": "Impressions and click-through rate of the page in Search Console.",
+      "phase": 4,
+      "priority_score": 0.5,
+      "severity": "Low",
+      "title": "Use hyphens between words and redirect the old URL."
+    },
+    {
+      "body": "Add an og:image (about 1200x630 px).",
+      "check_ids": [
+        "missing-og-image"
+      ],
+      "confidence": "high",
+      "depends_on": [],
+      "effort": {
+        "hours_max": 1.0,
+        "hours_min": 0.25,
+        "level": "S"
+      },
+      "failure_check": "Re-run the audit: this finding must no longer appear for the page.",
+      "finding_ids": [
+        "fnd_0012"
+      ],
+      "id": "rec_0012",
+      "impact": {
+        "level": "low"
+      },
+      "leading_indicator": "Impressions and click-through rate of the page in Search Console.",
+      "phase": 4,
+      "priority_score": 1.0,
+      "severity": "Info",
+      "title": "Add an og:image (about 1200x630 px)."
+    }
+  ],
+  "schema_suggestions": {
+    "items": [],
+    "items_total": 0,
+    "not_measured_reason": "suite-no-data",
+    "not_measured_text": "This analysis did not run or produced no result in this audit (timeout or error).",
+    "notes": [],
+    "status": "not_measured",
+    "truncated": false
+  },
+  "schema_version": "1.6.0",
+  "scope_note": {
+    "intro": "This score only measures the technical and on-page hygiene of your site: is it set up correctly, is anything in the way. On its own it does not tell whether the site will show up in search. Not measured:",
+    "items": [
+      "Indexing status: whether Google has actually indexed the page",
+      "Rankings and the searches you appear in",
+      "Backlinks (links from other sites) and authority",
+      "Keyword targeting and search-intent fit",
+      "Field speed data: what real users experience (the speed measurement in this report is a lab value taken from this machine)",
+      "Comparison with competitors"
+    ],
+    "model_note": "The score is an estimated model: the weights are this product's internal model and have not been calibrated against real rankings.",
+    "next_step": "What can be done: connect your Google account (Search Console) for indexing and search data; only read access is requested; until it is connected, the visibility signals are informational only.",
+    "title": "What this score does not measure"
+  },
+  "scores": {
+    "categories": [
+      {
+        "checks": [
+          {
+            "check_id": "noindex",
+            "message": "A robots meta tag asks search engines not to index this page. Confirm this is intended.",
+            "pages_affected": 1,
+            "pages_assessed": 10,
+            "pass_ratio": 0.9,
+            "severity": "Critical",
+            "status": "fail",
+            "weight": 8.0
+          },
+          {
+            "check_id": "canonical-points-elsewhere",
+            "message": "The canonical names a different URL, so this page asks search engines to index that URL instead. Confirm this is intended.",
+            "pages_affected": 1,
+            "pages_assessed": 10,
+            "pass_ratio": 0.9,
+            "severity": "High",
+            "status": "fail",
+            "weight": 4.0
+          },
+          {
+            "check_id": "mixed-content",
+            "message": "This HTTPS page loads resources over plain HTTP. Browsers block or warn about these.",
+            "pages_affected": 1,
+            "pages_assessed": 10,
+            "pass_ratio": 0.9,
+            "severity": "High",
+            "status": "fail",
+            "weight": 4.0
+          },
+          {
+            "check_id": "hsts-missing",
+            "message": "The HTTPS response does not send a Strict-Transport-Security header.",
+            "pages_affected": 1,
+            "pages_assessed": 1,
+            "pass_ratio": 0.0,
+            "severity": "Medium",
+            "status": "fail",
+            "weight": 2.0
+          },
+          {
+            "check_id": "robots-blocks-site",
+            "message": "robots.txt disallows the whole site for crawlers.",
+            "pages_affected": 0,
+            "pages_assessed": 1,
+            "pass_ratio": 1.0,
+            "severity": "Critical",
+            "status": "pass",
+            "weight": 8.0
+          }
+        ],
+        "checks_failed": 4,
+        "checks_passed": 1,
+        "checks_total": 5,
+        "confidence": null,
+        "finding_ids": [
+          "fnd_0001",
+          "fnd_0002",
+          "fnd_0003",
+          "fnd_0006"
+        ],
+        "id": "technical",
+        "label": "Technical",
+        "not_measured_reason": null,
+        "not_measured_text": null,
+        "penalties": [
+          {
+            "check_id": "canonical-points-elsewhere",
+            "finding_id": "fnd_0002",
+            "points": -5.0,
+            "severity": "High"
+          },
+          {
+            "check_id": "noindex",
+            "finding_id": "fnd_0001",
+            "points": -11.0,
+            "severity": "Critical"
+          }
+        ],
+        "score": 55.0,
+        "status": "measured",
+        "weight_default": 20.0,
+        "weight_effective": 20.0
+      },
+      {
+        "checks": [
+          {
+            "check_id": "missing-title",
+            "message": "The page has no title tag. Search engines then build the result title from other text, such as the main heading.",
+            "pages_affected": 0,
+            "pages_assessed": 10,
+            "pass_ratio": 1.0,
+            "severity": "High",
+            "status": "pass",
+            "weight": 4.0
+          },
+          {
+            "check_id": "missing-meta-description",
+            "message": "The page has no meta description. Search engines write their own snippet when none is given.",
+            "pages_affected": 3,
+            "pages_assessed": 10,
+            "pass_ratio": 0.7,
+            "severity": "Medium",
+            "status": "fail",
+            "weight": 2.0
+          },
+          {
+            "check_id": "title-too-long",
+            "message": "The title is longer than 60 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+            "pages_affected": 2,
+            "pages_assessed": 10,
+            "pass_ratio": 0.8,
+            "severity": "Medium",
+            "status": "fail",
+            "weight": 2.0
+          },
+          {
+            "check_id": "multiple-h1",
+            "message": "The page has more than one H1. Google says there is no ideal number of headings, so this does not affect Search on its own. Check that the most prominent heading names the page.",
+            "pages_affected": 1,
+            "pages_assessed": 10,
+            "pass_ratio": 0.9,
+            "severity": "Low",
+            "status": "warn",
+            "weight": 1.0
+          },
+          {
+            "check_id": "url-underscores",
+            "message": "The URL path uses underscores. Hyphens are the usual word separator in URLs.",
+            "pages_affected": 1,
+            "pages_assessed": 10,
+            "pass_ratio": 0.9,
+            "severity": "Low",
+            "status": "warn",
+            "weight": 1.0
+          }
+        ],
+        "checks_failed": 4,
+        "checks_passed": 1,
+        "checks_total": 5,
+        "confidence": null,
+        "finding_ids": [
+          "fnd_0004",
+          "fnd_0005",
+          "fnd_0010",
+          "fnd_0011",
+          "fnd_0012"
+        ],
+        "id": "onpage",
+        "label": "On-page",
+        "not_measured_reason": null,
+        "not_measured_text": null,
+        "penalties": [
+          {
+            "check_id": "missing-meta-description",
+            "finding_id": "fnd_0004",
+            "points": -6.0,
+            "severity": "Medium"
+          }
+        ],
+        "score": 78.0,
+        "status": "measured",
+        "weight_default": 15.0,
+        "weight_effective": 15.0
+      },
+      {
+        "checks": [
+          {
+            "check_id": "thin-content",
+            "message": "The page has fewer than 200 words of visible body text. Google has no minimum word count, so this is not a ranking rule. Check that the page fully answers what a visitor came for.",
+            "pages_affected": 1,
+            "pages_assessed": 10,
+            "pass_ratio": 0.9,
+            "severity": "Medium",
+            "status": "fail",
+            "weight": 2.0
+          },
+          {
+            "check_id": "placeholder-text",
+            "message": "Placeholder text such as lorem ipsum was found in the visible content.",
+            "pages_affected": 0,
+            "pages_assessed": 10,
+            "pass_ratio": 1.0,
+            "severity": "High",
+            "status": "pass",
+            "weight": 4.0
+          }
+        ],
+        "checks_failed": 1,
+        "checks_passed": 1,
+        "checks_total": 2,
+        "confidence": null,
+        "finding_ids": [
+          "fnd_0009"
+        ],
+        "id": "content",
+        "label": "Content",
+        "not_measured_reason": null,
+        "not_measured_text": null,
+        "penalties": [],
+        "score": 70.0,
+        "status": "measured",
+        "weight_default": 20.0,
+        "weight_effective": 20.0
+      },
+      {
+        "checks": [
+          {
+            "check_id": "broken-internal-link",
+            "message": "The page links to an internal URL that answers with an error (for example 404) or cannot be reached.",
+            "pages_affected": 2,
+            "pages_assessed": 10,
+            "pass_ratio": 0.8,
+            "severity": "High",
+            "status": "fail",
+            "weight": 4.0
+          },
+          {
+            "check_id": "orphan-page",
+            "message": "A URL listed in the sitemap is not linked from any page in the sample. This is a heuristic: the sample may not include every page.",
+            "pages_affected": 1,
+            "pages_assessed": 10,
+            "pass_ratio": 0.9,
+            "severity": "Medium",
+            "status": "fail",
+            "weight": 2.0
+          },
+          {
+            "check_id": "deep-page",
+            "message": "The page needs more than three clicks from the entry page in the sampled link graph. This is a heuristic, not a search engine rule.",
+            "pages_affected": 0,
+            "pages_assessed": 10,
+            "pass_ratio": 1.0,
+            "severity": "Low",
+            "status": "pass",
+            "weight": 1.0
+          },
+          {
+            "check_id": "internal-redirect-link",
+            "message": "An internal link points to a URL that redirects before reaching the page.",
+            "pages_affected": 3,
+            "pages_assessed": 10,
+            "pass_ratio": 0.7,
+            "severity": "Low",
+            "status": "warn",
+            "weight": 1.0
+          }
+        ],
+        "checks_failed": 3,
+        "checks_passed": 1,
+        "checks_total": 4,
+        "confidence": null,
+        "finding_ids": [],
+        "id": "links",
+        "label": "Links",
+        "not_measured_reason": null,
+        "not_measured_text": null,
+        "penalties": [
+          {
+            "check_id": "broken-internal-link",
+            "finding_id": null,
+            "points": -8.0,
+            "severity": "High"
+          }
+        ],
+        "score": 72.0,
+        "status": "measured",
+        "weight_default": 10.0,
+        "weight_effective": 10.0
+      },
+      {
+        "checks": [
+          {
+            "check_id": "cwv-lcp-needs-improvement",
+            "message": "Largest Contentful Paint needs improvement (Core Web Vitals).",
+            "pages_affected": 1,
+            "pages_assessed": 1,
+            "pass_ratio": 0.0,
+            "severity": "Medium",
+            "status": "fail",
+            "weight": 2.0
+          },
+          {
+            "check_id": "cwv-cls-poor",
+            "message": "Cumulative Layout Shift is in the 'poor' range (Core Web Vitals).",
+            "pages_affected": 0,
+            "pages_assessed": 1,
+            "pass_ratio": 1.0,
+            "severity": "High",
+            "status": "pass",
+            "weight": 4.0
+          },
+          {
+            "check_id": "page-weight-heavy",
+            "message": "The page transfers more than 3 MiB in total. This limit is a heuristic, not a search engine rule.",
+            "pages_affected": 0,
+            "pages_assessed": 2,
+            "pass_ratio": 1.0,
+            "severity": "Medium",
+            "status": "pass",
+            "weight": 2.0
+          }
+        ],
+        "checks_failed": 1,
+        "checks_passed": 2,
+        "checks_total": 3,
+        "confidence": null,
+        "finding_ids": [],
+        "id": "performance",
+        "label": "Performance",
+        "not_measured_reason": null,
+        "not_measured_text": null,
+        "penalties": [
+          {
+            "check_id": "cwv-lcp-needs-improvement",
+            "finding_id": null,
+            "points": -14.0,
+            "severity": "Medium"
+          }
+        ],
+        "score": 74.0,
+        "status": "measured",
+        "weight_default": 12.0,
+        "weight_effective": 12.0
+      },
+      {
+        "checks": [
+          {
+            "check_id": "invalid-jsonld",
+            "message": "A JSON-LD block is not valid JSON, so search engines cannot read any of it and the page loses the rich result that block was meant to support.",
+            "pages_affected": 1,
+            "pages_assessed": 10,
+            "pass_ratio": 0.9,
+            "severity": "Medium",
+            "status": "fail",
+            "weight": 2.0
+          }
+        ],
+        "checks_failed": 1,
+        "checks_passed": 0,
+        "checks_total": 1,
+        "confidence": null,
+        "finding_ids": [
+          "fnd_0008"
+        ],
+        "id": "schema",
+        "label": "Schema",
+        "not_measured_reason": null,
+        "not_measured_text": null,
+        "penalties": [],
+        "score": 90.0,
+        "status": "measured",
+        "weight_default": 8.0,
+        "weight_effective": 8.0
+      },
+      {
+        "checks": [
+          {
+            "check_id": "ai-search-bots-blocked",
+            "message": "robots.txt blocks at least one AI search crawler at the site root.",
+            "pages_affected": 0,
+            "pages_assessed": 1,
+            "pass_ratio": 1.0,
+            "severity": "Medium",
+            "status": "pass",
+            "weight": 2.0
+          }
+        ],
+        "checks_failed": 0,
+        "checks_passed": 1,
+        "checks_total": 1,
+        "confidence": null,
+        "finding_ids": [],
+        "id": "ai_readiness",
+        "label": "AI-search readiness",
+        "not_measured_reason": null,
+        "not_measured_text": null,
+        "penalties": [],
+        "score": 82.0,
+        "status": "measured",
+        "weight_default": 8.0,
+        "weight_effective": 8.0
+      },
+      {
+        "checks": [
+          {
+            "check_id": "images-missing-alt",
+            "message": "Some images have no alt attribute. Screen readers and image search rely on alt text. An empty alt is correct for decorative images.",
+            "pages_affected": 1,
+            "pages_assessed": 10,
+            "pass_ratio": 0.9,
+            "severity": "Medium",
+            "status": "fail",
+            "weight": 2.0
+          },
+          {
+            "check_id": "image-too-large",
+            "message": "Some images are larger than the size guideline for their kind (thumbnail 100 KB, content 200 KB, hero 300 KB).",
+            "pages_affected": 3,
+            "pages_assessed": 10,
+            "pass_ratio": 0.7,
+            "severity": "Medium",
+            "status": "fail",
+            "weight": 2.0
+          }
+        ],
+        "checks_failed": 2,
+        "checks_passed": 0,
+        "checks_total": 2,
+        "confidence": null,
+        "finding_ids": [
+          "fnd_0007"
+        ],
+        "id": "images",
+        "label": "Images",
+        "not_measured_reason": null,
+        "not_measured_text": null,
+        "penalties": [],
+        "score": 85.0,
+        "status": "measured",
+        "weight_default": 7.0,
+        "weight_effective": 7.0
+      }
+    ],
+    "core_overall": 40.0,
+    "kind": "health",
+    "overall": {
+      "band": "poor",
+      "confidence": "medium",
+      "coverage_pct": 90.0,
+      "display": "number",
+      "gate": {
+        "cap": 40,
+        "finding_id": "fnd_0001",
+        "id": "noindex",
+        "message": "A noindex directive was found on the entry page",
+        "url": "https://example.com/"
+      },
+      "raw_value": 71.0,
+      "value": 40.0
+    },
+    "p25": 58.0
+  },
+  "screenshots": {
+    "above_fold": [],
+    "errors": [],
+    "not_measured_reason": "suite-no-data",
+    "not_measured_text": "This analysis did not run or produced no result in this audit (timeout or error).",
+    "shots": [],
+    "status": "not_measured",
+    "truncated": false
+  },
+  "site_setup": {
+    "custom_404_text": "",
+    "files": [],
+    "headers": [],
+    "hsts_text": "",
+    "http_version_text": "",
+    "not_measured_reason": "suite-no-data",
+    "not_measured_text": "This analysis did not run or produced no result in this audit (timeout or error).",
+    "redirects": [],
+    "requests_made": 0,
+    "skipped": [],
+    "soft_404": "unknown",
+    "soft_404_text": "",
+    "status": "not_measured",
+    "truncated": false
+  },
+  "sitemap_gen": {
+    "counts_toward_overall": false,
+    "excluded": [],
+    "excluded_total": 0,
+    "facts": [],
+    "missing": [],
+    "missing_total": 0,
+    "not_indexable": [],
+    "not_indexable_total": 0,
+    "not_measured_reason": "suite-no-data",
+    "not_measured_text": "This analysis did not run or produced no result in this audit (timeout or error).",
+    "note": "",
+    "status": "not_measured",
+    "truncated": false,
+    "urls_shown": 0,
+    "urls_total": 0,
+    "xml_preview": ""
+  },
+  "summary": {
+    "counts": {
+      "Critical": 1,
+      "High": 2,
+      "Info": 1,
+      "Low": 2,
+      "Medium": 6
+    },
+    "quick_win_recommendation_ids": [
+      "rec_0001",
+      "rec_0002",
+      "rec_0006",
+      "rec_0007",
+      "rec_0004"
+    ],
+    "top_finding_ids": [
+      "fnd_0001",
+      "fnd_0002",
+      "fnd_0003",
+      "fnd_0004",
+      "fnd_0005"
+    ],
+    "zero_findings": false
+  },
+  "techstack": {
+    "groups": [],
+    "not_measured_reason": "suite-no-data",
+    "not_measured_text": "This analysis did not run or produced no result in this audit (timeout or error).",
+    "note": "",
+    "status": "not_measured",
+    "total": 0,
+    "truncated": false
+  },
+  "trend": {
+    "basis": "core_sample",
+    "comparable": false,
+    "core_overall": 40.0,
+    "reason_if_not": "first_audit"
+  },
+  "usage": {
+    "fetch_requests": 31
+  },
+  "versions": {
+    "engine_version": "0.1.0",
+    "rule_version": "0.1.0",
+    "score_version": "mvp-0.2"
+  },
+  "visibility": {
+    "counts_toward_overall": false,
+    "disclaimer": "These are informational indicators from public, keyless sources. None of them proves that a page is indexed by Google, and none counts toward the score.",
+    "domain": "example.com",
+    "items": [
+      {
+        "available": true,
+        "detail": "Registrar: Example Registrar Inc.",
+        "error_text": null,
+        "id": "rdap",
+        "label": "Domain registration (RDAP)",
+        "value": "Registered: 2026-08-01 (about 104 days)"
+      },
+      {
+        "available": true,
+        "detail": "7 captures (sampled)",
+        "error_text": null,
+        "id": "wayback",
+        "label": "Web archive (Wayback)",
+        "value": "First capture: 2026-08-05 · last capture: 2026-11-01"
+      },
+      {
+        "available": true,
+        "detail": null,
+        "error_text": null,
+        "id": "common_crawl",
+        "label": "Common Crawl",
+        "value": "Not found (CC-MAIN-2026-40)"
+      },
+      {
+        "available": false,
+        "detail": "Connect your Google account to see indexing and search data.",
+        "error_text": null,
+        "id": "search_console",
+        "label": "Google Search Console",
+        "value": "Not connected"
+      }
+    ],
+    "not_measured_reason": null,
+    "not_measured_text": null,
+    "notes": [
+      "The domain is under 6 months old: rankings can take time.",
+      "The site was not found in the latest Common Crawl (this proves neither indexing nor its absence)."
+    ],
+    "status": "measured",
+    "truncated": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+ "schema": {
+  "description": "The file to publish at ``https://<host><path>`` before submitting.",
+  "properties": {
+   "content": {
+    "title": "Content",
+    "type": "string"
+   },
+   "content_type": {
+    "default": "text/plain; charset=utf-8",
+    "title": "Content Type",
+    "type": "string"
+   },
+   "key": {
+    "title": "Key",
+    "type": "string"
+   },
+   "path": {
+    "title": "Path",
+    "type": "string"
+   }
+  },
+  "required": [
+   "key",
+   "path",
+   "content"
+  ],
+  "title": "IndexNowKeyFile",
+  "type": "object"
+ },
+ "schema_version": "indexnow.key_file/1"
+}

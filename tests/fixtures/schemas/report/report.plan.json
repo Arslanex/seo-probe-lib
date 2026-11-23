@@ -1,0 +1,91 @@
+{
+ "schema": {
+  "$defs": {
+   "Phase": {
+    "properties": {
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "items": {
+      "items": {
+       "$ref": "#/$defs/PhaseItem"
+      },
+      "title": "Items",
+      "type": "array"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "name_key": {
+      "title": "Name Key",
+      "type": "string"
+     },
+     "notes": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+     },
+     "number": {
+      "title": "Number",
+      "type": "integer"
+     },
+     "timeframe": {
+      "title": "Timeframe",
+      "type": "string"
+     },
+     "timeframe_key": {
+      "title": "Timeframe Key",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "number",
+     "name_key",
+     "name",
+     "timeframe_key",
+     "timeframe"
+    ],
+    "title": "Phase",
+    "type": "object"
+   },
+   "PhaseItem": {
+    "properties": {
+     "order": {
+      "title": "Order",
+      "type": "integer"
+     },
+     "recommendation_id": {
+      "title": "Recommendation Id",
+      "type": "string"
+     }
+    },
+    "required": [
+     "recommendation_id",
+     "order"
+    ],
+    "title": "PhaseItem",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "phases": {
+    "items": {
+     "$ref": "#/$defs/Phase"
+    },
+    "title": "Phases",
+    "type": "array"
+   }
+  },
+  "required": [
+   "phases"
+  ],
+  "title": "ActionPlan",
+  "type": "object"
+ },
+ "schema_version": "report.plan/1"
+}

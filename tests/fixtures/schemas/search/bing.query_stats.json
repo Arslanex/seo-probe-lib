@@ -1,0 +1,84 @@
+{
+ "schema": {
+  "$defs": {
+   "BingQueryStat": {
+    "properties": {
+     "avg_click_position": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Avg Click Position"
+     },
+     "avg_impression_position": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Avg Impression Position"
+     },
+     "clicks": {
+      "default": 0,
+      "title": "Clicks",
+      "type": "integer"
+     },
+     "date": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Date"
+     },
+     "impressions": {
+      "default": 0,
+      "title": "Impressions",
+      "type": "integer"
+     },
+     "query": {
+      "title": "Query",
+      "type": "string"
+     }
+    },
+    "required": [
+     "query"
+    ],
+    "title": "BingQueryStat",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "items": {
+    "items": {
+     "$ref": "#/$defs/BingQueryStat"
+    },
+    "title": "Items",
+    "type": "array"
+   },
+   "site": {
+    "title": "Site",
+    "type": "string"
+   }
+  },
+  "required": [
+   "site"
+  ],
+  "title": "BingQueryStats",
+  "type": "object"
+ },
+ "schema_version": "bing.query_stats/1"
+}

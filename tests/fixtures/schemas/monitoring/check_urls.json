@@ -1,0 +1,207 @@
+{
+ "schema": {
+  "$defs": {
+   "Hop": {
+    "properties": {
+     "status": {
+      "title": "Status",
+      "type": "integer"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url",
+     "status"
+    ],
+    "title": "Hop",
+    "type": "object"
+   },
+   "UrlCheck": {
+    "properties": {
+     "canonical": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Canonical"
+     },
+     "canonical_elsewhere": {
+      "default": false,
+      "title": "Canonical Elsewhere",
+      "type": "boolean"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "final_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Final Url"
+     },
+     "hops": {
+      "default": 0,
+      "title": "Hops",
+      "type": "integer"
+     },
+     "in_sitemap": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "In Sitemap"
+     },
+     "indexable": {
+      "default": false,
+      "title": "Indexable",
+      "type": "boolean"
+     },
+     "noindex_header": {
+      "default": false,
+      "title": "Noindex Header",
+      "type": "boolean"
+     },
+     "noindex_meta": {
+      "default": false,
+      "title": "Noindex Meta",
+      "type": "boolean"
+     },
+     "reasons": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Reasons",
+      "type": "array"
+     },
+     "redirect_chain": {
+      "items": {
+       "$ref": "#/$defs/Hop"
+      },
+      "title": "Redirect Chain",
+      "type": "array"
+     },
+     "robots_allowed": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Robots Allowed"
+     },
+     "status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Status"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     },
+     "x_robots_tag": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "X Robots Tag"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "UrlCheck",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "checked": {
+    "default": 0,
+    "title": "Checked",
+    "type": "integer"
+   },
+   "concurrency": {
+    "default": 0,
+    "title": "Concurrency",
+    "type": "integer"
+   },
+   "duplicates": {
+    "default": 0,
+    "title": "Duplicates",
+    "type": "integer"
+   },
+   "items": {
+    "items": {
+     "$ref": "#/$defs/UrlCheck"
+    },
+    "title": "Items",
+    "type": "array"
+   },
+   "robots_checked": {
+    "default": true,
+    "title": "Robots Checked",
+    "type": "boolean"
+   },
+   "sitemap_checked": {
+    "default": false,
+    "title": "Sitemap Checked",
+    "type": "boolean"
+   },
+   "skipped": {
+    "default": 0,
+    "title": "Skipped",
+    "type": "integer"
+   },
+   "user_agent": {
+    "default": "Googlebot",
+    "title": "User Agent",
+    "type": "string"
+   }
+  },
+  "title": "UrlChecks",
+  "type": "object"
+ },
+ "schema_version": "check_urls/1"
+}

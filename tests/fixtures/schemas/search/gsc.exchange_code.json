@@ -1,0 +1,36 @@
+{
+ "schema": {
+  "properties": {
+   "account": {
+    "default": "default",
+    "title": "Account",
+    "type": "string"
+   },
+   "configured": {
+    "default": false,
+    "title": "Configured",
+    "type": "boolean"
+   },
+   "connected": {
+    "default": false,
+    "title": "Connected",
+    "type": "boolean"
+   },
+   "email": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Email"
+   }
+  },
+  "title": "GscConnection",
+  "type": "object"
+ },
+ "schema_version": "gsc.exchange_code/1"
+}

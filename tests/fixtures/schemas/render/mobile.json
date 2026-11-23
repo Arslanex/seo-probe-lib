@@ -1,0 +1,226 @@
+{
+ "schema": {
+  "$defs": {
+   "DeviceView": {
+    "properties": {
+     "internal_links": {
+      "default": 0,
+      "title": "Internal Links",
+      "type": "integer"
+     },
+     "visible_text_chars": {
+      "default": 0,
+      "title": "Visible Text Chars",
+      "type": "integer"
+     }
+    },
+    "title": "DeviceView",
+    "type": "object"
+   },
+   "TapOverlap": {
+    "properties": {
+     "first": {
+      "title": "First",
+      "type": "string"
+     },
+     "second": {
+      "title": "Second",
+      "type": "string"
+     }
+    },
+    "required": [
+     "first",
+     "second"
+    ],
+    "title": "TapOverlap",
+    "type": "object"
+   },
+   "TapTarget": {
+    "properties": {
+     "height": {
+      "title": "Height",
+      "type": "number"
+     },
+     "selector": {
+      "title": "Selector",
+      "type": "string"
+     },
+     "text": {
+      "default": "",
+      "title": "Text",
+      "type": "string"
+     },
+     "width": {
+      "title": "Width",
+      "type": "number"
+     }
+    },
+    "required": [
+     "selector",
+     "width",
+     "height"
+    ],
+    "title": "TapTarget",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "desktop": {
+    "anyOf": [
+     {
+      "$ref": "#/$defs/DeviceView"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null
+   },
+   "errors": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "title": "Errors",
+    "type": "object"
+   },
+   "horizontal_overflow": {
+    "default": false,
+    "title": "Horizontal Overflow",
+    "type": "boolean"
+   },
+   "link_ratio": {
+    "anyOf": [
+     {
+      "type": "number"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Link Ratio"
+   },
+   "mobile": {
+    "anyOf": [
+     {
+      "$ref": "#/$defs/DeviceView"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null
+   },
+   "overlap_examples": {
+    "items": {
+     "$ref": "#/$defs/TapOverlap"
+    },
+    "title": "Overlap Examples",
+    "type": "array"
+   },
+   "overlapping_tap_targets": {
+    "default": 0,
+    "title": "Overlapping Tap Targets",
+    "type": "integer"
+   },
+   "scroll_width": {
+    "default": 0,
+    "title": "Scroll Width",
+    "type": "integer"
+   },
+   "small_tap_examples": {
+    "items": {
+     "$ref": "#/$defs/TapTarget"
+    },
+    "title": "Small Tap Examples",
+    "type": "array"
+   },
+   "small_tap_share": {
+    "default": 0.0,
+    "title": "Small Tap Share",
+    "type": "number"
+   },
+   "small_tap_targets": {
+    "default": 0,
+    "title": "Small Tap Targets",
+    "type": "integer"
+   },
+   "small_text_nodes": {
+    "default": 0,
+    "title": "Small Text Nodes",
+    "type": "integer"
+   },
+   "small_text_share": {
+    "default": 0.0,
+    "title": "Small Text Share",
+    "type": "number"
+   },
+   "tap_targets": {
+    "default": 0,
+    "title": "Tap Targets",
+    "type": "integer"
+   },
+   "text_nodes": {
+    "default": 0,
+    "title": "Text Nodes",
+    "type": "integer"
+   },
+   "text_ratio": {
+    "anyOf": [
+     {
+      "type": "number"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Text Ratio"
+   },
+   "thresholds": {
+    "additionalProperties": {
+     "type": "number"
+    },
+    "title": "Thresholds",
+    "type": "object"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   },
+   "viewport_device_width": {
+    "default": false,
+    "title": "Viewport Device Width",
+    "type": "boolean"
+   },
+   "viewport_meta": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Viewport Meta"
+   },
+   "viewport_meta_present": {
+    "default": false,
+    "title": "Viewport Meta Present",
+    "type": "boolean"
+   },
+   "viewport_width": {
+    "default": 0,
+    "title": "Viewport Width",
+    "type": "integer"
+   }
+  },
+  "required": [
+   "url"
+  ],
+  "title": "MobileReport",
+  "type": "object"
+ },
+ "schema_version": "mobile/1"
+}

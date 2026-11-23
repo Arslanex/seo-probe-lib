@@ -1,0 +1,90 @@
+{
+ "schema": {
+  "$defs": {
+   "AgenticCheck": {
+    "properties": {
+     "detail": {
+      "default": "",
+      "title": "Detail",
+      "type": "string"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "status": {
+      "enum": [
+       "pass",
+       "fail",
+       "unknown",
+       "na"
+      ],
+      "title": "Status",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "status"
+    ],
+    "title": "AgenticCheck",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "checks": {
+    "items": {
+     "$ref": "#/$defs/AgenticCheck"
+    },
+    "title": "Checks",
+    "type": "array"
+   },
+   "fraction": {
+    "default": "0/0",
+    "title": "Fraction",
+    "type": "string"
+   },
+   "lighthouse_fraction": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Lighthouse Fraction"
+   },
+   "llms_txt_notes": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Llms Txt Notes",
+    "type": "array"
+   },
+   "notes": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Notes",
+    "type": "array"
+   },
+   "requests": {
+    "default": 0,
+    "title": "Requests",
+    "type": "integer"
+   },
+   "unnamed": {
+    "additionalProperties": {
+     "type": "integer"
+    },
+    "title": "Unnamed",
+    "type": "object"
+   }
+  },
+  "title": "AgenticReadiness",
+  "type": "object"
+ },
+ "schema_version": "ai_access/1"
+}

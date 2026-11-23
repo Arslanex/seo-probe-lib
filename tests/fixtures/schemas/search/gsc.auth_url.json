@@ -1,0 +1,55 @@
+{
+ "schema": {
+  "description": "One pending Google authorisation. The caller stores it and hands it to ``exchange_code``.",
+  "properties": {
+   "account": {
+    "default": "default",
+    "title": "Account",
+    "type": "string"
+   },
+   "consumed": {
+    "default": false,
+    "title": "Consumed",
+    "type": "boolean"
+   },
+   "created_at": {
+    "format": "date-time",
+    "title": "Created At",
+    "type": "string"
+   },
+   "redirect_uri": {
+    "title": "Redirect Uri",
+    "type": "string"
+   },
+   "scopes": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Scopes",
+    "type": "array"
+   },
+   "state": {
+    "title": "State",
+    "type": "string"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   },
+   "verifier": {
+    "title": "Verifier",
+    "type": "string"
+   }
+  },
+  "required": [
+   "url",
+   "state",
+   "verifier",
+   "redirect_uri",
+   "created_at"
+  ],
+  "title": "AuthRequest",
+  "type": "object"
+ },
+ "schema_version": "gsc.auth_url/1"
+}

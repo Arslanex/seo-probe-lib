@@ -1,0 +1,287 @@
+{
+ "schema": {
+  "$defs": {
+   "CategoryDelta": {
+    "properties": {
+     "category": {
+      "title": "Category",
+      "type": "string"
+     },
+     "delta": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Delta"
+     },
+     "new": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "New"
+     },
+     "old": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Old"
+     }
+    },
+    "required": [
+     "category"
+    ],
+    "title": "CategoryDelta",
+    "type": "object"
+   },
+   "Delta": {
+    "properties": {
+     "delta": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Delta"
+     },
+     "new": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "New"
+     },
+     "old": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Old"
+     }
+    },
+    "title": "Delta",
+    "type": "object"
+   },
+   "FindingRef": {
+    "properties": {
+     "category": {
+      "title": "Category",
+      "type": "string"
+     },
+     "rule_id": {
+      "title": "Rule Id",
+      "type": "string"
+     },
+     "severity": {
+      "title": "Severity",
+      "type": "string"
+     },
+     "url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Url"
+     }
+    },
+    "required": [
+     "rule_id",
+     "severity",
+     "category"
+    ],
+    "title": "FindingRef",
+    "type": "object"
+   },
+   "MetricDelta": {
+    "properties": {
+     "delta": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Delta"
+     },
+     "improved": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Improved"
+     },
+     "key": {
+      "title": "Key",
+      "type": "string"
+     },
+     "new": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "New"
+     },
+     "old": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Old"
+     }
+    },
+    "required": [
+     "key"
+    ],
+    "title": "MetricDelta",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "categories": {
+    "items": {
+     "$ref": "#/$defs/CategoryDelta"
+    },
+    "title": "Categories",
+    "type": "array"
+   },
+   "comparable": {
+    "title": "Comparable",
+    "type": "boolean"
+   },
+   "core_overall": {
+    "anyOf": [
+     {
+      "$ref": "#/$defs/Delta"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null
+   },
+   "metrics": {
+    "items": {
+     "$ref": "#/$defs/MetricDelta"
+    },
+    "title": "Metrics",
+    "type": "array"
+   },
+   "new_findings": {
+    "items": {
+     "$ref": "#/$defs/FindingRef"
+    },
+    "title": "New Findings",
+    "type": "array"
+   },
+   "new_id": {
+    "title": "New Id",
+    "type": "string"
+   },
+   "new_total": {
+    "default": 0,
+    "title": "New Total",
+    "type": "integer"
+   },
+   "old_id": {
+    "title": "Old Id",
+    "type": "string"
+   },
+   "overall": {
+    "anyOf": [
+     {
+      "$ref": "#/$defs/Delta"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null
+   },
+   "persisting_count": {
+    "default": 0,
+    "title": "Persisting Count",
+    "type": "integer"
+   },
+   "resolved_findings": {
+    "items": {
+     "$ref": "#/$defs/FindingRef"
+    },
+    "title": "Resolved Findings",
+    "type": "array"
+   },
+   "resolved_total": {
+    "default": 0,
+    "title": "Resolved Total",
+    "type": "integer"
+   },
+   "warnings": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Warnings",
+    "type": "array"
+   }
+  },
+  "required": [
+   "old_id",
+   "new_id",
+   "comparable"
+  ],
+  "title": "Comparison",
+  "type": "object"
+ },
+ "schema_version": "report.compare/1"
+}

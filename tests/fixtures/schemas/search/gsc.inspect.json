@@ -1,0 +1,149 @@
+{
+ "schema": {
+  "description": "URL Inspection result of one page (Google's own view of it).",
+  "properties": {
+   "coverage_state": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Coverage State"
+   },
+   "crawled_as": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Crawled As"
+   },
+   "error": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Error"
+   },
+   "google_canonical": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Google Canonical"
+   },
+   "indexed": {
+    "anyOf": [
+     {
+      "type": "boolean"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Indexed"
+   },
+   "indexing_state": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Indexing State"
+   },
+   "last_crawl_time": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Last Crawl Time"
+   },
+   "page_fetch_state": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Page Fetch State"
+   },
+   "robots_txt_state": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Robots Txt State"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   },
+   "user_canonical": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "User Canonical"
+   },
+   "verdict": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Verdict"
+   }
+  },
+  "required": [
+   "url"
+  ],
+  "title": "GscInspection",
+  "type": "object"
+ },
+ "schema_version": "gsc.inspect/1"
+}

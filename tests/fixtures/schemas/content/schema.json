@@ -1,0 +1,38 @@
+{
+ "schema": {
+  "properties": {
+   "blocks": {
+    "default": 0,
+    "title": "Blocks",
+    "type": "integer"
+   },
+   "checked": {
+    "default": false,
+    "title": "Checked",
+    "type": "boolean"
+   },
+   "facts": {
+    "additionalProperties": true,
+    "title": "Facts",
+    "type": "object"
+   },
+   "types": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Types",
+    "type": "array"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   }
+  },
+  "required": [
+   "url"
+  ],
+  "title": "SchemaReport",
+  "type": "object"
+ },
+ "schema_version": "schema/1"
+}

@@ -1,0 +1,158 @@
+{
+ "schema": {
+  "$defs": {
+   "SitemapFile": {
+    "properties": {
+     "bytes": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Bytes"
+     },
+     "child_count": {
+      "default": 0,
+      "title": "Child Count",
+      "type": "integer"
+     },
+     "declared": {
+      "default": false,
+      "title": "Declared",
+      "type": "boolean"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "final_url": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Final Url"
+     },
+     "gzip": {
+      "default": false,
+      "title": "Gzip",
+      "type": "boolean"
+     },
+     "kind": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Kind"
+     },
+     "status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Status"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     },
+     "url_count": {
+      "default": 0,
+      "title": "Url Count",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "SitemapFile",
+    "type": "object"
+   },
+   "SitemapUrl": {
+    "properties": {
+     "lastmod": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Lastmod"
+     },
+     "loc": {
+      "title": "Loc",
+      "type": "string"
+     }
+    },
+    "required": [
+     "loc"
+    ],
+    "title": "SitemapUrl",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "facts": {
+    "additionalProperties": true,
+    "title": "Facts",
+    "type": "object"
+   },
+   "files": {
+    "items": {
+     "$ref": "#/$defs/SitemapFile"
+    },
+    "title": "Files",
+    "type": "array"
+   },
+   "found": {
+    "default": false,
+    "title": "Found",
+    "type": "boolean"
+   },
+   "truncated": {
+    "default": false,
+    "title": "Truncated",
+    "type": "boolean"
+   },
+   "urls": {
+    "items": {
+     "$ref": "#/$defs/SitemapUrl"
+    },
+    "title": "Urls",
+    "type": "array"
+   }
+  },
+  "title": "SitemapReport",
+  "type": "object"
+ },
+ "schema_version": "sitemap/1"
+}

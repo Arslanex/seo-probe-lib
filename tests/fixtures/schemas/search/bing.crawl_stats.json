@@ -1,0 +1,103 @@
+{
+ "schema": {
+  "$defs": {
+   "BingCrawlStat": {
+    "properties": {
+     "all_other_codes": {
+      "default": 0,
+      "title": "All Other Codes",
+      "type": "integer"
+     },
+     "blocked_by_robots_txt": {
+      "default": 0,
+      "title": "Blocked By Robots Txt",
+      "type": "integer"
+     },
+     "code_2xx": {
+      "default": 0,
+      "title": "Code 2Xx",
+      "type": "integer"
+     },
+     "code_301": {
+      "default": 0,
+      "title": "Code 301",
+      "type": "integer"
+     },
+     "code_302": {
+      "default": 0,
+      "title": "Code 302",
+      "type": "integer"
+     },
+     "code_4xx": {
+      "default": 0,
+      "title": "Code 4Xx",
+      "type": "integer"
+     },
+     "code_5xx": {
+      "default": 0,
+      "title": "Code 5Xx",
+      "type": "integer"
+     },
+     "contains_malware": {
+      "default": 0,
+      "title": "Contains Malware",
+      "type": "integer"
+     },
+     "crawl_errors": {
+      "default": 0,
+      "title": "Crawl Errors",
+      "type": "integer"
+     },
+     "crawled_pages": {
+      "default": 0,
+      "title": "Crawled Pages",
+      "type": "integer"
+     },
+     "date": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Date"
+     },
+     "in_index": {
+      "default": 0,
+      "title": "In Index",
+      "type": "integer"
+     },
+     "in_links": {
+      "default": 0,
+      "title": "In Links",
+      "type": "integer"
+     }
+    },
+    "title": "BingCrawlStat",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "items": {
+    "items": {
+     "$ref": "#/$defs/BingCrawlStat"
+    },
+    "title": "Items",
+    "type": "array"
+   },
+   "site": {
+    "title": "Site",
+    "type": "string"
+   }
+  },
+  "required": [
+   "site"
+  ],
+  "title": "BingCrawlStats",
+  "type": "object"
+ },
+ "schema_version": "bing.crawl_stats/1"
+}

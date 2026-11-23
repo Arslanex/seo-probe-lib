@@ -1,0 +1,13 @@
+{
+  "min_impressions": 100,
+  "striking_min_position": 8,
+  "striking_max_position": 20,
+  "low_ctr_ratio": 0.5,
+  "cannibal_min_share": 0.2,
+  "cannibal_min_pages": 2,
+  "decline_min_previous_clicks": 20,
+  "decline_min_drop_clicks": 10,
+  "decline_min_ratio": 0.3,
+  "row_limit": 5000,
+  "list_limit": 50
+}

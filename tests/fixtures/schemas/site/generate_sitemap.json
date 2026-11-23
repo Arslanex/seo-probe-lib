@@ -1,0 +1,107 @@
+{
+ "schema": {
+  "$defs": {
+   "ExcludedPage": {
+    "properties": {
+     "reason": {
+      "title": "Reason",
+      "type": "string"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url",
+     "reason"
+    ],
+    "title": "ExcludedPage",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "excluded": {
+    "items": {
+     "$ref": "#/$defs/ExcludedPage"
+    },
+    "title": "Excluded",
+    "type": "array"
+   },
+   "excluded_total": {
+    "default": 0,
+    "title": "Excluded Total",
+    "type": "integer"
+   },
+   "existing_sitemap": {
+    "default": false,
+    "title": "Existing Sitemap",
+    "type": "boolean"
+   },
+   "in_sitemap_not_indexable": {
+    "items": {
+     "$ref": "#/$defs/ExcludedPage"
+    },
+    "title": "In Sitemap Not Indexable",
+    "type": "array"
+   },
+   "in_sitemap_not_indexable_total": {
+    "default": 0,
+    "title": "In Sitemap Not Indexable Total",
+    "type": "integer"
+   },
+   "missing_from_sitemap": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Missing From Sitemap",
+    "type": "array"
+   },
+   "missing_total": {
+    "default": 0,
+    "title": "Missing Total",
+    "type": "integer"
+   },
+   "pages_in_sample": {
+    "default": 0,
+    "title": "Pages In Sample",
+    "type": "integer"
+   },
+   "sample_limited": {
+    "default": true,
+    "title": "Sample Limited",
+    "type": "boolean"
+   },
+   "truncated": {
+    "default": false,
+    "title": "Truncated",
+    "type": "boolean"
+   },
+   "urls": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Urls",
+    "type": "array"
+   },
+   "urls_total": {
+    "default": 0,
+    "title": "Urls Total",
+    "type": "integer"
+   },
+   "with_lastmod": {
+    "default": 0,
+    "title": "With Lastmod",
+    "type": "integer"
+   },
+   "xml": {
+    "default": "",
+    "title": "Xml",
+    "type": "string"
+   }
+  },
+  "title": "SitemapGenerated",
+  "type": "object"
+ },
+ "schema_version": "generate_sitemap/1"
+}

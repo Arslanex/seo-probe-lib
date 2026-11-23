@@ -1,0 +1,51 @@
+{
+ "schema": {
+  "description": "The single-page checks of one page; ``checked`` is False when the page had no parseable HTML.",
+  "properties": {
+   "checked": {
+    "title": "Checked",
+    "type": "boolean"
+   },
+   "facts": {
+    "additionalProperties": true,
+    "title": "Facts",
+    "type": "object"
+   },
+   "title": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Title"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   },
+   "word_count": {
+    "anyOf": [
+     {
+      "type": "integer"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Word Count"
+   }
+  },
+  "required": [
+   "url",
+   "checked"
+  ],
+  "title": "OnPageReport",
+  "type": "object"
+ },
+ "schema_version": "onpage/1"
+}

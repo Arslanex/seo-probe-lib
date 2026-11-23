@@ -1,0 +1,133 @@
+{
+ "schema": {
+  "$defs": {
+   "HreflangEntry": {
+    "properties": {
+     "href": {
+      "title": "Href",
+      "type": "string"
+     },
+     "lang": {
+      "title": "Lang",
+      "type": "string"
+     },
+     "source": {
+      "default": "html",
+      "title": "Source",
+      "type": "string"
+     },
+     "valid": {
+      "default": true,
+      "title": "Valid",
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "lang",
+     "href"
+    ],
+    "title": "HreflangEntry",
+    "type": "object"
+   },
+   "HreflangPageRow": {
+    "properties": {
+     "canonical": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Canonical"
+     },
+     "entries": {
+      "items": {
+       "$ref": "#/$defs/HreflangEntry"
+      },
+      "title": "Entries",
+      "type": "array"
+     },
+     "html_lang": {
+      "default": "",
+      "title": "Html Lang",
+      "type": "string"
+     },
+     "issues": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Issues",
+      "type": "array"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "HreflangPageRow",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "applicable": {
+    "default": false,
+    "title": "Applicable",
+    "type": "boolean"
+   },
+   "has_x_default": {
+    "default": false,
+    "title": "Has X Default",
+    "type": "boolean"
+   },
+   "languages": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Languages",
+    "type": "array"
+   },
+   "multilingual_signals": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Multilingual Signals",
+    "type": "array"
+   },
+   "notes": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Notes",
+    "type": "array"
+   },
+   "pages": {
+    "items": {
+     "$ref": "#/$defs/HreflangPageRow"
+    },
+    "title": "Pages",
+    "type": "array"
+   },
+   "probed": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Probed",
+    "type": "array"
+   },
+   "unchecked": {
+    "default": 0,
+    "title": "Unchecked",
+    "type": "integer"
+   }
+  },
+  "title": "HreflangReport",
+  "type": "object"
+ },
+ "schema_version": "hreflang/1"
+}

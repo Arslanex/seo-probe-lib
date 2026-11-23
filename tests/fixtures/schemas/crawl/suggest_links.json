@@ -1,0 +1,111 @@
+{
+ "schema": {
+  "$defs": {
+   "LinkSuggestion": {
+    "properties": {
+     "anchor_candidates": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Anchor Candidates",
+      "type": "array"
+     },
+     "shared_terms": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Shared Terms",
+      "type": "array"
+     },
+     "similarity": {
+      "title": "Similarity",
+      "type": "number"
+     },
+     "source_url": {
+      "title": "Source Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "source_url",
+     "similarity"
+    ],
+    "title": "LinkSuggestion",
+    "type": "object"
+   },
+   "LinkTarget": {
+    "properties": {
+     "inlinks": {
+      "default": 0,
+      "title": "Inlinks",
+      "type": "integer"
+     },
+     "suggestions": {
+      "items": {
+       "$ref": "#/$defs/LinkSuggestion"
+      },
+      "title": "Suggestions",
+      "type": "array"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "LinkTarget",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "pages_considered": {
+    "default": 0,
+    "title": "Pages Considered",
+    "type": "integer"
+   },
+   "pages_skipped": {
+    "default": 0,
+    "title": "Pages Skipped",
+    "type": "integer"
+   },
+   "targets": {
+    "items": {
+     "$ref": "#/$defs/LinkTarget"
+    },
+    "title": "Targets",
+    "type": "array"
+   },
+   "targets_skipped": {
+    "default": 0,
+    "title": "Targets Skipped",
+    "type": "integer"
+   },
+   "thresholds": {
+    "additionalProperties": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "integer"
+      }
+     ]
+    },
+    "title": "Thresholds",
+    "type": "object"
+   },
+   "unknown_targets": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Unknown Targets",
+    "type": "array"
+   }
+  },
+  "title": "LinkSuggestions",
+  "type": "object"
+ },
+ "schema_version": "suggest_links/1"
+}

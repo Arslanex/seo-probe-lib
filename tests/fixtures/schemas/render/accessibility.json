@@ -1,0 +1,157 @@
+{
+ "schema": {
+  "$defs": {
+   "A11yNode": {
+    "properties": {
+     "html": {
+      "default": "",
+      "title": "Html",
+      "type": "string"
+     },
+     "selector": {
+      "title": "Selector",
+      "type": "string"
+     }
+    },
+    "required": [
+     "selector"
+    ],
+    "title": "A11yNode",
+    "type": "object"
+   },
+   "A11yRule": {
+    "properties": {
+     "help": {
+      "default": "",
+      "title": "Help",
+      "type": "string"
+     },
+     "help_url": {
+      "default": "",
+      "title": "Help Url",
+      "type": "string"
+     },
+     "id": {
+      "title": "Id",
+      "type": "string"
+     },
+     "impact": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Impact"
+     },
+     "nodes": {
+      "items": {
+       "$ref": "#/$defs/A11yNode"
+      },
+      "title": "Nodes",
+      "type": "array"
+     },
+     "nodes_count": {
+      "default": 0,
+      "title": "Nodes Count",
+      "type": "integer"
+     },
+     "tags": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+     },
+     "wcag": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Wcag",
+      "type": "array"
+     }
+    },
+    "required": [
+     "id"
+    ],
+    "title": "A11yRule",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "axe_version": {
+    "default": "",
+    "title": "Axe Version",
+    "type": "string"
+   },
+   "error": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Error"
+   },
+   "inapplicable": {
+    "default": 0,
+    "title": "Inapplicable",
+    "type": "integer"
+   },
+   "incomplete": {
+    "items": {
+     "$ref": "#/$defs/A11yRule"
+    },
+    "title": "Incomplete",
+    "type": "array"
+   },
+   "passes": {
+    "default": 0,
+    "title": "Passes",
+    "type": "integer"
+   },
+   "standard": {
+    "title": "Standard",
+    "type": "string"
+   },
+   "tags": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Tags",
+    "type": "array"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   },
+   "violations": {
+    "items": {
+     "$ref": "#/$defs/A11yRule"
+    },
+    "title": "Violations",
+    "type": "array"
+   },
+   "violations_by_impact": {
+    "additionalProperties": {
+     "type": "integer"
+    },
+    "title": "Violations By Impact",
+    "type": "object"
+   }
+  },
+  "required": [
+   "url",
+   "standard"
+  ],
+  "title": "AccessibilityReport",
+  "type": "object"
+ },
+ "schema_version": "accessibility/1"
+}

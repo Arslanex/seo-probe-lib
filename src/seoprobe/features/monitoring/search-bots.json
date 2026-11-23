@@ -1,0 +1,11 @@
+{
+  "_doc": "Search engine crawlers identified in access logs by a user-agent substring and verified by reverse DNS (the host name must end in one of the domains) plus a forward lookup that returns the same IP. Domains are the ones the vendors publish for this check: Google (developers.google.com/search/docs/crawling-indexing/verifying-googlebot), Bing (bing.com/webmasters/help/how-to-verify-bingbot-3905dc26), Yandex (yandex.com/support/webmaster/robot-workings/check-yandex-robots.html), Baidu (help.baidu.com), Apple (support.apple.com/en-us/119829). Checked tokens are matched case-insensitively in this order; the AI crawlers of seoprobe/core/data/bots.json follow, unverifiable.",
+  "last_verified": "2026-11-23",
+  "bots": [
+    {"name": "Googlebot", "vendor": "Google", "match": ["googlebot", "google-inspectiontool", "googleother", "storebot-google", "adsbot-google", "mediapartners-google"], "domains": ["googlebot.com", "google.com", "googleusercontent.com"]},
+    {"name": "Bingbot", "vendor": "Microsoft", "match": ["bingbot", "adidxbot", "bingpreview", "msnbot"], "domains": ["search.msn.com"]},
+    {"name": "YandexBot", "vendor": "Yandex", "match": ["yandexbot", "yandeximages", "yandexmobilebot"], "domains": ["yandex.ru", "yandex.net", "yandex.com"]},
+    {"name": "Baiduspider", "vendor": "Baidu", "match": ["baiduspider"], "domains": ["baidu.com", "baidu.jp"]},
+    {"name": "Applebot", "vendor": "Apple", "match": ["applebot"], "domains": ["applebot.apple.com"]}
+  ]
+}

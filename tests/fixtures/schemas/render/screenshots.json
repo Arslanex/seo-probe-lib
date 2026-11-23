@@ -1,0 +1,118 @@
+{
+ "schema": {
+  "$defs": {
+   "AboveFold": {
+    "properties": {
+     "cta_visible": {
+      "default": false,
+      "title": "Cta Visible",
+      "type": "boolean"
+     },
+     "h1_present": {
+      "default": false,
+      "title": "H1 Present",
+      "type": "boolean"
+     },
+     "h1_visible": {
+      "default": false,
+      "title": "H1 Visible",
+      "type": "boolean"
+     },
+     "horizontal_overflow": {
+      "default": false,
+      "title": "Horizontal Overflow",
+      "type": "boolean"
+     },
+     "overlay_label": {
+      "default": "",
+      "title": "Overlay Label",
+      "type": "string"
+     },
+     "overlay_share": {
+      "default": 0.0,
+      "title": "Overlay Share",
+      "type": "number"
+     },
+     "text_chars": {
+      "default": 0,
+      "title": "Text Chars",
+      "type": "integer"
+     }
+    },
+    "title": "AboveFold",
+    "type": "object"
+   },
+   "ScreenshotFile": {
+    "properties": {
+     "bytes": {
+      "title": "Bytes",
+      "type": "integer"
+     },
+     "data_base64": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Data Base64"
+     },
+     "device": {
+      "title": "Device",
+      "type": "string"
+     },
+     "height": {
+      "title": "Height",
+      "type": "integer"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "width": {
+      "title": "Width",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "device",
+     "name",
+     "width",
+     "height",
+     "bytes"
+    ],
+    "title": "ScreenshotFile",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "above_fold": {
+    "additionalProperties": {
+     "$ref": "#/$defs/AboveFold"
+    },
+    "title": "Above Fold",
+    "type": "object"
+   },
+   "errors": {
+    "additionalProperties": {
+     "type": "string"
+    },
+    "title": "Errors",
+    "type": "object"
+   },
+   "files": {
+    "items": {
+     "$ref": "#/$defs/ScreenshotFile"
+    },
+    "title": "Files",
+    "type": "array"
+   }
+  },
+  "title": "Screenshots",
+  "type": "object"
+ },
+ "schema_version": "screenshots/1"
+}

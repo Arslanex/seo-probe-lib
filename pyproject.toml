@@ -1,0 +1,116 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "seoprobe"
+version = "0.1.0"
+description = "Async SEO analysis library: SSRF-safe fetching, deterministic checks, scored and evidenced JSON results."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Arslanex" }]
+keywords = ["seo", "audit", "core-web-vitals", "search-console", "asyncio"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Framework :: AsyncIO",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Internet :: WWW/HTTP :: Site Management",
+  "Typing :: Typed",
+]
+dependencies = [
+  "aiohttp>=3.9",
+  "beautifulsoup4>=4.12",
+  "lxml>=5.0",
+  "pydantic>=2.7",
+  "trafilatura>=2.0",
+]
+
+[project.optional-dependencies]
+browser = ["playwright>=1.48"]
+dns = ["dnspython>=2.6"]
+all = ["seoprobe[browser,dns]"]
+
+[project.urls]
+Repository = "https://github.com/Arslanex/seo-probe-lib"
+
+[dependency-groups]
+dev = [
+  "pytest>=8",
+  "pytest-asyncio>=0.24",
+  "mypy>=1.10",
+  "ruff>=0.6",
+  "lxml-stubs",
+  "import-linter>=2.0",
+  "build>=1.2",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/seoprobe"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/seoprobe", "tests", "docs", "README.md", "CHANGELOG.md", "LICENSE"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+extend-exclude = ["docs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "BLE"]  # BLE: every broad except carries a noqa with its reason
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["--import-mode=importlib"]
+pythonpath = ["."]
+filterwarnings = ["ignore::urllib3.exceptions.DependencyWarning"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src"]
+
+[[tool.mypy.overrides]]
+module = ["trafilatura.*", "dns.*"]
+ignore_missing_imports = true
+
+[tool.importlinter]
+root_package = "seoprobe"
+
+[[tool.importlinter.contracts]]
+name = "core does not depend on any feature"
+type = "forbidden"
+source_modules = ["seoprobe.core"]
+forbidden_modules = ["seoprobe.features"]
+
+[[tool.importlinter.contracts]]
+name = "core layers (runtime > net | rules > parse > contract types)"
+type = "layers"
+containers = ["seoprobe.core"]
+layers = [
+  "feature : session : page",
+  "net | rules",
+  "parse",
+  "config : errors : models : result",
+]
+
+[[tool.importlinter.contracts]]
+name = "feature layers (higher may use lower, never the reverse)"
+type = "layers"
+containers = ["seoprobe.features"]
+layers = [
+  "report",
+  "audit",
+  "monitoring | offsite",
+  "crawl",
+  "content | site | render | performance | search",
+  "page",
+]

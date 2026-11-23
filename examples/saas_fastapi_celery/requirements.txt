@@ -1,0 +1,9 @@
+# Install from this folder: pip install -r requirements.txt
+-e ../..[all]
+fastapi>=0.110
+uvicorn[standard]>=0.29
+celery[redis]>=5.3
+asyncpg>=0.29
+redis>=5.0
+cryptography>=42
+httpx>=0.27

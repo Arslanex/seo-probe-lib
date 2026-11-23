@@ -1,0 +1,154 @@
+{
+ "schema": {
+  "$defs": {
+   "Ga4LandingPage": {
+    "properties": {
+     "engaged_sessions": {
+      "default": 0,
+      "title": "Engaged Sessions",
+      "type": "integer"
+     },
+     "engagement_rate": {
+      "default": 0.0,
+      "title": "Engagement Rate",
+      "type": "number"
+     },
+     "key_events": {
+      "default": 0.0,
+      "title": "Key Events",
+      "type": "number"
+     },
+     "page": {
+      "title": "Page",
+      "type": "string"
+     },
+     "revenue": {
+      "default": 0.0,
+      "title": "Revenue",
+      "type": "number"
+     },
+     "sessions": {
+      "default": 0,
+      "title": "Sessions",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "page"
+    ],
+    "title": "Ga4LandingPage",
+    "type": "object"
+   }
+  },
+  "description": "GA4 organic landing pages of the property that serves a site (owner's authorisation).",
+  "properties": {
+   "account": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Account"
+   },
+   "channel": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": "Organic Search",
+    "title": "Channel"
+   },
+   "days": {
+    "default": 28,
+    "title": "Days",
+    "type": "integer"
+   },
+   "display_name": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Display Name"
+   },
+   "error": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Error"
+   },
+   "landing_pages": {
+    "items": {
+     "$ref": "#/$defs/Ga4LandingPage"
+    },
+    "title": "Landing Pages",
+    "type": "array"
+   },
+   "property": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Property"
+   },
+   "status": {
+    "default": "not-connected",
+    "enum": [
+     "ok",
+     "not-connected",
+     "not-configured",
+     "property-not-found",
+     "no-permission",
+     "error"
+    ],
+    "title": "Status",
+    "type": "string"
+   },
+   "stream_uri": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Stream Uri"
+   },
+   "totals": {
+    "additionalProperties": {
+     "type": "number"
+    },
+    "title": "Totals",
+    "type": "object"
+   }
+  },
+  "title": "Ga4Summary",
+  "type": "object"
+ },
+ "schema_version": "ga4.summary/1"
+}

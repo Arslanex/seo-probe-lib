@@ -1,0 +1,85 @@
+{
+ "schema": {
+  "$defs": {
+   "TechItem": {
+    "properties": {
+     "category": {
+      "title": "Category",
+      "type": "string"
+     },
+     "confidence": {
+      "enum": [
+       "high",
+       "medium",
+       "low"
+      ],
+      "title": "Confidence",
+      "type": "string"
+     },
+     "evidence": {
+      "title": "Evidence",
+      "type": "string"
+     },
+     "name": {
+      "title": "Name",
+      "type": "string"
+     },
+     "version": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Version"
+     },
+     "website": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Website"
+     }
+    },
+    "required": [
+     "name",
+     "category",
+     "evidence",
+     "confidence"
+    ],
+    "title": "TechItem",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "by_category": {
+    "additionalProperties": {
+     "items": {
+      "type": "string"
+     },
+     "type": "array"
+    },
+    "title": "By Category",
+    "type": "object"
+   },
+   "items": {
+    "items": {
+     "$ref": "#/$defs/TechItem"
+    },
+    "title": "Items",
+    "type": "array"
+   }
+  },
+  "title": "TechStack",
+  "type": "object"
+ },
+ "schema_version": "techstack/1"
+}

@@ -1,0 +1,359 @@
+{
+ "schema": {
+  "$defs": {
+   "CaaInfo": {
+    "properties": {
+     "found_at": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Found At"
+     },
+     "issuers": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Issuers",
+      "type": "array"
+     },
+     "records": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Records",
+      "type": "array"
+     }
+    },
+    "title": "CaaInfo",
+    "type": "object"
+   },
+   "DmarcInfo": {
+    "properties": {
+     "pct": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Pct"
+     },
+     "policy": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Policy"
+     },
+     "record": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Record"
+     },
+     "records": {
+      "default": 0,
+      "title": "Records",
+      "type": "integer"
+     },
+     "rua": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Rua",
+      "type": "array"
+     },
+     "ruf_present": {
+      "default": false,
+      "title": "Ruf Present",
+      "type": "boolean"
+     },
+     "subdomain_policy": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Subdomain Policy"
+     }
+    },
+    "title": "DmarcInfo",
+    "type": "object"
+   },
+   "DnssecInfo": {
+    "properties": {
+     "ds_records": {
+      "default": 0,
+      "title": "Ds Records",
+      "type": "integer"
+     },
+     "enabled": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Enabled"
+     },
+     "method": {
+      "default": "ds-at-parent",
+      "title": "Method",
+      "type": "string"
+     },
+     "validated": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Validated"
+     }
+    },
+    "title": "DnssecInfo",
+    "type": "object"
+   },
+   "HostAddresses": {
+    "properties": {
+     "a": {
+      "items": {
+       "type": "string"
+      },
+      "title": "A",
+      "type": "array"
+     },
+     "aaaa": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Aaaa",
+      "type": "array"
+     },
+     "host": {
+      "title": "Host",
+      "type": "string"
+     }
+    },
+    "required": [
+     "host"
+    ],
+    "title": "HostAddresses",
+    "type": "object"
+   },
+   "MxInfo": {
+    "properties": {
+     "count": {
+      "default": 0,
+      "title": "Count",
+      "type": "integer"
+     },
+     "hosts": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Hosts",
+      "type": "array"
+     },
+     "null_mx": {
+      "default": false,
+      "title": "Null Mx",
+      "type": "boolean"
+     }
+    },
+    "title": "MxInfo",
+    "type": "object"
+   },
+   "NsInfo": {
+    "properties": {
+     "count": {
+      "default": 0,
+      "title": "Count",
+      "type": "integer"
+     },
+     "distinct_subnets_24": {
+      "default": 0,
+      "title": "Distinct Subnets 24",
+      "type": "integer"
+     },
+     "hosts": {
+      "items": {
+       "$ref": "#/$defs/HostAddresses"
+      },
+      "title": "Hosts",
+      "type": "array"
+     },
+     "min_nameservers": {
+      "default": 2,
+      "title": "Min Nameservers",
+      "type": "integer"
+     },
+     "min_subnets": {
+      "default": 2,
+      "title": "Min Subnets",
+      "type": "integer"
+     },
+     "providers": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Providers",
+      "type": "array"
+     },
+     "zone": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Zone"
+     }
+    },
+    "title": "NsInfo",
+    "type": "object"
+   },
+   "SpfInfo": {
+    "properties": {
+     "all_qualifier": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "All Qualifier"
+     },
+     "errors": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Errors",
+      "type": "array"
+     },
+     "lookup_limit": {
+      "default": 10,
+      "title": "Lookup Limit",
+      "type": "integer"
+     },
+     "lookups": {
+      "default": 0,
+      "title": "Lookups",
+      "type": "integer"
+     },
+     "lookups_complete": {
+      "default": true,
+      "title": "Lookups Complete",
+      "type": "boolean"
+     },
+     "records": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Records",
+      "type": "array"
+     },
+     "valid": {
+      "anyOf": [
+       {
+        "type": "boolean"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Valid"
+     }
+    },
+    "title": "SpfInfo",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "caa": {
+    "$ref": "#/$defs/CaaInfo"
+   },
+   "dmarc": {
+    "$ref": "#/$defs/DmarcInfo"
+   },
+   "dnssec": {
+    "$ref": "#/$defs/DnssecInfo"
+   },
+   "domain": {
+    "title": "Domain",
+    "type": "string"
+   },
+   "ipv6": {
+    "items": {
+     "$ref": "#/$defs/HostAddresses"
+    },
+    "title": "Ipv6",
+    "type": "array"
+   },
+   "mx": {
+    "$ref": "#/$defs/MxInfo"
+   },
+   "ns": {
+    "$ref": "#/$defs/NsInfo"
+   },
+   "queries": {
+    "default": 0,
+    "title": "Queries",
+    "type": "integer"
+   },
+   "spf": {
+    "$ref": "#/$defs/SpfInfo"
+   },
+   "thresholds": {
+    "additionalProperties": {
+     "type": "number"
+    },
+    "title": "Thresholds",
+    "type": "object"
+   }
+  },
+  "required": [
+   "domain"
+  ],
+  "title": "DnsHealth",
+  "type": "object"
+ },
+ "schema_version": "dns_health/1"
+}

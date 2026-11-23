@@ -1,0 +1,153 @@
+{
+ "schema": {
+  "$defs": {
+   "HreflangPair": {
+    "properties": {
+     "href": {
+      "title": "Href",
+      "type": "string"
+     },
+     "lang": {
+      "title": "Lang",
+      "type": "string"
+     }
+    },
+    "required": [
+     "lang",
+     "href"
+    ],
+    "title": "HreflangPair",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "canonical": {
+    "default": "",
+    "title": "Canonical",
+    "type": "string"
+   },
+   "content_hash": {
+    "default": "",
+    "title": "Content Hash",
+    "type": "string"
+   },
+   "error": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Error"
+   },
+   "final_url": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Final Url"
+   },
+   "h1": {
+    "items": {
+     "type": "string"
+    },
+    "title": "H1",
+    "type": "array"
+   },
+   "hreflang": {
+    "items": {
+     "$ref": "#/$defs/HreflangPair"
+    },
+    "title": "Hreflang",
+    "type": "array"
+   },
+   "internal_links": {
+    "default": 0,
+    "title": "Internal Links",
+    "type": "integer"
+   },
+   "meta_description": {
+    "default": "",
+    "title": "Meta Description",
+    "type": "string"
+   },
+   "noindex": {
+    "default": false,
+    "title": "Noindex",
+    "type": "boolean"
+   },
+   "robots_meta": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Robots Meta",
+    "type": "array"
+   },
+   "schema_types": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Schema Types",
+    "type": "array"
+   },
+   "status": {
+    "anyOf": [
+     {
+      "type": "integer"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Status"
+   },
+   "taken_at": {
+    "anyOf": [
+     {
+      "format": "date-time",
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Taken At"
+   },
+   "title": {
+    "default": "",
+    "title": "Title",
+    "type": "string"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   },
+   "word_count": {
+    "default": 0,
+    "title": "Word Count",
+    "type": "integer"
+   },
+   "x_robots_tag": {
+    "default": "",
+    "title": "X Robots Tag",
+    "type": "string"
+   }
+  },
+  "required": [
+   "url"
+  ],
+  "title": "Snapshot",
+  "type": "object"
+ },
+ "schema_version": "snapshot/1"
+}

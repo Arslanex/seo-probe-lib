@@ -1,0 +1,70 @@
+{
+ "schema": {
+  "$defs": {
+   "GscSitemap": {
+    "properties": {
+     "errors": {
+      "default": 0,
+      "title": "Errors",
+      "type": "integer"
+     },
+     "is_pending": {
+      "default": false,
+      "title": "Is Pending",
+      "type": "boolean"
+     },
+     "last_downloaded": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Last Downloaded"
+     },
+     "last_submitted": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Last Submitted"
+     },
+     "path": {
+      "title": "Path",
+      "type": "string"
+     },
+     "warnings": {
+      "default": 0,
+      "title": "Warnings",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "path"
+    ],
+    "title": "GscSitemap",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "items": {
+    "items": {
+     "$ref": "#/$defs/GscSitemap"
+    },
+    "title": "Items",
+    "type": "array"
+   }
+  },
+  "title": "GscSitemaps",
+  "type": "object"
+ },
+ "schema_version": "gsc.sitemaps/1"
+}

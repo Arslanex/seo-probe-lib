@@ -1,0 +1,121 @@
+{
+ "schema": {
+  "$defs": {
+   "IndexNowBatch": {
+    "properties": {
+     "accepted": {
+      "default": false,
+      "title": "Accepted",
+      "type": "boolean"
+     },
+     "error": {
+      "anyOf": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Error"
+     },
+     "index": {
+      "title": "Index",
+      "type": "integer"
+     },
+     "result": {
+      "title": "Result",
+      "type": "string"
+     },
+     "size": {
+      "title": "Size",
+      "type": "integer"
+     },
+     "status": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Status"
+     }
+    },
+    "required": [
+     "index",
+     "size",
+     "result"
+    ],
+    "title": "IndexNowBatch",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "accepted": {
+    "default": 0,
+    "title": "Accepted",
+    "type": "integer"
+   },
+   "batches": {
+    "items": {
+     "$ref": "#/$defs/IndexNowBatch"
+    },
+    "title": "Batches",
+    "type": "array"
+   },
+   "duplicates": {
+    "default": 0,
+    "title": "Duplicates",
+    "type": "integer"
+   },
+   "host": {
+    "title": "Host",
+    "type": "string"
+   },
+   "key_location": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Key Location"
+   },
+   "rejected_count": {
+    "default": 0,
+    "title": "Rejected Count",
+    "type": "integer"
+   },
+   "rejected_urls": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Rejected Urls",
+    "type": "array"
+   },
+   "skipped": {
+    "default": 0,
+    "title": "Skipped",
+    "type": "integer"
+   },
+   "submitted": {
+    "default": 0,
+    "title": "Submitted",
+    "type": "integer"
+   }
+  },
+  "required": [
+   "host"
+  ],
+  "title": "IndexNowSubmission",
+  "type": "object"
+ },
+ "schema_version": "indexnow.submit/1"
+}

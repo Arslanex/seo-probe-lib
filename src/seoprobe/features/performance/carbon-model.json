@@ -1,0 +1,38 @@
+{
+  "model": "Sustainable Web Design Model",
+  "version": "4",
+  "sources": [
+    "https://sustainablewebdesign.org/estimating-digital-emissions/",
+    "https://sustainablewebdesign.org/digital-carbon-ratings/",
+    "https://github.com/thegreenwebfoundation/co2.js/blob/main/src/sustainable-web-design-v4.js"
+  ],
+  "bytes_per_gb": 1000000000,
+  "energy_kwh_per_gb": {
+    "operational": {"data_centre": 0.055, "network": 0.059, "user_device": 0.080},
+    "embodied": {"data_centre": 0.012, "network": 0.013, "user_device": 0.081}
+  },
+  "grid_intensity_g_per_kwh": {
+    "global": 494,
+    "note": "Ember 2022 world average used by SWD v4"
+  },
+  "green_hosting": {
+    "verified_green_factor": 1.0,
+    "note": "data-centre segment = operational x (1 - green_hosting_factor) + embodied; factor 0-1 is the share of hosting on renewable or zero-carbon energy; network and user device are unaffected"
+  },
+  "visits": {
+    "first_visit_share": 1.0,
+    "return_visit_share": 0.0,
+    "data_reload_ratio": 0.0,
+    "note": "CO2.js v4 defaults (firstViewRatio 1, returnViewRatio 0, dataReloadRatio 0); total = first x emissions + return x emissions x data_reload_ratio"
+  },
+  "rating_bands_g_per_view": [
+    {"rating": "A+", "max": 0.040},
+    {"rating": "A", "max": 0.079},
+    {"rating": "B", "max": 0.145},
+    {"rating": "C", "max": 0.209},
+    {"rating": "D", "max": 0.278},
+    {"rating": "E", "max": 0.359},
+    {"rating": "F", "max": null}
+  ],
+  "thresholds": {"flag_from_rating": "E"}
+}

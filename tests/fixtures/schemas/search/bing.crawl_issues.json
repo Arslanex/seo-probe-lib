@@ -1,0 +1,67 @@
+{
+ "schema": {
+  "$defs": {
+   "BingCrawlIssue": {
+    "properties": {
+     "http_code": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Http Code"
+     },
+     "in_links": {
+      "default": 0,
+      "title": "In Links",
+      "type": "integer"
+     },
+     "issue_flags": {
+      "default": 0,
+      "title": "Issue Flags",
+      "type": "integer"
+     },
+     "issues": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Issues",
+      "type": "array"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "BingCrawlIssue",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "items": {
+    "items": {
+     "$ref": "#/$defs/BingCrawlIssue"
+    },
+    "title": "Items",
+    "type": "array"
+   },
+   "site": {
+    "title": "Site",
+    "type": "string"
+   }
+  },
+  "required": [
+   "site"
+  ],
+  "title": "BingCrawlIssues",
+  "type": "object"
+ },
+ "schema_version": "bing.crawl_issues/1"
+}

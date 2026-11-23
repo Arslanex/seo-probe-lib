@@ -1,0 +1,165 @@
+{
+ "schema": {
+  "$defs": {
+   "FieldMetric": {
+    "properties": {
+     "good_share": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Good Share"
+     },
+     "metric": {
+      "enum": [
+       "lcp",
+       "inp",
+       "cls",
+       "fcp",
+       "ttfb"
+      ],
+      "title": "Metric",
+      "type": "string"
+     },
+     "needs_improvement_share": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Needs Improvement Share"
+     },
+     "p75": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "P75"
+     },
+     "poor_share": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Poor Share"
+     },
+     "rating": {
+      "anyOf": [
+       {
+        "enum": [
+         "good",
+         "needs-improvement",
+         "poor"
+        ],
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "title": "Rating"
+     }
+    },
+    "required": [
+     "metric"
+    ],
+    "title": "FieldMetric",
+    "type": "object"
+   }
+  },
+  "description": "Real-user data (Chrome UX Report, 28-day p75). Public data; no site owner authorisation.",
+  "properties": {
+   "error": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Error"
+   },
+   "form_factor": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Form Factor"
+   },
+   "metrics": {
+    "items": {
+     "$ref": "#/$defs/FieldMetric"
+    },
+    "title": "Metrics",
+    "type": "array"
+   },
+   "period": {
+    "anyOf": [
+     {
+      "additionalProperties": {
+       "type": "string"
+      },
+      "type": "object"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Period"
+   },
+   "scope": {
+    "anyOf": [
+     {
+      "enum": [
+       "url",
+       "origin"
+      ],
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Scope"
+   },
+   "source": {
+    "const": "crux",
+    "default": "crux",
+    "title": "Source",
+    "type": "string"
+   }
+  },
+  "title": "FieldData",
+  "type": "object"
+ },
+ "schema_version": "field_data/1"
+}

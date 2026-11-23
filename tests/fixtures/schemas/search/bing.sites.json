@@ -1,0 +1,36 @@
+{
+ "schema": {
+  "$defs": {
+   "BingSite": {
+    "properties": {
+     "is_verified": {
+      "default": false,
+      "title": "Is Verified",
+      "type": "boolean"
+     },
+     "url": {
+      "title": "Url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "url"
+    ],
+    "title": "BingSite",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "items": {
+    "items": {
+     "$ref": "#/$defs/BingSite"
+    },
+    "title": "Items",
+    "type": "array"
+   }
+  },
+  "title": "BingSites",
+  "type": "object"
+ },
+ "schema_version": "bing.sites/1"
+}

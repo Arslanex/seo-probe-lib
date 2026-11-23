@@ -1,0 +1,14 @@
+{
+ "schema": {
+  "properties": {
+   "duplicate_pairs": {
+    "default": 0,
+    "title": "Duplicate Pairs",
+    "type": "integer"
+   }
+  },
+  "title": "DuplicateReport",
+  "type": "object"
+ },
+ "schema_version": "duplicates/1"
+}

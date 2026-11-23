@@ -1,0 +1,70 @@
+{
+ "schema": {
+  "properties": {
+   "error": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Error"
+   },
+   "html": {
+    "anyOf": [
+     {
+      "type": "string"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Html"
+   },
+   "is_spa": {
+    "default": false,
+    "title": "Is Spa",
+    "type": "boolean"
+   },
+   "js_gap": {
+    "anyOf": [
+     {
+      "additionalProperties": true,
+      "type": "object"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Js Gap"
+   },
+   "reasons": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Reasons",
+    "type": "array"
+   },
+   "rendered": {
+    "default": false,
+    "title": "Rendered",
+    "type": "boolean"
+   },
+   "url": {
+    "title": "Url",
+    "type": "string"
+   }
+  },
+  "required": [
+   "url"
+  ],
+  "title": "RenderReport",
+  "type": "object"
+ },
+ "schema_version": "render/1"
+}

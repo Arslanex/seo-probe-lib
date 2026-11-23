@@ -1,0 +1,187 @@
+{
+ "schema": {
+  "$defs": {
+   "AICrawlerStatus": {
+    "properties": {
+     "capability": {
+      "title": "Capability",
+      "type": "string"
+     },
+     "governs": {
+      "title": "Governs",
+      "type": "string"
+     },
+     "group": {
+      "title": "Group",
+      "type": "string"
+     },
+     "not_evidence_for": {
+      "title": "Not Evidence For",
+      "type": "string"
+     },
+     "root_allowed": {
+      "title": "Root Allowed",
+      "type": "boolean"
+     },
+     "token": {
+      "title": "Token",
+      "type": "string"
+     },
+     "vendor": {
+      "title": "Vendor",
+      "type": "string"
+     }
+    },
+    "required": [
+     "token",
+     "vendor",
+     "capability",
+     "governs",
+     "not_evidence_for",
+     "group",
+     "root_allowed"
+    ],
+    "title": "AICrawlerStatus",
+    "type": "object"
+   },
+   "Group": {
+    "properties": {
+     "agents": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Agents",
+      "type": "array"
+     },
+     "content_signal": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Content Signal",
+      "type": "array"
+     },
+     "rules": {
+      "items": {
+       "maxItems": 2,
+       "minItems": 2,
+       "prefixItems": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "string"
+        }
+       ],
+       "type": "array"
+      },
+      "title": "Rules",
+      "type": "array"
+     }
+    },
+    "title": "Group",
+    "type": "object"
+   },
+   "RobotsRules": {
+    "properties": {
+     "groups": {
+      "items": {
+       "$ref": "#/$defs/Group"
+      },
+      "title": "Groups",
+      "type": "array"
+     },
+     "sitemaps": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Sitemaps",
+      "type": "array"
+     },
+     "truncated": {
+      "default": false,
+      "title": "Truncated",
+      "type": "boolean"
+     }
+    },
+    "title": "RobotsRules",
+    "type": "object"
+   }
+  },
+  "properties": {
+   "ai_crawlers": {
+    "items": {
+     "$ref": "#/$defs/AICrawlerStatus"
+    },
+    "title": "Ai Crawlers",
+    "type": "array"
+   },
+   "entry_allowed_for_bot": {
+    "default": true,
+    "title": "Entry Allowed For Bot",
+    "type": "boolean"
+   },
+   "entry_allowed_for_googlebot": {
+    "default": true,
+    "title": "Entry Allowed For Googlebot",
+    "type": "boolean"
+   },
+   "facts": {
+    "additionalProperties": true,
+    "title": "Facts",
+    "type": "object"
+   },
+   "http_status": {
+    "anyOf": [
+     {
+      "type": "integer"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Http Status"
+   },
+   "llms_txt_present": {
+    "anyOf": [
+     {
+      "type": "boolean"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "title": "Llms Txt Present"
+   },
+   "rules": {
+    "anyOf": [
+     {
+      "$ref": "#/$defs/RobotsRules"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null
+   },
+   "sitemaps": {
+    "items": {
+     "type": "string"
+    },
+    "title": "Sitemaps",
+    "type": "array"
+   },
+   "status": {
+    "title": "Status",
+    "type": "string"
+   }
+  },
+  "required": [
+   "status"
+  ],
+  "title": "RobotsReport",
+  "type": "object"
+ },
+ "schema_version": "robots/1"
+}
